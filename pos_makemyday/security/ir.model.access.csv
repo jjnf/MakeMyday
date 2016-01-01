@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_makemyday_printer,makemyday.printer.user,model_makemyday_printer,point_of_sale.group_makemyday_user,1,0,0,0
+access_makemyday_printer_manager,makemyday.printer.manager,model_makemyday_printer,point_of_sale.group_makemyday_manager,1,1,1,1
+access_makemyday_floor,makemyday.floor.user,model_makemyday_floor,point_of_sale.group_makemyday_user,1,0,0,0
+access_makemyday_floor_manager,makemyday.floor.manager,model_makemyday_floor,point_of_sale.group_makemyday_manager,1,1,1,1
+access_makemyday_table,makemyday.table.user,model_makemyday_table,point_of_sale.group_makemyday_user,1,0,0,0
+access_makemyday_table_manager,makemyday.table.manager,model_makemyday_table,point_of_sale.group_makemyday_manager,1,1,1,1
