@@ -3,7 +3,7 @@ odoo.define('point_of_sale.DB', function (require) {
 
 var core = require('web.core');
 /* The PosDB holds reference to data that is either
- * - static: does not change between pos reloads
+ * - static: does not change between makemyday reloads
  * - persistent : must stay between reloads ( orders )
  */
 

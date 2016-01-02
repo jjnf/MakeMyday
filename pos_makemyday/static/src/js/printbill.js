@@ -35,7 +35,7 @@ var PrintBillButton = screens.ActionButtonWidget.extend({
             var receipt = order.export_for_printing();
             receipt.bill = true;
             this.makemyday.proxy.print_receipt(QWeb.render('BillReceipt',{
-                receipt: receipt, widget: this, pos: this.pos, order: order,
+                receipt: receipt, widget: this, makemyday: this.makemyday, order: order,
             }));
         }
     },

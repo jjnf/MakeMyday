@@ -56,7 +56,7 @@ var PopupWidget = PosBaseWidget.extend({
     },
 
     // hides the popup. keep in mind that this is called in 
-    // the initialization pass of the pos instantiation, 
+    // the initialization pass of the makemyday instantiation, 
     // so you don't want to do anything fancy in here
     hide: function(){
         if (this.$el) {

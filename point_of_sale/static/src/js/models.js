@@ -28,7 +28,7 @@ var exports = {};
 // this is done asynchronously, a ready deferred alows the GUI to wait interactively 
 // for the loading to be completed 
 // There is a single instance of the PosModel for each Front-End instance, it is usually called
-// 'pos' and is available to all widgets extending PosWidget.
+// 'makemyday' and is available to all widgets extending PosWidget.
 
 exports.PosModel = Backbone.Model.extend({
     initialize: function(session, attributes) {
@@ -39,7 +39,7 @@ exports.PosModel = Backbone.Model.extend({
         this.gui    = attributes.gui;
 
         this.proxy = new devices.ProxyDevice(this);              // used to communicate to the hardware devices via a local proxy
-        this.barcode_reader = new devices.BarcodeReader({'pos': this, proxy:this.proxy});
+        this.barcode_reader = new devices.BarcodeReader({'makemyday': this, proxy:this.proxy});
 
         this.proxy_queue = new devices.JobQueue();           // used to prevent parallels communications to the proxy
         this.db = new PosDB();                       // a local database used to search trough products and categories & store pending orders
@@ -63,7 +63,7 @@ exports.PosModel = Backbone.Model.extend({
         this.units_by_id = {};
         this.pricelist = null;
         this.order_sequence = 1;
-        window.posmodel = this;
+        window.makemydaymodel = this;
 
         // these dynamic attributes can be watched for change by other models or widgets
         this.set({
@@ -85,7 +85,7 @@ exports.PosModel = Backbone.Model.extend({
         this.get('orders').bind('add remove change', update_client, this);
         this.bind('change:selectedOrder', update_client, this);
 
-        // We fetch the backend data on the server asynchronously. this is done only when the pos user interface is launched,
+        // We fetch the backend data on the server asynchronously. this is done only when the makemyday user interface is launched,
         // Any change on this data made on the server is thus not reflected on the point of sale until it is relaunched. 
         // when all the data has loaded, we compute some stuff, and declare the Pos ready to be used. 
         this.ready = this.load_server_data().then(function(){
@@ -99,7 +99,7 @@ exports.PosModel = Backbone.Model.extend({
              return this.connect_to_proxy();
          }
     },
-    // releases ressources holds by the model at the end of life of the posmodel
+    // releases ressources holds by the model at the end of life of the makemydaymodel
     destroy: function(){
         // FIXME, should wait for flushing, return a deferred to indicate successfull destruction
         // this.flush();
@@ -318,7 +318,7 @@ exports.PosModel = Backbone.Model.extend({
                  'to_weight', 'uom_id', 'description_sale', 'description',
                  'product_tmpl_id'],
         order:  ['sequence','name'],
-        domain: [['sale_ok','=',true],['available_in_pos','=',true]],
+        domain: [['sale_ok','=',true],['available_in_makemyday','=',true]],
         context: function(self){ return { pricelist: self.pricelist.id, display_default_code: false }; },
         loaded: function(self, products){
             self.db.add_products(products);
@@ -587,7 +587,7 @@ exports.PosModel = Backbone.Model.extend({
     },
     //creates a new empty order and sets it as the current order
     add_new_order: function(){
-        var order = new exports.Order({},{pos:this});
+        var order = new exports.Order({},{makemyday:this});
         this.get('orders').add(order);
         this.set('selectedOrder', order);
         return order;
@@ -602,7 +602,7 @@ exports.PosModel = Backbone.Model.extend({
             var json = jsons[i];
             if (json.makemyday_session_id === this.makemyday_session.id) {
                 orders.push(new exports.Order({},{
-                    pos:  this,
+                    makemyday:  this,
                     json: json,
                 }));
             } else {
@@ -784,8 +784,8 @@ exports.PosModel = Backbone.Model.extend({
 
         // we try to send the order. shadow prevents a spinner if it takes too long. (unless we are sending an invoice,
         // then we want to notify the user that we are waiting on something )
-        var posOrderModel = new Model('makemyday.order');
-        return posOrderModel.call('create_from_ui',
+        var makemydayOrderModel = new Model('makemyday.order');
+        return makemydayOrderModel.call('create_from_ui',
             [_.map(orders, function (order) {
                 order.to_invoice = options.to_invoice || false;
                 return order;
@@ -913,7 +913,7 @@ exports.PosModel = Backbone.Model.extend({
                     report.unpaid_skipped_existing += 1;
                 } else {
                     orders.push(new exports.Order({},{
-                        pos: this,
+                        makemyday: this,
                         json: order,
                     }));
                 } 
@@ -943,7 +943,7 @@ exports.PosModel = Backbone.Model.extend({
             var json = jsons[i];
             if (json.makemyday_session_id === this.makemyday_session.id) {
                 orders.push(new exports.Order({},{
-                    pos:  this,
+                    makemyday:  this,
                     json: json,
                 }));
             } else {
@@ -1063,7 +1063,7 @@ var orderline_id = 1;
 // An Order contains zero or more Orderlines.
 exports.Orderline = Backbone.Model.extend({
     initialize: function(attr,options){
-        this.pos   = options.pos;
+        this.makemyday   = options.makemyday;
         this.order = options.order;
         if (options.json) {
             this.init_from_JSON(options.json);
@@ -1091,7 +1091,7 @@ exports.Orderline = Backbone.Model.extend({
     },
     clone: function(){
         var orderline = new exports.Orderline({},{
-            pos: this.pos,
+            makemyday: this.makemyday,
             order: null,
             product: this.product,
             price: this.price,
@@ -1169,7 +1169,7 @@ exports.Orderline = Backbone.Model.extend({
             return undefined;
         }
         unit_id = unit_id[0];
-        if(!this.pos){
+        if(!this.makemyday){
             return undefined;
         }
         return this.makemyday.units_by_id[unit_id];
@@ -1416,7 +1416,7 @@ var OrderlineCollection = Backbone.Collection.extend({
 // Every Paymentline contains a cashregister and an amount of money.
 exports.Paymentline = Backbone.Model.extend({
     initialize: function(attributes, options) {
-        this.pos = options.pos;
+        this.makemyday = options.makemyday;
         this.order = options.order;
         this.amount = 0;
         this.selected = false;
@@ -1489,7 +1489,7 @@ exports.Order = Backbone.Model.extend({
         options  = options || {};
 
         this.init_locked    = true;
-        this.pos            = options.pos; 
+        this.makemyday            = options.makemyday; 
         this.selected_orderline   = undefined;
         this.selected_paymentline = undefined;
         this.screen_data    = {};  // see Gui
@@ -1539,7 +1539,7 @@ exports.Order = Backbone.Model.extend({
         if (json.partner_id) {
             client = this.makemyday.db.get_partner_by_id(json.partner_id);
             if (!client) {
-                console.error('ERROR: trying to load a parner not available in the pos');
+                console.error('ERROR: trying to load a parner not available in the makemyday');
             }
         } else {
             client = null;
@@ -1552,13 +1552,13 @@ exports.Order = Backbone.Model.extend({
         var orderlines = json.lines;
         for (var i = 0; i < orderlines.length; i++) {
             var orderline = orderlines[i][2];
-            this.add_orderline(new exports.Orderline({}, {pos: this.pos, order: this, json: orderline}));
+            this.add_orderline(new exports.Orderline({}, {makemyday: this.makemyday, order: this, json: orderline}));
         }
 
         var paymentlines = json.statement_ids;
         for (var i = 0; i < paymentlines.length; i++) {
             var paymentline = paymentlines[i][2];
-            var newpaymentline = new exports.Paymentline({},{pos: this.pos, order: this, json: paymentline});
+            var newpaymentline = new exports.Paymentline({},{makemyday: this.makemyday, order: this, json: paymentline});
             this.paymentlines.add(newpaymentline);
 
             if (i === paymentlines.length - 1) {
@@ -1625,7 +1625,7 @@ exports.Order = Backbone.Model.extend({
                     qweb.default_dict = _.clone(QWeb.default_dict);
                     qweb.add_template('<templates><t t-name="subreceipt">'+subreceipt+'</t></templates>');
                 
-                return qweb.render('subreceipt',{'pos':self.pos,'widget':self.makemyday.chrome,'order':self, 'receipt': receipt}) ;
+                return qweb.render('subreceipt',{'makemyday':self.makemyday,'widget':self.makemyday.chrome,'order':self, 'receipt': receipt}) ;
             }
         }
 
@@ -1779,9 +1779,9 @@ exports.Order = Backbone.Model.extend({
         this.assert_editable();
         options = options || {};
         var attr = JSON.parse(JSON.stringify(product));
-        attr.pos = this.pos;
+        attr.makemyday = this.makemyday;
         attr.order = this;
-        var line = new exports.Orderline({}, {pos: this.pos, order: this, product: product});
+        var line = new exports.Orderline({}, {makemyday: this.makemyday, order: this, product: product});
 
         if(options.quantity !== undefined){
             line.set_quantity(options.quantity);
@@ -1832,7 +1832,7 @@ exports.Order = Backbone.Model.extend({
     /* ---- Payment Lines --- */
     add_paymentline: function(cashregister) {
         this.assert_editable();
-        var newPaymentline = new exports.Paymentline({},{order: this, cashregister:cashregister, pos: this.pos});
+        var newPaymentline = new exports.Paymentline({},{order: this, cashregister:cashregister, makemyday: this.makemyday});
         if(cashregister.journal.type !== 'cash' || this.makemyday.config.iface_precompute_cash){
             newPaymentline.set_amount( Math.max(this.get_due(),0) );
         }

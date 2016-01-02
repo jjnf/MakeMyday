@@ -1,7 +1,7 @@
 odoo.define('point_of_sale.screens', function (require) {
 "use strict";
 // This file contains the Screens definitions. Screens are the
-// content of the right pane of the pos, containing the main functionalities. 
+// content of the right pane of the makemyday, containing the main functionalities. 
 //
 // Screens must be defined and named in chrome.js before use.
 //
@@ -303,7 +303,7 @@ var ScaleScreenWidget = ScreenWidget.extend({
     get_product_weight_string: function(){
         var product = this.get_product();
         var defaultstr = (this.weight || 0).toFixed(3) + ' Kg';
-        if(!product || !this.pos){
+        if(!product || !this.makemyday){
             return defaultstr;
         }
         var unit_id = product.uom_id;
@@ -1258,9 +1258,9 @@ var ClientListScreenWidget = ScreenWidget.extend({
     // Shows,hides or edit the customer details box :
     // visibility: 'show', 'hide' or 'edit'
     // partner:    the partner object to show or edit
-    // clickpos:   the height of the click on the list (in pixel), used
+    // clickmakemyday:   the height of the click on the list (in pixel), used
     //             to maintain consistent scroll.
-    display_client_details: function(visibility,partner,clickpos){
+    display_client_details: function(visibility,partner,clickmakemyday){
         var self = this;
         var contents = this.$('.client-details-contents');
         var parent   = this.$('.client-list').parent();
@@ -1283,8 +1283,8 @@ var ClientListScreenWidget = ScreenWidget.extend({
             var new_height   = contents.height();
 
             if(!this.details_visible){
-                if(clickpos < scroll + new_height + 20 ){
-                    parent.scrollTop( clickpos - 20 );
+                if(clickmakemyday < scroll + new_height + 20 ){
+                    parent.scrollTop( clickmakemyday - 20 );
                 }else{
                     parent.scrollTop(parent.scrollTop() + new_height);
                 }
@@ -1380,7 +1380,7 @@ var ReceiptScreenWidget = ScreenWidget.extend({
     print_xml: function() {
         var env = {
             widget:  this,
-            pos:     this.pos,
+            makemyday:     this.makemyday,
             order:   this.makemyday.get_order(),
             receipt: this.makemyday.get_order().export_for_printing(),
             paymentlines: this.makemyday.get_order().get_paymentlines()
@@ -1403,7 +1403,7 @@ var ReceiptScreenWidget = ScreenWidget.extend({
             // and so you end up printing the product list instead of the receipt... 
             //
             // Fixing this would need a re-architecturing
-            // of the code to postpone sending of orders after printing.
+            // of the code to makemydaytpone sending of orders after printing.
             //
             // But since the print dialog also blocks the other asynchronous calls, the
             // button enabling in the setTimeout() is blocked until the printing dialog is 
@@ -1454,7 +1454,7 @@ var ReceiptScreenWidget = ScreenWidget.extend({
     },
     render_receipt: function() {
         var order = this.makemyday.get_order();
-        this.$('.pos-receipt-container').html(QWeb.render('PosTicket',{
+        this.$('.makemyday-receipt-container').html(QWeb.render('PosTicket',{
                 widget:this,
                 order: order,
                 receipt: order.export_for_printing(),

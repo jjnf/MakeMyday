@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <openerp>
     <data>
-        <record id="paperformat_posreceipt" model="report.paperformat">
+        <record id="paperformat_makemydayreceipt" model="report.paperformat">
             <field name="name">Point Of Sale Receipt</field>
             <field name="default" eval="True"/>
             <field name="format">custom</field>

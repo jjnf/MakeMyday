@@ -69,22 +69,22 @@ td {
 }
 
 
-.pos input::-webkit-outer-spin-button,
-.pos input::-webkit-inner-spin-button {
+.makemyday input::-webkit-outer-spin-button,
+.makemyday input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
 
-.pos button{
+.makemyday button{
     box-shadow: none;
     outline: none;
     border: none;
     font-family: 'Lato';
 }
-.pos button:hover{
+.makemyday button:hover{
     background: default;
 }
-.pos textarea {
+.makemyday textarea {
     font-family: "Lato";
     font-size: 20px;
     color: #444;
@@ -93,23 +93,23 @@ td {
     border: none;
     box-shadow: 0px 0px 0px 1px rgb(220,220,220) inset;
 }
-.pos textarea:focus {
+.makemyday textarea:focus {
     outline: none;
     box-shadow: 0px 0px 0px 3px #6EC89B;
 }
 
 
-.pos .oe_hidden{
+.makemyday .oe_hidden{
     display: none !important;
 }
 
-.pos ul, .pos li  {
+.makemyday ul, .makemyday li  {
     margin: 0;
     padding: 0;
     list-style-type: none;
 }
 
-.pos {
+.makemyday {
     padding: 0;
     margin: 0;
     background-color: #f0eeee;
@@ -130,7 +130,7 @@ td {
 
 /*  ********* The black loading screen ********* */
 
-.pos .loader{
+.makemyday .loader{
     background-color: #222;
     position:absolute;
     left:0px;
@@ -143,7 +143,7 @@ td {
     color: #555555;
 }
 
-.pos .loader-feedback{
+.makemyday .loader-feedback{
     width: 400px;
     height: 160px;
     margin: -60px -200px;
@@ -151,20 +151,20 @@ td {
     left: 50%; top: 50%;
     text-align: center;
 }
-.pos .loader-feedback h1{
+.makemyday .loader-feedback h1{
     font-weight: 300;
 }
-.pos .loader-feedback .progressbar{
+.makemyday .loader-feedback .progressbar{
     background: rgb(73,73,73);
     height: 1px;
 }
-.pos .loader-feedback .progressbar > .progress{
+.makemyday .loader-feedback .progressbar > .progress{
     height: 100%;
     background: white;
     width: 0%;
     box-shadow: 0px 0px 5px rgba(255,255,255,0.35);
 }
-.pos .loader-feedback .button{
+.makemyday .loader-feedback .button{
     display: inline-block;
     margin: 25px auto;
     line-height: 42px;
@@ -175,13 +175,13 @@ td {
     border-radius: 5px;
     cursor: pointer;
 }
-.pos .loader-feedback .button:active{
+.makemyday .loader-feedback .button:active{
     color: #222;
     background: #555555;
 }
 /*  ********* Generic Layout Constructs  ********* */
 
-.pos .window{
+.makemyday .window{
     position: absolute;
     top: 0px;
     left: 0px;
@@ -190,71 +190,71 @@ td {
     display: table;
     border: none;
 }
-.pos .window .subwindow{
+.makemyday .window .subwindow{
     display: table-row;
     width: 100%;
     height: 100%;
 }
-.pos .window .subwindow.collapsed{
+.makemyday .window .subwindow.collapsed{
     height: 0px;
 }
-.pos .subwindow .subwindow-container{
+.makemyday .subwindow .subwindow-container{
     display: table-cell;
     position: relative;
 }
 /* firefox seems to ignore the relative positionning of the subwindow-container
  * putting this inside subwindow-container fixes it.
  */ 
-.pos .subwindow .subwindow-container-fix{
+.makemyday .subwindow .subwindow-container-fix{
     height: 100%;
     position: relative;
 }
 
 /* ---- Scrollers ----- */
 
-.pos .scroller-container{
+.makemyday .scroller-container{
     position: absolute;
     top: 0px;
     left: 0px;
     right: 0px;
     bottom: 0px;
 }
-.pos .scroller{
+.makemyday .scroller{
     width: 100%;
     height: 100%;
     overflow: hidden;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
 }
-.pos .scroller.horizontal{
+.makemyday .scroller.horizontal{
     overflow-y: hidden;
     overflow-x: auto;
 }
-.pos .scroller-content{
+.makemyday .scroller-content{
     -webkit-transform: translate3d(0,0,0);
 }
-.pos .scroller-container ::-webkit-scrollbar{
+.makemyday .scroller-container ::-webkit-scrollbar{
     width:  10px;
     height: 10px;
 }
-.pos .scroller-container ::-webkit-scrollbar-track{
+.makemyday .scroller-container ::-webkit-scrollbar-track{
     background: rgb(224,224,224);
     border-left: solid 1px rgb(200,200,200);
     border-top-right-radius: 3px;
     border-bottom-right-radius: 3px;
 }
-.pos .scroller-container ::-webkit-scrollbar-thumb{
+.makemyday .scroller-container ::-webkit-scrollbar-thumb{
     background: rgb(168,168,168);
     min-height: 30px;
 }
 
 /*  ********* Generic element styling  ********* */
 
-.pos a {
+.makemyday a {
     text-decoration: none;
     color: #555555;
 }
-.pos button, .pos a.button {
+.makemyday button, .makemyday a.button {
     display: inline-block;
     cursor: pointer;
     padding: 4px 10px;
@@ -263,20 +263,20 @@ td {
     background: #e2e2e2;
     border-radius: 3px;
 }
-.pos ul, .pos ol {
+.makemyday ul, .makemyday ol {
     padding: 0;
     margin: 0;
 }
-.pos li {
+.makemyday li {
     list-style-type: none;
 }
-.pos .pos-right-align {
+.makemyday .makemyday-right-align {
     text-align: right;
 }
-.pos .pos-center-align {
+.makemyday .makemyday-center-align {
     text-align: center;
 }
-.pos .pos-disc-font {
+.makemyday .makemyday-disc-font {
     font-size: 12px;
     font-style:italic;
     color: #808080;
@@ -285,7 +285,7 @@ td {
 /*  ********* The black header bar ********* */
 
 
-.pos .pos-topheader {
+.makemyday .makemyday-topheader {
     position:absolute;
     left:0;
     top:0;
@@ -299,7 +299,7 @@ td {
 
 /*  a) The left part of the top-bar */
 
-.pos .pos-branding{
+.makemyday .makemyday-branding{
     position: absolute;
     display: table-cell;
     left:0;
@@ -313,13 +313,13 @@ td {
     line-height:100%;
     vertical-align: middle;
 }
-.pos .pos-logo {
+.makemyday .makemyday-logo {
     height: 35px;
     margin-left: 7px;
     margin-top: 2px;
     vertical-align:middle;
 } 
-.pos .pos-branding .username{
+.makemyday .makemyday-branding .username{
     float:right;
     color:#DDD;
     font-size:16px;
@@ -331,7 +331,7 @@ td {
 
 /*  b) The right part of the top-bar */
 
-.pos .pos-rightheader {
+.makemyday .makemyday-rightheader {
     position: absolute;
     left:440px;
     right:0;
@@ -340,11 +340,11 @@ td {
     display: -webkit-flex;
     display: flex;
 }
-.pos .pos-rightheader > * {
+.makemyday .makemyday-rightheader > * {
     border-right: 1px solid #292929;
 }
 
-.pos .order-button{
+.makemyday .order-button{
     color: #f0f0f0;
     display: inline-block;
     box-sizing: border-box;
@@ -366,11 +366,11 @@ td {
     min-width: 45px;
 }
 
-.pos .order-button:first-child {
+.makemyday .order-button:first-child {
     margin-left: 0px;
 }
 
-.pos .order-button.selected{
+.makemyday .order-button.selected{
     font-weight: 900;
     background: #EEEEEE;
     color: rgb(75,75,75);
@@ -381,12 +381,12 @@ td {
     flex-shrink: 0;
 }
 
-.pos .order-button .order-sequence{
+.makemyday .order-button .order-sequence{
     font-size: 16px;
     font-weight: 800;
     vertical-align: middle;
 }
-.pos .order-button.selected .order-sequence{
+.makemyday .order-button.selected .order-sequence{
     color: white;
     background: black;
     display: inline-block;
@@ -397,30 +397,30 @@ td {
     margin-left: -4px;
 }
 
-.pos .order-button.square{
+.makemyday .order-button.square{
     margin-left:1px;
     background: #5c5c5c;
     color: rgb(160,160,160);
     font-size: 18px;
     line-height: 45px;
 }
-.pos .order-button:not(.square) > .fa {
+.makemyday .order-button:not(.square) > .fa {
     font-size: 16px;
     vertical-align: middle;
     margin-right: 4px;
 }
-.pos .order-button .order-sequence{
+.makemyday .order-button .order-sequence{
     font-size: 16px;
     font-weight: 800;
 }
 
-.pos .order-selector {
+.makemyday .order-selector {
     display: -webkit-flex;
     display: flex;
     -webkit-flex: 1;
     flex: 1;
 }
-.pos .orders {
+.makemyday .orders {
     display: -webkit-flex;
     display: flex;
     vertical-align: top;
@@ -432,7 +432,7 @@ td {
 
 /*  c) The session buttons */
 
-.pos .pos-rightheader .header-button{
+.makemyday .makemyday-rightheader .header-button{
     float: right;
     height: 48px;
     padding-left: 16px;
@@ -448,14 +448,14 @@ td {
     -webkit-transition-duration: 0.2s;
     -webkit-transition-timing-function: ease-out;
 }
-.pos .pos-rightheader .header-button:last-child{
+.makemyday .makemyday-rightheader .header-button:last-child{
     border-left:  1px solid #3a3a3a;
 }
-.pos .pos-rightheader .header-button:active{
+.makemyday .makemyday-rightheader .header-button:active{
     background: rgba(0,0,0,0.2);
     color:#EEE;
 }
-.pos .pos-rightheader .header-button.confirm {
+.makemyday .makemyday-rightheader .header-button.confirm {
     background: #359766;
     color: white;
     font-weight: bold;
@@ -463,7 +463,7 @@ td {
 
 /*  c) The notifications indicator */
 
-.pos .oe_status{
+.makemyday .oe_status{
     float:right; 
     color: rgba(255,255,255,0.4);
     padding: 14px;
@@ -473,31 +473,31 @@ td {
     font-style: italic;
     cursor:pointer;
 }
-.pos .oe_status.oe_inactive{
+.makemyday .oe_status.oe_inactive{
     cursor: default;
 }
-.pos .oe_status .oe_icon{
+.makemyday .oe_status .oe_icon{
     display:inline-block;
     cursor:pointer;
     width:20px; height:16px;
     color: white;
 }
-.pos .oe_status .oe_red,
-.pos .oe_icon.oe_red {
+.makemyday .oe_status .oe_red,
+.makemyday .oe_icon.oe_red {
     color: rgb(197, 52, 0);
 }
-.pos .oe_statu .oe_green,
-.pos .oe_icon.oe_green {
+.makemyday .oe_statu .oe_green,
+.makemyday .oe_icon.oe_green {
     color: rgb(94, 185, 55);
 }
-.pos .oe_status .oe_orange,
-.pos .oe_icon.oe_orange {
+.makemyday .oe_status .oe_orange,
+.makemyday .oe_icon.oe_orange {
     color: rgb(239, 153, 65);
 }
 
 /*  ********* Contains everything below the  bar ********* */
 
-.pos .pos-content {
+.makemyday .makemyday-content {
     width: 100%;
     position: absolute;
     top: 48px;
@@ -507,7 +507,7 @@ td {
 
 /*  ********* The leftpane contains the order, numpad and paypad ********* */
 
-.pos .leftpane {
+.makemyday .leftpane {
     -webkit-box-sizing: border-box;
        -moz-box-sizing: border-box;
         -ms-box-sizing: border-box;
@@ -522,13 +522,13 @@ td {
     background: #e2e2e2;
 }
 
-.pos .leftpane .pads {
+.makemyday .leftpane .pads {
     border-top: solid 3px rgb(110, 200, 155);
 }
 
 /*  ********* The control buttons ********* */
 
-.pos .control-buttons {
+.makemyday .control-buttons {
     display: -webkit-flex;
     display: flex;
     -webkit-flex-flow: row wrap;
@@ -536,7 +536,7 @@ td {
     padding: 8px 16px 0px 11px;
     margin-bottom: -6px;
 }
-.pos .control-button {
+.makemyday .control-button {
     -webkit-flex-grow: 1;
     flex-grow: 1;
     background: #e2e2e2;
@@ -554,18 +554,18 @@ td {
     overflow: hidden;
     transition: all linear 150ms;
 }
-.pos .control-button:hover {
+.makemyday .control-button:hover {
     background: #efefef;
 }
-.pos .control-button:active {
+.makemyday .control-button:active {
     background: black;
     color: white;
     border-color: black;
 }
-.pos .control-button .fa{
+.makemyday .control-button .fa{
     margin-right: 4px;
 }
-.pos .control-button .control-button-number {
+.makemyday .control-button .control-button-number {
     color: rgb(226, 226, 226);
     background: rgb(85, 85, 85);
     display: inline-block;
@@ -580,20 +580,20 @@ td {
     margin-right: 4px;
 }
 
-.pos .control-button.highlight,
-.pos .button.highlight {
+.makemyday .control-button.highlight,
+.makemyday .button.highlight {
     background: #6EC89B !important;
     border: solid 1px #64AF8A !important; 
     color: white !important;
 }
-.pos .control-button.altlight,
-.pos .button.altlight {
+.makemyday .control-button.altlight,
+.makemyday .button.altlight {
     background: #7F82AC !important;
     border: solid 1px #756A99 !important;
     color: white !important;
 }
-.pos .control-button.disabled,
-.pos .control-button.disabled:active{
+.makemyday .control-button.disabled,
+.makemyday .control-button.disabled:active{
     background: #e2e2e2;
     border: solid 1px #BEBEBE;
     opacity: 0.5;
@@ -603,7 +603,7 @@ td {
 
 /*  ********* The actionpad (payment, set customer) ********* */
 
-.pos .actionpad {
+.makemyday .actionpad {
     display: inline-block;
     float: left;
     padding: 0;
@@ -621,7 +621,7 @@ td {
     border-top-left-radius: 4px;
     border-bottom-left-radius: 4px;
 }
-.pos .actionpad .button {
+.makemyday .actionpad .button {
     position: relative;
     display: block;
     height: 54px;
@@ -637,24 +637,24 @@ td {
     border-color: #bfbfbf;
     transition: all 150ms linear;
 }
-.pos .actionpad .button:hover {
+.makemyday .actionpad .button:hover {
     background: #efefef;
 }
-.pos .actionpad .button:active {
+.makemyday .actionpad .button:active {
     background: black;
     border-color: black;
     color: white;
 }
-.pos .actionpad .button:first-child {
+.makemyday .actionpad .button:first-child {
     border-top-left-radius: 4px;
 }
-.pos .actionpad .button:last-child {
+.makemyday .actionpad .button:last-child {
     border-bottom-left-radius: 4px;
 }
-.pos .actionpad .button.pay {
+.makemyday .actionpad .button.pay {
     height: 162px;
 }
-.pos .actionpad .button.pay .pay-circle {
+.makemyday .actionpad .button.pay .pay-circle {
     display: block;
     font-size: 32px;
     line-height: 54px;
@@ -666,21 +666,21 @@ td {
     border-radius: 30px;
     margin-bottom: 10px;
 }
-.pos .actionpad .button.pay .pay-circle .fa {
+.makemyday .actionpad .button.pay .pay-circle .fa {
     position: relative;
     top: -1px;
     left: 3px;
 }
 
-.pos .actionpad .button.set-customer{
+.makemyday .actionpad .button.set-customer{
     padding-left: 40px;
     padding-right: 40px;
 }
-.pos .actionpad .button.set-customer.decentered {
+.makemyday .actionpad .button.set-customer.decentered {
     padding-left: 40px;
     padding-right: 5px;
 }
-.pos .actionpad .button .fa-user {
+.makemyday .actionpad .button .fa-user {
     position: absolute;
     left: 13px;
     top: 13px;
@@ -694,7 +694,7 @@ td {
 
 /*  ********* The Numpad ********* */
 
-.pos .numpad {
+.makemyday .numpad {
     display: inline-block;
     float: right;
     text-align: center;
@@ -707,7 +707,7 @@ td {
     border-color: #bfbfbf;
     border-top-right-radius: 4px;
 }
-.pos .numpad button {
+.makemyday .numpad button {
     float: left;
     height: 54px;
     width: 54px;
@@ -721,32 +721,32 @@ td {
     border-color: #bfbfbf;
     transition: all 150ms linear;
 }
-.pos .numpad button:hover {
+.makemyday .numpad button:hover {
     background: #efefef;
 }
-.pos .numpad button:active {
+.makemyday .numpad button:active {
     background: black;
     color: white;
     border-color: transparent;
 }
-.pos .numpad button:nth-child(4) {
+.makemyday .numpad button:nth-child(4) {
     border-top-right-radius: 4px;
 }
-.pos .numpad button:last-child {
+.makemyday .numpad button:last-child {
     border-bottom-right-radius: 4px;
 }
-.pos .input-button {
+.makemyday .input-button {
     font-size: 24px;
 }
-.pos .mode-button {
+.makemyday .mode-button {
     font-size: 14px;
 }
-.pos .mode-button.selected-mode {
+.makemyday .mode-button.selected-mode {
     color: white;
     background: #6EC89B;
     border-color: transparent;
 }
-.pos .mode-button.selected-mode:hover {
+.makemyday .mode-button.selected-mode:hover {
     background: #6EC89B;
     color: white;
     border-color: transparent;
@@ -754,7 +754,7 @@ td {
 
 /*  ********* The right pane contains the screens and headers ********* */
 
-.pos .rightpane {
+.makemyday .rightpane {
     position: absolute;
     top: 0;
     bottom:0;
@@ -764,7 +764,7 @@ td {
     -webkit-transform: translate3d(0,0,0);
 }
 
-.pos .rightpane-header {
+.makemyday .rightpane-header {
     padding: 0;
     height: 48px;
     border-bottom: 1px solid #c7c7c7;
@@ -774,13 +774,13 @@ td {
 
 /*  ********* The product list  ********* */
 
-.pos .product-list {
+.makemyday .product-list {
     padding: 10px;
     text-align: left;
     -webkit-transform: translate3d(0,0,0);
 }
 
-.pos .product-list-scroller{
+.makemyday .product-list-scroller{
     -webkit-box-sizing: border-box;
        -moz-box-sizing: border-box;
         -ms-box-sizing: border-box;
@@ -793,7 +793,7 @@ td {
     -webkit-transform: translate3d(0,0,0);
 
 }
-.pos .product-list-container {
+.makemyday .product-list-container {
     position:absolute;
     top:0px;
     bottom:0px;
@@ -803,23 +803,23 @@ td {
 
 /*  a) the product list navigation bar */
 
-.pos .breadcrumbs{
+.makemyday .breadcrumbs{
     display: inline-block;
     text-align: left;
     float:left;
 }
-.pos .breadcrumb{
+.makemyday .breadcrumb{
     float: left;
     display: inline-block;
     line-height: 48px;
     height: 48px;
     min-width: 48px;
 }
-.pos .breadcrumb:last-child {
+.makemyday .breadcrumb:last-child {
     padding-right: 3px;
     border-right: 1px solid #c5c5c5;
 }
-.pos .breadcrumb-button {
+.makemyday .breadcrumb-button {
     display: inline-block;
     padding: 0 9px;
     vertical-align: top;
@@ -827,7 +827,7 @@ td {
     font-size: 14px;
     cursor: pointer;
 }
-.pos .breadcrumb-button.breadcrumb-home {
+.makemyday .breadcrumb-button.breadcrumb-home {
     line-height: 50px;
     padding: 0;
     width: 50px;
@@ -835,21 +835,21 @@ td {
     text-align: center;
 }
 
-.pos .breadcrumb-arrow{
+.makemyday .breadcrumb-arrow{
     width: 28px;
 }
-.pos .breadcrumb-homeimg {
+.makemyday .breadcrumb-homeimg {
     width: 27px;
     margin: 12px 6px;
 }
 
 /*  b) the search box */
 
-.pos .searchbox {
+.makemyday .searchbox {
     position: absolute;
     right: 2px;
 }
-.pos .searchbox input {
+.makemyday .searchbox input {
     width: 100px;
     border: 1px solid #cecbcb;
     padding: 10px 20px;
@@ -861,12 +861,12 @@ td {
     font-family: "Lato","Lucida Grande", Helvetica, Verdana, Arial;
     font-size: 13px;
 }
-.pos .searchbox input:focus {
+.makemyday .searchbox input:focus {
     outline: none;
     box-shadow: 0px 0px 0px 2px rgb(153, 153, 255) inset;
     color: rgb(153, 153, 255);
 }
-.pos .search-clear {
+.makemyday .search-clear {
     position: absolute;
     width: 30px;
     height: 30px;
@@ -877,22 +877,22 @@ td {
 
 /*  c) the categories list */
 
-.pos .categories {
+.makemyday .categories {
     position: relative;
     border-bottom: solid 3px rgb(110, 200, 155);
 }
-.pos .categories h4 {
+.makemyday .categories h4 {
     display: inline-block;
     margin: 9px 5px;
 }
 
-.pos .category-list {
+.makemyday .category-list {
     text-align: left;
     padding: 10px;
     background: rgb(229, 229, 229);
     border-bottom: 1px solid #cecece;
 }
-.pos .category-list.simple {
+.makemyday .category-list.simple {
     padding: 0px;
     background: #cecece;
     display: -webkit-flex;
@@ -905,7 +905,7 @@ td {
 
 /*  d) the category button */
 
-.pos .category-button {
+.makemyday .category-button {
     position: relative;
     vertical-align: top;
     display: inline-block;
@@ -920,7 +920,7 @@ td {
     cursor: pointer;
 }
 
-.pos .category-simple-button{
+.makemyday .category-simple-button{
     position: relative;
     display: inline-block;
     font-size: 14px;
@@ -933,7 +933,7 @@ td {
     cursor: pointer;
     background: #e2e2e2;
 }
-.pos .category-simple-button:active{
+.makemyday .category-simple-button:active{
     color: white;
     background: black;
 
@@ -944,7 +944,7 @@ td {
 
 
 
-.pos .category-button .category-img {
+.makemyday .category-button .category-img {
     position: relative;
     width: 120px;
     height: 100px;
@@ -952,13 +952,13 @@ td {
     cursor: pointer;
 }
 
-.pos .category-button .category-img img {
+.makemyday .category-button .category-img img {
     max-height: 100px;
     max-width:  120px;
     vertical-align: middle;
 }
 
-.pos .category-button .category-name {
+.makemyday .category-button .category-name {
     position: absolute;
     -webkit-box-sizing: border-box;
        -moz-box-sizing: border-box;
@@ -979,7 +979,7 @@ td {
 
 /*  e) the product */
 
-.pos .product {
+.makemyday .product {
     position:relative;
     vertical-align: top;
     display: inline-block;
@@ -996,7 +996,7 @@ td {
     cursor: pointer;
 }
 
-.pos .product .product-img {
+.makemyday .product .product-img {
     position: relative;
     width: 120px;
     height: 100px;
@@ -1004,13 +1004,13 @@ td {
     text-align: center;
 }
 
-.pos .product .product-img img {
+.makemyday .product .product-img img {
     max-height: 100px;
     max-width:  120px;
     vertical-align: middle;
 }
 
-.pos .product .price-tag {
+.makemyday .product .price-tag {
     position: absolute;
     top: 2px;
     right: 2px;
@@ -1022,7 +1022,7 @@ td {
     border-radius: 2px;
 }
 
-.pos .product .product-name {
+.makemyday .product .product-name {
     position: absolute;
     -webkit-box-sizing: border-box;
        -moz-box-sizing: border-box;
@@ -1048,7 +1048,7 @@ td {
 
 /*  ********* The Screens  ********* */
 
-.pos .screen {
+.makemyday .screen {
     position:absolute;
     text-align: center;
     top:0px;
@@ -1057,21 +1057,21 @@ td {
     overflow: auto;
     -webkit-overflow-scrolling: touch;
 }
-.pos .screen header h2 {
+.makemyday .screen header h2 {
     margin-top: 0px;
     padding-top: 7px;
 }
-.pos .screen p{
+.makemyday .screen p{
     font-size: 18px;
 }
-.pos .dialog{
+.makemyday .dialog{
     width: 500px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 50px;
     text-align: center;
 }
-.pos .dialog p{
+.makemyday .dialog p{
     font-size: 25px;
     margin-top: 10px;
     color: #5a5a5a;
@@ -1177,31 +1177,31 @@ td {
 
 /* a) Layout for the Product Screen */
 
-.pos .screen .layout-table {
+.makemyday .screen .layout-table {
     border:none;
     width:100%;
     height:100%;
 }
 
-.pos .screen .header-row {
+.makemyday .screen .header-row {
     border:none;
     width:100%;
     height:0px;
 }
 
-.pos .screen .header-cell{
+.makemyday .screen .header-cell{
     border:none;
     width:100%;
     height:0px;
 }
-.pos .screen .content-row {
+.makemyday .screen .content-row {
     width:100%;
     height:100%;
 }
-.pos .screen .content-cell{
+.makemyday .screen .content-cell{
     width:100%;
 }
-.pos .screen .content-cell .content-container{
+.makemyday .screen .content-cell .content-container{
     height:100%;
     position:relative;
 }
@@ -1209,7 +1209,7 @@ td {
 
 /* b) The payment screen */
 
-.pos .payment-numpad {
+.makemyday .payment-numpad {
     display: inline-block;
     width: 50%;
     box-sizing: border-box;
@@ -1217,7 +1217,7 @@ td {
     text-align: center;
     float: left;
 }
-.pos .payment-numpad .numpad {
+.makemyday .payment-numpad .numpad {
     float: none;
     border-radius: 4px;
     border-top: 1px solid;
@@ -1227,47 +1227,47 @@ td {
     overflow: hidden;
     margin: 0;
 }
-.pos .payment-numpad .numpad button {
+.makemyday .payment-numpad .numpad button {
     width: 74px;
     height: 74px;
 }
-.pos .payment-numpad .numpad button:first-child {
+.makemyday .payment-numpad .numpad button:first-child {
     border-top-left-radius: 4px;
 }
-.pos .payment-numpad .numpad button:nth-child(16) {
+.makemyday .payment-numpad .numpad button:nth-child(16) {
     border-bottom-left-radius: 4px;
 }
 
-.pos .paymentlines-container {
+.makemyday .paymentlines-container {
     padding: 16px;
     padding-top: 0;
     border-bottom: dashed 1px gainsboro;
     min-height: 154px;
 }
 
-.pos .paymentlines {
+.makemyday .paymentlines {
     width: 100%;
 }
-.pos .paymentlines .controls {
+.makemyday .paymentlines .controls {
     width: 40px;
 }
-.pos .paymentlines .label > * {
+.makemyday .paymentlines .label > * {
     font-size: 16px;
     padding: 8px;
 }
-.pos .paymentlines tbody{
+.makemyday .paymentlines tbody{
     background: white;
     border-radius: 3px;
 }
-.pos .paymentline{
+.makemyday .paymentline{
     font-size: 22px;
 }
-.pos .paymentline.selected {
+.makemyday .paymentline.selected {
     font-size: 22px;
     background: #6EC89B;
     color: white;
 }
-.pos .paymentline.selected .edit {
+.makemyday .paymentline.selected .edit {
     background: white;
     color: #6EC89B;
     outline: 3px blue;
@@ -1275,30 +1275,30 @@ td {
     position: relative;
     border-radius: 3px;
 }
-.pos .paymentline > *{
+.makemyday .paymentline > *{
     padding: 8px 12px;
 }
-.pos .paymentline .col-due,
-.pos .paymentline .col-tendered,
-.pos .paymentline .col-change {
+.makemyday .paymentline .col-due,
+.makemyday .paymentline .col-tendered,
+.makemyday .paymentline .col-change {
     min-width: 90px;
 }
-.pos .paymentline.extra .col-due {
+.makemyday .paymentline.extra .col-due {
     border-radius: 0 0 6px 6px;
     border-top: solid 1px rgb(230, 230, 230);
     font-weight: bold;
 }
-.pos .paymentline .col-change.highlight {
+.makemyday .paymentline .col-change.highlight {
     background: rgb(184, 152, 204);
 }
-.pos .paymentline .col-name {
+.makemyday .paymentline .col-name {
     font-size: 16px;
 }
-.pos .paymentline .delete-button{
+.makemyday .paymentline .delete-button{
     cursor: pointer;
     text-align: center;
 }
-.pos .payment-buttons {
+.makemyday .payment-buttons {
     display: inline-block;
     width: 50%;
     box-sizing: border-box;
@@ -1377,7 +1377,7 @@ td {
 
 /* c) The receipt screen */
 
-.pos .receipt-screen .centered-content .button {
+.makemyday .receipt-screen .centered-content .button {
     line-height: 40px;
     padding: 3px 13px;
     font-size: 20px;
@@ -1390,12 +1390,12 @@ td {
     cursor: pointer;
 }
 
-.pos .pos-receipt-container {
+.makemyday .makemyday-receipt-container {
     font-size: 0.75em;
     text-align: center;
 }
 
-.pos .pos-sale-ticket {
+.makemyday .makemyday-sale-ticket {
     text-align: left;
     width: 300px;
     background-color: white;
@@ -1409,19 +1409,19 @@ td {
     border-radius: 3px;
     overflow: hidden;
 }
-.pos .pos-sale-ticket pre{
+.makemyday .makemyday-sale-ticket pre{
     font-family: "Inconsolata";
 }
-.pos .pos-sale-ticket .emph{
+.makemyday .makemyday-sale-ticket .emph{
     font-size: 20px;
     margin:5px;
 }
-.pos .pos-sale-ticket table {
+.makemyday .makemyday-sale-ticket table {
     width: 100%;
     border: 0;
     table-layout: fixed;
 }
-.pos .pos-sale-ticket table td {
+.makemyday .makemyday-sale-ticket table td {
     border: 0;
     word-wrap: break-word;
 }
@@ -1439,54 +1439,54 @@ td {
         color: white !important;
     }
     .oe_leftbar,
-    .pos .pos-topheader, 
-    .pos .pos-leftpane, 
-    .pos .keyboard_frame,
-    .pos .receipt-screen header,
-    .pos .receipt-screen .top-content,
-    .pos .receipt-screen .centered-content .button {
+    .makemyday .makemyday-topheader, 
+    .makemyday .makemyday-leftpane, 
+    .makemyday .keyboard_frame,
+    .makemyday .receipt-screen header,
+    .makemyday .receipt-screen .top-content,
+    .makemyday .receipt-screen .centered-content .button {
         display: none !important;
     }
-    .pos,
-    .pos .pos-content,
-    .pos .rightpane,
-    .pos .screen, 
-    .pos .window, 
-    .pos .window .subwindow, 
-    .pos .subwindow .subwindow-container{
+    .makemyday,
+    .makemyday .makemyday-content,
+    .makemyday .rightpane,
+    .makemyday .screen, 
+    .makemyday .window, 
+    .makemyday .window .subwindow, 
+    .makemyday .subwindow .subwindow-container{
         display: block;
         position: static;
         height: auto;
     }
-    .pos{
+    .makemyday{
         background: white !important;
     }
-    .pos .rightpane {
+    .makemyday .rightpane {
         left: 0px !important;
         background-color: white;
     }
-    .pos .receipt-screen {
+    .makemyday .receipt-screen {
         text-align: left;
     }
-    .pos .receipt-screen .centered-content{
+    .makemyday .receipt-screen .centered-content{
         position: static;
         border: none;
     }
-    .pos .pos-receipt-container {
+    .makemyday .makemyday-receipt-container {
         text-align: left;
     }
-    .pos-actionbar {
+    .makemyday-actionbar {
         display: none !important;
     }
     .debug-widget{
         display: none !important;
     }
-    .pos *{
+    .makemyday *{
         text-shadow: none !important;
         box-shadow: none !important;
         background: transparent !important;
     }
-    .pos .pos-sale-ticket{
+    .makemyday .makemyday-sale-ticket{
         margin: 0;
         margin-left: auto !important;
         margin-right: auto !important;
@@ -1498,14 +1498,14 @@ td {
 
 /* d) The Scale screen */
 
-.pos .scale-screen .product-price{
+.makemyday .scale-screen .product-price{
     font-size: 25px;
     margin: 16px;
     text-align: center;
     display: inline-block;
     width: 40%;
 }
-.pos .scale-screen .computed-price{
+.makemyday .scale-screen .computed-price{
     font-size: 25px;
     display: inline-block;
     text-align: right;
@@ -1521,7 +1521,7 @@ td {
     box-shadow: 0px 2px 0px rgb(225,225,225) inset;
     float: right;
 }
-.pos .scale-screen .buy-product{
+.makemyday .scale-screen .buy-product{
     text-align: center;
     font-size: 32px;
     background: rgb(110,200,155);
@@ -1532,7 +1532,7 @@ td {
     cursor: pointer;
 }
 
-.pos .scale-screen .weight{
+.makemyday .scale-screen .weight{
     text-align: right;
     margin: 16px;
     background: white;
@@ -1548,41 +1548,41 @@ td {
 
 /* e) The Client List Screen */
 
-.pos .clientlist-screen .client-list{
+.makemyday .clientlist-screen .client-list{
     font-size: 16px;
     width: 100%;
     line-height: 40px;
 }
-.pos .clientlist-screen .client-list th,
-.pos .clientlist-screen .client-list td {
+.makemyday .clientlist-screen .client-list th,
+.makemyday .clientlist-screen .client-list td {
     padding: 0px 8px;
 }
-.pos .clientlist-screen .client-list tr{
+.makemyday .clientlist-screen .client-list tr{
     transition: all 150ms linear;
     background: rgb(230,230,230);
 }
-.pos .clientlist-screen .client-list thead > tr,
-.pos .clientlist-screen .client-list tr:nth-child(even) {
+.makemyday .clientlist-screen .client-list thead > tr,
+.makemyday .clientlist-screen .client-list tr:nth-child(even) {
     background: rgb(247,247,247);
 }
-.pos .clientlist-screen .client-list tr.highlight{
+.makemyday .clientlist-screen .client-list tr.highlight{
     transition: all 150ms linear;
     background: rgb(110,200,155) !important;
     color: white;
 }
-.pos .clientlist-screen .client-list tr.lowlight{
+.makemyday .clientlist-screen .client-list tr.lowlight{
     transition: all 150ms linear;
     background: rgb(216, 238, 227);
 }
-.pos .clientlist-screen .client-list tr.lowlight:nth-child(even){
+.makemyday .clientlist-screen .client-list tr.lowlight:nth-child(even){
     transition: all 150ms linear;
     background: rgb(227, 246, 237);
 }
-.pos .clientlist-screen .client-details{
+.makemyday .clientlist-screen .client-details{
     padding: 16px;
     border-bottom: solid 5px rgb(110,200,155);
 }
-.pos .clientlist-screen .client-picture{
+.makemyday .clientlist-screen .client-picture{
     height: 64px;
     width: 64px;
     border-radius: 32px;
@@ -1593,7 +1593,7 @@ td {
     background: white;
     position: relative;
 }
-.pos .clientlist-screen .client-picture > img {
+.makemyday .clientlist-screen .client-picture > img {
     position: absolute;
     top: -9999px;
     bottom: -9999px;
@@ -1602,11 +1602,11 @@ td {
     max-height: 64px;
     margin: auto;
 }
-.pos .clientlist-screen .client-picture > .fa {
+.makemyday .clientlist-screen .client-picture > .fa {
     line-height: 64px;
     font-size: 32px;
 }
-.pos .clientlist-screen .client-picture .image-uploader {
+.makemyday .clientlist-screen .client-picture .image-uploader {
     position: absolute;
     z-index: 1000;
     top: 0;
@@ -1616,47 +1616,47 @@ td {
     opacity: 0;
     cursor: pointer;
 }
-.pos .clientlist-screen .client-name {
+.makemyday .clientlist-screen .client-name {
     font-size: 32px;
     line-height: 64px;
     margin-bottom:16px;
 }
-.pos .clientlist-screen .edit-buttons {
+.makemyday .clientlist-screen .edit-buttons {
     position: absolute;
     right: 16px;
     top: 10px;
 }
-.pos .clientlist-screen .edit-buttons .button{
+.makemyday .clientlist-screen .edit-buttons .button{
     display: inline-block;
     margin-left: 16px;
     color: rgb(128,128,128);
     cursor: pointer;
     font-size: 36px;
 }
-.pos .clientlist-screen .client-details-box{
+.makemyday .clientlist-screen .client-details-box{
     position: relative;
     font-size: 16px;
 }
-.pos .clientlist-screen .client-details-left{
+.makemyday .clientlist-screen .client-details-left{
     width: 50%;
     float: left;
 }
-.pos .clientlist-screen .client-details-right{
+.makemyday .clientlist-screen .client-details-right{
     width: 50%;
     float: right;
 }
-.pos .clientlist-screen .client-detail{
+.makemyday .clientlist-screen .client-detail{
     line-height: 24px;
 }
-.pos .clientlist-screen .client-detail > .label{
+.makemyday .clientlist-screen .client-detail > .label{
     font-weight: bold;
     display: inline-block;
     width: 75px;
     text-align: right;
     margin-right: 8px;
 }
-.pos .clientlist-screen .client-details input,
-.pos .clientlist-screen .client-details select
+.makemyday .clientlist-screen .client-details input,
+.makemyday .clientlist-screen .client-details select
 {
     padding: 4px;
     border-radius: 3px;
@@ -1669,25 +1669,25 @@ td {
     font-size: 14px;
     box-sizing: border-box;
 }
-.pos .clientlist-screen .client-details input.client-name {
+.makemyday .clientlist-screen .client-details input.client-name {
     font-size: 24px;
     line-height: 24px;
     margin: 18px 6px;
     width: 340px;
 }
-.pos .clientlist-screen .client-detail > .empty{
+.makemyday .clientlist-screen .client-detail > .empty{
     opacity: 0.3;
 }
-.pos .clientlist-screen .searchbox{
+.makemyday .clientlist-screen .searchbox{
     right: auto;
     margin-left: -90px;
     margin-top:8px;
     left: 50%;
 }
-.pos .clientlist-screen .searchbox input{
+.makemyday .clientlist-screen .searchbox input{
     width: 120px;
 }
-.pos .clientlist-screen .button.new-customer {
+.makemyday .clientlist-screen .button.new-customer {
     left: 50%;
     margin-left: 120px;
 }
@@ -1695,7 +1695,7 @@ td {
 
 /*  ********* The OrderWidget  ********* */
 
-.pos .order-container{
+.makemyday .order-container{
     position: absolute;
     top: 0px;
     width:100%;
@@ -1703,7 +1703,7 @@ td {
     background: white;
 }
 
-.pos .order-scroller{
+.makemyday .order-scroller{
     width:100%;
     height:100%;
     overflow: hidden;
@@ -1711,13 +1711,13 @@ td {
     -webkit-overflow-scrolling: touch;
 }
 
-.pos .scrollable-y{
+.makemyday .scrollable-y{
     overflow: hidden !important;
     overflow-y: auto !important;
     -webkit-overflow-scrolling: touch !important;
 }
 
-.pos .order{
+.makemyday .order{
     background: white;
     padding-bottom: 8px;
     padding-top: 8px;
@@ -1727,26 +1727,26 @@ td {
     -webkit-transform: translate3d(0,0,0);
 }
 
-.pos .order .order-empty {
+.makemyday .order .order-empty {
     text-align: center;
     margin: 48px;
     color: #DDD;
 }
-.pos .order .order-empty .fa {
+.makemyday .order .order-empty .fa {
     font-size: 64px;
 }
-.pos .order .order-empty h1 {
+.makemyday .order .order-empty h1 {
     font-size: 20px;
 }
 
-.pos .order .summary{
+.makemyday .order .summary{
     width:100%;
     text-align:right;
     font-weight: bold;
     margin-top:20px;
     margin-bottom:10px;
 }
-.pos .order .summary .line{
+.makemyday .order .summary .line{
     float: right;
     margin-right:15px;
     margin-left: 15px;
@@ -1754,21 +1754,21 @@ td {
     border-top: solid 2px;
     border-color:#777;
 }
-.pos .order .summary .total {
+.makemyday .order .summary .total {
     font-size: 22px;
 }
-.pos .order .summary .line .subentry{
+.makemyday .order .summary .line .subentry{
     font-size: 16px;
     font-weight: normal;
     text-align: center;
 }
-.pos .order .summary .line.empty{
+.makemyday .order .summary .line.empty{
     text-align: right;
     border-color:#BBB;
     color:#999;
 }
 
-.pos .order .summary .fidpoints{
+.makemyday .order .summary .fidpoints{
     position: absolute;
     left: 20px;
     padding: 10px;
@@ -1789,7 +1789,7 @@ td {
 
 /*  ********* The OrderLineWidget  ********* */
 
-.pos .order .orderline{
+.makemyday .order .orderline{
     width:100%;
     margin:0px;
     padding-top:3px;
@@ -1805,25 +1805,25 @@ td {
        -moz-transition: background 250ms ease-in-out;
             transition: background 250ms ease-in-out;
 }
-.pos .order .orderline:active{
+.makemyday .order .orderline:active{
     background: rgba(140,143,183,0.05);
     -webkit-transition: background 50ms ease-in-out;
        -moz-transition: background 50ms ease-in-out;
             transition: background 50ms ease-in-out;
 }
-.pos .order .orderline.empty:active{
+.makemyday .order .orderline.empty:active{
     background: transparent;
     cursor: default;
 }
 
-.pos .order .orderline.selected{
+.makemyday .order .orderline.selected{
     background: rgba(140,143,183,0.2);
     -webkit-transition: background 250ms ease-in-out;
        -moz-transition: background 250ms ease-in-out;
             transition: background 250ms ease-in-out;
     cursor: default;
 }
-.pos .order .orderline .product-name{
+.makemyday .order .orderline .product-name{
     padding:0;
     display:inline-block;
     font-weight: bold;
@@ -1831,16 +1831,16 @@ td {
     overflow:hidden;
     text-overflow: ellipsis;
 }
-.pos .order .orderline .price{
+.makemyday .order .orderline .price{
     padding:0;
     font-weight: bold;
     float:right;
 }
-.pos .order .orderline .info-list{
+.makemyday .order .orderline .info-list{
     color: #888;
     margin-left:10px;
 }
-.pos .order .orderline .info-list em{
+.makemyday .order .orderline .info-list em{
     color: #777;
     font-weight: bold;
     font-style:normal;
@@ -1857,7 +1857,7 @@ td {
     text-shadow: 0px 2px white, 0px 2px 2px rgba(0, 0, 0, 0.27);
     border-bottom: dashed 1px rgb(215,215,215);
 }
-.pos .splitbill-screen .order {
+.makemyday .splitbill-screen .order {
     background: white;
     padding-bottom:15px;
     padding-top:15px;
@@ -1927,18 +1927,18 @@ td {
 
 /*  ********* The ActionBarWidget  ********* */
 
-.pos .pos-actionbar{
+.makemyday .makemyday-actionbar{
     height: 105px;
     background: #f5f5f5;    /*#ebebeb;*/
     border-top: solid 1px #cecece;
     z-index:900;
 }
 
-.pos .pos-actionbar ul{
+.makemyday .makemyday-actionbar ul{
     list-style:  none;
 }
 
-.pos .pos-actionbar-button-list{
+.makemyday .makemyday-actionbar-button-list{
     height: 100%;
     margin: 0px;
     padding-left:3px;
@@ -1946,7 +1946,7 @@ td {
     overflow:hidden;
 }
 
-.pos .pos-actionbar .button{
+.makemyday .makemyday-actionbar .button{
     width: 90px;
     height: 90px;
     text-align:center;
@@ -1964,13 +1964,13 @@ td {
 
     background: #e2e2e2;
 }
-.pos .pos-actionbar .button .label{
+.makemyday .makemyday-actionbar .button .label{
     margin-top: 37px;
 }
-.pos .pos-actionbar .button .icon{
+.makemyday .makemyday-actionbar .button .icon{
     margin-top: 10px;
 }
-.pos .pos-actionbar .button:active{
+.makemyday .makemyday-actionbar .button:active{
     color: white;
     background: #7f82ac;
     border: 1px solid #7f82ac;
@@ -1980,10 +1980,10 @@ td {
     -webkit-transition-timing-function: ease-out;
 }
 
-.pos .pos-actionbar .button.disabled{
+.makemyday .makemyday-actionbar .button.disabled{
     opacity: 0.5;
 }
-.pos .pos-actionbar .button.disabled:active{
+.makemyday .makemyday-actionbar .button.disabled:active{
     border: 1px solid #cacaca;
     color: #555;
     cursor: default;
@@ -1991,12 +1991,12 @@ td {
     background: #e2e2e2;
 }
 
-.pos .pos-actionbar .button.rightalign{
+.makemyday .makemyday-actionbar .button.rightalign{
     float:right;
 }
 /*  ********* The Debug Widget  ********* */
 
-.pos .debug-widget{
+.makemyday .debug-widget{
     z-index:100000;
     position: absolute;
     right: 10px;
@@ -2010,7 +2010,7 @@ td {
     cursor: move;
     -webkit-transform: translate3d(0,0,0);
 }
-.pos .debug-widget .toggle{
+.makemyday .debug-widget .toggle{
     position: absolute;
     font-size: 16px;
     cursor:pointer;
@@ -2019,17 +2019,17 @@ td {
     padding:10px;
     padding-right:15px;
 }
-.pos .debug-widget .content{
+.makemyday .debug-widget .content{
     overflow: hidden;
 }
-.pos .debug-widget h1{
+.makemyday .debug-widget h1{
     background:black;
     padding-top: 10px;
     padding-left: 10px;
     margin-top:0;
     margin-bottom:0;
 }
-.pos .debug-widget .category{
+.makemyday .debug-widget .category{
     background: black;
     padding-left: 10px;
     margin: 0px;
@@ -2037,16 +2037,16 @@ td {
     padding-top:3px;
     padding-bottom:3px;
 }
-.pos .debug-widget .button{
+.makemyday .debug-widget .button{
     padding: 5px;
     padding-left: 15px;
     display: block;
     cursor:pointer;
 }
-.pos .debug-widget .button:active{
+.makemyday .debug-widget .button:active{
     background: rgba(96,21,177,0.45);
 }
-.pos .debug-widget input{
+.makemyday .debug-widget input{
     margin-left:10px;
     margin-top:7px;
     padding: 4px;
@@ -2056,16 +2056,16 @@ td {
     -moz-box-sizing: border-box;
     border-radius: 3px;
 }
-.pos .debug-widget .status{
+.makemyday .debug-widget .status{
     padding: 5px;
     padding-left: 15px;
     display: block;
     cursor:default;
 }
-.pos .debug-widget .status.on{
+.makemyday .debug-widget .status.on{
     background-color: #6cd11d;
 }
-.pos .debug-widget .event{
+.makemyday .debug-widget .event{
     padding: 5px;
     padding-left: 15px;
     display: block;
@@ -2075,7 +2075,7 @@ td {
 
 /*  ********* The PopupWidgets  ********* */
 
-.pos .modal-dialog{
+.makemyday .modal-dialog{
     position: absolute;
     left: 0;
     top: 0;
@@ -2084,7 +2084,7 @@ td {
     background-color: rgba(0,0,0,0.5);
     z-index:1000;
 }
-.pos .modal-dialog .popup{
+.makemyday .modal-dialog .popup{
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
     margin: auto;
@@ -2100,20 +2100,20 @@ td {
     font-family: 'Lato';
     font-family: Lato;
 }
-.pos .popup .title {
+.makemyday .popup .title {
     background: rgba(255,255,255,0.5);
     margin: 0;
     padding: 20px;
     border-radius: 3px 3px 0px 0px;
     border-bottom: solid 1px rgba(60,60,60,0.1);
 }
-.pos .popup .body {
+.makemyday .popup .body {
     font-weight: normal;
     font-size: 18px;
     margin: 16px;
     margin-top: 20px;
 }
-.pos .popup .body.traceback {
+.makemyday .popup .body.traceback {
     height: 238px;
     overflow: auto;
     font-size: 14px;
@@ -2124,7 +2124,7 @@ td {
        -moz-user-select: text;
             user-select: text;
 }
-.pos .popup .footer{
+.makemyday .popup .footer{
     position:absolute;
     bottom:0;
     left:0;
@@ -2132,7 +2132,7 @@ td {
     height:60px;
     border-top: solid 1px rgba(60,60,60,0.1);
 }
-.pos .popup .button{
+.makemyday .popup .button{
     float:right;
     width: 110px;
     height: 40px;
@@ -2151,11 +2151,11 @@ td {
 
     background: rgba(0,0,0,0.05);
 }
-.pos .popup .button.icon {
+.makemyday .popup .button.icon {
     width: 40px;
     font-size: 20px;
 }
-.pos .popup .button:active{
+.makemyday .popup .button:active{
     color: white;
     background: black;
     border: 1px solid black;
@@ -2166,7 +2166,7 @@ td {
 }
 
 
-.pos .popup .button.big-left{
+.makemyday .popup .button.big-left{
     position:absolute;
     top: 120px;
     left:40px;
@@ -2175,7 +2175,7 @@ td {
     line-height:180px;
 }
 
-.pos .popup .button.big-right{
+.makemyday .popup .button.big-right{
     position:absolute;
     top: 120px;
     right:40px;
@@ -2183,8 +2183,8 @@ td {
     height: 180px;
     line-height:180px;
 }
-.pos .popup input,
-.pos .popup-input {
+.makemyday .popup input,
+.makemyday .popup-input {
     text-align: left;
     display: inline-block;
     overflow: hidden;
@@ -2200,24 +2200,24 @@ td {
     box-sizing: border-box;
     width: 80%;
 }
-.pos .popup-number .popup-input {
+.makemyday .popup-number .popup-input {
     text-align: center;
 }
-.pos .popup input:focus,
-.pos .popup-input.active {
+.makemyday .popup input:focus,
+.makemyday .popup-input.active {
     outline: none;
     box-shadow: 0px 0px 0px 3px #6EC89B;
 }
-.pos .popup.popup-error {
+.makemyday .popup.popup-error {
     background-color: #F3BBBB;
     color: rgb(168, 89, 89);
     box-shadow: 0px 10px 20px rgba(92,51,51,0.4);
 }
-.pos .popup.popup-error .title {
+.makemyday .popup.popup-error .title {
     color: white;
     background: rgba(255, 76, 76, 0.5);
 }
-.pos .popup.popup-selection .selection {
+.makemyday .popup.popup-selection .selection {
     overflow-y: auto;
     max-height: 273px;
     font-size: 16px;
@@ -2227,41 +2227,41 @@ td {
     border-top: solid 3px #6EC89B;
     
 }
-.pos .popup.popup-selection .selection-item {
+.makemyday .popup.popup-selection .selection-item {
     width: auto;
     background: rgb(230,230,230);
     cursor: pointer;
     text-align: left;
     padding: 0px 16px;
 }
-.pos .popup.popup-selection .selection-item:nth-child(even) {
+.makemyday .popup.popup-selection .selection-item:nth-child(even) {
     background: rgb(247,247,247);
 }
-.pos .popup.popup-number {
+.makemyday .popup.popup-number {
     width: 300px;
     height: 450px;
 }
-.pos .footer.centered {
+.makemyday .footer.centered {
     text-align: center;
 }
-.pos .footer.centered .button {
+.makemyday .footer.centered .button {
     float: none;
     display: inline-block;
     margin-left: 3px;
     margin-right: 3px;
 }
-.pos .popup-numpad {
+.makemyday .popup-numpad {
     margin: 12px auto;
     text-align: center;
     width: 254px;
 }
-.pos .popup-number .title,
-.pos .popup-textinput .title
+.makemyday .popup-number .title,
+.makemyday .popup-textinput .title
 {
     margin-bottom: 20px;
 }
-.pos .popup-numpad .input-button,
-.pos .popup-numpad .mode-button {
+.makemyday .popup-numpad .input-button,
+.makemyday .popup-numpad .mode-button {
     background: none;
     height: 50px;
     width: 50px;
@@ -2271,38 +2271,38 @@ td {
     vertical-align: top;
     color: #444;
 }
-.pos .popup-numpad .input-button:active,
-.pos .popup-numpad .mode-button:active {
+.makemyday .popup-numpad .input-button:active,
+.makemyday .popup-numpad .mode-button:active {
     background: #444;
     color: white;
     border-color: #444;
 }
 
-.pos .popup.popup-password {
+.makemyday .popup.popup-password {
     width: 254px;
 }
-.pos .popup-password .mode-button.add,
-.pos .popup-password .input-button.dot {
+.makemyday .popup-password .mode-button.add,
+.makemyday .popup-password .input-button.dot {
     display: none;
 }
-.pos .popup-password .popup-numpad {
+.makemyday .popup-password .popup-numpad {
     width: 190px;
     text-align: left;
 }
-.pos .popup-password .popup-input {
+.makemyday .popup-password .popup-input {
     width: 70%;
     -webkit-text-security: disc;
  }
 
-.pos .popup .body ul,
-.pos .popup ul.body {
+.makemyday .popup .body ul,
+.makemyday .popup ul.body {
     text-align: left;
     margin-left: 1em;
 }
-.pos .popup .body li {
+.makemyday .popup .body li {
     text-indent: 1em;
 }
-.pos .popup .body li:before {
+.makemyday .popup .body li:before {
     content: '—';
     position: relative;
     font-size: 0.6em;
@@ -2313,15 +2313,15 @@ td {
 
 /*  ********* The Webkit Scrollbar  ********* */
 
-.pos *::-webkit-scrollbar{
+.makemyday *::-webkit-scrollbar{
     width:  4px;
     height: 4px;
 }
-.pos *::-webkit-scrollbar-track{
+.makemyday *::-webkit-scrollbar-track{
     background: rgb(224,224,224);
     border-left: solid 1px rgb(200,200,200);
 }
-.pos *::-webkit-scrollbar-thumb{
+.makemyday *::-webkit-scrollbar-thumb{
     background: rgb(168,168,168);
     background: #393939;
     min-height: 30px;
@@ -2357,13 +2357,13 @@ td {
 
 /*  ********* Unsupported Browser Page ********* */
 
-.pos .not-supported-browser{
+.makemyday .not-supported-browser{
     position: absolute;
     z-index: 100000;
     top: 0; bottom: 0; left: 0; right: 0;
     background: #2C2C2C;
 }
-.pos .not-supported-browser .message{
+.makemyday .not-supported-browser .message{
     width:600px;
     margin-top: 100px;
     margin-left: auto;
@@ -2372,6 +2372,6 @@ td {
     color: #d3d3d3;
     font-size: 14px;
 }
-.pos .not-supported-browser img{
+.makemyday .not-supported-browser img{
     border-collapse: separate;
 }

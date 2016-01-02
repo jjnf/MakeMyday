@@ -12,7 +12,7 @@ class makemyday_configuration(osv.TransientModel):
             help='This module adds several restaurant features to the Point of Sale: \n\n- Bill Printing: Allows you to print a receipt before the order is paid \n\n- Bill Splitting: Allows you to split an order into different orders \n\n- Kitchen Order Printing: allows you to print orders updates to kitchen or bar printers'),
         'module_pos_loyalty': fields.boolean("Loyalty Program",
             help='Allows you to define a loyalty program in the point of sale, where the customers earn loyalty points and get rewards'),
-        'module_makemyday_discount': fields.selection([
+        'module_pos_discount': fields.selection([
             (0, "Allow discounts on order lines only"),
             (1, "Allow global discounts")
             ], "Discount",

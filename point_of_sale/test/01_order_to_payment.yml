@@ -46,7 +46,7 @@
 -
   I create a PoS order with 2 units of PCSC234 at 450 EUR (Tax Incl) and 3 units of PCSC349 at 300 EUR. (Tax Excl)
 -
-  !record {model: makemyday.order, id: makemyday_order_pos0}:
+  !record {model: makemyday.order, id: makemyday_order_makemyday0}:
     company_id: base.main_company
     lines:
       - name: OL/0001
@@ -63,7 +63,7 @@
   I check that the total of the order is equal to 450*2 + 300*3*1.05 and the tax of the order is equal to 900 -(450 * 2 / 1.1) + 300*0.05*3
 - 
   !python {model: makemyday.order}: |
-    order = self.browse(cr, uid, ref('makemyday_order_pos0'))
+    order = self.browse(cr, uid, ref('makemyday_order_makemyday0'))
     assert(abs(order.amount_total - (450*2 + 300*3*1.05)) < 0.01), "The order has a wrong amount, tax included"
     assert(abs(order.amount_tax - (900-(450*2/1.1) + 300*0.05*3)) < 0.01), "The order has a wrong tax amount"
 - 
@@ -76,59 +76,59 @@
 - 
   !python {model: makemyday.discount}: |
     self.apply_discount(cr, uid, [ref("makemyday_discount_0")], {"active_model": "makemyday.order",
-      "active_ids": [ref("makemyday_order_pos0")], "active_id": ref("makemyday_order_pos0"), })
+      "active_ids": [ref("makemyday_order_makemyday0")], "active_id": ref("makemyday_order_makemyday0"), })
 - 
   I check that the total of the order is now equal to (450*2 + 300*3*1.05)*0.95
 - 
   !python {model: makemyday.order}: |
-    order = self.browse(cr, uid, ref('makemyday_order_pos0'))
+    order = self.browse(cr, uid, ref('makemyday_order_makemyday0'))
     assert(abs(order.amount_total - (450*2 + 300*3*1.05)*0.95) < 0.01), "The order has a wrong total including tax and discounts"
 -
   I click on the "Make Payment" wizard to pay the PoS order with a partial amount of 100.0 EUR
 - 
-  !record {model: makemyday.make.payment, id: makemyday_make_payment_0, context: '{"active_id": ref("makemyday_order_pos0"), "active_ids": [ref("makemyday_order_pos0")]}' }:
+  !record {model: makemyday.make.payment, id: makemyday_make_payment_0, context: '{"active_id": ref("makemyday_order_makemyday0"), "active_ids": [ref("makemyday_order_makemyday0")]}' }:
     amount: 100.0
 -
   I click on the validate button to register the payment.
 -
   !python {model: makemyday.make.payment}: |
-    self.check(cr, uid, [ref('makemyday_make_payment_0')], context={'active_id': ref('makemyday_order_pos0'), 'lang':'en_US', 'active_model': 'makemyday.order', 'tz': False, 'active_ids': [ref('makemyday_order_pos0')]} )
+    self.check(cr, uid, [ref('makemyday_make_payment_0')], context={'active_id': ref('makemyday_order_makemyday0'), 'lang':'en_US', 'active_model': 'makemyday.order', 'tz': False, 'active_ids': [ref('makemyday_order_makemyday0')]} )
 - |
   I check that the order is not marked as paid yet
 -
-  !assert {model: makemyday.order, id: makemyday_order_pos0}:
+  !assert {model: makemyday.order, id: makemyday_order_makemyday0}:
      - state == 'draft'
 - |
   On the second payment proposition, I check that it proposes me the remaining balance which is 1790.0 EUR
 - 
   !python {model: makemyday.make.payment}: |
-     defs = self.default_get(cr, uid, ['amount'], {'active_id': ref('makemyday_order_pos0')})
+     defs = self.default_get(cr, uid, ['amount'], {'active_id': ref('makemyday_order_makemyday0')})
      assert abs(defs['amount'] - ((450*2 + 300*3*1.05)*0.95-100.0)) < 0.01, "The remaining balance is incorrect"
 -
   I pay the remaining balance.
 - 
-  !record {model: makemyday.make.payment, id: makemyday_make_payment_1, context: '{"active_id": ref("makemyday_order_pos0"), "active_ids": [ref("makemyday_order_pos0")]}' }:
+  !record {model: makemyday.make.payment, id: makemyday_make_payment_1, context: '{"active_id": ref("makemyday_order_makemyday0"), "active_ids": [ref("makemyday_order_makemyday0")]}' }:
     amount: !eval >
       (450*2 + 300*3*1.05)*0.95-100.0
 -
   I click on the validate button to register the payment.
 -
   !python {model: makemyday.make.payment}: |
-    self.check(cr, uid, [ref('makemyday_make_payment_1')], context={'active_id': ref('makemyday_order_pos0')} )
+    self.check(cr, uid, [ref('makemyday_make_payment_1')], context={'active_id': ref('makemyday_order_makemyday0')} )
 - |
   I check that the order is marked as paid
 -
-  !assert {model: makemyday.order, id: makemyday_order_pos0}:
+  !assert {model: makemyday.order, id: makemyday_order_makemyday0}:
      - state == 'paid'
 - 
   I generate the journal entries
 -
   !python {model: makemyday.order}: |
-    self.create_account_move(cr, uid, [ref('makemyday_order_pos0')], {})
+    self.create_account_move(cr, uid, [ref('makemyday_order_makemyday0')], {})
 -
   I test that the generated journal entry is attached to the PoS order
 -
-  !assert {model: makemyday.order, id: makemyday_order_pos0}:
+  !assert {model: makemyday.order, id: makemyday_order_makemyday0}:
      - bool(account_move)
   
 

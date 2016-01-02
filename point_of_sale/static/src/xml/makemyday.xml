@@ -2,19 +2,19 @@
 <templates id="template" xml:space="preserve">
 
     <t t-name="Chrome">
-        <div class="pos">
-            <div class="pos-topheader">
-                <div class="pos-branding">
-                    <img class="pos-logo" src="/point_of_sale/static/src/img/logo.png" />
+        <div class="makemyday">
+            <div class="makemyday-topheader">
+                <div class="makemyday-branding">
+                    <img class="makemyday-logo" src="/point_of_sale/static/src/img/logo.png" />
                     <span class="placeholder-UsernameWidget"></span>
                 </div>
-                <div class="pos-rightheader">
+                <div class="makemyday-rightheader">
                     <span class="placeholder-OrderSelectorWidget"></span>
                     <!-- here goes header buttons -->
                 </div>
             </div>
 
-            <div class="pos-content">
+            <div class="makemyday-content">
 
                 <div class='window'>
                     <div class='subwindow'>
@@ -654,7 +654,7 @@
                     <div class="button print">
                         <i class='fa fa-print'></i> Print Receipt
                     </div>
-                    <div class="pos-receipt-container">
+                    <div class="makemyday-receipt-container">
                     </div>
                 </div>
             </div>
@@ -1210,7 +1210,7 @@
             <td class="paymentline-type">
                 <t t-esc="line.name"/>
             </td>
-            <td class="paymentline-amount pos-right-align">
+            <td class="paymentline-amount makemyday-right-align">
                 <input type="number" step="0.01" t-att-value="line.get_amount_str()" />
                 <span class='delete-payment-line'><img src="/point_of_sale/static/src/img/search_reset.gif" /></span>
             </td>
@@ -1255,9 +1255,9 @@
     </t>
 
     <t t-name="PosTicket">
-        <div class="pos-sale-ticket">
+        <div class="makemyday-sale-ticket">
             
-            <div class="pos-center-align"><t t-esc="moment().format('L LT')"/> <t t-esc="order.name"/></div>
+            <div class="makemyday-center-align"><t t-esc="moment().format('L LT')"/> <t t-esc="order.name"/></div>
             <br />
             <t t-esc="widget.makemyday.company.name"/><br />
             Phone: <t t-esc="widget.makemyday.company.phone || ''"/><br />
@@ -1280,15 +1280,15 @@
                     <td>
                         <t t-esc="orderline.get_product().display_name"/>
                          <t t-if="orderline.get_discount() > 0">
-                            <div class="pos-disc-font">
+                            <div class="makemyday-disc-font">
                                 With a <t t-esc="orderline.get_discount()"/>% discount
                             </div>
                         </t>
                     </td>
-                    <td class="pos-right-align">
+                    <td class="makemyday-right-align">
                         <t t-esc="orderline.get_quantity_str_with_unit()"/>
                     </td>
-                    <td class="pos-right-align">
+                    <td class="makemyday-right-align">
                         <t t-esc="widget.format_currency(orderline.get_display_price())"/>
                     </td>
                 </tr>
@@ -1297,27 +1297,27 @@
             <table class='receipt-total'>
                 <tr>
                     <td>Subtotal:</td>
-                    <td class="pos-right-align">
+                    <td class="makemyday-right-align">
                         <t t-esc="widget.format_currency(order.get_subtotal())"/>
                     </td>
                 </tr>
                 <t t-foreach="order.get_tax_details()" t-as="taxdetail">
                     <tr>
                         <td><t t-esc="taxdetail.name" /></td>
-                        <td class="pos-right-align">
+                        <td class="makemyday-right-align">
                             <t t-esc="widget.format_currency(taxdetail.amount)" />
                         </td>
                     </tr>
                 </t>
                 <tr>
                     <td>Discount:</td>
-                    <td class="pos-right-align">
+                    <td class="makemyday-right-align">
                         <t t-esc="widget.format_currency(order.get_total_discount())"/>
                     </td>
                 </tr>
                 <tr class="emph">
                     <td>Total:</td>
-                    <td class="pos-right-align">
+                    <td class="makemyday-right-align">
                         <t t-esc="widget.format_currency(order.get_total_with_tax())"/>
                     </td>
                 </tr>
@@ -1329,7 +1329,7 @@
                       <td>
                           <t t-esc="line.name"/>
                       </td>
-                      <td class="pos-right-align">
+                      <td class="makemyday-right-align">
                           <t t-esc="widget.format_currency(line.get_amount())"/>
                       </td>
                   </tr>
@@ -1337,7 +1337,7 @@
             </table>
             <br />
             <table class='receipt-change'>
-                <tr><td>Change:</td><td class="pos-right-align">
+                <tr><td>Change:</td><td class="makemyday-right-align">
                     <t t-esc="widget.format_currency(order.get_change())"/>
                     </td></tr>
             </table>

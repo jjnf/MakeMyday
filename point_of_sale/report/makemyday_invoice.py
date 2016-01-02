@@ -12,20 +12,20 @@ class PosInvoiceReport(osv.AbstractModel):
 
     def render_html(self, cr, uid, ids, data=None, context=None):
         report_obj = self.pool['report']
-        posorder_obj = self.pool['makemyday.order']
+        makemydayorder_obj = self.pool['makemyday.order']
         report = report_obj._get_report_from_name(cr, uid, 'account.report_invoice')
-        selected_orders = posorder_obj.browse(cr, uid, ids, context=context)
+        selected_orders = makemydayorder_obj.browse(cr, uid, ids, context=context)
         ids_to_print = []
-        invoiced_posorders_ids = []
+        invoiced_makemydayorders_ids = []
         for order in selected_orders:
             if order.invoice_id:
                 ids_to_print.append(order.invoice_id.id)
-                invoiced_posorders_ids.append(order.id)
+                invoiced_makemydayorders_ids.append(order.id)
 
-        not_invoiced_orders_ids = list(set(ids) - set(invoiced_posorders_ids))
+        not_invoiced_orders_ids = list(set(ids) - set(invoiced_makemydayorders_ids))
         if not_invoiced_orders_ids:
-            not_invoiced_posorders = posorder_obj.browse(cr, uid, not_invoiced_orders_ids, context=context)
-            not_invoiced_orders_names = list(map(lambda a: a.name, not_invoiced_posorders))
+            not_invoiced_makemydayorders = makemydayorder_obj.browse(cr, uid, not_invoiced_orders_ids, context=context)
+            not_invoiced_orders_names = list(map(lambda a: a.name, not_invoiced_makemydayorders))
             raise UserError(_('No link to an invoice for %s.') % ', '.join(not_invoiced_orders_names))
 
         docargs = {

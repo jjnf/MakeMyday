@@ -52,7 +52,7 @@
 
         <!-- Resource: product.product -->
         <record id="boni_orange" model="product.product">
-          <field name="available_in_pos">True</field>
+          <field name="available_in_makemyday">True</field>
           <field name="list_price">1.98</field>
           <field name="name">Boni Oranges</field>
           <field name="to_weight">True</field>
@@ -63,7 +63,7 @@
           <field name="image" type="base64" file="point_of_sale/static/img/boni_orange-image.jpg"/>
         </record>
         <record id="papillon_orange" model="product.product">
-          <field name="available_in_pos">True</field>
+          <field name="available_in_makemyday">True</field>
           <field name="list_price">2.83</field>
           <field name="name">Orange Butterfly</field>
           <field name="makemyday_categ_id" ref="fruits_vegetables"/>
@@ -74,7 +74,7 @@
         </record>
 
         <record id="citron" model="product.product">
-          <field name="available_in_pos">True</field>
+          <field name="available_in_makemyday">True</field>
           <field name="list_price">1.98</field>
           <field name="name">Lemon</field>
           <field name="barcode">2301000000006</field>
@@ -85,7 +85,7 @@
           <field name="image" type="base64" file="point_of_sale/static/img/citron-image.jpg"/>
         </record>
         <record id="limon" model="product.product">
-          <field name="available_in_pos">True</field>
+          <field name="available_in_makemyday">True</field>
           <field name="list_price">3.19</field>
           <field name="name">Stringers</field>
           <field name="to_weight">True</field>
@@ -95,7 +95,7 @@
           <field name="image" type="base64" file="point_of_sale/static/img/limon-image.jpg"/>
         </record>
         <record id="pamplemousse_rouge_pamplemousse" model="product.product">
-          <field name="available_in_pos">True</field>
+          <field name="available_in_makemyday">True</field>
           <field name="list_price">1.98</field>
           <field name="name">Red grapefruit</field>
           <field name="to_weight">True</field>
@@ -106,7 +106,7 @@
         </record>
 
         <record id="pomme_granny_smith" model="product.product">
-          <field name="available_in_pos">True</field>
+          <field name="available_in_makemyday">True</field>
           <field name="list_price">2.09</field>
           <field name="name">Granny Smith apples</field>
           <field name="to_weight">True</field>
@@ -116,7 +116,7 @@
           <field name="image" type="base64" file="point_of_sale/static/img/pomme_granny_smith-image.jpg"/>
         </record>
         <record id="pomme_jonagold" model="product.product">
-          <field name="available_in_pos">True</field>
+          <field name="available_in_makemyday">True</field>
           <field name="list_price">1.10</field>
           <field name="name">Jonagold apples</field>
           <field name="to_weight">True</field>
@@ -126,7 +126,7 @@
           <field name="image" type="base64" file="point_of_sale/static/img/pomme_jonagold-image.jpg"/>
         </record>
         <record id="pomme_golden_perlim" model="product.product">
-          <field name="available_in_pos">True</field>
+          <field name="available_in_makemyday">True</field>
           <field name="list_price">1.69</field>
           <field name="name">Golden Apples Perlim</field>
           <field name="to_weight">True</field>
@@ -137,7 +137,7 @@
         </record>
 
         <record id="poire_conference" model="product.product">
-          <field name="available_in_pos">True</field>
+          <field name="available_in_makemyday">True</field>
           <field name="list_price">1.70</field>
           <field name="name">Conference pears</field>
           <field name="to_weight">True</field>
@@ -148,7 +148,7 @@
         </record>
 
         <record id="peche" model="product.product">
-          <field name="available_in_pos">True</field>
+          <field name="available_in_makemyday">True</field>
           <field name="list_price">5.10</field>
           <field name="name">Peaches</field>
           <field name="to_weight">True</field>
@@ -160,7 +160,7 @@
         </record>
 
         <record id="raisins_noir" model="product.product">
-          <field name="available_in_pos">True</field>
+          <field name="available_in_makemyday">True</field>
           <field name="list_price">4.80</field>
           <field name="name">Black Grapes</field>
           <field name="to_weight">True</field>
@@ -171,7 +171,7 @@
         </record>
 
         <record id="pomme_de_terre" model="product.product">
-          <field name="available_in_pos">True</field>
+          <field name="available_in_makemyday">True</field>
           <field name="list_price">1.39</field>
           <field name="name">Potatoes</field>
           <field name="to_weight">True</field>
@@ -182,7 +182,7 @@
         </record>
 
         <record id="chicon_flandria_extra" model="product.product">
-          <field name="available_in_pos">True</field>
+          <field name="available_in_makemyday">True</field>
           <field name="list_price">2.20</field>
           <field name="name">Extra Flandria chicory</field>
           <field name="to_weight">True</field>
@@ -192,7 +192,7 @@
           <field name="image" type="base64" file="point_of_sale/static/img/chicon_flandria_extra-image.jpg"/>
         </record>
         <record id="carotte" model="product.product">
-          <field name="available_in_pos">True</field>
+          <field name="available_in_makemyday">True</field>
           <field name="list_price">0.90</field>
           <field name="name">Carrots</field>
           <field name="to_weight">True</field>
@@ -203,7 +203,7 @@
         </record>
 
         <record id="tomate_en_grappe" model="product.product">
-          <field name="available_in_pos">True</field>
+          <field name="available_in_makemyday">True</field>
           <field name="list_price">1.90</field>
           <field name="name">In Cluster Tomatoes</field>
           <field name="to_weight">True</field>
@@ -214,7 +214,7 @@
         </record>
 
         <record id="Onions" model="product.product">
-          <field name="available_in_pos">True</field>
+          <field name="available_in_makemyday">True</field>
           <field name="list_price">1.28</field>
           <field name="name">Onions</field>
           <field name="to_weight">True</field>
@@ -226,7 +226,7 @@
         </record>
 
         <record id="poivron_rouges" model="product.product">
-          <field name="available_in_pos">True</field>
+          <field name="available_in_makemyday">True</field>
           <field name="list_price">3.10</field>
           <field name="name">Red Pepper</field>
           <field name="to_weight">True</field>
@@ -236,7 +236,7 @@
           <field name="image" type="base64" file="point_of_sale/static/img/poivron_rouges-image.jpg"/>
         </record>
         <record id="poivron_verts" model="product.product">
-          <field name="available_in_pos">True</field>
+          <field name="available_in_makemyday">True</field>
           <field name="list_price">3.00</field>
           <field name="name">Green Peppers</field>
           <field name="to_weight">True</field>
@@ -246,7 +246,7 @@
           <field name="image" type="base64" file="point_of_sale/static/img/poivron_verts-image.jpg"/>
         </record>
         <record id="poivron_jaunes" model="product.product">
-          <field name="available_in_pos">True</field>
+          <field name="available_in_makemyday">True</field>
           <field name="list_price">2.70</field>
           <field name="name">Yellow Peppers</field>
           <field name="to_weight">True</field>
@@ -256,7 +256,7 @@
           <field name="image" type="base64" file="point_of_sale/static/img/poivron_jaunes-image.jpg"/>
         </record>
         <record id="poireaux_poireaux" model="product.product">
-          <field name="available_in_pos">True</field>
+          <field name="available_in_makemyday">True</field>
           <field name="list_price">2.29</field>
           <field name="name">Leeks</field>
           <field name="to_weight">True</field>
@@ -266,7 +266,7 @@
           <field name="image" type="base64" file="point_of_sale/static/img/poireaux_poireaux-image.jpg"/>
         </record>
         <record id="courgette" model="product.product">
-          <field name="available_in_pos">True</field>
+          <field name="available_in_makemyday">True</field>
           <field name="list_price">1.20</field>
           <field name="name">Zucchini</field>
           <field name="to_weight">True</field>
@@ -277,14 +277,14 @@
         </record>
 
         <record id="coca_regular_50cl" model="product.product">
-          <field name="available_in_pos">True</field>
+          <field name="available_in_makemyday">True</field>
           <field name="list_price">0.97</field>
           <field name="name">Coca-Cola Regular 50cl</field>
           <field name="makemyday_categ_id" ref="soft"/>
           <field name="image" type="base64" file="point_of_sale/static/img/coca_regular_50cl-image.jpg"/>
         </record>
         <record id="coca_regular_33cl" model="product.product">
-          <field name="available_in_pos">True</field>
+          <field name="available_in_makemyday">True</field>
           <field name="list_price">0.51</field>
           <field name="name">Coca-Cola Regular 33cl</field>
           <field name="barcode">5449000000996</field>
@@ -293,14 +293,14 @@
         </record>
 
         <record id="coca_light_50cl" model="product.product">
-          <field name="available_in_pos">True</field>
+          <field name="available_in_makemyday">True</field>
           <field name="list_price">0.97</field>
           <field name="name">Coca-Cola Light 50cl</field>
           <field name="makemyday_categ_id" ref="soft"/>
           <field name="image" type="base64" file="point_of_sale/static/img/coca_light_50cl-image.jpg"/>
         </record>
         <record id="coca_light_33cl" model="product.product">
-          <field name="available_in_pos">True</field>
+          <field name="available_in_makemyday">True</field>
           <field name="list_price">0.51</field>
           <field name="name">Coca-Cola Light 33cl</field>
           <field name="makemyday_categ_id" ref="soft"/>
@@ -308,42 +308,42 @@
         </record>
 
         <record id="coca_light_lemon_2l" model="product.product">
-          <field name="available_in_pos">True</field>
+          <field name="available_in_makemyday">True</field>
           <field name="list_price">2.83</field>
           <field name="name">Coca-Cola Light Lemon 2L</field>
           <field name="makemyday_categ_id" ref="soft"/>
           <field name="image" type="base64" file="point_of_sale/static/img/coca_light_lemon_2l-image.jpg"/>
         </record>
         <record id="fanta_orange_50cl" model="product.product">
-          <field name="available_in_pos">True</field>
+          <field name="available_in_makemyday">True</field>
           <field name="list_price">0.98</field>
           <field name="name">Fanta Orange 50cl</field>
           <field name="makemyday_categ_id" ref="soft"/>
           <field name="image" type="base64" file="point_of_sale/static/img/fanta_orange_50cl-image.jpg"/>
         </record>
         <record id="fanta_orange_33cl" model="product.product">
-          <field name="available_in_pos">True</field>
+          <field name="available_in_makemyday">True</field>
           <field name="list_price">0.51</field>
           <field name="name">Fanta Orange 33cl</field>
           <field name="makemyday_categ_id" ref="soft"/>
           <field name="image" type="base64" file="point_of_sale/static/img/fanta_orange_33cl-image.jpg"/>
         </record>
         <record id="fanta_orange_25cl" model="product.product">
-          <field name="available_in_pos">True</field>
+          <field name="available_in_makemyday">True</field>
           <field name="list_price">0.84</field>
           <field name="name">Fanta Orange 25cl</field>
           <field name="makemyday_categ_id" ref="soft"/>
           <field name="image" type="base64" file="point_of_sale/static/img/fanta_orange_25cl-image.jpg"/>
         </record>
         <record id="fanta_zero_orange_1,5l" model="product.product">
-          <field name="available_in_pos">True</field>
+          <field name="available_in_makemyday">True</field>
           <field name="list_price">2.08</field>
           <field name="name">Fanta Orange Zero 1.5L</field>
           <field name="makemyday_categ_id" ref="soft"/>
           <field name="image" type="base64" file="point_of_sale/static/img/fanta_zero_orange_1,5l-image.jpg"/>
         </record>
         <record id="fanta_zero_orange_33cl" model="product.product">
-          <field name="available_in_pos">True</field>
+          <field name="available_in_makemyday">True</field>
           <field name="list_price">0.53</field>
           <field name="name">Fanta Zero Orange 33cl</field>
           <field name="makemyday_categ_id" ref="soft"/>
@@ -351,35 +351,35 @@
         </record>
 
         <record id="evian_50cl" model="product.product">
-          <field name="available_in_pos">True</field>
+          <field name="available_in_makemyday">True</field>
           <field name="list_price">0.52</field>
           <field name="name">Evian 50cl</field>
           <field name="makemyday_categ_id" ref="soft"/>
           <field name="image" type="base64" file="point_of_sale/static/img/evian_50cl-image.jpg"/>
         </record>
         <record id="evian_2l" model="product.product">
-          <field name="available_in_pos">True</field>
+          <field name="available_in_makemyday">True</field>
           <field name="list_price">1.26</field>
           <field name="name">2L Evian</field>
           <field name="makemyday_categ_id" ref="soft"/>
           <field name="image" type="base64" file="point_of_sale/static/img/evian_2l-image.jpg"/>
         </record>
         <record id="chaudfontaine_petillante_1,5l" model="product.product">
-          <field name="available_in_pos">True</field>
+          <field name="available_in_makemyday">True</field>
           <field name="list_price">0.98</field>
           <field name="name">Chaudfontaine Petillante 1.5l</field>
           <field name="makemyday_categ_id" ref="soft"/>
           <field name="image" type="base64" file="point_of_sale/static/img/chaudfontaine_petillante_1,5l-image.jpg"/>
         </record>
         <record id="perrier_50cl" model="product.product">
-          <field name="available_in_pos">True</field>
+          <field name="available_in_makemyday">True</field>
           <field name="list_price">0.71</field>
           <field name="name">50cl Perrier</field>
           <field name="makemyday_categ_id" ref="soft"/>
           <field name="image" type="base64" file="point_of_sale/static/img/perrier_50cl-image.jpg"/>
         </record>
         <record id="san_pellegrino_1l" model="product.product">
-          <field name="available_in_pos">True</field>
+          <field name="available_in_makemyday">True</field>
           <field name="list_price">0.98</field>
           <field name="name">San Pellegrino 1L</field>
           <field name="makemyday_categ_id" ref="soft"/>
@@ -387,42 +387,42 @@
         </record>
 
         <record id="stella_50cl" model="product.product">
-          <field name="available_in_pos">True</field>
+          <field name="available_in_makemyday">True</field>
           <field name="list_price">1.19</field>
           <field name="name">Stella Artois 50cl</field>
           <field name="makemyday_categ_id" ref="alcohol"/>
           <field name="image" type="base64" file="point_of_sale/static/img/stella_50cl-image.jpg"/>
         </record>
         <record id="stella_33cl" model="product.product">
-          <field name="available_in_pos">True</field>
+          <field name="available_in_makemyday">True</field>
           <field name="list_price">0.82</field>
           <field name="name">Stella Artois 33cl</field>
           <field name="makemyday_categ_id" ref="alcohol"/>
           <field name="image" type="base64" file="point_of_sale/static/img/stella_33cl-image.jpg"/>
         </record>
         <record id="timmermans_kriek_37,5cl" model="product.product">
-          <field name="available_in_pos">True</field>
+          <field name="available_in_makemyday">True</field>
           <field name="list_price">1.7</field>
           <field name="name">Timmermans Kriek 37.5cl</field>
           <field name="makemyday_categ_id" ref="alcohol"/>
           <field name="image" type="base64" file="point_of_sale/static/img/timmermans_kriek_37,5cl-image.jpg"/>
         </record>
         <record id="lindemans_kriek_37,5cl" model="product.product">
-          <field name="available_in_pos">True</field>
+          <field name="available_in_makemyday">True</field>
           <field name="list_price">1.51</field>
           <field name="name">Lindemans Kriek 37.5cl</field>
           <field name="makemyday_categ_id" ref="alcohol"/>
           <field name="image" type="base64" file="point_of_sale/static/img/lindemans_kriek_37,5cl-image.jpg"/>
         </record>
         <record id="grisette_cerise_25cl" model="product.product">
-          <field name="available_in_pos">True</field>
+          <field name="available_in_makemyday">True</field>
           <field name="list_price">1.04</field>
           <field name="name">Grisette Cherry 25cl</field>
           <field name="makemyday_categ_id" ref="alcohol"/>
           <field name="image" type="base64" file="point_of_sale/static/img/grisette_cerise_25cl-image.jpg"/>
         </record>
         <record id="belle_vue_kriek_25cl" model="product.product">
-          <field name="available_in_pos">True</field>
+          <field name="available_in_makemyday">True</field>
           <field name="list_price">0.83</field>
           <field name="name">Belle-Vue Kriek 25cl</field>
           <field name='barcode'>5410228193449</field>
@@ -431,7 +431,7 @@
         </record>
 
         <record id="leffe_brune_33cl" model="product.product">
-          <field name="available_in_pos">True</field>
+          <field name="available_in_makemyday">True</field>
           <field name="list_price">1.00</field>
           <field name="name">Leffe Brune 33cl</field>
           <field name='barcode'>5410228142164</field>
@@ -439,7 +439,7 @@
           <field name="image" type="base64" file="point_of_sale/static/img/leffe_brune_33cl-image.jpg"/>
         </record>
         <record id="leffe_blonde_33cl" model="product.product">
-          <field name="available_in_pos">True</field>
+          <field name="available_in_makemyday">True</field>
           <field name="list_price">1.00</field>
           <field name="name">Leffe Blonde 33cl</field>
           <field name='barcode'>5410228142218</field>
@@ -447,21 +447,21 @@
           <field name="image" type="base64" file="point_of_sale/static/img/leffe_blonde_33cl-image.jpg"/>
         </record>
         <record id="orval_33cl" model="product.product">
-          <field name="available_in_pos">True</field>
+          <field name="available_in_makemyday">True</field>
           <field name="list_price">1.59</field>
           <field name="name">Orval 33cl</field>
           <field name="makemyday_categ_id" ref="alcohol"/>
           <field name="image" type="base64" file="point_of_sale/static/img/orval_33cl-image.jpg"/>
         </record>
         <record id="rochefort_8_33cl" model="product.product">
-          <field name="available_in_pos">True</field>
+          <field name="available_in_makemyday">True</field>
           <field name="list_price">1.75</field>
           <field name="name">Rochefort "8" 33cl</field>
           <field name="makemyday_categ_id" ref="alcohol"/>
           <field name="image" type="base64" file="point_of_sale/static/img/rochefort_8_33cl-image.jpg"/>
         </record>
         <record id="chimay_rouge_33cl" model="product.product">
-          <field name="available_in_pos">True</field>
+          <field name="available_in_makemyday">True</field>
           <field name="list_price">1.02</field>
           <field name="name">Chimay Red 33cl</field>
           <field name="makemyday_categ_id" ref="alcohol"/>
@@ -472,11 +472,11 @@
 
         <record id="stock.product_icecream"  model="product.product"> 
             <field name="name">Ice Cream</field>
-            <field name="available_in_pos" eval="False"/> 
+            <field name="available_in_makemyday" eval="False"/> 
         </record>
 
         <record id="partner_product_3" model="product.product">
-          <field name="available_in_pos">True</field>
+          <field name="available_in_makemyday">True</field>
           <field name="list_price">999.99</field>
           <field name="name">Eezee-It</field>
           <field name="type">service</field>
@@ -485,7 +485,7 @@
         </record>
 
         <record id="partner_product_4" model="product.product">
-          <field name="available_in_pos">True</field>
+          <field name="available_in_makemyday">True</field>
           <field name="list_price">999.99</field>
           <field name="name">Ekomurz.nl</field>
           <field name="type">service</field>
@@ -494,7 +494,7 @@
         </record>
 
         <record id="partner_product_5" model="product.product">
-          <field name="available_in_pos">True</field>
+          <field name="available_in_makemyday">True</field>
           <field name="list_price">999.99</field>
           <field name="name">Acsone.eu</field>
           <field name="makemyday_categ_id" ref="partner_services"/>
@@ -502,7 +502,7 @@
         </record>
 
         <record id="partner_product_6" model="product.product">
-          <field name="available_in_pos">True</field>
+          <field name="available_in_makemyday">True</field>
           <field name="list_price">999.99</field>
           <field name="name">Vauxoo.com</field>
           <field name="type">service</field>
@@ -511,7 +511,7 @@
         </record>
 
         <record id="partner_product_7" model="product.product">
-          <field name="available_in_pos">True</field>
+          <field name="available_in_makemyday">True</field>
           <field name="list_price">999.99</field>
           <field name="name">Datalp.com</field>
           <field name="type">service</field>
@@ -520,7 +520,7 @@
         </record>
 
         <record id="partner_product_8" model="product.product">
-          <field name="available_in_pos">True</field>
+          <field name="available_in_makemyday">True</field>
           <field name="list_price">999.99</field>
           <field name="name">camptocamp.com</field>
           <field name="type">service</field>
@@ -529,7 +529,7 @@
         </record>
 
         <record id="partner_product_9" model="product.product">
-          <field name="available_in_pos">True</field>
+          <field name="available_in_makemyday">True</field>
           <field name="list_price">999.99</field>
           <field name="name">EGGS-solutions.fr</field>
           <field name="type">service</field>
@@ -539,67 +539,67 @@
 
         <!-- The electronic products shouldn't be present in the point of sale for the demo -->
 
-        <record id="product.product_product_1" model="product.product"> <field name="available_in_pos" eval="False"/> </record>
-        <record id="product.product_product_2" model="product.product"> <field name="available_in_pos" eval="False"/> </record>
-        <record id="product.product_product_3" model="product.product"> <field name="available_in_pos" eval="False"/> </record>
-        <record id="product.product_product_4" model="product.product"> <field name="available_in_pos" eval="False"/> </record>
-        <record id="product.product_product_5" model="product.product"> <field name="available_in_pos" eval="False"/> </record>
-        <record id="product.product_product_5b" model="product.product"> <field name="available_in_pos" eval="False"/> </record>
-        <record id="product.product_product_6" model="product.product"> <field name="available_in_pos" eval="False"/> </record>
-        <record id="product.product_product_7" model="product.product"> <field name="available_in_pos" eval="False"/> </record>
-        <record id="product.product_product_8" model="product.product"> <field name="available_in_pos" eval="False"/> </record>
-        <record id="product.product_product_9" model="product.product"> <field name="available_in_pos" eval="False"/> </record>
-        <record id="product.product_product_10" model="product.product"> <field name="available_in_pos" eval="False"/> </record>
-        <record id="product.product_product_11" model="product.product"> <field name="available_in_pos" eval="False"/> </record>
-        <record id="product.product_product_12" model="product.product"> <field name="available_in_pos" eval="False"/> </record>
-        <record id="product.product_product_13" model="product.product"> <field name="available_in_pos" eval="False"/> </record>
-        <record id="product.product_product_14" model="product.product"> <field name="available_in_pos" eval="False"/> </record>
-        <record id="product.product_product_15" model="product.product"> <field name="available_in_pos" eval="False"/> </record>
-        <record id="product.product_product_16" model="product.product"> <field name="available_in_pos" eval="False"/> </record>
-        <record id="product.product_product_17" model="product.product"> <field name="available_in_pos" eval="False"/> </record>
-        <record id="product.product_product_18" model="product.product"> <field name="available_in_pos" eval="False"/> </record>
-        <record id="product.product_product_19" model="product.product"> <field name="available_in_pos" eval="False"/> </record>
-        <record id="product.product_product_20" model="product.product"> <field name="available_in_pos" eval="False"/> </record>
-        <record id="product.product_product_21" model="product.product"> <field name="available_in_pos" eval="False"/> </record>
-        <record id="product.product_product_22" model="product.product"> <field name="available_in_pos" eval="False"/> </record>
-        <record id="product.product_product_23" model="product.product"> <field name="available_in_pos" eval="False"/> </record>
-        <record id="product.product_product_24" model="product.product"> <field name="available_in_pos" eval="False"/> </record>
-        <record id="product.product_product_25" model="product.product"> <field name="available_in_pos" eval="False"/> </record>
-        <record id="product.product_product_26" model="product.product"> <field name="available_in_pos" eval="False"/> </record>
-        <record id="product.product_product_27" model="product.product"> <field name="available_in_pos" eval="False"/> </record>
-        <record id="product.product_product_28" model="product.product"> <field name="available_in_pos" eval="False"/> </record>
-        <record id="product.product_product_29" model="product.product"> <field name="available_in_pos" eval="False"/> </record>
-        <record id="product.product_product_30" model="product.product"> <field name="available_in_pos" eval="False"/> </record>
-        <record id="product.product_product_31" model="product.product"> <field name="available_in_pos" eval="False"/> </record>
-        <record id="product.product_product_32" model="product.product"> <field name="available_in_pos" eval="False"/> </record>
-        <record id="product.product_product_33" model="product.product"> <field name="available_in_pos" eval="False"/> </record>
-        <record id="product.product_product_34" model="product.product"> <field name="available_in_pos" eval="False"/> </record>
-        <record id="product.product_product_35" model="product.product"> <field name="available_in_pos" eval="False"/> </record>
-        <record id="product.product_product_36" model="product.product"> <field name="available_in_pos" eval="False"/> </record>
-        <record id="product.product_product_37" model="product.product"> <field name="available_in_pos" eval="False"/> </record>
-        <record id="product.product_product_38" model="product.product"> <field name="available_in_pos" eval="False"/> </record>
-        <record id="product.product_product_39" model="product.product"> <field name="available_in_pos" eval="False"/> </record>
-        <record id="product.product_product_40" model="product.product"> <field name="available_in_pos" eval="False"/> </record>
-        <record id="product.product_product_41" model="product.product"> <field name="available_in_pos" eval="False"/> </record>
-        <record id="product.product_product_42" model="product.product"> <field name="available_in_pos" eval="False"/> </record>
-        <record id="product.product_product_43" model="product.product"> <field name="available_in_pos" eval="False"/> </record>
-        <record id="product.product_product_44" model="product.product"> <field name="available_in_pos" eval="False"/> </record>
-        <record id="product.product_product_45" model="product.product"> <field name="available_in_pos" eval="False"/> </record>
-        <record id="product.product_product_46" model="product.product"> <field name="available_in_pos" eval="False"/> </record>
-        <record id="product.product_product_47" model="product.product"> <field name="available_in_pos" eval="False"/> </record>
-        <record id="product.product_product_48" model="product.product"> <field name="available_in_pos" eval="False"/> </record>
-        <record id="product.product_product_49" model="product.product"> <field name="available_in_pos" eval="False"/> </record>
-        <record id="product.product_product_50" model="product.product"> <field name="available_in_pos" eval="False"/> </record>
-        <record id="product.product_product_51" model="product.product"> <field name="available_in_pos" eval="False"/> </record>
-        <record id="product.product_product_52" model="product.product"> <field name="available_in_pos" eval="False"/> </record>
-        <record id="product.product_product_53" model="product.product"> <field name="available_in_pos" eval="False"/> </record>
-        <record id="product.product_product_54" model="product.product"> <field name="available_in_pos" eval="False"/> </record>
-        <record id="product.product_product_55" model="product.product"> <field name="available_in_pos" eval="False"/> </record>
-        <record id="product.product_product_56" model="product.product"> <field name="available_in_pos" eval="False"/> </record>
-        <record id="product.product_product_57" model="product.product"> <field name="available_in_pos" eval="False"/> </record>
-        <record id="product.product_product_58" model="product.product"> <field name="available_in_pos" eval="False"/> </record>
-        <record id="product.product_product_59" model="product.product"> <field name="available_in_pos" eval="False"/> </record>
-        <record id="sale.advance_product_0" model="product.product"> <field name="available_in_pos" eval="False"/> </record>
+        <record id="product.product_product_1" model="product.product"> <field name="available_in_makemyday" eval="False"/> </record>
+        <record id="product.product_product_2" model="product.product"> <field name="available_in_makemyday" eval="False"/> </record>
+        <record id="product.product_product_3" model="product.product"> <field name="available_in_makemyday" eval="False"/> </record>
+        <record id="product.product_product_4" model="product.product"> <field name="available_in_makemyday" eval="False"/> </record>
+        <record id="product.product_product_5" model="product.product"> <field name="available_in_makemyday" eval="False"/> </record>
+        <record id="product.product_product_5b" model="product.product"> <field name="available_in_makemyday" eval="False"/> </record>
+        <record id="product.product_product_6" model="product.product"> <field name="available_in_makemyday" eval="False"/> </record>
+        <record id="product.product_product_7" model="product.product"> <field name="available_in_makemyday" eval="False"/> </record>
+        <record id="product.product_product_8" model="product.product"> <field name="available_in_makemyday" eval="False"/> </record>
+        <record id="product.product_product_9" model="product.product"> <field name="available_in_makemyday" eval="False"/> </record>
+        <record id="product.product_product_10" model="product.product"> <field name="available_in_makemyday" eval="False"/> </record>
+        <record id="product.product_product_11" model="product.product"> <field name="available_in_makemyday" eval="False"/> </record>
+        <record id="product.product_product_12" model="product.product"> <field name="available_in_makemyday" eval="False"/> </record>
+        <record id="product.product_product_13" model="product.product"> <field name="available_in_makemyday" eval="False"/> </record>
+        <record id="product.product_product_14" model="product.product"> <field name="available_in_makemyday" eval="False"/> </record>
+        <record id="product.product_product_15" model="product.product"> <field name="available_in_makemyday" eval="False"/> </record>
+        <record id="product.product_product_16" model="product.product"> <field name="available_in_makemyday" eval="False"/> </record>
+        <record id="product.product_product_17" model="product.product"> <field name="available_in_makemyday" eval="False"/> </record>
+        <record id="product.product_product_18" model="product.product"> <field name="available_in_makemyday" eval="False"/> </record>
+        <record id="product.product_product_19" model="product.product"> <field name="available_in_makemyday" eval="False"/> </record>
+        <record id="product.product_product_20" model="product.product"> <field name="available_in_makemyday" eval="False"/> </record>
+        <record id="product.product_product_21" model="product.product"> <field name="available_in_makemyday" eval="False"/> </record>
+        <record id="product.product_product_22" model="product.product"> <field name="available_in_makemyday" eval="False"/> </record>
+        <record id="product.product_product_23" model="product.product"> <field name="available_in_makemyday" eval="False"/> </record>
+        <record id="product.product_product_24" model="product.product"> <field name="available_in_makemyday" eval="False"/> </record>
+        <record id="product.product_product_25" model="product.product"> <field name="available_in_makemyday" eval="False"/> </record>
+        <record id="product.product_product_26" model="product.product"> <field name="available_in_makemyday" eval="False"/> </record>
+        <record id="product.product_product_27" model="product.product"> <field name="available_in_makemyday" eval="False"/> </record>
+        <record id="product.product_product_28" model="product.product"> <field name="available_in_makemyday" eval="False"/> </record>
+        <record id="product.product_product_29" model="product.product"> <field name="available_in_makemyday" eval="False"/> </record>
+        <record id="product.product_product_30" model="product.product"> <field name="available_in_makemyday" eval="False"/> </record>
+        <record id="product.product_product_31" model="product.product"> <field name="available_in_makemyday" eval="False"/> </record>
+        <record id="product.product_product_32" model="product.product"> <field name="available_in_makemyday" eval="False"/> </record>
+        <record id="product.product_product_33" model="product.product"> <field name="available_in_makemyday" eval="False"/> </record>
+        <record id="product.product_product_34" model="product.product"> <field name="available_in_makemyday" eval="False"/> </record>
+        <record id="product.product_product_35" model="product.product"> <field name="available_in_makemyday" eval="False"/> </record>
+        <record id="product.product_product_36" model="product.product"> <field name="available_in_makemyday" eval="False"/> </record>
+        <record id="product.product_product_37" model="product.product"> <field name="available_in_makemyday" eval="False"/> </record>
+        <record id="product.product_product_38" model="product.product"> <field name="available_in_makemyday" eval="False"/> </record>
+        <record id="product.product_product_39" model="product.product"> <field name="available_in_makemyday" eval="False"/> </record>
+        <record id="product.product_product_40" model="product.product"> <field name="available_in_makemyday" eval="False"/> </record>
+        <record id="product.product_product_41" model="product.product"> <field name="available_in_makemyday" eval="False"/> </record>
+        <record id="product.product_product_42" model="product.product"> <field name="available_in_makemyday" eval="False"/> </record>
+        <record id="product.product_product_43" model="product.product"> <field name="available_in_makemyday" eval="False"/> </record>
+        <record id="product.product_product_44" model="product.product"> <field name="available_in_makemyday" eval="False"/> </record>
+        <record id="product.product_product_45" model="product.product"> <field name="available_in_makemyday" eval="False"/> </record>
+        <record id="product.product_product_46" model="product.product"> <field name="available_in_makemyday" eval="False"/> </record>
+        <record id="product.product_product_47" model="product.product"> <field name="available_in_makemyday" eval="False"/> </record>
+        <record id="product.product_product_48" model="product.product"> <field name="available_in_makemyday" eval="False"/> </record>
+        <record id="product.product_product_49" model="product.product"> <field name="available_in_makemyday" eval="False"/> </record>
+        <record id="product.product_product_50" model="product.product"> <field name="available_in_makemyday" eval="False"/> </record>
+        <record id="product.product_product_51" model="product.product"> <field name="available_in_makemyday" eval="False"/> </record>
+        <record id="product.product_product_52" model="product.product"> <field name="available_in_makemyday" eval="False"/> </record>
+        <record id="product.product_product_53" model="product.product"> <field name="available_in_makemyday" eval="False"/> </record>
+        <record id="product.product_product_54" model="product.product"> <field name="available_in_makemyday" eval="False"/> </record>
+        <record id="product.product_product_55" model="product.product"> <field name="available_in_makemyday" eval="False"/> </record>
+        <record id="product.product_product_56" model="product.product"> <field name="available_in_makemyday" eval="False"/> </record>
+        <record id="product.product_product_57" model="product.product"> <field name="available_in_makemyday" eval="False"/> </record>
+        <record id="product.product_product_58" model="product.product"> <field name="available_in_makemyday" eval="False"/> </record>
+        <record id="product.product_product_59" model="product.product"> <field name="available_in_makemyday" eval="False"/> </record>
+        <record id="sale.advance_product_0" model="product.product"> <field name="available_in_makemyday" eval="False"/> </record>
 
 
 

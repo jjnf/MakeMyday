@@ -10,7 +10,7 @@ _logger = logging.getLogger(__name__)
 
 class PosController(http.Controller):
 
-    @http.route('/pos/web', type='http', auth='user')
+    @http.route('/makemyday/web', type='http', auth='user')
     def a(self, debug=False, **k):
         cr, uid, context, session = request.cr, request.uid, request.context, request.session
 

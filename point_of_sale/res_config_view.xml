@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <openerp>
     <data>
-        <record id="view_sale_config_settings_form_pos" model="ir.ui.view">
+        <record id="view_sale_config_settings_form_makemyday" model="ir.ui.view">
             <field name="name">makemyday.config.settings.form</field>
             <field name="model">makemyday.config.settings</field>
             <field name="arch" type="xml">
@@ -12,7 +12,7 @@
                     </header>
                     <group string="Point of Sale">
                         <field name="module_pos_makemyday" widget="radio"/>
-                        <field name="module_makemyday_discount" widget="radio"/>
+                        <field name="module_pos_discount" widget="radio"/>
                         <field name="module_pos_mercury" widget="radio"/>
                         <field name="module_pos_reprint" widget="radio"/>
                         <label for="module_pos_loyalty"/>

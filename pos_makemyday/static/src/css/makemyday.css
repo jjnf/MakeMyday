@@ -280,7 +280,7 @@
 
 /* ------ FLOOR BUTTON IN THE ORDER SELECTOR ------- */
 
-.pos .order-button.floor-button {
+.makemyday .order-button.floor-button {
     background: #6EC89B;
     font-weight: bold;
     font-size: 16px;
@@ -288,20 +288,20 @@
     padding-left: 16px;
     padding-right: 16px;
 }
-.pos .order-button.floor-button .table-name {
+.makemyday .order-button.floor-button .table-name {
     font-weight: normal;
 }
-.pos .order-button.floor-button .fa{
+.makemyday .order-button.floor-button .fa{
     font-size: 24px;
 }
 /* ------ ORDER LINE STATUS ------- */
 
-.pos .order .orderline.dirty {
+.makemyday .order .orderline.dirty {
     border-left: solid 6px #6EC89B;
     color: #6EC89B;
     padding-left: 9px;
 }
-.pos .order .orderline.skip {
+.makemyday .order .orderline.skip {
     border-left: solid 6px #7F82AC;
     color: #7F82AC;
     padding-left: 9px;
@@ -310,7 +310,7 @@
 
 /* ------ ORDER NOTES ------- */
 
-.pos .order .orderline-note {
+.makemyday .order .orderline-note {
     margin: 8px;
 }
 .orderline-note .fa {

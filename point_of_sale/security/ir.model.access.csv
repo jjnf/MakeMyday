@@ -1,12 +1,12 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_makemyday_order,makemyday.order,model_makemyday_order,group_makemyday_user,1,1,1,1
 access_makemyday_order_line,makemyday.order.line,model_makemyday_order_line,group_makemyday_user,1,1,1,1
-access_report_transaction_pos,report.transaction.pos,model_report_transaction_pos,group_makemyday_manager,1,1,1,1
+access_report_transaction_makemyday,report.transaction.makemyday,model_report_transaction_makemyday,group_makemyday_manager,1,1,1,1
 access_stock_picking_makemyday_user,stock.picking makemyday_user,stock.model_stock_picking,group_makemyday_user,1,1,1,1
 access_stock_warehouse_makemyday_user,stock.warehouse makemyday_user,stock.model_stock_warehouse,group_makemyday_user,1,0,0,0
 access_makemyday_order_stock_worker,makemyday.order stock_worker,model_makemyday_order,stock.group_stock_user,1,0,0,0
 access_stock_move_makemyday_user,stock.move makemyday_user,stock.model_stock_move,group_makemyday_user,1,1,1,1
-access_report_sales_by_user_pos,report.sales.by.user.pos,model_report_sales_by_user_pos,group_makemyday_user,1,0,0,0
+access_report_sales_by_user_makemyday,report.sales.by.user.makemyday,model_report_sales_by_user_makemyday,group_makemyday_user,1,0,0,0
 access_report_sales_by_user_makemyday_month,report.sales.by.user.makemyday.month,model_report_sales_by_user_makemyday_month,group_makemyday_user,1,0,0,0
 access_report_makemyday_order,report.makemyday.order,model_report_makemyday_order,group_makemyday_user,1,1,1,1
 access_account_journal_makemyday_user,account.journal makemyday_user,account.model_account_journal,group_makemyday_user,1,0,0,0
@@ -15,9 +15,9 @@ access_account_bank_statement,account.bank.statement,account.model_account_bank_
 access_account_bank_statement_manager,account.bank.statement manager,account.model_account_bank_statement,group_makemyday_manager,1,1,1,1
 access_account_bank_statement_line,account.bank.statement.line,account.model_account_bank_statement_line,group_makemyday_user,1,1,1,0
 access_product_product,product.product,product.model_product_product,group_makemyday_user,1,0,0,0
-access_product_template_makemyday_user,product.template pos user,product.model_product_template,group_makemyday_user,1,0,0,0
-access_product_product_makemyday_manager,product.product.pos manager,product.model_product_product,group_makemyday_manager,1,1,1,1
-access_product_template_makemyday_manager,product.template pos manager,product.model_product_template,group_makemyday_manager,1,1,1,1
+access_product_template_makemyday_user,product.template makemyday user,product.model_product_template,group_makemyday_user,1,0,0,0
+access_product_product_makemyday_manager,product.product.makemyday manager,product.model_product_product,group_makemyday_manager,1,1,1,1
+access_product_template_makemyday_manager,product.template makemyday manager,product.model_product_template,group_makemyday_manager,1,1,1,1
 access_account_bank_statement_line_manager,account.bank.statement.line manager,account.model_account_bank_statement_line,group_makemyday_manager,1,1,1,1
 access_product_product_supplierinfo_user,product.supplierinfo user,product.model_product_supplierinfo,group_makemyday_user,1,0,0,0
 access_product_product_packaging_user,product.packaging user,product.model_product_packaging,group_makemyday_user,1,0,0,0

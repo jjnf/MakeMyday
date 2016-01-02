@@ -93,7 +93,7 @@ var ProxyDevice  = core.Class.extend(core.mixins.PropertiesMixin,{
         var self = this;
         options = options || {};
 
-        this.pos = parent;
+        this.makemyday = parent;
 
         this.weighting = false;
         this.debug_weight = 0;
@@ -453,7 +453,7 @@ var BarcodeReader = core.Class.extend({
     ],
 
     init: function(attributes){
-        this.pos = attributes.pos;
+        this.makemyday = attributes.makemyday;
         this.action_callback = {};
         this.proxy = attributes.proxy;
         this.remote_scanning = false;

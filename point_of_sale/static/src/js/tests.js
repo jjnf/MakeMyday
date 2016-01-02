@@ -28,7 +28,7 @@ Tour.register({
         },
         {
             title: 'Loading The Point of Sale',
-            waitFor: '.pos',
+            waitFor: '.makemyday',
         },
         {
             title: 'On va manger des CHIPS!',

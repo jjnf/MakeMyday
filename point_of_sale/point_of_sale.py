@@ -112,7 +112,7 @@ class makemyday_config(osv.osv):
         'proxy_ip':       fields.char('IP Address', help='The hostname or ip address of the hardware proxy, Will be autodetected if left empty', size=45),
 
         'state' : fields.selection(POS_CONFIG_STATE, 'Status', required=True, readonly=True, copy=False),
-        'uuid'  : fields.char('uuid', readonly=True, help='A globally unique identifier for this pos configuration, used to prevent conflicts in client-generated data'),
+        'uuid'  : fields.char('uuid', readonly=True, help='A globally unique identifier for this.makemyday configuration, used to prevent conflicts in client-generated data'),
         'sequence_id' : fields.many2one('ir.sequence', 'Order IDs Sequence', readonly=True,
             help="This sequence is automatically created by Odoo but you can change it "\
                 "to customize the reference numbers of your orders.", copy=False),
@@ -126,8 +126,8 @@ class makemyday_config(osv.osv):
         'pricelist_id': fields.many2one('product.pricelist','Pricelist', required=True),
         'company_id': fields.many2one('res.company', 'Company', required=True),
         'barcode_nomenclature_id':  fields.many2one('barcode.nomenclature','Barcodes', help='Defines what kind of barcodes are available and how they are assigned to products, customers and cashiers', required=True),
-        'group_makemyday_manager_id': fields.many2one('res.groups','Point of Sale Manager Group', help='This field is there to pass the id of the pos manager group to the point of sale client'),
-        'group_makemyday_user_id':    fields.many2one('res.groups','Point of Sale User Group', help='This field is there to pass the id of the pos user group to the point of sale client'),
+        'group_makemyday_manager_id': fields.many2one('res.groups','Point of Sale Manager Group', help='This field is there to pass the id of the makemyday manager group to the point of sale client'),
+        'group_makemyday_user_id':    fields.many2one('res.groups','Point of Sale User Group', help='This field is there to pass the id of the makemyday user group to the point of sale client'),
         'tip_product_id':       fields.many2one('product.product','Tip Product', help="The product used to encode the customer tip. Leave empty if you do not accept tips."),
         'fiscal_position_ids': fields.many2many('account.fiscal.position', string='Fiscal Positions')
     }
@@ -291,7 +291,7 @@ class makemyday_config(osv.osv):
         context['active_id'] = record.current_session_id.id
         return {
             'type': 'ir.actions.act_url',
-            'url':   '/pos/web/',
+            'url':   '/makemyday/web/',
             'target': 'self',
         }
 
@@ -395,7 +395,7 @@ class makemyday_session(osv.osv):
         'rescue': fields.boolean('Rescue session', readonly=True,
                                  help="Auto-generated session for orphan orders, ignored in constraints"),
         'sequence_number': fields.integer('Order Sequence Number', help='A sequence number that is incremented with each order'),
-        'login_number':  fields.integer('Login Sequence Number', help='A sequence number that is incremented each time a user resumes the pos session'),
+        'login_number':  fields.integer('Login Sequence Number', help='A sequence number that is incremented each time a user resumes the makemyday session'),
 
         'cash_control' : fields.function(_compute_cash_all,
                                          multi='cash',
@@ -588,7 +588,7 @@ class makemyday_session(osv.osv):
             local_context.update({'force_company': company_id, 'company_id': company_id})
             for st in record.statement_ids:
                 if abs(st.difference) > st.journal_id.amount_authorized_diff:
-                    # The pos manager can close statements with maximums.
+                    # The makemyday manager can close statements with maximums.
                     if not self.pool.get('ir.model.access').check_groups(cr, uid, "point_of_sale.group_makemyday_manager"):
                         raise UserError(_("Your ending balance is too different from the theoretical cash closing (%.2f), the maximum allowed is: %.2f. You can contact your manager to force it.") % (st.difference, st.journal_id.amount_authorized_diff))
                 if (st.journal_id.type not in ['bank', 'cash']):
@@ -639,7 +639,7 @@ class makemyday_session(osv.osv):
         return {
             'type' : 'ir.actions.act_url',
             'target': 'self',
-            'url':   '/pos/web/',
+            'url':   '/makemyday/web/',
         }
 
 class makemyday_order(osv.osv):
@@ -783,15 +783,15 @@ class makemyday_order(osv.osv):
         partner_obj = self.pool.get('res.partner')
         bsl_obj = self.pool.get("account.bank.statement.line")
         if 'partner_id' in vals:
-            for posorder in self.browse(cr, uid, ids, context=context):
-                if posorder.invoice_id:
+            for makemydayorder in self.browse(cr, uid, ids, context=context):
+                if makemydayorder.invoice_id:
                     raise UserError(_("You cannot change the partner of a POS order for which an invoice has already been issued."))
                 if vals['partner_id']:
                     p_id = partner_obj.browse(cr, uid, vals['partner_id'], context=context)
                     part_id = partner_obj._find_accounting_partner(p_id).id
                 else:
                     part_id = False
-                bsl_ids = [x.id for x in posorder.statement_ids]
+                bsl_ids = [x.id for x in makemydayorder.statement_ids]
                 bsl_obj.write(cr, uid, bsl_ids, {'partner_id': part_id}, context=context)
         return res
 
@@ -884,7 +884,7 @@ class makemyday_order(osv.osv):
 
     def _get_out_picking_type(self, cr, uid, context=None):
         return self.pool.get('ir.model.data').xmlid_to_res_id(
-                    cr, uid, 'point_of_sale.picking_type_posout', context=context)
+                    cr, uid, 'point_of_sale.picking_type_makemydayout', context=context)
 
     _defaults = {
         'user_id': lambda self, cr, uid, context: uid,
@@ -1286,7 +1286,7 @@ class makemyday_order(osv.osv):
                 else:
                     grouped_data[key].append(values)
 
-            #because of the weird way the pos order is written, we need to make sure there is at least one line, 
+            #because of the weird way the makemyday order is written, we need to make sure there is at least one line, 
             #because just after the 'for' loop there are references to 'line' and 'income_account' variables (that 
             #are set inside the for loop)
             #TOFIX: a deep refactoring of this method (and class!) is needed in order to get rid of this stupid hack
@@ -1553,19 +1553,19 @@ class product_template(osv.osv):
     _inherit = 'product.template'
 
     _columns = {
-        'available_in_pos': fields.boolean('Available in the Point of Sale', help='Check if you want this product to appear in the Point of Sale'), 
+        'available_in_makemyday': fields.boolean('Available in the Point of Sale', help='Check if you want this product to appear in the Point of Sale'), 
         'to_weight' : fields.boolean('To Weigh With Scale', help="Check if the product should be weighted using the hardware scale integration"),
         'makemyday_categ_id': fields.many2one('makemyday.category','Point of Sale Category', help="Those categories are used to group similar products for point of sale."),
     }
 
     _defaults = {
         'to_weight' : False,
-        'available_in_pos': True,
+        'available_in_makemyday': True,
     }
 
     def unlink(self, cr, uid, ids, context=None):
         product_ctx = dict(context or {}, active_test=False)
-        if self.search_count(cr, uid, [('id', 'in', ids), ('available_in_pos', '=', True)], context=product_ctx):
+        if self.search_count(cr, uid, [('id', 'in', ids), ('available_in_makemyday', '=', True)], context=product_ctx):
             if self.pool['makemyday.session'].search_count(cr, uid, [('state', '!=', 'closed')], context=context):
                 raise osv.except_osv(_('Error!'),
                     _('You cannot delete a product saleable in point of sale while a session is still opened.'))

@@ -171,9 +171,9 @@ var DebugWidget = PosBaseWidget.extend({
         
         // for dragging the debug widget around
         this.dragging  = false;
-        this.dragpos = {x:0, y:0};
+        this.dragmakemyday = {x:0, y:0};
 
-        function eventpos(event){
+        function eventmakemyday(event){
             if(event.touches && event.touches[0]){
                 return {x: event.touches[0].screenX, y: event.touches[0].screenY};
             }else{
@@ -186,17 +186,17 @@ var DebugWidget = PosBaseWidget.extend({
         };
         this.dragstart_handler = function(event){
             self.dragging = true;
-            self.dragpos = eventpos(event);
+            self.dragmakemyday = eventmakemyday(event);
         };
         this.dragmove_handler = function(event){
             if(self.dragging){
                 var top = this.offsetTop;
                 var left = this.offsetLeft;
-                var pos  = eventpos(event);
-                var dx   = pos.x - self.dragpos.x; 
-                var dy   = pos.y - self.dragpos.y; 
+                var makemyday  = eventmakemyday(event);
+                var dx   = makemyday.x - self.dragmakemyday.x; 
+                var dy   = makemyday.y - self.dragmakemyday.y; 
 
-                self.dragpos = pos;
+                self.dragmakemyday = makemyday;
 
                 this.style.right = 'auto';
                 this.style.bottom = 'auto';
@@ -340,7 +340,7 @@ var SynchNotificationWidget = StatusWidget.extend({
     template: 'SynchNotificationWidget',
     start: function(){
         var self = this;
-        this.makemyday.bind('change:synch', function(pos,synch){
+        this.makemyday.bind('change:synch', function(makemyday,synch){
             self.set_status(synch.state, synch.pending);
         });
         this.$el.click(function(){
@@ -369,7 +369,7 @@ var ProxyStatusWidget = StatusWidget.extend({
             }
             if( this.makemyday.config.iface_print_via_proxy || 
                 this.makemyday.config.iface_cashdrawer ){
-                var printer = status.drivers.escpos ? status.drivers.escpos.status : false;
+                var printer = status.drivers.escmakemyday ? status.drivers.escmakemyday.status : false;
                 if( printer != 'connected' && printer != 'connecting'){
                     warning = true;
                     msg = msg ? msg + ' & ' : msg;
@@ -435,8 +435,8 @@ var Chrome = PosBaseWidget.extend({
         this.started  = new $.Deferred(); // resolves when DOM is online
         this.ready    = new $.Deferred(); // resolves when the whole GUI has been loaded
 
-        this.pos = new models.PosModel(this.session,{chrome:this});
-        this.gui = new gui.Gui({pos: this.pos, chrome: this});
+        this.makemyday = new models.PosModel(this.session,{chrome:this});
+        this.gui = new gui.Gui({makemyday: this.makemyday, chrome: this});
         this.chrome = this; // So that chrome's childs have chrome set automatically
         this.makemyday.gui = this.gui;
 
@@ -480,7 +480,7 @@ var Chrome = PosBaseWidget.extend({
 
         this.renderElement();
 
-        this.$('.pos-logo').click(function(){
+        this.$('.makemyday-logo').click(function(){
             self.click_logo();
         });
 
@@ -499,7 +499,7 @@ var Chrome = PosBaseWidget.extend({
     },
 
     // replaces the error handling of the existing crashmanager which
-    // uses jquery dialog to display the error, to use the pos popup
+    // uses jquery dialog to display the error, to use the makemyday popup
     // instead
     replace_crashmanager: function() {
         var self = this;
@@ -538,7 +538,7 @@ var Chrome = PosBaseWidget.extend({
     },
 
     disable_rubberbanding: function(){
-        // prevent the pos body from being scrollable. 
+        // prevent the makemyday body from being scrollable. 
         document.body.addEventListener('touchmove',function(event){
             var node = event.target;
             while(node){
@@ -628,16 +628,16 @@ var Chrome = PosBaseWidget.extend({
         },{
             'name':   'proxy_status',
             'widget': ProxyStatusWidget,
-            'append':  '.pos-rightheader',
+            'append':  '.makemyday-rightheader',
             'condition': function(){ return this.makemyday.config.use_proxy; },
         },{
             'name':   'notification',
             'widget': SynchNotificationWidget,
-            'append':  '.pos-rightheader',
+            'append':  '.makemyday-rightheader',
         },{
             'name':   'close_button',
             'widget': HeaderButtonWidget,
-            'append':  '.pos-rightheader',
+            'append':  '.makemyday-rightheader',
             'args': {
                 label: _t('Close'),
                 action: function(){ 
@@ -667,7 +667,7 @@ var Chrome = PosBaseWidget.extend({
         },{
             'name':  'debug',
             'widget': DebugWidget,
-            'append': '.pos-content',
+            'append': '.makemyday-content',
         },
     ],
 

@@ -77,7 +77,7 @@ Main Features
     ],
     'installable': True,
     'application': True,
-    'qweb': ['static/src/xml/pos.xml'],
+    'qweb': ['static/src/xml/makemyday.xml'],
     'website': 'https://www.odoo.com/page/point-of-sale',
     'auto_install': False,
 }

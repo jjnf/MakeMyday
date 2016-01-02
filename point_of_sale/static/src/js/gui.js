@@ -1,10 +1,10 @@
 odoo.define('point_of_sale.gui', function (require) {
 "use strict";
-// this file contains the Gui, which is the pos 'controller'. 
+// this file contains the Gui, which is the makemyday 'controller'. 
 // It contains high level methods to manipulate the interface
 // such as changing between screens, creating popups, etc.
 //
-// it is available to all pos objects trough the '.gui' field.
+// it is available to all makemyday objects trough the '.gui' field.
 
 var core = require('web.core');
 var Model = require('web.DataModel');
@@ -16,7 +16,7 @@ var Gui = core.Class.extend({
     popup_classes:  [],
     init: function(options){
         var self = this;
-        this.pos            = options.pos;
+        this.makemyday            = options.makemyday;
         this.chrome         = options.chrome;
         this.screen_instances     = {};
         this.popup_instances      = {};
@@ -177,7 +177,7 @@ var Gui = core.Class.extend({
 
     /* ---- Gui: INTER TAB COMM ---- */
 
-    // This sets up automatic pos exit when open in
+    // This sets up automatic makemyday exit when open in
     // another tab.
     close_other_tabs: function() {
         var self = this;

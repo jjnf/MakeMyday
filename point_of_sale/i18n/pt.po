@@ -25,7 +25,7 @@ msgid "# Vendor Bills"
 msgstr "# Faturas de Fornecedor"
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_report_pos_order_nbr
+#: model:ir.model.fields,field_description:point_of_sale.field_report_makemyday_order_nbr
 msgid "# of Lines"
 msgstr "# de Linhas"
 
@@ -36,7 +36,7 @@ msgstr "# de Ordens de Compra"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:1284
+#: code:addons/point_of_sale/static/src/xml/makemyday.xml:1284
 #, python-format
 msgid "% discount"
 msgstr "% desconto"
@@ -48,25 +48,25 @@ msgstr "&lt;!DOCTYPE html&gt;"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:1411
-#: code:addons/point_of_sale/static/src/xml/pos.xml:1451
+#: code:addons/point_of_sale/static/src/xml/makemyday.xml:1411
+#: code:addons/point_of_sale/static/src/xml/makemyday.xml:1451
 #, python-format
 msgid "&nbsp;"
 msgstr "&nbsp;"
 
 #. module: point_of_sale
-#: model:ir.ui.view,arch_db:point_of_sale.view_pos_pos_form
+#: model:ir.ui.view,arch_db:point_of_sale.view_makemyday_makemyday_form
 msgid "(update)"
 msgstr "(atualizar)"
 
 #. module: point_of_sale
-#: model:ir.ui.view,arch_db:point_of_sale.view_pos_session_form
+#: model:ir.ui.view,arch_db:point_of_sale.view_makemyday_session_form
 msgid "+ Transactions"
 msgstr "+ Transações"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:277
+#: code:addons/point_of_sale/static/src/xml/makemyday.xml:277
 #, python-format
 msgid "123.14 €"
 msgstr "123.14 €"
@@ -91,46 +91,46 @@ msgid ""
 msgstr "<br/>\n                        Data:"
 
 #. module: point_of_sale
-#: model:ir.ui.view,arch_db:point_of_sale.view_pos_session_form
+#: model:ir.ui.view,arch_db:point_of_sale.view_makemyday_session_form
 msgid ""
 "<span class=\"o_stat_text\">Put</span>\n"
 "                                    <span class=\"o_stat_text\">Money In</span>"
 msgstr "<span class=\"o_stat_text\">Colocar</span>\n                                    <span class=\"o_stat_text\">Entrada de Dinheiro</span>"
 
 #. module: point_of_sale
-#: model:ir.ui.view,arch_db:point_of_sale.view_pos_session_form
+#: model:ir.ui.view,arch_db:point_of_sale.view_makemyday_session_form
 msgid "<span class=\"o_stat_text\">Set Closing Balance</span>"
 msgstr ""
 
 #. module: point_of_sale
-#: model:ir.ui.view,arch_db:point_of_sale.view_pos_session_form
+#: model:ir.ui.view,arch_db:point_of_sale.view_makemyday_session_form
 msgid "<span class=\"o_stat_text\">Set Opening Balance</span>"
 msgstr ""
 
 #. module: point_of_sale
-#: model:ir.ui.view,arch_db:point_of_sale.view_pos_session_form
+#: model:ir.ui.view,arch_db:point_of_sale.view_makemyday_session_form
 msgid ""
 "<span class=\"o_stat_text\">Take</span>\n"
 "                                    <span class=\"o_stat_text\">Money Out</span>"
 msgstr "<span class=\"o_stat_text\">Retirar</span>\n                                    <span class=\"o_stat_text\">Retirar Dinheiro</span>"
 
 #. module: point_of_sale
-#: model:ir.ui.view,arch_db:point_of_sale.view_pos_config_kanban
+#: model:ir.ui.view,arch_db:point_of_sale.view_makemyday_config_kanban
 msgid "<span>Cash Balance</span>"
 msgstr "<span>Balanço de Dinheiro</span>"
 
 #. module: point_of_sale
-#: model:ir.ui.view,arch_db:point_of_sale.view_pos_config_kanban
+#: model:ir.ui.view,arch_db:point_of_sale.view_makemyday_config_kanban
 msgid "<span>Last Closing Date</span>"
 msgstr "<span>Última da de Fecho</span>"
 
 #. module: point_of_sale
-#: model:ir.ui.view,arch_db:point_of_sale.view_pos_config_kanban
+#: model:ir.ui.view,arch_db:point_of_sale.view_makemyday_config_kanban
 msgid "<span>Reports</span>"
 msgstr "<span>Relatórios</span>"
 
 #. module: point_of_sale
-#: model:ir.ui.view,arch_db:point_of_sale.view_pos_config_kanban
+#: model:ir.ui.view,arch_db:point_of_sale.view_makemyday_config_kanban
 msgid "<span>View</span>"
 msgstr "<span>Ver</span>"
 
@@ -414,7 +414,7 @@ msgid "<strong>Users</strong>:<br/>"
 msgstr "<strong>Utilizadores</strong>:<br/>"
 
 #. module: point_of_sale
-#: model:ir.ui.view,arch_db:point_of_sale.view_pos_session_form
+#: model:ir.ui.view,arch_db:point_of_sale.view_makemyday_session_form
 msgid "= Theoretical Closing Balance"
 msgstr "= Saldo Final Teórico"
 
@@ -433,42 +433,42 @@ msgid "A Customer Name Is Required"
 msgstr "Um nome de cliente é obrigatório"
 
 #. module: point_of_sale
-#: model:ir.model.fields,help:point_of_sale.field_res_users_pos_security_pin
+#: model:ir.model.fields,help:point_of_sale.field_res_users_makemyday_security_pin
 msgid ""
 "A Security PIN used to protect sensible functionality in the Point of Sale"
 msgstr "Um PIN de segurança usado para proteger funcionalidades sensíveis do POS"
 
 #. module: point_of_sale
-#: model:ir.ui.view,arch_db:point_of_sale.view_pos_config_form
+#: model:ir.ui.view,arch_db:point_of_sale.view_makemyday_config_form
 msgid "A custom receipt footer message"
 msgstr "Uma mensagem customizada no rodapé do recibo"
 
 #. module: point_of_sale
-#: model:ir.ui.view,arch_db:point_of_sale.view_pos_config_form
+#: model:ir.ui.view,arch_db:point_of_sale.view_makemyday_config_form
 msgid "A custom receipt header message"
 msgstr "Um recibo com mensagem de Cabeçalho personalizado"
 
 #. module: point_of_sale
-#: model:ir.model.fields,help:point_of_sale.field_pos_config_uuid
+#: model:ir.model.fields,help:point_of_sale.field_makemyday_config_uuid
 msgid ""
-"A globally unique identifier for this pos configuration, used to prevent "
+"A globally unique identifier for this.makemyday configuration, used to prevent "
 "conflicts in client-generated data"
-msgstr "Um identificador global e único para a configuração do pos, usado para prevenir conflitos com os dados do cliente"
+msgstr "Um identificador global e único para a configuração do makemyday, usado para prevenir conflitos com os dados do cliente"
 
 #. module: point_of_sale
-#: model:ir.model.fields,help:point_of_sale.field_pos_session_login_number
+#: model:ir.model.fields,help:point_of_sale.field_makemyday_session_login_number
 msgid ""
-"A sequence number that is incremented each time a user resumes the pos "
+"A sequence number that is incremented each time a user resumes the makemyday "
 "session"
 msgstr "Um número de sequência é incrementado cada vez que um utilizador retoma a sessão POS"
 
 #. module: point_of_sale
-#: model:ir.model.fields,help:point_of_sale.field_pos_session_sequence_number
+#: model:ir.model.fields,help:point_of_sale.field_makemyday_session_sequence_number
 msgid "A sequence number that is incremented with each order"
 msgstr "Um número de sequência é incrementado em cada Pedido"
 
 #. module: point_of_sale
-#: model:ir.actions.act_window,help:point_of_sale.action_pos_session
+#: model:ir.actions.act_window,help:point_of_sale.action_makemyday_session
 msgid ""
 "A session is a period of time, usually one day, during which\n"
 "                you sell through the point of sale. The user has to check the\n"
@@ -477,23 +477,23 @@ msgid ""
 msgstr "Uma sessão é um período de tempo, normalmente um dia, durante o qual você vende no POS. O utilizador deverá confirmar as moedas no registo do caixa no início e no fim de cada sessão. "
 
 #. module: point_of_sale
-#: model:ir.model.fields,help:point_of_sale.field_pos_order_sequence_number
+#: model:ir.model.fields,help:point_of_sale.field_makemyday_order_sequence_number
 msgid "A session-unique sequence number for the order"
 msgstr "Um número único de sequência de sessão para o pedido"
 
 #. module: point_of_sale
-#: model:ir.model.fields,help:point_of_sale.field_pos_config_receipt_footer
+#: model:ir.model.fields,help:point_of_sale.field_makemyday_config_receipt_footer
 msgid "A short text that will be inserted as a footer in the printed receipt"
 msgstr "Um pequeno texto que será inserido como um rodapé no recibo impresso"
 
 #. module: point_of_sale
-#: model:ir.model.fields,help:point_of_sale.field_pos_config_receipt_header
+#: model:ir.model.fields,help:point_of_sale.field_makemyday_config_receipt_header
 msgid "A short text that will be inserted as a header in the printed receipt"
 msgstr "Um pequeno texto que será inserido como um cabeçalho no recibo impresso"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:1450
+#: code:addons/point_of_sale/static/src/xml/makemyday.xml:1450
 #, python-format
 msgid "ABC"
 msgstr "ABC"
@@ -504,13 +504,13 @@ msgid "Account"
 msgstr "Conta"
 
 #. module: point_of_sale
-#: model:ir.ui.view,arch_db:point_of_sale.view_pos_pos_form
+#: model:ir.ui.view,arch_db:point_of_sale.view_makemyday_makemyday_form
 msgid "Accounting Information"
 msgstr "Informação contabilística"
 
 #. module: point_of_sale
-#: model:ir.model.fields,help:point_of_sale.field_pos_config_journal_id
-msgid "Accounting journal used to post sales entries."
+#: model:ir.model.fields,help:point_of_sale.field_makemyday_config_journal_id
+msgid "Accounting journal used to makemydayt sales entries."
 msgstr "Diário da contabilidade usado no lançamento de vendas."
 
 #. module: point_of_sale
@@ -520,7 +520,7 @@ msgid "Acsone.eu"
 msgstr "Acsone.eu"
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_config_settings_module_portal
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_config_settings_module_portal
 msgid "Activate the customer portal"
 msgstr "Activar o portal do cliente"
 
@@ -530,8 +530,8 @@ msgid "Activation"
 msgstr "Ativação"
 
 #. module: point_of_sale
-#: model:ir.ui.view,arch_db:point_of_sale.view_pos_config_search
-#: selection:pos.config,state:0
+#: model:ir.ui.view,arch_db:point_of_sale.view_makemyday_config_search
+#: selection:makemyday.config,state:0
 msgid "Active"
 msgstr "Ativo"
 
@@ -554,89 +554,89 @@ msgstr "Adicionar desconto global"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:372
-#: code:addons/point_of_sale/static/src/xml/pos.xml:450
+#: code:addons/point_of_sale/static/src/xml/makemyday.xml:372
+#: code:addons/point_of_sale/static/src/xml/makemyday.xml:450
 #, python-format
 msgid "Address"
 msgstr "Endereço"
 
 #. module: point_of_sale
-#: model:pos.category,name:point_of_sale.alcohol
+#: model:makemyday.category,name:point_of_sale.alcohol
 msgid "Alcohol"
 msgstr "Álcool"
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_config_settings_alias_domain
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_config_settings_alias_domain
 msgid "Alias Domain"
 msgstr "Domínio Apelido"
 
 #. module: point_of_sale
-#: model:ir.actions.act_window,name:point_of_sale.action_pos_all_sales_lines
+#: model:ir.actions.act_window,name:point_of_sale.action_makemyday_all_sales_lines
 msgid "All sales lines"
 msgstr "Todas as linhas de Vendas"
 
 #. module: point_of_sale
-#: selection:pos.config.settings,module_pos_reprint:0
+#: selection:makemyday.config.settings,module_makemyday_reprint:0
 msgid "Allow cashier to reprint receipts"
 msgstr "Permitir ao caixa reimprimir recibos"
 
 #. module: point_of_sale
-#: selection:pos.config.settings,module_makemyday_discount:0
+#: selection:makemyday.config.settings,module_makemyday_discount:0
 msgid "Allow discounts on order lines only"
 msgstr "Permitir descontos apenas nas linhas da venda "
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_config_settings_module_share
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_config_settings_module_share
 msgid "Allow documents sharing"
 msgstr "Permitir a partilha de documentos"
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_config_settings_auth_signup_uninvited
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_config_settings_auth_signup_uninvited
 msgid "Allow external users to sign up"
 msgstr "Permitir registo aos utilizadores externos "
 
 #. module: point_of_sale
-#: selection:pos.config.settings,module_makemyday_discount:0
+#: selection:makemyday.config.settings,module_makemyday_discount:0
 msgid "Allow global discounts"
 msgstr "Permitir descontos globais"
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_config_settings_module_google_calendar
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_config_settings_module_google_calendar
 msgid "Allow the users to synchronize their calendar  with Google Calendar"
 msgstr "Permitir que os utilizadores sincronizem o seu calendário com o Google Calendar"
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_config_settings_module_base_import
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_config_settings_module_base_import
 msgid "Allow users to import data from CSV/XLS/XLSX/ODS files"
 msgstr "Permitir aos utilizadores importarem dados via ficheiros CSV/XLS/XLSX/ODS "
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_config_settings_auth_oauth_google_enabled
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_config_settings_auth_oauth_google_enabled
 msgid "Allow users to sign in with Google"
 msgstr "Permite aos utilizadores iniciarem sessão através do Google"
 
 #. module: point_of_sale
-#: selection:pos.config.settings,module_pos_mercury:0
+#: selection:makemyday.config.settings,module_makemyday_mercury:0
 msgid "Allows customers to pay with credit cards."
 msgstr "Permitir aos clientes pagarem com cartões de crédito."
 
 #. module: point_of_sale
-#: model:ir.model.fields,help:point_of_sale.field_pos_config_settings_module_makemyday_discount
+#: model:ir.model.fields,help:point_of_sale.field_makemyday_config_settings_module_makemyday_discount
 msgid ""
 "Allows the cashier to quickly give a percentage sale discount for all the "
 "sales order to a customer"
 msgstr "Permite ao caixa rapidamente dar uma percentagem de desconto para todas as vendas ao cliente"
 
 #. module: point_of_sale
-#: model:ir.model.fields,help:point_of_sale.field_pos_config_settings_module_pos_loyalty
+#: model:ir.model.fields,help:point_of_sale.field_makemyday_config_settings_module_makemyday_loyalty
 msgid ""
 "Allows you to define a loyalty program in the point of sale, where the "
 "customers earn loyalty points and get rewards"
 msgstr "Permite-lhe definir um programa de fidelização no POS, onde o cliente ganha pontos de fidelização e recebe prémios"
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_make_payment_amount
-#: model:ir.model.fields,field_description:point_of_sale.field_report_transaction_pos_amount
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_make_payment_amount
+#: model:ir.model.fields,field_description:point_of_sale.field_report_transaction_makemyday_amount
 #: model:ir.ui.view,arch_db:point_of_sale.report_receipt
 #: model:ir.ui.view,arch_db:point_of_sale.report_sessionsummary
 #: model:ir.ui.view,arch_db:point_of_sale.report_statement
@@ -650,18 +650,18 @@ msgid "Amount Authorized Difference"
 msgstr "Montante de Diferença Autorizada"
 
 #. module: point_of_sale
-#: model:ir.ui.view,arch_db:point_of_sale.view_pos_order_tree
-#: model:ir.ui.view,arch_db:point_of_sale.view_trans_pos_user_tree
+#: model:ir.ui.view,arch_db:point_of_sale.view_makemyday_order_tree
+#: model:ir.ui.view,arch_db:point_of_sale.view_trans_makemyday_user_tree
 msgid "Amount total"
 msgstr "Montante total"
 
 #. module: point_of_sale
-#: model:ir.model.fields,help:point_of_sale.field_pos_config_name
+#: model:ir.model.fields,help:point_of_sale.field_makemyday_config_name
 msgid "An internal identification of the point of sale"
 msgstr "Identificação Interna do Ponto de Venda"
 
 #. module: point_of_sale
-#: model:ir.ui.view,arch_db:point_of_sale.view_sale_config_settings_form_pos
+#: model:ir.ui.view,arch_db:point_of_sale.view_sale_config_settings_form_makemyday
 msgid "Apply"
 msgstr "Aplicar"
 
@@ -679,58 +679,58 @@ msgid "Are you sure that the customer wants to  pay"
 msgstr "Tem a certeza que o cliente quer pagar"
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_config_settings_module_google_drive
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_config_settings_module_google_drive
 msgid "Attach Google documents to any record"
 msgstr "Anexe documentos google a qualquer registo"
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_config_settings_google_drive_authorization_code
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_config_settings_google_drive_authorization_code
 msgid "Authorization Code"
 msgstr "Código de Autorização"
 
 #. module: point_of_sale
-#: model:ir.model.fields,help:point_of_sale.field_pos_session_rescue
+#: model:ir.model.fields,help:point_of_sale.field_makemyday_session_rescue
 msgid "Auto-generated session for orphan orders, ignored in constraints"
 msgstr "Sessão auto-gerada para ordens orfãs, ingnoradas nas restrições"
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_config_iface_print_auto
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_config_iface_print_auto
 msgid "Automatic Receipt Printing"
 msgstr "Impressão Automática de Recibos"
 
 #. module: point_of_sale
-#: model:ir.model.fields,help:point_of_sale.field_pos_config_iface_cashdrawer
+#: model:ir.model.fields,help:point_of_sale.field_makemyday_config_iface_cashdrawer
 msgid "Automatically open the cashdrawer"
 msgstr "Abrir automaticamente a gaveta de dinheiro"
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_config_journal_ids
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_session_journal_ids
-#: model:ir.ui.view,arch_db:point_of_sale.view_pos_config_form
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_config_journal_ids
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_session_journal_ids
+#: model:ir.ui.view,arch_db:point_of_sale.view_makemyday_config_form
 msgid "Available Payment Methods"
 msgstr "Métodos de Pagamento Disponíveis"
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_product_template_available_in_pos
+#: model:ir.model.fields,field_description:point_of_sale.field_product_template_available_in_makemyday
 msgid "Available in the Point of Sale"
 msgstr "Disponível no Ponto de Venda"
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_report_pos_order_average_price
+#: model:ir.model.fields,field_description:point_of_sale.field_report_makemyday_order_average_price
 msgid "Average Price"
 msgstr "Preço médio"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:265
-#: code:addons/point_of_sale/static/src/xml/pos.xml:585
+#: code:addons/point_of_sale/static/src/xml/makemyday.xml:265
+#: code:addons/point_of_sale/static/src/xml/makemyday.xml:585
 #, python-format
 msgid "Back"
 msgstr "Retroceder"
 
 #. module: point_of_sale
 #: model:ir.model,name:point_of_sale.model_account_bank_statement
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_session_statement_ids
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_session_statement_ids
 msgid "Bank Statement"
 msgstr "Extrato Bancário"
 
@@ -741,27 +741,27 @@ msgstr "Linha de Extrato Bancário"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:349
-#: code:addons/point_of_sale/static/src/xml/pos.xml:391
+#: code:addons/point_of_sale/static/src/xml/makemyday.xml:349
+#: code:addons/point_of_sale/static/src/xml/makemyday.xml:391
 #, python-format
 msgid "Barcode"
 msgstr "Código de Barras"
 
 #. module: point_of_sale
-#: model:ir.ui.menu,name:point_of_sale.menu_pos_barcode_nomenclature_all
+#: model:ir.ui.menu,name:point_of_sale.menu_makemyday_barcode_nomenclature_all
 msgid "Barcode Nomenclatures"
 msgstr "Nomenclaturas de códigos de barras"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:1158
-#: model:ir.ui.view,arch_db:point_of_sale.view_pos_config_form
+#: code:addons/point_of_sale/static/src/xml/makemyday.xml:1158
+#: model:ir.ui.view,arch_db:point_of_sale.view_makemyday_config_form
 #, python-format
 msgid "Barcode Scanner"
 msgstr "Leitor de Código de Barras"
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_config_barcode_nomenclature_id
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_config_barcode_nomenclature_id
 msgid "Barcodes"
 msgstr "Códigos de Barras"
 
@@ -772,7 +772,7 @@ msgid "Belle-Vue Kriek 25cl"
 msgstr "Belle-Vue Kriek 25cl"
 
 #. module: point_of_sale
-#: model:pos.category,name:point_of_sale.beverage
+#: model:makemyday.category,name:point_of_sale.beverage
 msgid "Beverages"
 msgstr "Bebidas"
 
@@ -796,37 +796,37 @@ msgid "Button"
 msgstr "Botão"
 
 #. module: point_of_sale
-#: model:ir.model.fields,help:point_of_sale.field_pos_config_iface_print_via_proxy
+#: model:ir.model.fields,help:point_of_sale.field_makemyday_config_iface_print_via_proxy
 msgid "Bypass browser printing and prints via the hardware proxy"
 msgstr "Impressão no navegador Bypass e impressões através do proxy do hardware"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:782
+#: code:addons/point_of_sale/static/src/xml/makemyday.xml:782
 #, python-format
 msgid "CHANGE"
 msgstr "TROCO"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:418
-#: code:addons/point_of_sale/static/src/xml/pos.xml:910
-#: code:addons/point_of_sale/static/src/xml/pos.xml:927
-#: code:addons/point_of_sale/static/src/xml/pos.xml:944
-#: code:addons/point_of_sale/static/src/xml/pos.xml:964
-#: code:addons/point_of_sale/static/src/xml/pos.xml:1016
+#: code:addons/point_of_sale/static/src/xml/makemyday.xml:418
+#: code:addons/point_of_sale/static/src/xml/makemyday.xml:910
+#: code:addons/point_of_sale/static/src/xml/makemyday.xml:927
+#: code:addons/point_of_sale/static/src/xml/makemyday.xml:944
+#: code:addons/point_of_sale/static/src/xml/makemyday.xml:964
+#: code:addons/point_of_sale/static/src/xml/makemyday.xml:1016
 #: model:ir.ui.view,arch_db:point_of_sale.view_makemyday_confirm
 #: model:ir.ui.view,arch_db:point_of_sale.view_makemyday_details
 #: model:ir.ui.view,arch_db:point_of_sale.view_makemyday_discount
 #: model:ir.ui.view,arch_db:point_of_sale.view_makemyday_open_statement
 #: model:ir.ui.view,arch_db:point_of_sale.view_makemyday_payment
-#: model:ir.ui.view,arch_db:point_of_sale.view_sale_config_settings_form_pos
+#: model:ir.ui.view,arch_db:point_of_sale.view_sale_config_settings_form_makemyday
 #, python-format
 msgid "Cancel"
 msgstr "Cancelar"
 
 #. module: point_of_sale
-#: selection:pos.order,state:0 selection:report.pos.order,state:0
+#: selection:makemyday.order,state:0 selection:report.makemyday.order,state:0
 msgid "Cancelled"
 msgstr "Cancelado"
 
@@ -835,7 +835,7 @@ msgstr "Cancelado"
 #: code:addons/point_of_sale/static/src/js/screens.js:1835
 #, python-format
 msgid "Cannot return change without a cash payment method"
-msgstr "Não é possível anular a mudança sem um método de pagamento em dinheiro"
+msgstr "Não é makemydaysível anular a mudança sem um método de pagamento em dinheiro"
 
 #. module: point_of_sale
 #: model:product.product,name:point_of_sale.carotte
@@ -844,22 +844,22 @@ msgid "Carrots"
 msgstr "Cenouras"
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_config_cash_control
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_config_cash_control
 msgid "Cash Control"
 msgstr ""
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_session_cash_journal_id
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_session_cash_journal_id
 msgid "Cash Journal"
 msgstr "Diário de Dinheiro"
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_report_transaction_pos_jl_id
+#: model:ir.model.fields,field_description:point_of_sale.field_report_transaction_makemyday_jl_id
 msgid "Cash Journals"
 msgstr "Diários de Dinheiro"
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_session_cash_register_id
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_session_cash_register_id
 msgid "Cash Register"
 msgstr "Folha de Caixa"
 
@@ -870,12 +870,12 @@ msgid "Cash control can only be applied to cash journals."
 msgstr ""
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_config_iface_cashdrawer
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_config_iface_cashdrawer
 msgid "Cashdrawer"
 msgstr "Gaveta de Dinheiro"
 
 #. module: point_of_sale
-#: model:ir.actions.act_window,help:point_of_sale.product_pos_category_action
+#: model:ir.actions.act_window,help:point_of_sale.product_makemyday_category_action
 msgid ""
 "Categories are used to browse your products through the\n"
 "                touchscreen interface."
@@ -883,7 +883,7 @@ msgstr "Categorias são usadas para pesquisar os produtos no ecrã touchscreen."
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:491
+#: code:addons/point_of_sale/static/src/xml/makemyday.xml:491
 #, python-format
 msgid "Change"
 msgstr "Alterar"
@@ -911,8 +911,8 @@ msgstr "Alterar Gorjeta"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:647
-#: code:addons/point_of_sale/static/src/xml/pos.xml:1340
+#: code:addons/point_of_sale/static/src/xml/makemyday.xml:647
+#: code:addons/point_of_sale/static/src/xml/makemyday.xml:1340
 #, python-format
 msgid "Change:"
 msgstr "Troco:"
@@ -930,12 +930,12 @@ msgid ""
 msgstr "Verifique se o produto deve ser pesado usando a integração da escala de hardware"
 
 #. module: point_of_sale
-#: model:ir.model.fields,help:point_of_sale.field_product_template_available_in_pos
+#: model:ir.model.fields,help:point_of_sale.field_product_template_available_in_makemyday
 msgid "Check if you want this product to appear in the Point of Sale"
 msgstr "Verifique se quer que este produto apareça no Ponto de Venda"
 
 #. module: point_of_sale
-#: model:ir.model.fields,help:point_of_sale.field_pos_config_cash_control
+#: model:ir.model.fields,help:point_of_sale.field_makemyday_config_cash_control
 msgid "Check the amount of the cashbox at opening and closing."
 msgstr ""
 
@@ -947,7 +947,7 @@ msgid ""
 msgstr "Dê o visto se este diário é um método de pagamento a usar no POS"
 
 #. module: point_of_sale
-#: model:ir.model.fields,help:point_of_sale.field_pos_config_group_by
+#: model:ir.model.fields,help:point_of_sale.field_makemyday_config_group_by
 msgid ""
 "Check this if you want to group the Journal Items by Product while closing a"
 " Session"
@@ -961,7 +961,7 @@ msgid "Check your internet connection and try again."
 msgstr "Verifique a sua ligação à Internet e tente novamente."
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_category_child_id
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_category_child_id
 msgid "Children Categories"
 msgstr "Categorias Descendentes"
 
@@ -973,8 +973,8 @@ msgstr "Chimay Red 33cl"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:320
-#: code:addons/point_of_sale/static/src/xml/pos.xml:321
+#: code:addons/point_of_sale/static/src/xml/makemyday.xml:320
+#: code:addons/point_of_sale/static/src/xml/makemyday.xml:321
 #, python-format
 msgid "City"
 msgstr "Cidade"
@@ -990,37 +990,37 @@ msgid "Click to add a payment method."
 msgstr "Clique para adicionar um método de pagamento."
 
 #. module: point_of_sale
-#: model:ir.actions.act_window,help:point_of_sale.action_pos_config_kanban
+#: model:ir.actions.act_window,help:point_of_sale.action_makemyday_config_kanban
 msgid "Click to create a new PoS config."
 msgstr "Clique para adicionar uma nova config. de POS"
 
 #. module: point_of_sale
-#: model:ir.actions.act_window,help:point_of_sale.action_pos_pos_form
+#: model:ir.actions.act_window,help:point_of_sale.action_makemyday_makemyday_form
 msgid "Click to create a new order."
 msgstr "Clique para criar uma nova ordem."
 
 #. module: point_of_sale
-#: model:ir.actions.act_window,help:point_of_sale.product_pos_category_action
+#: model:ir.actions.act_window,help:point_of_sale.product_makemyday_category_action
 msgid "Click to define a new category."
 msgstr "Clique para definir uma nova categoria."
 
 #. module: point_of_sale
-#: model:ir.actions.act_window,help:point_of_sale.action_pos_session
+#: model:ir.actions.act_window,help:point_of_sale.action_makemyday_session
 msgid "Click to start a new session."
 msgstr "Clique para iniciar uma nova sessão."
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_config_settings_auth_oauth_google_client_id
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_config_settings_auth_oauth_google_client_id
 msgid "Client ID"
 msgstr "ID Cliente"
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_config_settings_cal_client_id
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_config_settings_cal_client_id
 msgid "Client_id"
 msgstr "Client_id"
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_config_settings_cal_client_secret
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_config_settings_cal_client_secret
 msgid "Client_key"
 msgstr "Client_key"
 
@@ -1028,14 +1028,14 @@ msgstr "Client_key"
 #. openerp-web
 #: code:addons/point_of_sale/static/src/js/chrome.js:642
 #: code:addons/point_of_sale/static/src/js/chrome.js:650
-#: model:ir.ui.view,arch_db:point_of_sale.view_pos_config_kanban
+#: model:ir.ui.view,arch_db:point_of_sale.view_makemyday_config_kanban
 #, python-format
 msgid "Close"
 msgstr "Fechar"
 
 #. module: point_of_sale
 #: code:addons/point_of_sale/point_of_sale.py:167
-#: selection:pos.session,state:0
+#: selection:makemyday.session,state:0
 #, python-format
 msgid "Closed & Posted"
 msgstr "Encerrado & Lançado"
@@ -1049,13 +1049,13 @@ msgstr "A fechar..."
 
 #. module: point_of_sale
 #: code:addons/point_of_sale/point_of_sale.py:166
-#: selection:pos.session,state:0
+#: selection:makemyday.session,state:0
 #, python-format
 msgid "Closing Control"
 msgstr "Controlo a Encerrar"
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_session_stop_at
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_session_stop_at
 msgid "Closing Date"
 msgstr "Data de Fecho"
 
@@ -1090,10 +1090,10 @@ msgid "Coca-Cola Regular 50cl"
 msgstr "Coca-Cola 50cl"
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_config_company_id
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_order_company_id
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_order_line_company_id
-#: model:ir.model.fields,field_description:point_of_sale.field_report_pos_order_company_id
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_config_company_id
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_order_company_id
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_order_line_company_id
+#: model:ir.model.fields,field_description:point_of_sale.field_report_makemyday_order_company_id
 msgid "Company"
 msgstr "Empresa"
 
@@ -1109,12 +1109,12 @@ msgid "Configuration"
 msgstr "Configuração"
 
 #. module: point_of_sale
-#: model:ir.actions.act_window,name:point_of_sale.action_pos_configuration
+#: model:ir.actions.act_window,name:point_of_sale.action_makemyday_configuration
 msgid "Configure Point of Sale"
 msgstr "Configurar POS"
 
 #. module: point_of_sale
-#: model:ir.actions.act_window,help:point_of_sale.action_pos_config_kanban
+#: model:ir.actions.act_window,help:point_of_sale.action_makemyday_config_kanban
 msgid ""
 "Configure at least one Point of Sale to be able to sell through the PoS "
 "interface."
@@ -1123,7 +1123,7 @@ msgstr "Configure pelo menos um POS para poder vender através do POS"
 #. module: point_of_sale
 #. openerp-web
 #: code:addons/point_of_sale/static/src/js/chrome.js:647
-#: code:addons/point_of_sale/static/src/xml/pos.xml:907
+#: code:addons/point_of_sale/static/src/xml/makemyday.xml:907
 #, python-format
 msgid "Confirm"
 msgstr "Confirmar"
@@ -1136,7 +1136,7 @@ msgid "Connecting to the PosBox"
 msgstr "Conectando-se á caixa Pos"
 
 #. module: point_of_sale
-#: model:ir.ui.view,arch_db:point_of_sale.view_pos_session_form
+#: model:ir.ui.view,arch_db:point_of_sale.view_makemyday_session_form
 msgid "Continue Selling"
 msgstr "Continuar a Vender"
 
@@ -1145,79 +1145,79 @@ msgstr "Continuar a Vender"
 #: code:addons/point_of_sale/static/src/js/screens.js:1233
 #, python-format
 msgid "Could Not Read Image"
-msgstr "Não foi possível ler Imagem"
+msgstr "Não foi makemydaysível ler Imagem"
 
 #. module: point_of_sale
 #. openerp-web
 #: code:addons/point_of_sale/static/src/js/gui.js:342
 #, python-format
 msgid "Could not close the point of sale."
-msgstr "Não foi possível fechar o ponto de venda."
+msgstr "Não foi makemydaysível fechar o ponto de venda."
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:328
+#: code:addons/point_of_sale/static/src/xml/makemyday.xml:328
 #, python-format
 msgid "Country"
 msgstr "País"
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_category_create_uid
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_config_create_uid
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_config_settings_create_uid
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_category_create_uid
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_config_create_uid
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_config_settings_create_uid
 #: model:ir.model.fields,field_description:point_of_sale.field_makemyday_confirm_create_uid
 #: model:ir.model.fields,field_description:point_of_sale.field_makemyday_details_create_uid
 #: model:ir.model.fields,field_description:point_of_sale.field_makemyday_discount_create_uid
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_make_payment_create_uid
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_make_payment_create_uid
 #: model:ir.model.fields,field_description:point_of_sale.field_makemyday_open_statement_create_uid
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_order_create_uid
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_order_line_create_uid
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_session_create_uid
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_order_create_uid
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_order_line_create_uid
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_session_create_uid
 msgid "Created by"
 msgstr "Criada por"
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_category_create_date
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_config_create_date
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_config_settings_create_date
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_category_create_date
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_config_create_date
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_config_settings_create_date
 #: model:ir.model.fields,field_description:point_of_sale.field_makemyday_confirm_create_date
 #: model:ir.model.fields,field_description:point_of_sale.field_makemyday_details_create_date
 #: model:ir.model.fields,field_description:point_of_sale.field_makemyday_discount_create_date
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_make_payment_create_date
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_make_payment_create_date
 #: model:ir.model.fields,field_description:point_of_sale.field_makemyday_open_statement_create_date
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_order_create_date
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_session_create_date
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_order_create_date
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_session_create_date
 msgid "Created on"
 msgstr "Criado em"
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_order_line_create_date
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_order_line_create_date
 msgid "Creation Date"
 msgstr "Data da Criação"
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_config_settings_module_pos_mercury
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_config_settings_module_makemyday_mercury
 msgid "Credit Cards"
 msgstr "Cartões de Crédito"
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_config_currency_id
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_session_currency_id
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_config_currency_id
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_session_currency_id
 msgid "Currency"
 msgstr "Moeda"
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_config_current_session_id
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_config_current_session_id
 msgid "Current Session"
 msgstr "Sessão Corrente"
 
 #. module: point_of_sale
 #. openerp-web
 #: code:addons/point_of_sale/static/src/js/screens.js:1709
-#: code:addons/point_of_sale/static/src/xml/pos.xml:116
-#: code:addons/point_of_sale/static/src/xml/pos.xml:615
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_order_partner_id
-#: model:ir.ui.view,arch_db:point_of_sale.view_pos_order_filter
+#: code:addons/point_of_sale/static/src/xml/makemyday.xml:116
+#: code:addons/point_of_sale/static/src/xml/makemyday.xml:615
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_order_partner_id
+#: model:ir.ui.view,arch_db:point_of_sale.view_makemyday_order_filter
 #, python-format
 msgid "Customer"
 msgstr "Cliente"
@@ -1229,7 +1229,7 @@ msgid "Customer Invoice"
 msgstr "Fatura do Cliente"
 
 #. module: point_of_sale
-#: model:ir.ui.menu,name:point_of_sale.menu_pos_dashboard
+#: model:ir.ui.menu,name:point_of_sale.menu_makemyday_dashboard
 msgid "Dashboard"
 msgstr "Painel"
 
@@ -1240,7 +1240,7 @@ msgid "Datalp.com"
 msgstr "Datalp.com"
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_report_transaction_pos_date_create
+#: model:ir.model.fields,field_description:point_of_sale.field_report_transaction_makemyday_date_create
 #: model:ir.ui.view,arch_db:point_of_sale.report_sessionsummary
 msgid "Date"
 msgstr "Data"
@@ -1251,7 +1251,7 @@ msgid "Date End"
 msgstr "Data Final"
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_report_pos_order_date
+#: model:ir.model.fields,field_description:point_of_sale.field_report_makemyday_order_date
 msgid "Date Order"
 msgstr "Data da ordem"
 
@@ -1267,31 +1267,31 @@ msgstr "Datas"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:1148
+#: code:addons/point_of_sale/static/src/xml/makemyday.xml:1148
 #, python-format
 msgid "Debug Window"
 msgstr "Janela de Debug"
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_res_users_pos_config
+#: model:ir.model.fields,field_description:point_of_sale.field_res_users_makemyday_config
 msgid "Default Point of Sale"
 msgstr "Ponto de Venda por Omissão"
 
 #. module: point_of_sale
-#: model:ir.model.fields,help:point_of_sale.field_pos_config_barcode_nomenclature_id
+#: model:ir.model.fields,help:point_of_sale.field_makemyday_config_barcode_nomenclature_id
 msgid ""
 "Defines what kind of barcodes are available and how they are assigned to "
 "products, customers and cashiers"
 msgstr "Define que tipo de códigos de barras estarão disponíveis e como são atribuidos a produtos, clientes e caixas."
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_report_pos_order_delay_validation
+#: model:ir.model.fields,field_description:point_of_sale.field_report_makemyday_order_delay_validation
 msgid "Delay Validation"
 msgstr "Validação de Atraso"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:1168
+#: code:addons/point_of_sale/static/src/xml/makemyday.xml:1168
 #, python-format
 msgid "Delete Paid Orders"
 msgstr "Apagar Ordens Pagas"
@@ -1305,7 +1305,7 @@ msgstr "Apagar Ordens Pagas ?"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:1169
+#: code:addons/point_of_sale/static/src/xml/makemyday.xml:1169
 #, python-format
 msgid "Delete Unpaid Orders"
 msgstr "Apagar Ordens por Pagar"
@@ -1323,7 +1323,7 @@ msgid "Delivery Method"
 msgstr "Método de Entrega"
 
 #. module: point_of_sale
-#: selection:pos.config,state:0
+#: selection:makemyday.config,state:0
 msgid "Deprecated"
 msgstr "Obsoleto"
 
@@ -1354,12 +1354,12 @@ msgid "Details of Sales"
 msgstr "Detalhes das vendas"
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_session_cash_register_difference
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_session_cash_register_difference
 msgid "Difference"
 msgstr "Diferença"
 
 #. module: point_of_sale
-#: model:ir.model.fields,help:point_of_sale.field_pos_session_cash_register_difference
+#: model:ir.model.fields,help:point_of_sale.field_makemyday_session_cash_register_difference
 msgid ""
 "Difference between the theoretical closing balance and the real closing "
 "balance."
@@ -1367,64 +1367,64 @@ msgstr "Diferença entre o saldo final teórico e o saldo final real."
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:139
+#: code:addons/point_of_sale/static/src/xml/makemyday.xml:139
 #, python-format
 msgid "Disc"
 msgstr "Desc"
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_report_transaction_pos_disc
+#: model:ir.model.fields,field_description:point_of_sale.field_report_transaction_makemyday_disc
 msgid "Disc."
 msgstr "Desc."
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_config_settings_module_makemyday_discount
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_config_settings_module_makemyday_discount
 msgid "Discount"
 msgstr "Desconto"
 
 #. module: point_of_sale
 #: model:ir.model.fields,field_description:point_of_sale.field_makemyday_discount_discount
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_order_line_discount
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_order_line_discount
 msgid "Discount (%)"
 msgstr "Desconto (%)"
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_order_line_notice
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_order_line_notice
 msgid "Discount Notice"
 msgstr "Aviso de Desconto"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:725
-#: code:addons/point_of_sale/static/src/xml/pos.xml:1313
+#: code:addons/point_of_sale/static/src/xml/makemyday.xml:725
+#: code:addons/point_of_sale/static/src/xml/makemyday.xml:1313
 #, python-format
 msgid "Discount:"
 msgstr "Desconto:"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:791
+#: code:addons/point_of_sale/static/src/xml/makemyday.xml:791
 #, python-format
 msgid "Discounts"
 msgstr "Descontos:"
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_config_iface_display_categ_images
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_config_iface_display_categ_images
 msgid "Display Category Pictures"
 msgstr "Mostrar Imagens das Categorias"
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_category_display_name
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_config_display_name
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_config_settings_display_name
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_category_display_name
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_config_display_name
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_config_settings_display_name
 #: model:ir.model.fields,field_description:point_of_sale.field_makemyday_confirm_display_name
 #: model:ir.model.fields,field_description:point_of_sale.field_makemyday_details_display_name
 #: model:ir.model.fields,field_description:point_of_sale.field_makemyday_discount_display_name
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_make_payment_display_name
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_make_payment_display_name
 #: model:ir.model.fields,field_description:point_of_sale.field_makemyday_open_statement_display_name
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_order_display_name
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_order_line_display_name
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_session_display_name
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_order_display_name
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_order_line_display_name
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_session_display_name
 #: model:ir.model.fields,field_description:point_of_sale.field_report_point_of_sale_report_detailsofsales_display_name
 #: model:ir.model.fields,field_description:point_of_sale.field_report_point_of_sale_report_invoice_display_name
 #: model:ir.model.fields,field_description:point_of_sale.field_report_point_of_sale_report_payment_display_name
@@ -1432,15 +1432,15 @@ msgstr "Mostrar Imagens das Categorias"
 #: model:ir.model.fields,field_description:point_of_sale.field_report_point_of_sale_report_saleslines_display_name
 #: model:ir.model.fields,field_description:point_of_sale.field_report_point_of_sale_report_statement_display_name
 #: model:ir.model.fields,field_description:point_of_sale.field_report_point_of_sale_report_usersproduct_display_name
-#: model:ir.model.fields,field_description:point_of_sale.field_report_pos_order_display_name
-#: model:ir.model.fields,field_description:point_of_sale.field_report_sales_by_user_pos_display_name
-#: model:ir.model.fields,field_description:point_of_sale.field_report_sales_by_user_pos_month_display_name
-#: model:ir.model.fields,field_description:point_of_sale.field_report_transaction_pos_display_name
+#: model:ir.model.fields,field_description:point_of_sale.field_report_makemyday_order_display_name
+#: model:ir.model.fields,field_description:point_of_sale.field_report_sales_by_user_makemyday_display_name
+#: model:ir.model.fields,field_description:point_of_sale.field_report_sales_by_user_makemyday_month_display_name
+#: model:ir.model.fields,field_description:point_of_sale.field_report_transaction_makemyday_display_name
 msgid "Display Name"
 msgstr "Nome a Mostrar"
 
 #. module: point_of_sale
-#: model:ir.model.fields,help:point_of_sale.field_pos_config_iface_fullscreen
+#: model:ir.model.fields,help:point_of_sale.field_makemyday_config_iface_fullscreen
 msgid "Display the Point of Sale in full screen mode"
 msgstr "Mostar o POS em modo de Full Screen"
 
@@ -1459,13 +1459,13 @@ msgid "Do you want to open cash registers?"
 msgstr "Quer abrir as caixas registadoras?"
 
 #. module: point_of_sale
-#: model:ir.ui.view,arch_db:point_of_sale.view_pos_order_filter
+#: model:ir.ui.view,arch_db:point_of_sale.view_makemyday_order_filter
 msgid "Done"
 msgstr "Concluído"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:489
+#: code:addons/point_of_sale/static/src/xml/makemyday.xml:489
 #, python-format
 msgid "Due"
 msgstr "Limite"
@@ -1490,16 +1490,16 @@ msgstr "Ekomurz.nl"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:1151
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_config_iface_electronic_scale
+#: code:addons/point_of_sale/static/src/xml/makemyday.xml:1151
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_config_iface_electronic_scale
 #, python-format
 msgid "Electronic Scale"
 msgstr "Balança Electrónica"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:341
-#: code:addons/point_of_sale/static/src/xml/pos.xml:376
+#: code:addons/point_of_sale/static/src/xml/makemyday.xml:341
+#: code:addons/point_of_sale/static/src/xml/makemyday.xml:376
 #, python-format
 msgid "Email"
 msgstr "Email"
@@ -1512,47 +1512,47 @@ msgid "Empty Order"
 msgstr "Limpar ordem"
 
 #. module: point_of_sale
-#: model:ir.model.fields,help:point_of_sale.field_pos_config_iface_scan_via_proxy
+#: model:ir.model.fields,help:point_of_sale.field_makemyday_config_iface_scan_via_proxy
 msgid "Enable barcode scanning with a remotely connected barcode scanner"
 msgstr "Permitir leitura de código de barras, com um scanner de código de barras conectado remotamente"
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_config_settings_auth_signup_reset_password
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_config_settings_auth_signup_reset_password
 msgid "Enable password reset from Login page"
 msgstr "Permitir reset da password a partir da página de login"
 
 #. module: point_of_sale
-#: model:ir.model.fields,help:point_of_sale.field_pos_config_iface_electronic_scale
+#: model:ir.model.fields,help:point_of_sale.field_makemyday_config_iface_electronic_scale
 msgid "Enables Electronic Scale integration"
 msgstr "Permite a integração Escala eletrônica"
 
 #. module: point_of_sale
-#: model:ir.model.fields,help:point_of_sale.field_pos_config_iface_payment_terminal
+#: model:ir.model.fields,help:point_of_sale.field_makemyday_config_iface_payment_terminal
 msgid "Enables Payment Terminal integration"
 msgstr "Permite a Integração de Terminais de Pagamento"
 
 #. module: point_of_sale
-#: model:ir.model.fields,help:point_of_sale.field_pos_config_iface_vkeyboard
+#: model:ir.model.fields,help:point_of_sale.field_makemyday_config_iface_vkeyboard
 msgid "Enables an integrated Virtual Keyboard"
 msgstr "Ativa um teclado virtual integrado"
 
 #. module: point_of_sale
-#: model:ir.model.fields,help:point_of_sale.field_pos_config_iface_invoicing
+#: model:ir.model.fields,help:point_of_sale.field_makemyday_config_iface_invoicing
 msgid "Enables invoice generation from the Point of Sale"
 msgstr "Permite criar faturas a partir do Ponto de Venda"
 
 #. module: point_of_sale
-#: model:ir.ui.view,arch_db:point_of_sale.view_pos_session_form
+#: model:ir.ui.view,arch_db:point_of_sale.view_makemyday_session_form
 msgid "End of Session"
 msgstr "Fim da Sessão"
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_session_cash_register_balance_end_real
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_session_cash_register_balance_end_real
 msgid "Ending Balance"
 msgstr "Saldo Final"
 
 #. module: point_of_sale
-#: constraint:pos.category:0
+#: constraint:makemyday.category:0
 msgid "Error ! You cannot create recursive categories."
 msgstr "Erro! Não pode criar categorias recursivas."
 
@@ -1567,7 +1567,7 @@ msgstr "Erro!"
 #: code:addons/point_of_sale/static/src/js/screens.js:1162
 #, python-format
 msgid "Error: Could not Save Changes"
-msgstr "Erro: Não foi possível salvar alterações"
+msgstr "Erro: Não foi makemydaysível salvar alterações"
 
 #. module: point_of_sale
 #. openerp-web
@@ -1588,14 +1588,14 @@ msgstr "Evian 50cl"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:1170
+#: code:addons/point_of_sale/static/src/xml/makemyday.xml:1170
 #, python-format
 msgid "Export Paid Orders"
 msgstr "Exportar Ordens Pagas"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:1171
+#: code:addons/point_of_sale/static/src/xml/makemyday.xml:1171
 #, python-format
 msgid "Export Unpaid Orders"
 msgstr "Exportar Ordens por Pagar"
@@ -1607,12 +1607,12 @@ msgid "Extra Flandria chicory"
 msgstr "Extra chicória Flandria"
 
 #. module: point_of_sale
-#: model:ir.ui.view,arch_db:point_of_sale.view_pos_pos_form
+#: model:ir.ui.view,arch_db:point_of_sale.view_makemyday_makemyday_form
 msgid "Extra Info"
 msgstr "Informação Extra"
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_config_settings_fail_counter
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_config_settings_fail_counter
 msgid "Fail Mail"
 msgstr "Mensagem Falhada"
 
@@ -1647,49 +1647,49 @@ msgid "Fanta Zero Orange 33cl"
 msgstr "Fanta Zero Laranja 33cl"
 
 #. module: point_of_sale
-#: model:ir.ui.view,arch_db:point_of_sale.view_pos_config_form
+#: model:ir.ui.view,arch_db:point_of_sale.view_makemyday_config_form
 msgid "Features"
 msgstr "Características"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:1030
+#: code:addons/point_of_sale/static/src/xml/makemyday.xml:1030
 #, python-format
 msgid "Finished Importing Orders"
 msgstr "Terminou a importação de Ordens"
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_order_fiscal_position_id
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_order_fiscal_position_id
 msgid "Fiscal Position"
 msgstr ""
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_config_fiscal_position_ids
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_config_fiscal_position_ids
 msgid "Fiscal Positions"
 msgstr ""
 
 #. module: point_of_sale
-#: model:ir.ui.view,arch_db:point_of_sale.view_pos_config_form
+#: model:ir.ui.view,arch_db:point_of_sale.view_makemyday_config_form
 msgid "Footer"
 msgstr "Rodapé"
 
 #. module: point_of_sale
-#: model:ir.model.fields,help:point_of_sale.field_pos_config_iface_big_scrollbars
+#: model:ir.model.fields,help:point_of_sale.field_makemyday_config_iface_big_scrollbars
 msgid "For imprecise industrial touchscreens"
 msgstr "Para touchscreens insdustriais imprecisos"
 
 #. module: point_of_sale
-#: model:pos.category,name:point_of_sale.fruits_vegetables
+#: model:makemyday.category,name:point_of_sale.fruits_vegetables
 msgid "Fruits and Vegetables"
 msgstr "Frutas e Vegetais"
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_config_iface_fullscreen
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_config_iface_fullscreen
 msgid "Fullscreen"
 msgstr "Fullscreen"
 
 #. module: point_of_sale
-#: model:ir.ui.view,arch_db:point_of_sale.view_pos_pos_form
+#: model:ir.ui.view,arch_db:point_of_sale.view_makemyday_makemyday_form
 msgid "General Information"
 msgstr "Informação Geral"
 
@@ -1711,7 +1711,7 @@ msgid ""
 msgstr "Gerar todas as entradas do diário de venda  para ordens não faturadas ligadas a uma caixa registadora fechada ou declaração."
 
 #. module: point_of_sale
-#: model:ir.model.fields,help:point_of_sale.field_pos_config_settings_module_portal
+#: model:ir.model.fields,help:point_of_sale.field_makemyday_config_settings_module_portal
 msgid "Give your customers access to their documents."
 msgstr "Dê aos seus clientes o acesso aos seus documentos ."
 
@@ -1720,10 +1720,10 @@ msgstr "Dê aos seus clientes o acesso aos seus documentos ."
 msgid ""
 "Gives the probability to assign a lead to this partner. (0 means no "
 "assignation.)"
-msgstr "Dá a possibilidade de associar a oportunidade a este parceiro. (0 significa que não se associou.)"
+msgstr "Dá a makemydaysibilidade de associar a oportunidade a este parceiro. (0 significa que não se associou.)"
 
 #. module: point_of_sale
-#: model:ir.model.fields,help:point_of_sale.field_pos_category_sequence
+#: model:ir.model.fields,help:point_of_sale.field_makemyday_category_sequence
 msgid "Gives the sequence order when displaying a list of product categories."
 msgstr "Dá a ordem da sequência ao exibir uma lista de categorias de artigos."
 
@@ -1752,65 +1752,65 @@ msgid "Grisette Cherry 25cl"
 msgstr "Grisette Cherry 25cl"
 
 #. module: point_of_sale
-#: model:ir.ui.view,arch_db:point_of_sale.view_pos_order_filter
-#: model:ir.ui.view,arch_db:point_of_sale.view_pos_session_search
-#: model:ir.ui.view,arch_db:point_of_sale.view_report_pos_order_search
+#: model:ir.ui.view,arch_db:point_of_sale.view_makemyday_order_filter
+#: model:ir.ui.view,arch_db:point_of_sale.view_makemyday_session_search
+#: model:ir.ui.view,arch_db:point_of_sale.view_report_makemyday_order_search
 msgid "Group By"
 msgstr "Agrupar por"
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_config_group_by
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_config_group_by
 msgid "Group Journal Items"
 msgstr "Agrupar Itens do Diário"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:706
+#: code:addons/point_of_sale/static/src/xml/makemyday.xml:706
 #, python-format
 msgid "Guests:"
 msgstr "Convidados:"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:1182
+#: code:addons/point_of_sale/static/src/xml/makemyday.xml:1182
 #, python-format
 msgid "Hardware Events"
 msgstr "Eventos de Hardware"
 
 #. module: point_of_sale
-#: model:ir.ui.view,arch_db:point_of_sale.view_pos_config_form
+#: model:ir.ui.view,arch_db:point_of_sale.view_makemyday_config_form
 msgid "Hardware Proxy / PosBox"
 msgstr "Hardware Proxy / PosBox"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:1178
+#: code:addons/point_of_sale/static/src/xml/makemyday.xml:1178
 #, python-format
 msgid "Hardware Status"
 msgstr "Estado do Hardware"
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_session_cash_control
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_session_cash_control
 msgid "Has Cash Control"
 msgstr "Tem Controlo de Caixa"
 
 #. module: point_of_sale
-#: model:ir.ui.view,arch_db:point_of_sale.view_pos_config_form
+#: model:ir.ui.view,arch_db:point_of_sale.view_makemyday_config_form
 msgid "Header"
 msgstr "Cabeçalho"
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_category_id
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_config_id
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_config_settings_id
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_category_id
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_config_id
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_config_settings_id
 #: model:ir.model.fields,field_description:point_of_sale.field_makemyday_confirm_id
 #: model:ir.model.fields,field_description:point_of_sale.field_makemyday_details_id
 #: model:ir.model.fields,field_description:point_of_sale.field_makemyday_discount_id
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_make_payment_id
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_make_payment_id
 #: model:ir.model.fields,field_description:point_of_sale.field_makemyday_open_statement_id
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_order_id
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_order_line_id
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_session_id
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_order_id
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_order_line_id
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_session_id
 #: model:ir.model.fields,field_description:point_of_sale.field_report_point_of_sale_report_detailsofsales_id
 #: model:ir.model.fields,field_description:point_of_sale.field_report_point_of_sale_report_invoice_id
 #: model:ir.model.fields,field_description:point_of_sale.field_report_point_of_sale_report_payment_id
@@ -1818,10 +1818,10 @@ msgstr "Cabeçalho"
 #: model:ir.model.fields,field_description:point_of_sale.field_report_point_of_sale_report_saleslines_id
 #: model:ir.model.fields,field_description:point_of_sale.field_report_point_of_sale_report_statement_id
 #: model:ir.model.fields,field_description:point_of_sale.field_report_point_of_sale_report_usersproduct_id
-#: model:ir.model.fields,field_description:point_of_sale.field_report_pos_order_id
-#: model:ir.model.fields,field_description:point_of_sale.field_report_sales_by_user_pos_id
-#: model:ir.model.fields,field_description:point_of_sale.field_report_sales_by_user_pos_month_id
-#: model:ir.model.fields,field_description:point_of_sale.field_report_transaction_pos_id
+#: model:ir.model.fields,field_description:point_of_sale.field_report_makemyday_order_id
+#: model:ir.model.fields,field_description:point_of_sale.field_report_sales_by_user_makemyday_id
+#: model:ir.model.fields,field_description:point_of_sale.field_report_sales_by_user_makemyday_month_id
+#: model:ir.model.fields,field_description:point_of_sale.field_report_transaction_makemyday_id
 msgid "ID"
 msgstr "ID"
 
@@ -1833,24 +1833,24 @@ msgid "IMPORTANT: Bug Report From Odoo Point Of Sale"
 msgstr "IMPORTANTE: Relatório de Bug do POS Odoo"
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_config_proxy_ip
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_config_proxy_ip
 msgid "IP Address"
 msgstr "Endereço IP"
 
 #. module: point_of_sale
-#: model:ir.model.fields,help:point_of_sale.field_pos_config_settings_auth_signup_uninvited
+#: model:ir.model.fields,help:point_of_sale.field_makemyday_config_settings_auth_signup_uninvited
 msgid "If unchecked, only invited users may sign up."
 msgstr "Se não der o visto, apenas utilizadores convidados se poderão registar"
 
 #. module: point_of_sale
-#: model:ir.model.fields,help:point_of_sale.field_pos_config_settings_alias_domain
+#: model:ir.model.fields,help:point_of_sale.field_makemyday_config_settings_alias_domain
 msgid ""
 "If you have setup a catch-all email domain redirected to the Odoo server, "
 "enter the domain name here."
 msgstr "Se tem a configuração de um catch-all domínio de e-mail redirecionado para o servidor Odoo , digite o nome de domínio aqui."
 
 #. module: point_of_sale
-#: model:ir.actions.act_window,help:point_of_sale.product_pos_category_action
+#: model:ir.actions.act_window,help:point_of_sale.product_makemyday_category_action
 msgid ""
 "If you put a photo on the category, the layout of the\n"
 "                touchscreen interface will automatically. We suggest not to put\n"
@@ -1858,7 +1858,7 @@ msgid ""
 msgstr "Se colocar uma foto na categoria, o layout do POS vai se adaptar automaticamente. Aconselhamos a não usar fotos em ecrãs pequenos."
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_category_image
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_category_image
 msgid "Image"
 msgstr "Imagem"
 
@@ -1874,7 +1874,7 @@ msgstr "Implementado por"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:1172
+#: code:addons/point_of_sale/static/src/xml/makemyday.xml:1172
 #, python-format
 msgid "Import Orders"
 msgstr "Importar Ordens"
@@ -1887,7 +1887,7 @@ msgstr "Tomates Cluster"
 
 #. module: point_of_sale
 #: code:addons/point_of_sale/point_of_sale.py:165
-#: selection:pos.session,state:0
+#: selection:makemyday.session,state:0
 #, python-format
 msgid "In Progress"
 msgstr "Em Progresso"
@@ -1899,13 +1899,13 @@ msgid "In order to delete a sale, it must be new or cancelled."
 msgstr "Para apagar uma venda, ela deve ser nova ou cancelada."
 
 #. module: point_of_sale
-#: model:ir.ui.view,arch_db:point_of_sale.view_pos_config_search
-#: selection:pos.config,state:0
+#: model:ir.ui.view,arch_db:point_of_sale.view_makemyday_config_search
+#: selection:makemyday.config,state:0
 msgid "Inactive"
 msgstr "Inativo"
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_config_iface_tax_included
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_config_iface_tax_included
 msgid "Include Taxes in Prices"
 msgstr "Incluir Impostos nos Preços"
 
@@ -1917,16 +1917,16 @@ msgid "Incorrect Password"
 msgstr "Password Incorrecta"
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_order_note
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_order_note
 msgid "Internal Notes"
 msgstr "Notas Internas"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:623
+#: code:addons/point_of_sale/static/src/xml/makemyday.xml:623
 #: model:ir.actions.report.xml,name:point_of_sale.makemyday_invoice_report
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_order_invoice_id
-#: model:ir.ui.view,arch_db:point_of_sale.view_pos_pos_form
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_order_invoice_id
+#: model:ir.ui.view,arch_db:point_of_sale.view_makemyday_makemyday_form
 #, python-format
 msgid "Invoice"
 msgstr "Fatura"
@@ -1937,10 +1937,10 @@ msgid "Invoice Amount"
 msgstr "Montante da Fatura"
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_report_pos_order_invoiced
-#: model:ir.ui.view,arch_db:point_of_sale.view_pos_order_filter
-#: model:ir.ui.view,arch_db:point_of_sale.view_report_pos_order_search
-#: selection:pos.order,state:0 selection:report.pos.order,state:0
+#: model:ir.model.fields,field_description:point_of_sale.field_report_makemyday_order_invoiced
+#: model:ir.ui.view,arch_db:point_of_sale.view_makemyday_order_filter
+#: model:ir.ui.view,arch_db:point_of_sale.view_report_makemyday_order_search
+#: selection:makemyday.order,state:0 selection:report.makemyday.order,state:0
 msgid "Invoiced"
 msgstr "Faturado"
 
@@ -1950,7 +1950,7 @@ msgid "Invoices"
 msgstr "Faturas"
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_config_iface_invoicing
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_config_iface_invoicing
 msgid "Invoicing"
 msgstr "Faturação"
 
@@ -1962,37 +1962,37 @@ msgstr "Maçãs Jonagold"
 
 #. module: point_of_sale
 #: model:ir.model,name:point_of_sale.model_account_journal
-#: model:ir.model.fields,field_description:point_of_sale.field_report_pos_order_journal_id
+#: model:ir.model.fields,field_description:point_of_sale.field_report_makemyday_order_journal_id
 msgid "Journal"
 msgstr "Diário"
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_order_account_move
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_order_account_move
 msgid "Journal Entry"
 msgstr "Entradas no diário"
 
 #. module: point_of_sale
-#: model:ir.ui.view,arch_db:point_of_sale.view_pos_config_form
+#: model:ir.ui.view,arch_db:point_of_sale.view_makemyday_config_form
 msgid "Journals"
 msgstr "Diários"
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_config_iface_big_scrollbars
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_config_iface_big_scrollbars
 msgid "Large Scrollbars"
 msgstr "Scrollbars Largos"
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_category___last_update
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_config___last_update
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_config_settings___last_update
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_category___last_update
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_config___last_update
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_config_settings___last_update
 #: model:ir.model.fields,field_description:point_of_sale.field_makemyday_confirm___last_update
 #: model:ir.model.fields,field_description:point_of_sale.field_makemyday_details___last_update
 #: model:ir.model.fields,field_description:point_of_sale.field_makemyday_discount___last_update
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_make_payment___last_update
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_make_payment___last_update
 #: model:ir.model.fields,field_description:point_of_sale.field_makemyday_open_statement___last_update
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_order___last_update
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_order_line___last_update
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_session___last_update
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_order___last_update
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_order_line___last_update
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_session___last_update
 #: model:ir.model.fields,field_description:point_of_sale.field_report_point_of_sale_report_detailsofsales___last_update
 #: model:ir.model.fields,field_description:point_of_sale.field_report_point_of_sale_report_invoice___last_update
 #: model:ir.model.fields,field_description:point_of_sale.field_report_point_of_sale_report_payment___last_update
@@ -2000,40 +2000,40 @@ msgstr "Scrollbars Largos"
 #: model:ir.model.fields,field_description:point_of_sale.field_report_point_of_sale_report_saleslines___last_update
 #: model:ir.model.fields,field_description:point_of_sale.field_report_point_of_sale_report_statement___last_update
 #: model:ir.model.fields,field_description:point_of_sale.field_report_point_of_sale_report_usersproduct___last_update
-#: model:ir.model.fields,field_description:point_of_sale.field_report_pos_order___last_update
-#: model:ir.model.fields,field_description:point_of_sale.field_report_sales_by_user_pos___last_update
-#: model:ir.model.fields,field_description:point_of_sale.field_report_sales_by_user_pos_month___last_update
-#: model:ir.model.fields,field_description:point_of_sale.field_report_transaction_pos___last_update
+#: model:ir.model.fields,field_description:point_of_sale.field_report_makemyday_order___last_update
+#: model:ir.model.fields,field_description:point_of_sale.field_report_sales_by_user_makemyday___last_update
+#: model:ir.model.fields,field_description:point_of_sale.field_report_sales_by_user_makemyday_month___last_update
+#: model:ir.model.fields,field_description:point_of_sale.field_report_transaction_makemyday___last_update
 msgid "Last Modified on"
 msgstr "Última Modificação em"
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_category_write_uid
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_config_settings_write_uid
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_config_write_uid
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_category_write_uid
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_config_settings_write_uid
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_config_write_uid
 #: model:ir.model.fields,field_description:point_of_sale.field_makemyday_confirm_write_uid
 #: model:ir.model.fields,field_description:point_of_sale.field_makemyday_details_write_uid
 #: model:ir.model.fields,field_description:point_of_sale.field_makemyday_discount_write_uid
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_make_payment_write_uid
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_make_payment_write_uid
 #: model:ir.model.fields,field_description:point_of_sale.field_makemyday_open_statement_write_uid
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_order_line_write_uid
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_order_write_uid
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_session_write_uid
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_order_line_write_uid
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_order_write_uid
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_session_write_uid
 msgid "Last Updated by"
 msgstr "Última Actualização por"
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_category_write_date
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_config_settings_write_date
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_config_write_date
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_category_write_date
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_config_settings_write_date
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_config_write_date
 #: model:ir.model.fields,field_description:point_of_sale.field_makemyday_confirm_write_date
 #: model:ir.model.fields,field_description:point_of_sale.field_makemyday_details_write_date
 #: model:ir.model.fields,field_description:point_of_sale.field_makemyday_discount_write_date
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_make_payment_write_date
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_make_payment_write_date
 #: model:ir.model.fields,field_description:point_of_sale.field_makemyday_open_statement_write_date
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_order_line_write_date
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_order_write_date
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_session_write_date
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_order_line_write_date
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_order_write_date
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_session_write_date
 msgid "Last Updated on"
 msgstr "Última Actualização em"
 
@@ -2083,12 +2083,12 @@ msgid "Lindemans Kriek 37.5cl"
 msgstr "Lindemans Kriek 37.5cl"
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_order_line_name
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_order_line_name
 msgid "Line No"
 msgstr "Sem Linha"
 
 #. module: point_of_sale
-#: model:ir.model,name:point_of_sale.model_pos_order_line
+#: model:ir.model,name:point_of_sale.model_makemyday_order_line
 msgid "Lines of Point of Sale"
 msgstr "Linhas do Posto de Vendas"
 
@@ -2101,19 +2101,19 @@ msgstr "Lista de caixas registadoras"
 #. module: point_of_sale
 #. openerp-web
 #: code:addons/point_of_sale/static/src/js/models.js:484
-#: code:addons/point_of_sale/static/src/xml/pos.xml:38
+#: code:addons/point_of_sale/static/src/xml/makemyday.xml:38
 #, python-format
 msgid "Loading"
 msgstr "Carregando"
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_order_location_id
-#: model:ir.model.fields,field_description:point_of_sale.field_report_pos_order_location_id
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_order_location_id
+#: model:ir.model.fields,field_description:point_of_sale.field_report_makemyday_order_location_id
 msgid "Location"
 msgstr "Localização"
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_session_login_number
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_session_login_number
 msgid "Login Sequence Number"
 msgstr "Dar entrada de Número de Sequência"
 
@@ -2125,7 +2125,7 @@ msgid "Login as a Manager"
 msgstr "Login como Gestor"
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_config_settings_module_pos_loyalty
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_config_settings_module_makemyday_loyalty
 msgid "Loyalty Program"
 msgstr "Fidelização"
 
@@ -2135,37 +2135,37 @@ msgid "Make Payment"
 msgstr "Fazer Pagamento"
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_config_settings_module_inter_company_rules
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_config_settings_module_inter_company_rules
 msgid "Manage Inter Company"
 msgstr "Gerir Inter Empresa"
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_config_settings_group_product_variant
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_config_settings_group_product_variant
 msgid "Manage Product Variants"
 msgstr "Gerir Variantes de Produt"
 
 #. module: point_of_sale
-#: model:ir.ui.view,arch_db:point_of_sale.view_sale_config_settings_form_pos
+#: model:ir.ui.view,arch_db:point_of_sale.view_sale_config_settings_form_makemyday
 msgid "Manage loyalty program with points and rewards for customers"
 msgstr ""
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_config_settings_group_light_multi_company
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_config_settings_group_light_multi_company
 msgid "Manage multiple companies"
 msgstr "Gerir várias empresas"
 
 #. module: point_of_sale
-#: model:res.groups,name:point_of_sale.group_pos_manager
+#: model:res.groups,name:point_of_sale.group_makemyday_manager
 msgid "Manager"
 msgstr "Gestor"
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_category_image_medium
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_category_image_medium
 msgid "Medium-sized image"
 msgstr "Imagem de média dimensão"
 
 #. module: point_of_sale
-#: model:ir.model.fields,help:point_of_sale.field_pos_category_image_medium
+#: model:ir.model.fields,help:point_of_sale.field_makemyday_category_image_medium
 msgid ""
 "Medium-sized image of the category. It is automatically resized as a "
 "128x128px image, with aspect ratio preserved. Use this field in form views "
@@ -2174,7 +2174,7 @@ msgstr "Imagem da Categoria. É automaticamente redimensionada para  128x128 pix
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:492
+#: code:addons/point_of_sale/static/src/xml/makemyday.xml:492
 #, python-format
 msgid "Method"
 msgstr "Método"
@@ -2186,35 +2186,35 @@ msgid "Miscellaneous"
 msgstr "Diversos"
 
 #. module: point_of_sale
-#: model:ir.ui.view,arch_db:point_of_sale.view_report_pos_order_search
+#: model:ir.ui.view,arch_db:point_of_sale.view_report_makemyday_order_search
 msgid "Month of order date"
 msgstr "Mês da data da ordem"
 
 #. module: point_of_sale
-#: model:ir.ui.view,arch_db:point_of_sale.view_pos_config_kanban
+#: model:ir.ui.view,arch_db:point_of_sale.view_makemyday_config_kanban
 msgid "More <i class=\"fa fa-caret-down\"/>"
 msgstr "Mais <i class=\"fa fa-caret-down\"/>"
 
 #. module: point_of_sale
-#: model:ir.ui.view,arch_db:point_of_sale.view_report_pos_order_search
+#: model:ir.ui.view,arch_db:point_of_sale.view_report_makemyday_order_search
 msgid "My Sales"
 msgstr "As minhas vendas"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:385
-#: code:addons/point_of_sale/static/src/xml/pos.xml:396
-#: code:addons/point_of_sale/static/src/xml/pos.xml:405
+#: code:addons/point_of_sale/static/src/xml/makemyday.xml:385
+#: code:addons/point_of_sale/static/src/xml/makemyday.xml:396
+#: code:addons/point_of_sale/static/src/xml/makemyday.xml:405
 #, python-format
 msgid "N/A"
 msgstr "N/D"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:308
-#: code:addons/point_of_sale/static/src/xml/pos.xml:449
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_category_complete_name
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_category_name
+#: code:addons/point_of_sale/static/src/xml/makemyday.xml:308
+#: code:addons/point_of_sale/static/src/xml/makemyday.xml:449
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_category_complete_name
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_category_name
 #: model:ir.ui.view,arch_db:point_of_sale.report_statement
 #, python-format
 msgid "Name"
@@ -2233,19 +2233,19 @@ msgid "Negative Bank Payment"
 msgstr "Pagamento do banco negativo"
 
 #. module: point_of_sale
-#: model:ir.ui.view,arch_db:point_of_sale.view_pos_order_filter
-#: selection:pos.order,state:0 selection:report.pos.order,state:0
+#: model:ir.ui.view,arch_db:point_of_sale.view_makemyday_order_filter
+#: selection:makemyday.order,state:0 selection:report.makemyday.order,state:0
 msgid "New"
 msgstr "Novo"
 
 #. module: point_of_sale
-#: model:ir.ui.view,arch_db:point_of_sale.view_pos_config_kanban
+#: model:ir.ui.view,arch_db:point_of_sale.view_makemyday_config_kanban
 msgid "New Session"
 msgstr "Nova Sessão"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:648
+#: code:addons/point_of_sale/static/src/xml/makemyday.xml:648
 #, python-format
 msgid "Next Order"
 msgstr "Próxima ordem"
@@ -2263,7 +2263,7 @@ msgid ""
 msgstr "No cash statement found for this session. Unable to record returned cash."
 
 #. module: point_of_sale
-#: selection:pos.config.settings,module_pos_mercury:0
+#: selection:makemyday.config.settings,module_makemyday_mercury:0
 msgid "No credit card"
 msgstr "Sem cartão de crédito"
 
@@ -2274,7 +2274,7 @@ msgid "No link to an invoice for %s."
 msgstr "Nenhuma ligação para uma fatura para %s."
 
 #. module: point_of_sale
-#: selection:pos.config.settings,module_pos_reprint:0
+#: selection:makemyday.config.settings,module_makemyday_reprint:0
 msgid "No reprint"
 msgstr "Sem reimpressão"
 
@@ -2286,35 +2286,35 @@ msgstr "Sem seq. definida no diário"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:330
+#: code:addons/point_of_sale/static/src/xml/makemyday.xml:330
 #, python-format
 msgid "None"
 msgstr "Nenhum"
 
 #. module: point_of_sale
-#: model:ir.ui.view,arch_db:point_of_sale.view_report_pos_order_search
+#: model:ir.ui.view,arch_db:point_of_sale.view_report_makemyday_order_search
 msgid "Not Invoiced"
 msgstr "Não facturado"
 
 #. module: point_of_sale
-#: model:ir.actions.act_window,help:point_of_sale.action_pos_session
+#: model:ir.actions.act_window,help:point_of_sale.action_makemyday_session
 msgid ""
 "Note that you may use the menu <i>Your Session</i>\n"
 "                to quickly open a new session."
 msgstr "Note que pode usar o menu<i>Sua Sessão</i> para rapidamente abrir uma nova sessão"
 
 #. module: point_of_sale
-#: model:ir.ui.view,arch_db:point_of_sale.view_pos_pos_form
+#: model:ir.ui.view,arch_db:point_of_sale.view_makemyday_makemyday_form
 msgid "Notes"
 msgstr "Notas"
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_order_nb_print
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_order_nb_print
 msgid "Number of Print"
 msgstr "Número de Impressão"
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_report_transaction_pos_no_trans
+#: model:ir.model.fields,field_description:point_of_sale.field_report_transaction_makemyday_no_trans
 msgid "Number of Transaction"
 msgstr "Número da Transação"
 
@@ -2339,14 +2339,14 @@ msgstr "Ordens Offline"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:839
-#: code:addons/point_of_sale/static/src/xml/pos.xml:853
-#: code:addons/point_of_sale/static/src/xml/pos.xml:867
-#: code:addons/point_of_sale/static/src/xml/pos.xml:893
-#: code:addons/point_of_sale/static/src/xml/pos.xml:924
-#: code:addons/point_of_sale/static/src/xml/pos.xml:941
-#: code:addons/point_of_sale/static/src/xml/pos.xml:1019
-#: code:addons/point_of_sale/static/src/xml/pos.xml:1055
+#: code:addons/point_of_sale/static/src/xml/makemyday.xml:839
+#: code:addons/point_of_sale/static/src/xml/makemyday.xml:853
+#: code:addons/point_of_sale/static/src/xml/makemyday.xml:867
+#: code:addons/point_of_sale/static/src/xml/makemyday.xml:893
+#: code:addons/point_of_sale/static/src/xml/makemyday.xml:924
+#: code:addons/point_of_sale/static/src/xml/makemyday.xml:941
+#: code:addons/point_of_sale/static/src/xml/makemyday.xml:1019
+#: code:addons/point_of_sale/static/src/xml/makemyday.xml:1055
 #, python-format
 msgid "Ok"
 msgstr "OK"
@@ -2365,7 +2365,7 @@ msgid "Only web-compatible Image formats such as .png or .jpeg are supported"
 msgstr "Apenas formatos de imagem web compatíveis, como .png ou .jpeg, são suportadas"
 
 #. module: point_of_sale
-#: model:ir.ui.view,arch_db:point_of_sale.view_pos_session_search
+#: model:ir.ui.view,arch_db:point_of_sale.view_makemyday_session_search
 msgid "Open"
 msgstr "Abrir"
 
@@ -2376,14 +2376,14 @@ msgstr "Abrir Folha de Caixa"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:634
-#: code:addons/point_of_sale/static/src/xml/pos.xml:1184
+#: code:addons/point_of_sale/static/src/xml/makemyday.xml:634
+#: code:addons/point_of_sale/static/src/xml/makemyday.xml:1184
 #, python-format
 msgid "Open Cashbox"
 msgstr "Abrir Caixa Registadora"
 
 #. module: point_of_sale
-#: model:ir.actions.client,name:point_of_sale.action_client_pos_menu
+#: model:ir.actions.client,name:point_of_sale.action_client_makemyday_menu
 msgid "Open POS Menu"
 msgstr "Abrir Menu POS"
 
@@ -2393,8 +2393,8 @@ msgid "Open Registers"
 msgstr "Registos Abertos"
 
 #. module: point_of_sale
-#: model:ir.ui.view,arch_db:point_of_sale.view_pos_config_kanban
-#: model:ir.ui.view,arch_db:point_of_sale.view_pos_session_form
+#: model:ir.ui.view,arch_db:point_of_sale.view_makemyday_config_kanban
+#: model:ir.ui.view,arch_db:point_of_sale.view_makemyday_session_form
 msgid "Open Session"
 msgstr "Abrir a Sessão"
 
@@ -2406,19 +2406,19 @@ msgid "Open Statements"
 msgstr "Extratos Abertos"
 
 #. module: point_of_sale
-#: model:ir.ui.view,arch_db:point_of_sale.view_pos_session_form
+#: model:ir.ui.view,arch_db:point_of_sale.view_makemyday_session_form
 msgid "Opening Balance"
 msgstr "Saldo de Abertura"
 
 #. module: point_of_sale
 #: code:addons/point_of_sale/point_of_sale.py:164
-#: selection:pos.session,state:0
+#: selection:makemyday.session,state:0
 #, python-format
 msgid "Opening Control"
 msgstr "A Abrir Controlo"
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_session_start_at
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_session_start_at
 msgid "Opening Date"
 msgstr "Data de Abertura"
 
@@ -2430,7 +2430,7 @@ msgstr "Borboleta Alaranjada"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:280
+#: code:addons/point_of_sale/static/src/xml/makemyday.xml:280
 #, python-format
 msgid "Order"
 msgstr "Ordem"
@@ -2444,62 +2444,62 @@ msgid "Order "
 msgstr "Ordem "
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_order_date_order
-#: model:ir.model.fields,field_description:point_of_sale.field_report_sales_by_user_pos_date_order
-#: model:ir.model.fields,field_description:point_of_sale.field_report_sales_by_user_pos_month_date_order
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_order_date_order
+#: model:ir.model.fields,field_description:point_of_sale.field_report_sales_by_user_makemyday_date_order
+#: model:ir.model.fields,field_description:point_of_sale.field_report_sales_by_user_makemyday_month_date_order
 msgid "Order Date"
 msgstr "Ordem da Data"
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_config_sequence_id
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_config_sequence_id
 msgid "Order IDs Sequence"
 msgstr "Sequência de IDs da Ordem"
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_order_lines
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_order_lines
 msgid "Order Lines"
 msgstr "Linhas da Ordem"
 
 #. module: point_of_sale
-#: model:ir.ui.view,arch_db:point_of_sale.view_pos_order_filter
-#: model:ir.ui.view,arch_db:point_of_sale.view_report_pos_order_search
+#: model:ir.ui.view,arch_db:point_of_sale.view_makemyday_order_filter
+#: model:ir.ui.view,arch_db:point_of_sale.view_report_makemyday_order_search
 msgid "Order Month"
 msgstr "Mês de Ordem"
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_order_line_order_id
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_order_name
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_order_line_order_id
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_order_name
 msgid "Order Ref"
 msgstr "Ref da Ordem"
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_session_sequence_number
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_session_sequence_number
 msgid "Order Sequence Number"
 msgstr "Número da Sequência da Ordem"
 
 #. module: point_of_sale
-#: model:ir.ui.view,arch_db:point_of_sale.view_pos_pos_form
+#: model:ir.ui.view,arch_db:point_of_sale.view_makemyday_makemyday_form
 msgid "Order lines"
 msgstr "Linhas de ordem de venda"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:1165
-#: model:ir.actions.act_window,name:point_of_sale.act_pos_session_orders
-#: model:ir.actions.act_window,name:point_of_sale.action_pos_order_filtered
-#: model:ir.actions.act_window,name:point_of_sale.action_pos_pos_form
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_session_order_ids
+#: code:addons/point_of_sale/static/src/xml/makemyday.xml:1165
+#: model:ir.actions.act_window,name:point_of_sale.act_makemyday_session_orders
+#: model:ir.actions.act_window,name:point_of_sale.action_makemyday_order_filtered
+#: model:ir.actions.act_window,name:point_of_sale.action_makemyday_makemyday_form
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_session_order_ids
 #: model:ir.ui.menu,name:point_of_sale.menu_point_of_sale
 #: model:ir.ui.menu,name:point_of_sale.menu_point_ofsale
-#: model:ir.ui.menu,name:point_of_sale.menu_report_pos_order_all
-#: model:ir.ui.view,arch_db:point_of_sale.view_pos_config_kanban
+#: model:ir.ui.menu,name:point_of_sale.menu_report_makemyday_order_all
+#: model:ir.ui.view,arch_db:point_of_sale.view_makemyday_config_kanban
 #, python-format
 msgid "Orders"
 msgstr "Ordens"
 
 #. module: point_of_sale
-#: model:ir.actions.act_window,name:point_of_sale.action_report_pos_order_all
-#: model:ir.actions.act_window,name:point_of_sale.action_report_pos_order_all_filtered
+#: model:ir.actions.act_window,name:point_of_sale.action_report_makemyday_order_all
+#: model:ir.actions.act_window,name:point_of_sale.action_report_makemyday_order_all_filtered
 msgid "Orders Analysis"
 msgstr "Análise de Encomendas"
 
@@ -2510,12 +2510,12 @@ msgid "Orval 33cl"
 msgstr "Orval 33cl"
 
 #. module: point_of_sale
-#: model:ir.ui.view,arch_db:point_of_sale.view_pos_trans_user_form
-#: model:ir.ui.view,arch_db:point_of_sale.view_report_sales_by_user_pos_form
-#: model:ir.ui.view,arch_db:point_of_sale.view_report_sales_by_user_pos_month_form
-#: model:ir.ui.view,arch_db:point_of_sale.view_report_sales_by_user_pos_month_tree
-#: model:ir.ui.view,arch_db:point_of_sale.view_report_sales_by_user_pos_tree
-#: model:ir.ui.view,arch_db:point_of_sale.view_trans_pos_user_tree
+#: model:ir.ui.view,arch_db:point_of_sale.view_makemyday_trans_user_form
+#: model:ir.ui.view,arch_db:point_of_sale.view_report_sales_by_user_makemyday_form
+#: model:ir.ui.view,arch_db:point_of_sale.view_report_sales_by_user_makemyday_month_form
+#: model:ir.ui.view,arch_db:point_of_sale.view_report_sales_by_user_makemyday_month_tree
+#: model:ir.ui.view,arch_db:point_of_sale.view_report_sales_by_user_makemyday_tree
+#: model:ir.ui.view,arch_db:point_of_sale.view_trans_makemyday_user_tree
 msgid "POS"
 msgstr "POS"
 
@@ -2530,64 +2530,64 @@ msgid "POS Lines"
 msgstr "Linhas de POS"
 
 #. module: point_of_sale
-#: model:ir.ui.view,arch_db:point_of_sale.view_pos_order_line_form
+#: model:ir.ui.view,arch_db:point_of_sale.view_makemyday_order_line_form
 msgid "POS Order line"
 msgstr "Linha de Ordem de Venda de POS"
 
 #. module: point_of_sale
-#: model:ir.ui.view,arch_db:point_of_sale.view_pos_order_line
+#: model:ir.ui.view,arch_db:point_of_sale.view_makemyday_order_line
 msgid "POS Order lines"
 msgstr "Linhas de vendas da Loja"
 
 #. module: point_of_sale
-#: model:ir.ui.view,arch_db:point_of_sale.view_pos_order_tree
+#: model:ir.ui.view,arch_db:point_of_sale.view_makemyday_order_tree
 msgid "POS Orders"
 msgstr "Ordens de Venda do Ponto de Vendas"
 
 #. module: point_of_sale
-#: model:ir.ui.view,arch_db:point_of_sale.view_pos_order_tree_all_sales_lines
+#: model:ir.ui.view,arch_db:point_of_sale.view_makemyday_order_tree_all_sales_lines
 msgid "POS Orders lines"
 msgstr "Linhas de Ordem de Venda de POS"
 
 #. module: point_of_sale
-#: model:ir.ui.view,arch_db:point_of_sale.view_report_sales_by_user_pos_calendar
-#: model:ir.ui.view,arch_db:point_of_sale.view_report_sales_by_user_pos_month_calendar
-#: model:ir.ui.view,arch_db:point_of_sale.view_report_transaction_pos_calendar
-#: model:ir.ui.view,arch_db:point_of_sale.view_report_transaction_pos_graph
+#: model:ir.ui.view,arch_db:point_of_sale.view_report_sales_by_user_makemyday_calendar
+#: model:ir.ui.view,arch_db:point_of_sale.view_report_sales_by_user_makemyday_month_calendar
+#: model:ir.ui.view,arch_db:point_of_sale.view_report_transaction_makemyday_calendar
+#: model:ir.ui.view,arch_db:point_of_sale.view_report_transaction_makemyday_graph
 msgid "POS Report"
 msgstr "Relatório de POS"
 
 #. module: point_of_sale
-#: model:ir.ui.view,arch_db:point_of_sale.view_report_pos_order_search
+#: model:ir.ui.view,arch_db:point_of_sale.view_report_makemyday_order_search
 msgid "POS ordered created during current year"
 msgstr "POS ordenado criado durante este ano"
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_account_bank_statement_line_pos_statement_id
+#: model:ir.model.fields,field_description:point_of_sale.field_account_bank_statement_line_makemyday_statement_id
 msgid "POS statement"
 msgstr "Extrato do POS"
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_order_amount_paid
-#: selection:pos.order,state:0 selection:report.pos.order,state:0
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_order_amount_paid
+#: selection:makemyday.order,state:0 selection:report.makemyday.order,state:0
 msgid "Paid"
 msgstr "Pago"
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_category_parent_id
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_category_parent_id
 msgid "Parent Category"
 msgstr "Categoria Ascendente"
 
 #. module: point_of_sale
 #: model:ir.model,name:point_of_sale.model_res_partner
-#: model:ir.model.fields,field_description:point_of_sale.field_report_pos_order_partner_id
+#: model:ir.model.fields,field_description:point_of_sale.field_report_makemyday_order_partner_id
 #: model:ir.ui.view,arch_db:point_of_sale.report_sessionsummary
 #: model:ir.ui.view,arch_db:point_of_sale.report_statement
 msgid "Partner"
 msgstr "Parceiro"
 
 #. module: point_of_sale
-#: model:pos.category,name:point_of_sale.partner_services
+#: model:makemyday.category,name:point_of_sale.partner_services
 msgid "Partner Services"
 msgstr "Serviços do Parceiro"
 
@@ -2610,17 +2610,17 @@ msgstr "Ordem de Pagamento"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:121
-#: code:addons/point_of_sale/static/src/xml/pos.xml:588
+#: code:addons/point_of_sale/static/src/xml/makemyday.xml:121
+#: code:addons/point_of_sale/static/src/xml/makemyday.xml:588
 #: code:addons/point_of_sale/wizard/makemyday_payment.py:57
 #: model:ir.actions.act_window,name:point_of_sale.action_makemyday_payment
-#: model:ir.ui.view,arch_db:point_of_sale.view_pos_pos_form
+#: model:ir.ui.view,arch_db:point_of_sale.view_makemyday_makemyday_form
 #, python-format
 msgid "Payment"
 msgstr "Pagamento"
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_make_payment_payment_date
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_make_payment_payment_date
 msgid "Payment Date"
 msgstr "Data de Pagamento"
 
@@ -2631,18 +2631,18 @@ msgid "Payment Methods"
 msgstr "Métodos de Pagamento"
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_make_payment_journal_id
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_make_payment_journal_id
 #: model:ir.ui.view,arch_db:point_of_sale.report_receipt
 msgid "Payment Mode"
 msgstr "Modo de Pagamento"
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_make_payment_payment_name
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_make_payment_payment_name
 msgid "Payment Reference"
 msgstr "Referência Pagamento"
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_config_iface_payment_terminal
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_config_iface_payment_terminal
 msgid "Payment Terminal"
 msgstr "Terminal de Pagamento"
 
@@ -2656,8 +2656,8 @@ msgid ""
 msgstr "Métodos de pagamento são definidos pelos diários de contabilidade terem o campo <i>Método de Pagamento POS</i> com visto. De forma a ser usável no POS, terá de o associar na configuração do POS."
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_order_statement_ids
-#: model:ir.ui.view,arch_db:point_of_sale.view_pos_pos_form
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_order_statement_ids
+#: model:ir.ui.view,arch_db:point_of_sale.view_makemyday_makemyday_form
 msgid "Payments"
 msgstr "Pagamentos"
 
@@ -2668,7 +2668,7 @@ msgid "Peaches"
 msgstr "Pêssegos"
 
 #. module: point_of_sale
-#: model:ir.model.fields,help:point_of_sale.field_pos_order_user_id
+#: model:ir.model.fields,help:point_of_sale.field_makemyday_order_user_id
 msgid ""
 "Person who uses the cash register. It can be a reliever, a student or an "
 "interim employee."
@@ -2676,28 +2676,28 @@ msgstr "Pessoa que usa o caixa. Pode ser um estudante ou um empregado interino, 
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:345
-#: code:addons/point_of_sale/static/src/xml/pos.xml:380
-#: code:addons/point_of_sale/static/src/xml/pos.xml:451
+#: code:addons/point_of_sale/static/src/xml/makemyday.xml:345
+#: code:addons/point_of_sale/static/src/xml/makemyday.xml:380
+#: code:addons/point_of_sale/static/src/xml/makemyday.xml:451
 #, python-format
 msgid "Phone"
 msgstr "Telefone"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:1262
+#: code:addons/point_of_sale/static/src/xml/makemyday.xml:1262
 #, python-format
 msgid "Phone:"
 msgstr "Telefone:"
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_order_picking_id
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_order_picking_id
 msgid "Picking"
 msgstr "Picking"
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_config_picking_type_id
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_order_picking_type_id
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_config_picking_type_id
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_order_picking_type_id
 msgid "Picking Type"
 msgstr "Tipo de Recolha"
 
@@ -2722,7 +2722,7 @@ msgstr "Por Favor forneça um parceiro para a venda"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:472
+#: code:addons/point_of_sale/static/src/xml/makemyday.xml:472
 #, python-format
 msgid "Please select a payment method."
 msgstr "Por favor selecione um método de pagamento."
@@ -2735,102 +2735,102 @@ msgid "Please select the Customer"
 msgstr "Por favor selecione o cliente"
 
 #. module: point_of_sale
-#: model:stock.picking.type,name:point_of_sale.picking_type_posout
+#: model:stock.picking.type,name:point_of_sale.picking_type_makemydayout
 msgid "PoS Orders"
 msgstr "Ordens PoS"
 
 #. module: point_of_sale
-#: model:ir.actions.act_window,name:point_of_sale.action_pos_config_kanban
-#: model:ir.actions.act_window,name:point_of_sale.action_pos_config_pos
-#: model:ir.model,name:point_of_sale.model_pos_order
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_order_config_id
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_session_config_id
-#: model:ir.model.fields,field_description:point_of_sale.field_report_pos_order_config_id
+#: model:ir.actions.act_window,name:point_of_sale.action_makemyday_config_kanban
+#: model:ir.actions.act_window,name:point_of_sale.action_makemyday_config_makemyday
+#: model:ir.model,name:point_of_sale.model_makemyday_order
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_order_config_id
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_session_config_id
+#: model:ir.model.fields,field_description:point_of_sale.field_report_makemyday_order_config_id
 #: model:ir.ui.menu,name:point_of_sale.menu_point_root
-#: model:ir.ui.menu,name:point_of_sale.menu_pos_config_pos
+#: model:ir.ui.menu,name:point_of_sale.menu_makemyday_config_makemyday
 #: model:ir.ui.view,arch_db:point_of_sale.product_template_form_view
 #: model:ir.ui.view,arch_db:point_of_sale.res_users_form_view
-#: model:ir.ui.view,arch_db:point_of_sale.view_account_journal_pos_user_form
+#: model:ir.ui.view,arch_db:point_of_sale.view_account_journal_makemyday_user_form
 #: model:ir.ui.view,arch_db:point_of_sale.view_partner_property_form
-#: model:ir.ui.view,arch_db:point_of_sale.view_pos_session_search
-#: model:ir.ui.view,arch_db:point_of_sale.view_sale_config_settings_form_pos
+#: model:ir.ui.view,arch_db:point_of_sale.view_makemyday_session_search
+#: model:ir.ui.view,arch_db:point_of_sale.view_sale_config_settings_form_makemyday
 msgid "Point of Sale"
 msgstr "Ponto de venda"
 
 #. module: point_of_sale
-#: model:ir.ui.view,arch_db:point_of_sale.view_report_pos_order_graph
-#: model:ir.ui.view,arch_db:point_of_sale.view_report_pos_order_pivot
-#: model:ir.ui.view,arch_db:point_of_sale.view_report_pos_order_search
+#: model:ir.ui.view,arch_db:point_of_sale.view_report_makemyday_order_graph
+#: model:ir.ui.view,arch_db:point_of_sale.view_report_makemyday_order_pivot
+#: model:ir.ui.view,arch_db:point_of_sale.view_report_makemyday_order_search
 msgid "Point of Sale Analysis"
 msgstr "Análise do Ponto de Venda"
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_product_template_pos_categ_id
+#: model:ir.model.fields,field_description:point_of_sale.field_product_template_makemyday_categ_id
 msgid "Point of Sale Category"
 msgstr "Categoria de Ponto de Venda"
 
 #. module: point_of_sale
-#: model:ir.ui.view,arch_db:point_of_sale.view_pos_config_search
+#: model:ir.ui.view,arch_db:point_of_sale.view_makemyday_config_search
 msgid "Point of Sale Config"
 msgstr "Configuração do Ponto de Venda"
 
 #. module: point_of_sale
-#: model:ir.ui.view,arch_db:point_of_sale.view_pos_config_form
-#: model:ir.ui.view,arch_db:point_of_sale.view_pos_config_tree
+#: model:ir.ui.view,arch_db:point_of_sale.view_makemyday_config_form
+#: model:ir.ui.view,arch_db:point_of_sale.view_makemyday_config_tree
 msgid "Point of Sale Configuration"
 msgstr "Configuração de Ponto de Venda"
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_config_group_pos_manager_id
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_config_group_makemyday_manager_id
 msgid "Point of Sale Manager Group"
 msgstr "Grupo de Gestão do POS"
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_config_name
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_config_name
 msgid "Point of Sale Name"
 msgstr "Nome do Ponto de Venda"
 
 #. module: point_of_sale
-#: model:ir.ui.view,arch_db:point_of_sale.view_pos_order_search
-#: model:ir.ui.view,arch_db:point_of_sale.view_pos_pos_form
+#: model:ir.ui.view,arch_db:point_of_sale.view_makemyday_order_search
+#: model:ir.ui.view,arch_db:point_of_sale.view_makemyday_makemyday_form
 msgid "Point of Sale Orders"
 msgstr "Encomendas de Ponto de Venda"
 
 #. module: point_of_sale
-#: model:ir.model,name:point_of_sale.model_report_pos_order
+#: model:ir.model,name:point_of_sale.model_report_makemyday_order
 msgid "Point of Sale Orders Statistics"
 msgstr "Estatísticas de Ordens do Ponto de Venda"
 
 #. module: point_of_sale
-#: model:ir.model,name:point_of_sale.model_pos_make_payment
+#: model:ir.model,name:point_of_sale.model_makemyday_make_payment
 msgid "Point of Sale Payment"
 msgstr "Pagamento de Ponto de Venda"
 
 #. module: point_of_sale
-#: model:ir.ui.view,arch_db:point_of_sale.view_pos_session_form
-#: model:ir.ui.view,arch_db:point_of_sale.view_pos_session_search
-#: model:ir.ui.view,arch_db:point_of_sale.view_pos_session_tree
+#: model:ir.ui.view,arch_db:point_of_sale.view_makemyday_session_form
+#: model:ir.ui.view,arch_db:point_of_sale.view_makemyday_session_search
+#: model:ir.ui.view,arch_db:point_of_sale.view_makemyday_session_tree
 msgid "Point of Sale Session"
 msgstr "Sessão do Ponto de Venda"
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_config_group_pos_user_id
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_config_group_makemyday_user_id
 msgid "Point of Sale User Group"
 msgstr "Grupo de Utilizadores do POS"
 
 #. module: point_of_sale
-#: selection:pos.config.settings,module_pos_restaurant:0
+#: selection:makemyday.config.settings,module_makemyday_restaurant:0
 msgid "Point of sale for shops"
 msgstr "POS para Lojas"
 
 #. module: point_of_sale
-#: model:ir.ui.view,arch_db:point_of_sale.product_pos_category_form_view
+#: model:ir.ui.view,arch_db:point_of_sale.product_makemyday_category_form_view
 msgid "Pos Categories"
 msgstr "Categorias Pos"
 
 #. module: point_of_sale
-#: model:ir.actions.act_window,name:point_of_sale.product_pos_category_action
-#: model:ir.ui.menu,name:point_of_sale.menu_product_pos_category
+#: model:ir.actions.act_window,name:point_of_sale.product_makemyday_category_action
+#: model:ir.ui.menu,name:point_of_sale.menu_product_makemyday_category
 msgid "Pos Product Categories"
 msgstr "Categorias de Produto Pos"
 
@@ -2846,14 +2846,14 @@ msgstr "Publicar Entrada Diária POS"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:324
+#: code:addons/point_of_sale/static/src/xml/makemyday.xml:324
 #, python-format
 msgid "Postcode"
 msgstr "Código Postal"
 
 #. module: point_of_sale
-#: model:ir.ui.view,arch_db:point_of_sale.view_pos_order_filter
-#: selection:pos.order,state:0 selection:report.pos.order,state:0
+#: model:ir.ui.view,arch_db:point_of_sale.view_makemyday_order_filter
+#: selection:makemyday.order,state:0 selection:report.makemyday.order,state:0
 msgid "Posted"
 msgstr "Publicado"
 
@@ -2864,29 +2864,29 @@ msgid "Potatoes"
 msgstr "Batatas"
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_config_iface_precompute_cash
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_config_iface_precompute_cash
 msgid "Prefill Cash Payment"
 msgstr "Prepreencher o Pagamento em Dinheiro"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:144
+#: code:addons/point_of_sale/static/src/xml/makemyday.xml:144
 #: model:ir.ui.view,arch_db:point_of_sale.report_receipt
 #, python-format
 msgid "Price"
 msgstr "Preço"
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_config_pricelist_id
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_order_pricelist_id
-#: model:ir.model.fields,field_description:point_of_sale.field_report_pos_order_pricelist_id
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_config_pricelist_id
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_order_pricelist_id
+#: model:ir.model.fields,field_description:point_of_sale.field_report_makemyday_order_pricelist_id
 msgid "Pricelist"
 msgstr "Lista de preços"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:655
-#: code:addons/point_of_sale/static/src/xml/pos.xml:1185
+#: code:addons/point_of_sale/static/src/xml/makemyday.xml:655
+#: code:addons/point_of_sale/static/src/xml/makemyday.xml:1185
 #, python-format
 msgid "Print Receipt"
 msgstr "Imprimir Recibo"
@@ -2897,7 +2897,7 @@ msgid "Print Report"
 msgstr "Imprimir Relatório"
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_config_iface_print_via_proxy
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_config_iface_print_via_proxy
 msgid "Print via Proxy"
 msgstr "Imprimir via Proxy"
 
@@ -2916,50 +2916,50 @@ msgid "Printing Error: "
 msgstr "Erro de impressão:"
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_order_line_product_id
-#: model:ir.model.fields,field_description:point_of_sale.field_report_pos_order_product_id
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_order_line_product_id
+#: model:ir.model.fields,field_description:point_of_sale.field_report_makemyday_order_product_id
 #: model:ir.ui.view,arch_db:point_of_sale.report_usersproduct
-#: model:ir.ui.view,arch_db:point_of_sale.view_report_pos_order_search
+#: model:ir.ui.view,arch_db:point_of_sale.view_report_makemyday_order_search
 msgid "Product"
 msgstr "Artigo"
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_report_pos_order_product_categ_id
-#: model:ir.ui.view,arch_db:point_of_sale.view_report_pos_order_search
+#: model:ir.model.fields,field_description:point_of_sale.field_report_makemyday_order_product_categ_id
+#: model:ir.ui.view,arch_db:point_of_sale.view_report_makemyday_order_search
 msgid "Product Category"
 msgstr "Categoria do Artigo"
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_report_transaction_pos_product_nb
+#: model:ir.model.fields,field_description:point_of_sale.field_report_transaction_makemyday_product_nb
 msgid "Product Nb."
 msgstr "Nº de Artigo"
 
 #. module: point_of_sale
-#: model:ir.ui.view,arch_db:point_of_sale.product_pos_category_tree_view
+#: model:ir.ui.view,arch_db:point_of_sale.product_makemyday_category_tree_view
 msgid "Product Product Categories"
 msgstr "Categoria do Produto do Produto"
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_report_pos_order_product_qty
+#: model:ir.model.fields,field_description:point_of_sale.field_report_makemyday_order_product_qty
 msgid "Product Quantity"
 msgstr "Quantidade de Produto"
 
 #. module: point_of_sale
 #: model:ir.model,name:point_of_sale.model_product_template
-#: model:ir.model.fields,field_description:point_of_sale.field_report_pos_order_product_tmpl_id
+#: model:ir.model.fields,field_description:point_of_sale.field_report_makemyday_order_product_tmpl_id
 msgid "Product Template"
 msgstr "Template Artigo"
 
 #. module: point_of_sale
 #: model:ir.actions.act_window,name:point_of_sale.product_template_action
-#: model:ir.ui.menu,name:point_of_sale.menu_pos_products
-#: model:ir.ui.view,arch_db:point_of_sale.view_pos_pos_form
+#: model:ir.ui.menu,name:point_of_sale.menu_makemyday_products
+#: model:ir.ui.view,arch_db:point_of_sale.view_makemyday_makemyday_form
 msgid "Products"
 msgstr "Artigos"
 
 #. module: point_of_sale
-#: model:ir.model,name:point_of_sale.model_pos_category
-#: model:ir.model.fields,field_description:point_of_sale.field_report_pos_order_pos_categ_id
+#: model:ir.model,name:point_of_sale.model_makemyday_category
+#: model:ir.model.fields,field_description:point_of_sale.field_report_makemyday_order_makemyday_categ_id
 msgid "Public Category"
 msgstr "Categoria Pública"
 
@@ -2970,60 +2970,60 @@ msgstr "Receber Dinheiro"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:134
+#: code:addons/point_of_sale/static/src/xml/makemyday.xml:134
 #: model:ir.ui.view,arch_db:point_of_sale.report_usersproduct
 #, python-format
 msgid "Qty"
 msgstr "Qtd"
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_order_line_qty
-#: model:ir.model.fields,field_description:point_of_sale.field_report_sales_by_user_pos_month_qty
-#: model:ir.model.fields,field_description:point_of_sale.field_report_sales_by_user_pos_qty
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_order_line_qty
+#: model:ir.model.fields,field_description:point_of_sale.field_report_sales_by_user_makemyday_month_qty
+#: model:ir.model.fields,field_description:point_of_sale.field_report_sales_by_user_makemyday_qty
 #: model:ir.ui.view,arch_db:point_of_sale.report_receipt
 msgid "Quantity"
 msgstr "Quantidade"
 
 #. module: point_of_sale
-#: model:ir.ui.view,arch_db:point_of_sale.view_pos_pos_form
+#: model:ir.ui.view,arch_db:point_of_sale.view_makemyday_makemyday_form
 msgid "Re-Print"
 msgstr "Reimprimir"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:1186
+#: code:addons/point_of_sale/static/src/xml/makemyday.xml:1186
 #, python-format
 msgid "Read Weighting Scale"
 msgstr "Ler escala de peso"
 
 #. module: point_of_sale
-#: model:ir.ui.view,arch_db:point_of_sale.view_pos_session_form
+#: model:ir.ui.view,arch_db:point_of_sale.view_makemyday_session_form
 msgid "Real Closing Balance"
 msgstr "Saldo de Fecho Real"
 
 #. module: point_of_sale
 #: model:ir.actions.report.xml,name:point_of_sale.action_report_makemyday_receipt
-#: model:ir.ui.view,arch_db:point_of_sale.view_pos_config_form
+#: model:ir.ui.view,arch_db:point_of_sale.view_makemyday_config_form
 msgid "Receipt"
 msgstr "Recebido"
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_config_receipt_footer
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_config_receipt_footer
 msgid "Receipt Footer"
 msgstr "Rodapé do Recibo"
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_config_receipt_header
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_config_receipt_header
 msgid "Receipt Header"
 msgstr "Cabeçalho de Recibo"
 
 #. module: point_of_sale
-#: model:ir.ui.view,arch_db:point_of_sale.view_pos_config_form
+#: model:ir.ui.view,arch_db:point_of_sale.view_makemyday_config_form
 msgid "Receipt Printer"
 msgstr "Impressora de Recibo"
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_order_pos_reference
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_order_makemyday_reference
 msgid "Receipt Ref"
 msgstr "Ref de Recibo"
 
@@ -3050,56 +3050,56 @@ msgid "Reports"
 msgstr "Relatórios"
 
 #. module: point_of_sale
-#: model:ir.ui.view,arch_db:point_of_sale.view_pos_pos_form
+#: model:ir.ui.view,arch_db:point_of_sale.view_makemyday_makemyday_form
 msgid "Reprint"
 msgstr "Reimprimir"
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_config_settings_module_pos_reprint
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_config_settings_module_makemyday_reprint
 msgid "Reprints"
 msgstr "Reimpressões"
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_session_rescue
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_session_rescue
 msgid "Rescue session"
 msgstr "Recuperar Sessão"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:1155
+#: code:addons/point_of_sale/static/src/xml/makemyday.xml:1155
 #, python-format
 msgid "Reset"
 msgstr "Reiniciar"
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_session_user_id
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_session_user_id
 msgid "Responsible"
 msgstr "Responsável"
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_config_settings_module_pos_restaurant
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_config_settings_module_makemyday_restaurant
 msgid "Restaurant"
 msgstr "Restaurante"
 
 #. module: point_of_sale
-#: selection:pos.config.settings,module_pos_restaurant:0
+#: selection:makemyday.config.settings,module_makemyday_restaurant:0
 msgid "Restaurant: activate table management"
 msgstr "Restaurante: activar gestão de mesas"
 
 #. module: point_of_sale
-#: model:ir.ui.view,arch_db:point_of_sale.view_pos_config_kanban
+#: model:ir.ui.view,arch_db:point_of_sale.view_makemyday_config_kanban
 msgid "Resume"
 msgstr "Resumo"
 
 #. module: point_of_sale
 #: code:addons/point_of_sale/point_of_sale.py:1075
-#: model:ir.ui.view,arch_db:point_of_sale.view_pos_pos_form
+#: model:ir.ui.view,arch_db:point_of_sale.view_makemyday_makemyday_form
 #, python-format
 msgid "Return Products"
 msgstr "Devolver Artigos"
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_order_amount_return
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_order_amount_return
 msgid "Returned"
 msgstr "Devolvido"
 
@@ -3116,15 +3116,15 @@ msgid "Sale Details"
 msgstr "Detalhes da Venda"
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_config_journal_id
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_order_sale_journal
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_config_journal_id
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_order_sale_journal
 msgid "Sale Journal"
 msgstr "Diário de Vendas"
 
 #. module: point_of_sale
-#: model:ir.actions.act_window,name:point_of_sale.action_pos_order_line
-#: model:ir.actions.act_window,name:point_of_sale.action_pos_order_line_day
-#: model:ir.actions.act_window,name:point_of_sale.action_pos_order_line_form
+#: model:ir.actions.act_window,name:point_of_sale.action_makemyday_order_line
+#: model:ir.actions.act_window,name:point_of_sale.action_makemyday_order_line_day
+#: model:ir.actions.act_window,name:point_of_sale.action_makemyday_order_line_form
 msgid "Sale line"
 msgstr "Linha de Venda"
 
@@ -3134,7 +3134,7 @@ msgid "Sales Details"
 msgstr "Detalhes de Vendas"
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_report_transaction_pos_journal_id
+#: model:ir.model.fields,field_description:point_of_sale.field_report_transaction_makemyday_journal_id
 msgid "Sales Journal"
 msgstr "Diário de Vendas"
 
@@ -3144,46 +3144,46 @@ msgid "Sales Lines"
 msgstr "Linhas de Vendas"
 
 #. module: point_of_sale
-#: model:ir.ui.view,arch_db:point_of_sale.view_pos_config_kanban
+#: model:ir.ui.view,arch_db:point_of_sale.view_makemyday_config_kanban
 msgid "Sales Orders"
 msgstr "Ordens de Vendas"
 
 #. module: point_of_sale
-#: model:ir.actions.act_window,name:point_of_sale.action_report_sales_by_user_pos_today
-#: model:ir.ui.view,arch_db:point_of_sale.view_report_sales_by_user_pos_graph
-#: model:ir.ui.view,arch_db:point_of_sale.view_report_sales_by_user_pos_month_graph
+#: model:ir.actions.act_window,name:point_of_sale.action_report_sales_by_user_makemyday_today
+#: model:ir.ui.view,arch_db:point_of_sale.view_report_sales_by_user_makemyday_graph
+#: model:ir.ui.view,arch_db:point_of_sale.view_report_sales_by_user_makemyday_month_graph
 msgid "Sales by User"
 msgstr "Vendas por utilizador"
 
 #. module: point_of_sale
-#: model:ir.actions.act_window,name:point_of_sale.action_report_sales_by_user_pos_month
+#: model:ir.actions.act_window,name:point_of_sale.action_report_sales_by_user_makemyday_month
 msgid "Sales by User Monthly"
 msgstr "Vendas mensais, por utilizador"
 
 #. module: point_of_sale
-#: model:ir.actions.act_window,name:point_of_sale.action_trans_pos_tree_today
+#: model:ir.actions.act_window,name:point_of_sale.action_trans_makemyday_tree_today
 msgid "Sales by day"
 msgstr "Vendas por dia"
 
 #. module: point_of_sale
-#: model:ir.actions.act_window,name:point_of_sale.action_trans_pos_tree_month
+#: model:ir.actions.act_window,name:point_of_sale.action_trans_makemyday_tree_month
 msgid "Sales by month"
 msgstr "Vendas por mês"
 
 #. module: point_of_sale
-#: model:ir.actions.act_window,name:point_of_sale.action_trans_pos_tree
-#: model:ir.model,name:point_of_sale.model_report_sales_by_user_pos
+#: model:ir.actions.act_window,name:point_of_sale.action_trans_makemyday_tree
+#: model:ir.model,name:point_of_sale.model_report_sales_by_user_makemyday
 msgid "Sales by user"
 msgstr "Vendas por utilizador"
 
 #. module: point_of_sale
-#: model:ir.model,name:point_of_sale.model_report_sales_by_user_pos_month
+#: model:ir.model,name:point_of_sale.model_report_sales_by_user_makemyday_month
 msgid "Sales by user monthly"
 msgstr "Vendas mensais, por utilizador"
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_order_user_id
-#: model:ir.ui.view,arch_db:point_of_sale.view_pos_order_filter
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_order_user_id
+#: model:ir.ui.view,arch_db:point_of_sale.view_makemyday_order_filter
 msgid "Salesman"
 msgstr "Vendedor"
 
@@ -3193,8 +3193,8 @@ msgid "Salespeople"
 msgstr "Vendedor"
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_report_pos_order_user_id
-#: model:ir.ui.view,arch_db:point_of_sale.view_report_pos_order_search
+#: model:ir.model.fields,field_description:point_of_sale.field_report_makemyday_order_user_id
+#: model:ir.ui.view,arch_db:point_of_sale.view_report_makemyday_order_search
 msgid "Salesperson"
 msgstr "Vendedor"
 
@@ -3213,20 +3213,20 @@ msgstr "Escala"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:1161
+#: code:addons/point_of_sale/static/src/xml/makemyday.xml:1161
 #, python-format
 msgid "Scan"
 msgstr "Scan"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:1162
+#: code:addons/point_of_sale/static/src/xml/makemyday.xml:1162
 #, python-format
 msgid "Scan EAN-13"
 msgstr "Scan EAN-13"
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_config_iface_scan_via_proxy
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_config_iface_scan_via_proxy
 msgid "Scan via Proxy"
 msgstr "Digitalizar via Proxy"
 
@@ -3239,25 +3239,25 @@ msgstr "Scanner"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:422
+#: code:addons/point_of_sale/static/src/xml/makemyday.xml:422
 #, python-format
 msgid "Search Customers"
 msgstr "Procurar clientes"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:191
+#: code:addons/point_of_sale/static/src/xml/makemyday.xml:191
 #, python-format
 msgid "Search Products"
 msgstr "Pesquisar Produtos"
 
 #. module: point_of_sale
-#: model:ir.ui.view,arch_db:point_of_sale.view_pos_order_filter
+#: model:ir.ui.view,arch_db:point_of_sale.view_makemyday_order_filter
 msgid "Search Sales Order"
 msgstr "Procurar ordens de venda"
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_res_users_pos_security_pin
+#: model:ir.model.fields,field_description:point_of_sale.field_res_users_makemyday_security_pin
 msgid "Security PIN"
 msgstr "PIN Segurança"
 
@@ -3268,7 +3268,7 @@ msgstr "PIN de segurança só pode conter dígitos"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:430
+#: code:addons/point_of_sale/static/src/xml/makemyday.xml:430
 #, python-format
 msgid "Select Customer"
 msgstr "Selecionar Cliente"
@@ -3294,18 +3294,18 @@ msgid "Selected orders do not have the same session!"
 msgstr "Foram seleccionadas encomendas que não pertençam à mesma sessão!"
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_category_sequence
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_category_sequence
 msgid "Sequence"
 msgstr "Sequência"
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_order_sequence_number
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_order_sequence_number
 msgid "Sequence Number"
 msgstr "Número da Sequência"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:702
+#: code:addons/point_of_sale/static/src/xml/makemyday.xml:702
 #, python-format
 msgid "Served by"
 msgstr "Servido por"
@@ -3319,20 +3319,20 @@ msgstr "Erro de Servidor"
 
 #. module: point_of_sale
 #: code:addons/point_of_sale/point_of_sale.py:326
-#: model:ir.model.fields,field_description:point_of_sale.field_account_bank_statement_pos_session_id
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_order_session_id
-#: model:ir.ui.view,arch_db:point_of_sale.view_pos_order_filter
+#: model:ir.model.fields,field_description:point_of_sale.field_account_bank_statement_makemyday_session_id
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_order_session_id
+#: model:ir.ui.view,arch_db:point_of_sale.view_makemyday_order_filter
 #, python-format
 msgid "Session"
 msgstr "Sessão"
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_session_name
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_session_name
 msgid "Session ID"
 msgstr "ID da Sessão"
 
 #. module: point_of_sale
-#: model:ir.actions.report.xml,name:point_of_sale.action_report_pos_session_summary
+#: model:ir.actions.report.xml,name:point_of_sale.action_report_makemyday_session_summary
 msgid "Session Summary"
 msgstr "Resumo da Sessão"
 
@@ -3343,23 +3343,23 @@ msgstr "Resumo da Sessão:"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:1044
+#: code:addons/point_of_sale/static/src/xml/makemyday.xml:1044
 #, python-format
 msgid "Session ids:"
 msgstr "ids das Sessões: "
 
 #. module: point_of_sale
-#: model:ir.ui.view,arch_db:point_of_sale.view_pos_session_form
+#: model:ir.ui.view,arch_db:point_of_sale.view_makemyday_session_form
 msgid "Session:"
 msgstr "Sessão:"
 
 #. module: point_of_sale
-#: model:ir.actions.act_window,name:point_of_sale.act_pos_config_sessions
-#: model:ir.actions.act_window,name:point_of_sale.action_pos_session
-#: model:ir.actions.act_window,name:point_of_sale.action_pos_session_filtered
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_config_session_ids
-#: model:ir.ui.menu,name:point_of_sale.menu_pos_session_all
-#: model:ir.ui.view,arch_db:point_of_sale.view_pos_config_kanban
+#: model:ir.actions.act_window,name:point_of_sale.act_makemyday_config_sessions
+#: model:ir.actions.act_window,name:point_of_sale.action_makemyday_session
+#: model:ir.actions.act_window,name:point_of_sale.action_makemyday_session_filtered
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_config_session_ids
+#: model:ir.ui.menu,name:point_of_sale.menu_makemyday_session_all
+#: model:ir.ui.view,arch_db:point_of_sale.view_makemyday_config_kanban
 msgid "Sessions"
 msgstr "Sessões"
 
@@ -3372,49 +3372,49 @@ msgstr "Definir Cliente"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:1154
+#: code:addons/point_of_sale/static/src/xml/makemyday.xml:1154
 #, python-format
 msgid "Set Weight"
 msgstr "Defina o Peso"
 
 #. module: point_of_sale
-#: model:ir.ui.view,arch_db:point_of_sale.view_pos_config_form
+#: model:ir.ui.view,arch_db:point_of_sale.view_makemyday_config_form
 msgid "Set to Active"
 msgstr "Definir como Activo"
 
 #. module: point_of_sale
-#: model:ir.ui.view,arch_db:point_of_sale.view_pos_config_form
+#: model:ir.ui.view,arch_db:point_of_sale.view_makemyday_config_form
 msgid "Set to Deprecated"
 msgstr "Definir Como Obsoleto"
 
 #. module: point_of_sale
-#: model:ir.ui.view,arch_db:point_of_sale.view_pos_config_form
+#: model:ir.ui.view,arch_db:point_of_sale.view_makemyday_config_form
 msgid "Set to Inactive"
 msgstr "Definir como Inativo"
 
 #. module: point_of_sale
-#: model:ir.ui.menu,name:point_of_sale.menu_pos_global_settings
-#: model:ir.ui.view,arch_db:point_of_sale.view_pos_config_kanban
+#: model:ir.ui.menu,name:point_of_sale.menu_makemyday_global_settings
+#: model:ir.ui.view,arch_db:point_of_sale.view_makemyday_config_kanban
 msgid "Settings"
 msgstr "Configurações"
 
 #. module: point_of_sale
-#: model:ir.model.fields,help:point_of_sale.field_pos_config_settings_module_share
+#: model:ir.model.fields,help:point_of_sale.field_makemyday_config_settings_module_share
 msgid "Share or embbed any screen of Odoo."
 msgstr "Partilhar ou embeber qualquer ecrã do Odoo"
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_config_settings_company_share_partner
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_config_settings_company_share_partner
 msgid "Share partners to all companies"
 msgstr "Partilhar clientes para todas as empresas"
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_config_settings_company_share_product
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_config_settings_company_share_product
 msgid "Share product to all companies"
 msgstr "Partilhar produtos para todas as empresas"
 
 #. module: point_of_sale
-#: model:ir.model.fields,help:point_of_sale.field_pos_config_settings_company_share_partner
+#: model:ir.model.fields,help:point_of_sale.field_makemyday_config_settings_company_share_partner
 msgid ""
 "Share your partners to all companies defined in your instance.\n"
 " * Checked : Partners are visible for every companies, even if a company is defined on the partner.\n"
@@ -3422,7 +3422,7 @@ msgid ""
 msgstr "Partilhe os parceiros por todas as empresas definidas na sua instância.\n* Com visto: Parceiros estão visíveis para todas as empresas, mesmo que a empresa estiver definda no parceiro.\n* Sem visto: Cada empresa pode ver apenas os seus parceiros. (Parceiros sem empresa são vistos por todas.)"
 
 #. module: point_of_sale
-#: model:ir.model.fields,help:point_of_sale.field_pos_config_settings_company_share_product
+#: model:ir.model.fields,help:point_of_sale.field_makemyday_config_settings_company_share_product
 msgid ""
 "Share your product to all companies defined in your instance.\n"
 " * Checked : Product are visible for every company, even if a company is defined on the partner.\n"
@@ -3431,35 +3431,35 @@ msgstr "Partilhe os produtos por todas as empresas definidas na sua instância.\
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:1264
+#: code:addons/point_of_sale/static/src/xml/makemyday.xml:1264
 #, python-format
 msgid "Shop:"
 msgstr "Loja:"
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_config_settings_google_cal_sync
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_config_settings_google_cal_sync
 msgid "Show Tutorial"
 msgstr "Mostrar Tuturial"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:42
+#: code:addons/point_of_sale/static/src/xml/makemyday.xml:42
 #, python-format
 msgid "Skip"
 msgstr "Saltar"
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_config_iface_print_skip_screen
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_config_iface_print_skip_screen
 msgid "Skip Receipt Screen"
 msgstr "Saltar o Ecrâ do Recibo"
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_category_image_small
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_category_image_small
 msgid "Small-sized image"
 msgstr "Imagem pequena"
 
 #. module: point_of_sale
-#: model:ir.model.fields,help:point_of_sale.field_pos_category_image_small
+#: model:ir.model.fields,help:point_of_sale.field_makemyday_category_image_small
 msgid ""
 "Small-sized image of the category. It is automatically resized as a 64x64px "
 "image, with aspect ratio preserved. Use this field anywhere a small image is"
@@ -3467,7 +3467,7 @@ msgid ""
 msgstr "Imagem de tamanho pequeno da categoria. É automaticamente redimensionada para 64x64 pixeis, com o rácio preservado. Use este campo sempre que uma imagem pequena seja necessária."
 
 #. module: point_of_sale
-#: model:pos.category,name:point_of_sale.soft
+#: model:makemyday.category,name:point_of_sale.soft
 msgid "Soft"
 msgstr "Fácil"
 
@@ -3479,17 +3479,17 @@ msgid "Some orders could not be submitted to"
 msgstr "Algumas ordens não puderam ser submetidas para"
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_config_iface_start_categ_id
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_config_iface_start_categ_id
 msgid "Start Category"
 msgstr "Categorias de Início"
 
 #. module: point_of_sale
-#: model:ir.actions.act_url,name:point_of_sale.action_pos_pos
+#: model:ir.actions.act_url,name:point_of_sale.action_makemyday_makemyday
 msgid "Start Point of Sale"
 msgstr "Iniciar Ponto de Venda"
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_session_cash_register_balance_start
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_session_cash_register_balance_start
 msgid "Starting Balance"
 msgstr "Saldo Inicial"
 
@@ -3510,21 +3510,21 @@ msgid "Statement Summary"
 msgstr "Resumo de Extrato"
 
 #. module: point_of_sale
-#: model:ir.ui.view,arch_db:point_of_sale.view_pos_pos_form
+#: model:ir.ui.view,arch_db:point_of_sale.view_makemyday_makemyday_form
 msgid "Statement lines"
 msgstr "Linhas do extrato"
 
 #. module: point_of_sale
-#: model:ir.ui.view,arch_db:point_of_sale.view_pos_session_form
+#: model:ir.ui.view,arch_db:point_of_sale.view_makemyday_session_form
 msgid "Statements"
 msgstr "Extratos"
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_config_state
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_order_state
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_session_state
-#: model:ir.model.fields,field_description:point_of_sale.field_report_pos_order_state
-#: model:ir.ui.view,arch_db:point_of_sale.view_pos_order_filter
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_config_state
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_order_state
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_session_state
+#: model:ir.model.fields,field_description:point_of_sale.field_report_makemyday_order_state
+#: model:ir.ui.view,arch_db:point_of_sale.view_makemyday_order_filter
 msgid "Status"
 msgstr "Estado"
 
@@ -3541,14 +3541,14 @@ msgid "Stella Artois 50cl"
 msgstr "Stella Artois 50cl"
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_config_stock_location_id
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_config_stock_location_id
 msgid "Stock Location"
 msgstr "Localização do Stock"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:316
-#: code:addons/point_of_sale/static/src/xml/pos.xml:317
+#: code:addons/point_of_sale/static/src/xml/makemyday.xml:316
+#: code:addons/point_of_sale/static/src/xml/makemyday.xml:317
 #, python-format
 msgid "Street"
 msgstr "Rua"
@@ -3561,55 +3561,55 @@ msgstr "Vigas"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:753
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_order_line_price_subtotal_incl
+#: code:addons/point_of_sale/static/src/xml/makemyday.xml:753
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_order_line_price_subtotal_incl
 #, python-format
 msgid "Subtotal"
 msgstr "Subtotal"
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_order_line_price_subtotal
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_order_line_price_subtotal
 msgid "Subtotal w/o Tax"
 msgstr "Subtotal Sem Imposto"
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_report_pos_order_price_sub_total
+#: model:ir.model.fields,field_description:point_of_sale.field_report_makemyday_order_price_sub_total
 msgid "Subtotal w/o discount"
 msgstr "Subtotal c/s desconto"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:1299
+#: code:addons/point_of_sale/static/src/xml/makemyday.xml:1299
 #, python-format
 msgid "Subtotal:"
 msgstr "Subtotal:"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:1036
+#: code:addons/point_of_sale/static/src/xml/makemyday.xml:1036
 #, python-format
 msgid "Successfully  imported"
 msgstr "Importado com Sucesso"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:1035
+#: code:addons/point_of_sale/static/src/xml/makemyday.xml:1035
 #, python-format
 msgid "Successfully imported"
 msgstr "Importado com Sucesso"
 
 #. module: point_of_sale
-#: model:ir.model.fields,help:point_of_sale.field_pos_session_cash_register_balance_end
+#: model:ir.model.fields,help:point_of_sale.field_makemyday_session_cash_register_balance_end
 msgid "Sum of opening balance and transactions."
 msgstr "Sumatório de balanço e movimentos de abertura."
 
 #. module: point_of_sale
-#: model:ir.ui.view,arch_db:point_of_sale.view_pos_order_line
+#: model:ir.ui.view,arch_db:point_of_sale.view_makemyday_order_line
 msgid "Sum of subtotals"
 msgstr "Soma dos subtotais"
 
 #. module: point_of_sale
-#: model:ir.ui.view,arch_db:point_of_sale.view_pos_session_form
+#: model:ir.ui.view,arch_db:point_of_sale.view_makemyday_session_form
 msgid "Summary by Payment Methods"
 msgstr "Resumo por Métodos de Pagamento"
 
@@ -3620,7 +3620,7 @@ msgstr "Moeda do Fornecedor"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:766
+#: code:addons/point_of_sale/static/src/xml/makemyday.xml:766
 #, python-format
 msgid "TOTAL"
 msgstr "TOTAL"
@@ -3633,49 +3633,49 @@ msgstr "Retirar dinheiro"
 #. module: point_of_sale
 #. openerp-web
 #: code:addons/point_of_sale/point_of_sale.py:1319
-#: code:addons/point_of_sale/static/src/xml/pos.xml:105
+#: code:addons/point_of_sale/static/src/xml/makemyday.xml:105
 #, python-format
 msgid "Tax"
 msgstr "Imposto"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:353
-#: code:addons/point_of_sale/static/src/xml/pos.xml:400
+#: code:addons/point_of_sale/static/src/xml/makemyday.xml:353
+#: code:addons/point_of_sale/static/src/xml/makemyday.xml:400
 #, python-format
 msgid "Tax ID"
 msgstr "Imposto ID"
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_order_amount_tax
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_order_line_tax_ids
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_order_line_tax_ids_after_fiscal_position
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_order_amount_tax
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_order_line_tax_ids
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_order_line_tax_ids_after_fiscal_position
 #: model:ir.ui.view,arch_db:point_of_sale.report_saleslines
 msgid "Taxes"
 msgstr "Impostos"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:1134
+#: code:addons/point_of_sale/static/src/xml/makemyday.xml:1134
 #, python-format
 msgid "Taxes:"
 msgstr "Impostos:"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:682
+#: code:addons/point_of_sale/static/src/xml/makemyday.xml:682
 #, python-format
 msgid "Tel:"
 msgstr "Tel:"
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_config_settings_auth_signup_template_user_id
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_config_settings_auth_signup_template_user_id
 msgid "Template user for new users created through signup"
 msgstr "Utilizador template para novos utilizadores criado através de registo"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:490
+#: code:addons/point_of_sale/static/src/xml/makemyday.xml:490
 #, python-format
 msgid "Tendered"
 msgstr "Adjudicado"
@@ -3688,7 +3688,7 @@ msgstr "A Ordem POS tem de ter linhas quando chama este método"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:888
+#: code:addons/point_of_sale/static/src/xml/makemyday.xml:888
 #, python-format
 msgid ""
 "The Point of Sale could not find any product, client, employee\n"
@@ -3696,44 +3696,44 @@ msgid ""
 msgstr "O ponto de venda não poderia encontrar qualquer produto, cliente, empregado\n                    ou ação associada com o código de barras digitalizado."
 
 #. module: point_of_sale
-#: model:ir.model.fields,help:point_of_sale.field_pos_config_settings_google_drive_uri
+#: model:ir.model.fields,help:point_of_sale.field_makemyday_config_settings_google_drive_uri
 msgid "The URL to generate the authorization code from Google"
 msgstr "O URL para gerar o código de autorização da Google"
 
 #. module: point_of_sale
-#: constraint:pos.config:0
+#: constraint:makemyday.config:0
 msgid ""
 "The company of a payment method is different than the one of point of sale"
 msgstr "A empresa do método de pagamento é diferente da definida no ponto de venda."
 
 #. module: point_of_sale
-#: constraint:pos.config:0
+#: constraint:makemyday.config:0
 msgid ""
 "The company of the sale journal is different than the one of point of sale"
 msgstr "A empresa do diário de vendas é diferente da do ponto de venda"
 
 #. module: point_of_sale
-#: constraint:pos.config:0
+#: constraint:makemyday.config:0
 msgid ""
 "The company of the stock location is different than the one of point of sale"
 msgstr "A empresa da localização de stock é diferente da empresa de um dos pontos de venda"
 
 #. module: point_of_sale
-#: model:ir.model.fields,help:point_of_sale.field_pos_config_iface_tax_included
+#: model:ir.model.fields,help:point_of_sale.field_makemyday_config_iface_tax_included
 msgid ""
 "The displayed prices will always include all taxes, even if the taxes have "
 "been setup differently"
-msgstr "O preço apresentado vai sempre incluir impostos, mesmo que os impostos forem definidos de forma diferente"
+msgstr "O preço apresentado vai sempre incluir Impostos, mesmo que os Impostos forem definidos de forma diferente"
 
 #. module: point_of_sale
-#: model:ir.model.fields,help:point_of_sale.field_pos_config_proxy_ip
+#: model:ir.model.fields,help:point_of_sale.field_makemyday_config_proxy_ip
 msgid ""
 "The hostname or ip address of the hardware proxy, Will be autodetected if "
 "left empty"
 msgstr "O hostname ou o endereço IP do proxy hardware será detectado automaticamente se for deixado vazio"
 
 #. module: point_of_sale
-#: sql_constraint:pos.session:0
+#: sql_constraint:makemyday.session:0
 msgid "The name of this POS Session must be unique !"
 msgstr "O nome desta sessão POS tem que ser único !"
 
@@ -3752,31 +3752,31 @@ msgid "The order could not be sent to the server due to an unknown error"
 msgstr "A ordem não pode ser enviada para o servidor devido a um erro desconhecido"
 
 #. module: point_of_sale
-#: model:ir.model.fields,help:point_of_sale.field_pos_config_iface_precompute_cash
+#: model:ir.model.fields,help:point_of_sale.field_makemyday_config_iface_precompute_cash
 msgid ""
 "The payment input will behave similarily to bank payment input, and will be "
 "prefilled with the exact due amount"
 msgstr "O input de pagamento irá se comportar de forma similar a um input de pagamento bancário, e será pré-preenchido com o valor em atraso exacto."
 
 #. module: point_of_sale
-#: model:ir.model.fields,help:point_of_sale.field_pos_session_config_id
+#: model:ir.model.fields,help:point_of_sale.field_makemyday_session_config_id
 msgid "The physical point of sale you will use."
 msgstr "O ponto de venda físico que irá usar."
 
 #. module: point_of_sale
-#: model:ir.model.fields,help:point_of_sale.field_pos_config_iface_start_categ_id
+#: model:ir.model.fields,help:point_of_sale.field_makemyday_config_iface_start_categ_id
 msgid ""
 "The point of sale will display this product category by default. If no "
 "category is specified, all available products will be shown"
 msgstr "O POS vai mostrar esta categoria de produto por defeito. Se nenhuma categoria for especificada, todos os produtos disponíveis vão ser mostrados."
 
 #. module: point_of_sale
-#: model:ir.model.fields,help:point_of_sale.field_pos_config_iface_display_categ_images
+#: model:ir.model.fields,help:point_of_sale.field_makemyday_config_iface_display_categ_images
 msgid "The product categories will be displayed with pictures."
 msgstr "As categorias de produto vão ser mostradas com imagens."
 
 #. module: point_of_sale
-#: model:ir.model.fields,help:point_of_sale.field_pos_config_tip_product_id
+#: model:ir.model.fields,help:point_of_sale.field_makemyday_config_tip_product_id
 msgid ""
 "The product used to encode the customer tip. Leave empty if you do not "
 "accept tips."
@@ -3790,14 +3790,14 @@ msgid "The provided file could not be read due to an unknown error"
 msgstr "O arquivo fornecido não pode ser lido devido a um erro desconhecido"
 
 #. module: point_of_sale
-#: model:ir.model.fields,help:point_of_sale.field_pos_config_iface_print_skip_screen
+#: model:ir.model.fields,help:point_of_sale.field_makemyday_config_iface_print_skip_screen
 msgid ""
 "The receipt screen will be skipped if the receipt can be printed "
 "automatically."
 msgstr "O ecra do recibo será saltado se o recibo poder ser impresso automaticamente"
 
 #. module: point_of_sale
-#: model:ir.model.fields,help:point_of_sale.field_pos_config_iface_print_auto
+#: model:ir.model.fields,help:point_of_sale.field_makemyday_config_iface_print_auto
 msgid "The receipt will automatically be printed at the end of each order"
 msgstr "O recibo vai ser impresso automacamente no final de cada venda"
 
@@ -3814,10 +3814,10 @@ msgid ""
 "The system will open all cash registers, so that you can start recording "
 "payments. We suggest you to control the opening balance of each register, "
 "using their CashBox tab."
-msgstr "O sistema irá abrir todas as caixas registadoras, de modo que possa começar a gravação de pagamentos. Sugerimos-lhe que controle o saldo de abertura de cada registo, usando o seu guia da caixa."
+msgstr "O sistema irá abrir todas as caixas registadoras, de modo que makemydaysa começar a gravação de pagamentos. Sugerimos-lhe que controle o saldo de abertura de cada registo, usando o seu guia da caixa."
 
 #. module: point_of_sale
-#: model:ir.model.fields,help:point_of_sale.field_pos_config_settings_module_pos_mercury
+#: model:ir.model.fields,help:point_of_sale.field_makemyday_config_settings_module_makemyday_mercury
 msgid "The transactions are processed by MercuryPay"
 msgstr "As transações são processadas por MercuryPay"
 
@@ -3829,13 +3829,13 @@ msgid ""
 msgstr "O tipo de Diário para o seu método de pagamento deve ser bancária ou dinheiro "
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_session_cash_register_balance_end
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_session_cash_register_balance_end
 msgid "Theoretical Closing Balance"
 msgstr "Saldo Final Teórico"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:94
+#: code:addons/point_of_sale/static/src/xml/makemyday.xml:94
 #, python-format
 msgid ""
 "There are pending operations that could not be saved into the database, are "
@@ -3881,7 +3881,7 @@ msgid ""
 msgstr "Tem de existir pelo menos um produto na sua ordem para a poder validar"
 
 #. module: point_of_sale
-#: model:ir.model.fields,help:point_of_sale.field_pos_config_settings_auth_signup_reset_password
+#: model:ir.model.fields,help:point_of_sale.field_makemyday_config_settings_auth_signup_reset_password
 msgid "This allows users to trigger a password reset from the Login page."
 msgstr "Isto permite aos utilizadores activar o reset da password a partir da página de login."
 
@@ -3907,45 +3907,45 @@ msgid ""
 msgstr "Este campo mostra a diferença máxima permitida entre o saldo final e o dinheiro teórico ao fechar uma sessão, para os utilizadores 'não gestores'-POS. Se o máximo for atingido, o utilizador terá uma mensagem de erro no encerramento da sessão dizendo que ele precisa entrar em contato com o seu gestor ."
 
 #. module: point_of_sale
-#: model:ir.model.fields,help:point_of_sale.field_pos_category_image
+#: model:ir.model.fields,help:point_of_sale.field_makemyday_category_image
 msgid ""
 "This field holds the image used as image for the cateogry, limited to "
 "1024x1024px."
 msgstr "O campo guarda a imagem usada como imagem da categoria, limitada a 1024x1024 pixeis."
 
 #. module: point_of_sale
-#: model:ir.model.fields,help:point_of_sale.field_pos_config_group_pos_manager_id
+#: model:ir.model.fields,help:point_of_sale.field_makemyday_config_group_makemyday_manager_id
 msgid ""
-"This field is there to pass the id of the pos manager group to the point of "
+"This field is there to pass the id of the makemyday manager group to the point of "
 "sale client"
-msgstr "Este campo está lá para passar o id do gestor do pos para o client do pos"
+msgstr "Este campo está lá para passar o id do gestor do makemyday para o client do makemyday"
 
 #. module: point_of_sale
-#: model:ir.model.fields,help:point_of_sale.field_pos_config_group_pos_user_id
+#: model:ir.model.fields,help:point_of_sale.field_makemyday_config_group_makemyday_user_id
 msgid ""
-"This field is there to pass the id of the pos user group to the point of "
+"This field is there to pass the id of the makemyday user group to the point of "
 "sale client"
-msgstr "Este campo está lá para passar o id do utilizador do pos para o client do pos"
+msgstr "Este campo está lá para passar o id do utilizador do makemyday para o client do makemyday"
 
 #. module: point_of_sale
-#: model:ir.model.fields,help:point_of_sale.field_pos_config_settings_module_google_calendar
+#: model:ir.model.fields,help:point_of_sale.field_makemyday_config_settings_module_google_calendar
 msgid "This installs the module google_calendar."
 msgstr "Instala o módulo google_calendar."
 
 #. module: point_of_sale
-#: model:ir.model.fields,help:point_of_sale.field_pos_config_settings_module_google_drive
+#: model:ir.model.fields,help:point_of_sale.field_makemyday_config_settings_module_google_drive
 msgid "This installs the module google_docs."
 msgstr "Instala o módulo google_docs"
 
 #. module: point_of_sale
-#: model:ir.model.fields,help:point_of_sale.field_pos_config_settings_module_inter_company_rules
+#: model:ir.model.fields,help:point_of_sale.field_makemyday_config_settings_module_inter_company_rules
 msgid ""
 "This installs the module inter_company_rules.\n"
 " Configure company rules to automatically create SO/PO when one of your company sells/buys to another of your company."
 msgstr "Instala o módulo inter_company_rules.\nConfigura regras para que automaticamente sejam criadas SO/PO's se existirem vendas/compras para a outra empresa."
 
 #. module: point_of_sale
-#: model:ir.model.fields,help:point_of_sale.field_pos_config_settings_module_pos_restaurant
+#: model:ir.model.fields,help:point_of_sale.field_makemyday_config_settings_module_makemyday_restaurant
 msgid ""
 "This module adds several restaurant features to the Point of Sale: \n"
 "\n"
@@ -3963,7 +3963,7 @@ msgstr "Este módulo adiciona várias funcionalidades de restaurante ao POS:\n\n
 msgid ""
 "This operation will permanently destroy all paid orders from the local "
 "storage. You will lose all the data. This operation cannot be undone."
-msgstr "Esta operação vai destruir permanentemente todas as ordens pagas do repositório local. Vai perder todas a info. Esta operação não pode ser reparada ou anulada. "
+msgstr "Esta operação vai destruir permanentemente todas as ordens pagas do remakemydayitório local. Vai perder todas a info. Esta operação não pode ser reparada ou anulada. "
 
 #. module: point_of_sale
 #. openerp-web
@@ -3973,17 +3973,17 @@ msgid ""
 "This operation will permanently destroy all unpaid orders from all sessions "
 "that have been put in the local storage. You will lose all the data and exit"
 " the point of sale. This operation cannot be undone."
-msgstr "Esta operação vai destruir permanentemente todas as ordens pagas do repositório local. Vai perder todas a info. Esta operação não pode ser reparada ou anulada. "
+msgstr "Esta operação vai destruir permanentemente todas as ordens pagas do remakemydayitório local. Vai perder todas a info. Esta operação não pode ser reparada ou anulada. "
 
 #. module: point_of_sale
-#: model:ir.model.fields,help:point_of_sale.field_pos_config_sequence_id
+#: model:ir.model.fields,help:point_of_sale.field_makemyday_config_sequence_id
 msgid ""
 "This sequence is automatically created by Odoo but you can change it to "
 "customize the reference numbers of your orders."
 msgstr "Esta sequência é automaticamente criada pelo Odoo mas pode alterá-la para números personalizados nas suas ordens."
 
 #. module: point_of_sale
-#: model:ir.model.fields,help:point_of_sale.field_product_template_pos_categ_id
+#: model:ir.model.fields,help:point_of_sale.field_product_template_makemyday_categ_id
 msgid "Those categories are used to group similar products for point of sale."
 msgstr "Estas categorias são usadas para agrupar produtos semelhantes para o ponto de venda."
 
@@ -3995,13 +3995,13 @@ msgstr "Timmermans Kriek 37.5cl"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:629
+#: code:addons/point_of_sale/static/src/xml/makemyday.xml:629
 #, python-format
 msgid "Tip"
 msgstr "Gorjeta"
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_config_tip_product_id
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_config_tip_product_id
 msgid "Tip Product"
 msgstr "Produto da Gorjeta"
 
@@ -4019,7 +4019,7 @@ msgid ""
 msgstr "Para devolver o produto(s), precisa de abrir uma sessão que será usada para registar o reembolso."
 
 #. module: point_of_sale
-#: model:ir.ui.view,arch_db:point_of_sale.view_pos_session_search
+#: model:ir.ui.view,arch_db:point_of_sale.view_makemyday_session_search
 msgid "Today"
 msgstr "Hoje"
 
@@ -4034,63 +4034,63 @@ msgid "Today's Payments"
 msgstr "Pagamentos de Hoje"
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_order_amount_total
-#: model:ir.model.fields,field_description:point_of_sale.field_report_sales_by_user_pos_amount
-#: model:ir.model.fields,field_description:point_of_sale.field_report_sales_by_user_pos_month_amount
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_order_amount_total
+#: model:ir.model.fields,field_description:point_of_sale.field_report_sales_by_user_makemyday_amount
+#: model:ir.model.fields,field_description:point_of_sale.field_report_sales_by_user_makemyday_month_amount
 msgid "Total"
 msgstr "Total"
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_session_cash_register_total_entry_encoding
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_session_cash_register_total_entry_encoding
 msgid "Total Cash Transaction"
 msgstr "Transação Total de Dinheiro"
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_report_pos_order_total_discount
+#: model:ir.model.fields,field_description:point_of_sale.field_report_makemyday_order_total_discount
 msgid "Total Discount"
 msgstr "Desconto Total"
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_report_pos_order_price_total
+#: model:ir.model.fields,field_description:point_of_sale.field_report_makemyday_order_price_total
 msgid "Total Price"
 msgstr "Preço Total"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:803
+#: code:addons/point_of_sale/static/src/xml/makemyday.xml:803
 #, python-format
 msgid "Total Taxes"
 msgstr "Total Impostos"
 
 #. module: point_of_sale
-#: model:ir.ui.view,arch_db:point_of_sale.view_trans_pos_user_tree
+#: model:ir.ui.view,arch_db:point_of_sale.view_trans_makemyday_user_tree
 msgid "Total Transaction"
 msgstr "Transação Total"
 
 #. module: point_of_sale
-#: model:ir.model.fields,help:point_of_sale.field_pos_session_cash_register_total_entry_encoding
+#: model:ir.model.fields,help:point_of_sale.field_makemyday_session_cash_register_total_entry_encoding
 msgid "Total of all paid sale orders"
 msgstr "Total de todas as Ordens de Venda pagas"
 
 #. module: point_of_sale
-#: model:ir.model.fields,help:point_of_sale.field_pos_session_cash_register_balance_end_real
+#: model:ir.model.fields,help:point_of_sale.field_makemyday_session_cash_register_balance_end_real
 msgid "Total of closing cash control lines."
 msgstr "Total de linhas de fecho de controlo de dinheiro."
 
 #. module: point_of_sale
-#: model:ir.model.fields,help:point_of_sale.field_pos_session_cash_register_balance_start
+#: model:ir.model.fields,help:point_of_sale.field_makemyday_session_cash_register_balance_start
 msgid "Total of opening cash control lines."
 msgstr "Total de linhas de abertura de controlo de dinheiro."
 
 #. module: point_of_sale
-#: model:ir.ui.view,arch_db:point_of_sale.view_pos_order_line
+#: model:ir.ui.view,arch_db:point_of_sale.view_makemyday_order_line
 msgid "Total qty"
 msgstr "Quant.Total"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:1133
-#: code:addons/point_of_sale/static/src/xml/pos.xml:1319
+#: code:addons/point_of_sale/static/src/xml/makemyday.xml:1133
+#: code:addons/point_of_sale/static/src/xml/makemyday.xml:1319
 #, python-format
 msgid "Total:"
 msgstr "Total:"
@@ -4102,12 +4102,12 @@ msgid "Trade Receivables"
 msgstr "Comercializar Recebíveis"
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_config_settings_google_drive_uri
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_config_settings_google_drive_uri
 msgid "URI"
 msgstr "URI"
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_config_settings_server_uri
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_config_settings_server_uri
 msgid "URI for tuto"
 msgstr "URI for tuto"
 
@@ -4115,7 +4115,7 @@ msgstr "URI for tuto"
 #: code:addons/point_of_sale/point_of_sale.py:985
 #, python-format
 msgid "Unable to cancel the picking."
-msgstr "Não é possível cancelar o picking."
+msgstr "Não é makemydaysível cancelar o picking."
 
 #. module: point_of_sale
 #: code:addons/point_of_sale/point_of_sale.py:505
@@ -4123,16 +4123,16 @@ msgstr "Não é possível cancelar o picking."
 msgid ""
 "Unable to open the session. You have to assign a sale journal to your point "
 "of sale."
-msgstr "Não foi possível abrir a sessão. Tem de definir um diário de venda ao seu ponto de venda."
+msgstr "Não foi makemydaysível abrir a sessão. Tem de definir um diário de venda ao seu ponto de venda."
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_order_line_price_unit
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_order_line_price_unit
 msgid "Unit Price"
 msgstr "Preço Unitário"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:884
+#: code:addons/point_of_sale/static/src/xml/makemyday.xml:884
 #, python-format
 msgid "Unknown Barcode"
 msgstr "Código de Barras Desconhecido"
@@ -4152,12 +4152,12 @@ msgid "Unsupported File Format"
 msgstr "Formato de ficheiro não suportado"
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_config_settings_module_auth_oauth
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_config_settings_module_auth_oauth
 msgid "Use external authentication providers, sign in with Google..."
 msgstr "Use registo através de apps terceiras, login com Google..."
 
 #. module: point_of_sale
-#: model:ir.actions.act_window,help:point_of_sale.action_pos_pos_form
+#: model:ir.actions.act_window,help:point_of_sale.action_makemyday_makemyday_form
 msgid ""
 "Use this menu to browse previous orders. To record new\n"
 "                orders, you may use the menu <i>Your Session</i> for\n"
@@ -4165,11 +4165,11 @@ msgid ""
 msgstr "Utilize este menu para navegar ordens anteriores. Para criar novas ordens, pode usar o menu <i>Sua Sessão</i> para o interface touchscreen."
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_report_sales_by_user_pos_month_user_id
-#: model:ir.model.fields,field_description:point_of_sale.field_report_sales_by_user_pos_user_id
-#: model:ir.model.fields,field_description:point_of_sale.field_report_transaction_pos_user_id
-#: model:ir.ui.view,arch_db:point_of_sale.view_pos_session_search
-#: model:res.groups,name:point_of_sale.group_pos_user
+#: model:ir.model.fields,field_description:point_of_sale.field_report_sales_by_user_makemyday_month_user_id
+#: model:ir.model.fields,field_description:point_of_sale.field_report_sales_by_user_makemyday_user_id
+#: model:ir.model.fields,field_description:point_of_sale.field_report_transaction_makemyday_user_id
+#: model:ir.ui.view,arch_db:point_of_sale.view_makemyday_session_search
+#: model:res.groups,name:point_of_sale.group_makemyday_user
 msgid "User"
 msgstr "Utilizador"
 
@@ -4186,7 +4186,7 @@ msgstr "Artigo do Utilizador"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:1263
+#: code:addons/point_of_sale/static/src/xml/makemyday.xml:1263
 #: model:ir.ui.view,arch_db:point_of_sale.report_receipt
 #, python-format
 msgid "User:"
@@ -4199,20 +4199,20 @@ msgstr "Utilizadores"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:685
+#: code:addons/point_of_sale/static/src/xml/makemyday.xml:685
 #, python-format
 msgid "VAT:"
 msgstr "IVA:"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:589
+#: code:addons/point_of_sale/static/src/xml/makemyday.xml:589
 #, python-format
 msgid "Validate"
 msgstr "Validar"
 
 #. module: point_of_sale
-#: model:ir.ui.view,arch_db:point_of_sale.view_pos_session_form
+#: model:ir.ui.view,arch_db:point_of_sale.view_makemyday_session_form
 msgid "Validate Closing & Post Entries"
 msgstr "Validar Encerramento e Entradas Lançadas"
 
@@ -4223,46 +4223,46 @@ msgid "Vauxoo.com"
 msgstr "Vauxoo.com"
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_config_iface_vkeyboard
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_config_iface_vkeyboard
 msgid "Virtual KeyBoard"
 msgstr "Teclado Virtual"
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_report_pos_order_stock_location_id
+#: model:ir.model.fields,field_description:point_of_sale.field_report_makemyday_order_stock_location_id
 msgid "Warehouse"
 msgstr "Armazém"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:1180
+#: code:addons/point_of_sale/static/src/xml/makemyday.xml:1180
 #, python-format
 msgid "Weighting"
 msgstr "Pesagem"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:1106
-#: code:addons/point_of_sale/static/src/xml/pos.xml:1283
+#: code:addons/point_of_sale/static/src/xml/makemyday.xml:1106
+#: code:addons/point_of_sale/static/src/xml/makemyday.xml:1283
 #, python-format
 msgid "With a"
 msgstr "Com um"
 
 #. module: point_of_sale
-#: model:ir.model.fields,help:point_of_sale.field_pos_config_settings_group_light_multi_company
+#: model:ir.model.fields,help:point_of_sale.field_makemyday_config_settings_group_light_multi_company
 msgid ""
 "Work in multi-company environments, with appropriate security access between"
 " companies."
 msgstr "Trabalhe em ambientes multi-empresa, com segurança apropriada entre elas"
 
 #. module: point_of_sale
-#: model:ir.model.fields,help:point_of_sale.field_pos_config_settings_group_product_variant
+#: model:ir.model.fields,help:point_of_sale.field_makemyday_config_settings_group_product_variant
 msgid ""
 "Work with product variant allows you to define some variant of the same "
 "products, an ease the product management in the ecommerce for example"
 msgstr "Trabalhar com variantes de produtos permite-lhe definir algumas variantes de produtos, e gerir a loja online de forma mais fácil."
 
 #. module: point_of_sale
-#: model:ir.ui.view,arch_db:point_of_sale.view_report_pos_order_search
+#: model:ir.ui.view,arch_db:point_of_sale.view_report_makemyday_order_search
 msgid "Year"
 msgstr "Ano"
 
@@ -4273,7 +4273,7 @@ msgid "Yellow Peppers"
 msgstr "Pimentos Amarelos"
 
 #. module: point_of_sale
-#: model:ir.ui.view,arch_db:point_of_sale.view_pos_session_form
+#: model:ir.ui.view,arch_db:point_of_sale.view_makemyday_session_form
 msgid ""
 "You can define another list of available currencies on the\n"
 "                                    <i>Cash Registers</i> tab of the"
@@ -4296,13 +4296,13 @@ msgid ""
 msgstr "Não pode confirmar todas as ordens desta sessão, porque as mesmas não se encontram no estado 'pago'"
 
 #. module: point_of_sale
-#: constraint:pos.session:0
+#: constraint:makemyday.session:0
 msgid ""
 "You cannot create two active sessions related to the same point of sale!"
 msgstr "Não pode criar duas sessões ativas referentes ao mesmo ponto de venda!"
 
 #. module: point_of_sale
-#: constraint:pos.session:0
+#: constraint:makemyday.session:0
 msgid "You cannot create two active sessions with the same responsible!"
 msgstr "Não pode criar duas sessões activas com o mesmo responsável"
 
@@ -4415,14 +4415,14 @@ msgstr "A sua conexão de internet está provavelmente em baixo."
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:1125
+#: code:addons/point_of_sale/static/src/xml/makemyday.xml:1125
 #, python-format
 msgid "Your shopping cart is empty"
 msgstr "O seu carrinho de compras está vazio"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:325
+#: code:addons/point_of_sale/static/src/xml/makemyday.xml:325
 #, python-format
 msgid "ZIP"
 msgstr "Código Postal"
@@ -4435,7 +4435,7 @@ msgstr "Courgete"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:1098
+#: code:addons/point_of_sale/static/src/xml/makemyday.xml:1098
 #, python-format
 msgid "at"
 msgstr "em"
@@ -4447,7 +4447,7 @@ msgstr "barcode.rule"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:1041
+#: code:addons/point_of_sale/static/src/xml/makemyday.xml:1041
 #, python-format
 msgid "belong to another session:"
 msgstr "pertence a outra sessão:"
@@ -4460,7 +4460,7 @@ msgstr "camptocamp.com"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:1386
+#: code:addons/point_of_sale/static/src/xml/makemyday.xml:1386
 #, python-format
 msgid "caps lock"
 msgstr "caps lock"
@@ -4477,23 +4477,23 @@ msgstr "cash.box.out"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:1413
-#: code:addons/point_of_sale/static/src/xml/pos.xml:1455
+#: code:addons/point_of_sale/static/src/xml/makemyday.xml:1413
+#: code:addons/point_of_sale/static/src/xml/makemyday.xml:1455
 #, python-format
 msgid "close"
 msgstr "fechar"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:1371
-#: code:addons/point_of_sale/static/src/xml/pos.xml:1448
+#: code:addons/point_of_sale/static/src/xml/makemyday.xml:1371
+#: code:addons/point_of_sale/static/src/xml/makemyday.xml:1448
 #, python-format
 msgid "delete"
 msgstr "eliminar"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:1108
+#: code:addons/point_of_sale/static/src/xml/makemyday.xml:1108
 #, python-format
 msgid "discount"
 msgstr "desconto"
@@ -4513,30 +4513,30 @@ msgstr "não usado"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:1035
+#: code:addons/point_of_sale/static/src/xml/makemyday.xml:1035
 #, python-format
 msgid "paid orders"
 msgstr "ordens pagas"
 
 #. module: point_of_sale
-#: model:ir.ui.view,arch_db:point_of_sale.view_pos_session_form
+#: model:ir.ui.view,arch_db:point_of_sale.view_makemyday_session_form
 msgid "payment method."
 msgstr "método de pagamento"
 
 #. module: point_of_sale
-#: model:ir.model,name:point_of_sale.model_pos_config
-msgid "pos.config"
-msgstr "pos.config"
+#: model:ir.model,name:point_of_sale.model_makemyday_config
+msgid "makemyday.config"
+msgstr "makemyday.config"
 
 #. module: point_of_sale
-#: model:ir.model,name:point_of_sale.model_pos_config_settings
-msgid "pos.config.settings"
-msgstr "pos.config.settings"
+#: model:ir.model,name:point_of_sale.model_makemyday_config_settings
+msgid "makemyday.config.settings"
+msgstr "makemyday.config.settings"
 
 #. module: point_of_sale
-#: model:ir.model,name:point_of_sale.model_pos_session
-msgid "pos.session"
-msgstr "pos.session"
+#: model:ir.model,name:point_of_sale.model_makemyday_session
+msgid "makemyday.session"
+msgstr "makemyday.session"
 
 #. module: point_of_sale
 #: model:ir.model,name:point_of_sale.model_report_point_of_sale_report_detailsofsales
@@ -4576,63 +4576,63 @@ msgstr "report.point_of_sale.report_usersproduct"
 #. module: point_of_sale
 #. openerp-web
 #: code:addons/point_of_sale/point_of_sale.py:730
-#: code:addons/point_of_sale/static/src/xml/pos.xml:1398
-#: code:addons/point_of_sale/static/src/xml/pos.xml:1453
+#: code:addons/point_of_sale/static/src/xml/makemyday.xml:1398
+#: code:addons/point_of_sale/static/src/xml/makemyday.xml:1453
 #, python-format
 msgid "return"
 msgstr "devolver"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:1399
-#: code:addons/point_of_sale/static/src/xml/pos.xml:1410
+#: code:addons/point_of_sale/static/src/xml/makemyday.xml:1399
+#: code:addons/point_of_sale/static/src/xml/makemyday.xml:1410
 #, python-format
 msgid "shift"
 msgstr "mudança"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:1372
+#: code:addons/point_of_sale/static/src/xml/makemyday.xml:1372
 #, python-format
 msgid "tab"
 msgstr "separador"
 
 #. module: point_of_sale
-#: model:ir.model,name:point_of_sale.model_report_transaction_pos
-msgid "transaction for the pos"
+#: model:ir.model,name:point_of_sale.model_report_transaction_makemyday
+msgid "transaction for the makemyday"
 msgstr "Transação Para o Ponto de Venda"
 
 #. module: point_of_sale
 #: model:ir.model.fields,field_description:point_of_sale.field_account_bank_statement_account_id
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_config_current_session_state
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_config_last_session_closing_cash
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_config_last_session_closing_date
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_config_pos_session_username
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_config_current_session_state
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_config_last_session_closing_cash
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_config_last_session_closing_date
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_config_makemyday_session_username
 msgid "unknown"
 msgstr "Desconhecido"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:1036
+#: code:addons/point_of_sale/static/src/xml/makemyday.xml:1036
 #, python-format
 msgid "unpaid orders"
 msgstr "ordens por pagar"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:1038
+#: code:addons/point_of_sale/static/src/xml/makemyday.xml:1038
 #, python-format
 msgid "unpaid orders could not be imported"
 msgstr "ordens por pagar não foram importadas"
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_config_uuid
+#: model:ir.model.fields,field_description:point_of_sale.field_makemyday_config_uuid
 msgid "uuid"
 msgstr "uuid"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:1040
+#: code:addons/point_of_sale/static/src/xml/makemyday.xml:1040
 #, python-format
 msgid "were duplicates of existing orders"
 msgstr "eram duplicados de ordens existentes"

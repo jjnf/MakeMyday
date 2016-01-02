@@ -148,7 +148,7 @@ var SplitbillScreenWidget = screens.ScreenWidget.extend({
 
         var order = this.makemyday.get_order();
         var neworder = new models.Order({},{
-            pos: this.pos,
+            makemyday: this.makemyday,
             temporary: true,
         });
         neworder.set('client',order.get('client'));

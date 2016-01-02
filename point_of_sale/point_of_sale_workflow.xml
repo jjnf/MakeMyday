@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <openerp>
   <data>
-    <record model="workflow" id="wkf_pos">
+    <record model="workflow" id="wkf_makemyday">
       <field name="name">Pos workflow</field>
       <field name="osv">makemyday.order</field>
       <field name="on_create">True</field>
@@ -10,20 +10,20 @@
 <!--Activities-->
 
     <record model="workflow.activity" id="act_draft">
-      <field name="wkf_id" ref="wkf_pos"/>
+      <field name="wkf_id" ref="wkf_makemyday"/>
       <field name="flow_start">True</field>
       <field name="name">draft</field>
     </record>
 
     <record model="workflow.activity" id="act_paid">
-      <field name="wkf_id" ref="wkf_pos"/>
+      <field name="wkf_id" ref="wkf_makemyday"/>
       <field name="name">paid</field>
       <field name="action">action_paid()</field>
       <field name="kind">function</field>
     </record>
 
     <record model="workflow.activity" id="act_done">
-      <field name="wkf_id" ref="wkf_pos"/>
+      <field name="wkf_id" ref="wkf_makemyday"/>
       <field name="name">done</field>
       <field name="flow_stop">True</field>
       <field name="action">action_done()</field>
@@ -31,7 +31,7 @@
     </record>
 
     <record model="workflow.activity" id="act_invoiced">
-      <field name="wkf_id" ref="wkf_pos"/>
+      <field name="wkf_id" ref="wkf_makemyday"/>
       <field name="name">invoiced</field>
       <field name="flow_stop">True</field>
       <field name="action">action_invoice_state()</field>
@@ -39,7 +39,7 @@
     </record>
 
     <record model="workflow.activity" id="act_cancel">
-      <field name="wkf_id" ref="wkf_pos"/>
+      <field name="wkf_id" ref="wkf_makemyday"/>
       <field name="name">cancel</field>
       <field name="flow_stop">True</field>
       <field name="action">action_cancel()</field>

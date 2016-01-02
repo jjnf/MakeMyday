@@ -12,7 +12,7 @@ var Model = require('web.DataModel');
 var QWeb = core.qweb;
 var _t = core._t;
 
-// At POS Startup, load the floors, and add them to the pos model
+// At POS Startup, load the floors, and add them to the makemyday model
 models.load_models({
     model: 'makemyday.floor',
     fields: ['name','background_color','table_ids','sequence'],
@@ -59,7 +59,7 @@ var TableWidget = PosBaseWidget.extend({
         this.table    = options.table;
         this.selected = false;
         this.moved    = false;
-        this.dragpos  = {x:0, y:0};
+        this.dragmakemyday  = {x:0, y:0};
         this.handle_dragging = false;
         this.handle   = null;
     },
@@ -97,7 +97,7 @@ var TableWidget = PosBaseWidget.extend({
     dragstart_handler: function(event,$el,drag){
         if (this.selected && !this.handle_dragging) {
             this.dragging = true;
-            this.dragpos  = { x: drag.offsetX, y: drag.offsetY };
+            this.dragmakemyday  = { x: drag.offsetX, y: drag.offsetY };
         }
     },
     // drag and drop for moving the table, at drag end
@@ -107,10 +107,10 @@ var TableWidget = PosBaseWidget.extend({
     // drag and drop for moving the table, at every drop movement.
     dragmove_handler: function(event,$el,drag){
         if (this.dragging) {
-            var dx   = drag.offsetX - this.dragpos.x;
-            var dy   = drag.offsetY - this.dragpos.y;
+            var dx   = drag.offsetX - this.dragmakemyday.x;
+            var dy   = drag.offsetY - this.dragmakemyday.y;
 
-            this.dragpos = { x: drag.offsetX, y: drag.offsetY };
+            this.dragmakemyday = { x: drag.offsetX, y: drag.offsetY };
             this.moved   = true;
 
             this.table.position_v += dy;
@@ -123,7 +123,7 @@ var TableWidget = PosBaseWidget.extend({
     handle_dragstart_handler: function(event, $el, drag) {
         if (this.selected && !this.dragging) {
             this.handle_dragging = true;
-            this.handle_dragpos  = this.event_position(event);
+            this.handle_dragmakemyday  = this.event_position(event);
             this.handle          = drag.target;
         } 
     },
@@ -132,11 +132,11 @@ var TableWidget = PosBaseWidget.extend({
     },
     handle_dragmove_handler: function(event) {
         if (this.handle_dragging) {
-            var pos  = this.event_position(event);
-            var dx   = pos.x - this.handle_dragpos.x;
-            var dy   = pos.y - this.handle_dragpos.y;
+            var makemyday  = this.event_position(event);
+            var dx   = makemyday.x - this.handle_dragmakemyday.x;
+            var dy   = makemyday.y - this.handle_dragmakemyday.y;
 
-            this.handle_dragpos = pos;
+            this.handle_dragmakemyday = makemyday;
             this.moved   = true;
 
             var cl     = this.handle.classList;
@@ -763,11 +763,11 @@ chrome.OrderSelectorWidget.include({
 //
 // And when we change the table, we must create an order for that table
 // if there is none. 
-var _super_posmodel = models.PosModel.prototype;
+var _super_makemydaymodel = models.PosModel.prototype;
 models.PosModel = models.PosModel.extend({
     initialize: function(session, attributes) {
         this.table = null;
-        return _super_posmodel.initialize.call(this,session,attributes);
+        return _super_makemydaymodel.initialize.call(this,session,attributes);
     },
 
     // changes the current table. 
@@ -789,7 +789,7 @@ models.PosModel = models.PosModel.extend({
     // set when the user selects a table.
     set_start_order: function() {
         if (!this.config.iface_floorplan) {
-            _super_posmodel.set_start_order.apply(this,arguments);
+            _super_makemydaymodel.set_start_order.apply(this,arguments);
         }
     },
 
@@ -798,19 +798,19 @@ models.PosModel = models.PosModel.extend({
     add_new_order: function() {
         if (this.config.iface_floorplan) {
             if (this.table) {
-                _super_posmodel.add_new_order.call(this);
+                _super_makemydaymodel.add_new_order.call(this);
             } else {
-                console.warn("WARNING: orders cannot be created when there is no active table in restaurant mode");
+                console.warn("WARNING: orders cannot be created when there is no active table in makemyday mode");
             }
         } else {
-            _super_posmodel.add_new_order.apply(this,arguments);
+            _super_makemydaymodel.add_new_order.apply(this,arguments);
         }
     },
 
 
     // get the list of unpaid orders (associated to the current table)
     get_order_list: function() {    
-        var orders = _super_posmodel.get_order_list.call(this);  
+        var orders = _super_makemydaymodel.get_order_list.call(this);  
         if (!this.config.iface_floorplan) {
             return orders;
         } else if (!this.table) {
@@ -828,7 +828,7 @@ models.PosModel = models.PosModel.extend({
 
     // get the list of orders associated to a table. FIXME: should be O(1)
     get_table_orders: function(table) {
-        var orders   = _super_posmodel.get_order_list.call(this);
+        var orders   = _super_makemydaymodel.get_order_list.call(this);
         var t_orders = [];
         for (var i = 0; i < orders.length; i++) {
             if (orders[i].table === table) {
@@ -861,7 +861,7 @@ models.PosModel = models.PosModel.extend({
                 this.set_table(null);
             }
         } else {
-            _super_posmodel.on_removed_order.apply(this,arguments);
+            _super_makemydaymodel.on_removed_order.apply(this,arguments);
         }
     },
 

@@ -5,7 +5,7 @@
     import os
     import openerp.report
     from openerp import tools
-    data, format = openerp.report.render_report(cr, uid, [ref('makemyday_order_pos1')], 'point_of_sale.report_invoice', {}, {})
+    data, format = openerp.report.render_report(cr, uid, [ref('makemyday_order_makemyday1')], 'point_of_sale.report_invoice', {}, {})
     if tools.config['test_report_directory']:
         file(os.path.join(tools.config['test_report_directory'], 'point_of_sale-invoice_report.'+format), 'wb+').write(data)
 
@@ -16,7 +16,7 @@
     import os
     import openerp.report
     from openerp import tools
-    data, format = openerp.report.render_report(cr, uid, [ref('makemyday_order_pos1')], 'point_of_sale.report_saleslines', {}, {})
+    data, format = openerp.report.render_report(cr, uid, [ref('makemyday_order_makemyday1')], 'point_of_sale.report_saleslines', {}, {})
     if tools.config['test_report_directory']:
         file(os.path.join(tools.config['test_report_directory'], 'point_of_sale-lines_report.'+format), 'wb+').write(data)
 
@@ -27,7 +27,7 @@
     import os
     import openerp.report
     from openerp import tools
-    data, format = openerp.report.render_report(cr, uid, [ref('makemyday_order_pos1')], 'point_of_sale.report_receipt', {}, {})
+    data, format = openerp.report.render_report(cr, uid, [ref('makemyday_order_makemyday1')], 'point_of_sale.report_receipt', {}, {})
     if tools.config['test_report_directory']:
         file(os.path.join(tools.config['test_report_directory'], 'point_of_sale-receipt_report.'+format), 'wb+').write(data)
 
@@ -49,6 +49,6 @@
     import os, time
     import openerp.report
     from openerp import tools
-    data, format = openerp.report.render_report(cr, uid, [ref('makemyday_order_pos0')], 'point_of_sale.report_payment', {}, {})
+    data, format = openerp.report.render_report(cr, uid, [ref('makemyday_order_makemyday0')], 'point_of_sale.report_payment', {}, {})
     if tools.config['test_report_directory']:
         file(os.path.join(tools.config['test_report_directory'], 'point_of_sale-payment_report.'+format), 'wb+').write(data)

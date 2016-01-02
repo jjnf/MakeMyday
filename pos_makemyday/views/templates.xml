@@ -11,7 +11,7 @@
               <script type="text/javascript" src="/pos_makemyday/static/src/js/floors.js"></script>
               <script type="text/javascript" src="/pos_makemyday/static/src/js/notes.js"></script>
           </xpath>
-          <xpath expr="//link[@id='pos-stylesheet']" position="after">
+          <xpath expr="//link[@id='makemyday-stylesheet']" position="after">
               <link rel="stylesheet" href="/pos_makemyday/static/src/css/makemyday.css" />
           </xpath>
         </template>

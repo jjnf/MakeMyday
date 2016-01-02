@@ -28,7 +28,7 @@ class makemyday_details(report_sxw.rml_parse):
         user_ids = form['user_ids'] or self._get_all_users()
         company_id = user_obj.browse(self.cr, self.uid, self.uid).company_id.id
         makemyday_ids = makemyday_obj.search(self.cr, self.uid, [('date_order','>=',form['date_start'] + ' 00:00:00'),('date_order','<=',form['date_end'] + ' 23:59:59'),('user_id','in',user_ids),('state','in',['done','paid','invoiced']),('company_id','=',company_id)])
-        for pos in makemyday_obj.browse(self.cr, self.uid, makemyday_ids, context=self.localcontext):
+        for makemyday in makemyday_obj.browse(self.cr, self.uid, makemyday_ids, context=self.localcontext):
             for pol in makemyday.lines:
                 result = {
                     'code': pol.product_id.default_code,
@@ -63,7 +63,7 @@ class makemyday_details(report_sxw.rml_parse):
         user_ids = form['user_ids'] or self._get_all_users()
         company_id = user_obj.browse(self.cr, self.uid, self.uid).company_id.id
         makemyday_ids = makemyday_obj.search(self.cr, self.uid, [('date_order','>=',form['date_start'] + ' 00:00:00'),('date_order','<=',form['date_end'] + ' 23:59:59'),('user_id','in',user_ids),('company_id','=',company_id),('invoice_id','<>',False)])
-        for pos in makemyday_obj.browse(self.cr, self.uid, makemyday_ids):
+        for makemyday in makemyday_obj.browse(self.cr, self.uid, makemyday_ids):
             for pol in makemyday.lines:
                 self.total_invoiced += (pol.price_unit * pol.qty * (1 - (pol.discount) / 100.0))
         return self.total_invoiced or False
@@ -81,7 +81,7 @@ class makemyday_details(report_sxw.rml_parse):
         user_ids = form['user_ids'] or self._get_all_users()
         company_id = user_obj.browse(self.cr, self.uid, self.uid).company_id.id
         makemyday_ids = makemyday_obj.search(self.cr, self.uid, [('date_order','>=',form['date_start'] + ' 00:00:00'),('date_order','<=',form['date_end'] + ' 23:59:59'),('user_id','in',user_ids),('company_id','=',company_id)])
-        for pos in makemyday_obj.browse(self.cr, self.uid, makemyday_ids):
+        for makemyday in makemyday_obj.browse(self.cr, self.uid, makemyday_ids):
             for pol in makemyday.lines:
                 self.total_discount += ((pol.price_unit * pol.qty) * (pol.discount / 100))
         return self.total_discount or False

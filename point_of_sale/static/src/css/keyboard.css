@@ -1,6 +1,6 @@
 /* Onscreen Keyboard http://net.tutsplus.com/tutorials/javascript-ajax/creating-a-keyboard-with-css-and-jquery/ */
 
-.pos .keyboard_frame{
+.makemyday .keyboard_frame{
     display: none;
     position:absolute;
     left:    0;
@@ -21,7 +21,7 @@
     z-index:10000;
 
 }
-.pos .keyboard_frame .close_button{
+.makemyday .keyboard_frame .close_button{
     height:40px;
     width:60px;
     text-align:center;
@@ -34,7 +34,7 @@
     right:15px;
 	cursor: pointer;
 }
-.pos .keyboard li {
+.makemyday .keyboard li {
 	float: left;
 	text-align: center;
 	background-color: #fff;
@@ -47,7 +47,7 @@
     -webkit-transition-duration: 0.2s;
     -webkit-transition-timing-function: linear;
 }
-.pos .keyboard li:active{
+.makemyday .keyboard li:active{
 	position: relative;
 	top: 2px;
 	left: 0px;
@@ -58,22 +58,22 @@
     -webkit-transition-duration: 0.1s;
     -webkit-transition-timing-function: ease-out;
 }
-.pos .uppercase {
+.makemyday .uppercase {
 	text-transform: uppercase;
 }
-.pos .on {
+.makemyday .on {
 	display: none;
 }
-.pos .firstitem{
+.makemyday .firstitem{
 	clear: left;
 }
-.pos .keyboard .lastitem {
+.makemyday .keyboard .lastitem {
 	margin-right: 0 !important;
 }
 
 /* ---- full sized keyboard ---- */
 
-.pos .full_keyboard {
+.makemyday .full_keyboard {
     list-style: none;
     font-size: 14px;
     width: 685px;
@@ -81,35 +81,35 @@
     margin-left: auto !important;
     margin-right: auto !important;
 }
-.pos .full_keyboard li{
+.makemyday .full_keyboard li{
 	margin: 0 5px 5px 0 !important;
 	width: 40px;
 	height: 40px;
 	line-height: 40px;
 }
-.pos .full_keyboard .tab, .pos .full_keyboard .delete {
+.makemyday .full_keyboard .tab, .makemyday .full_keyboard .delete {
 	width: 70px;
 }
-.pos .full_keyboard .capslock {
+.makemyday .full_keyboard .capslock {
 	width: 80px;
 }
-.pos .full_keyboard .return {
+.makemyday .full_keyboard .return {
 	width: 77px;
 }
-.pos .full_keyboard .left-shift {
+.makemyday .full_keyboard .left-shift {
 	width: 95px;
 }
-.pos .full_keyboard .right-shift {
+.makemyday .full_keyboard .right-shift {
 	width: 109px;
 }
-.pos .full_keyboard .space {
+.makemyday .full_keyboard .space {
 	clear: left;
 	width: 673px;
 }
 
 /* ---- simplified keyboard ---- */
 
-.pos .simple_keyboard {
+.makemyday .simple_keyboard {
     list-style: none;
     font-size: 16px;
     width: 555px;
@@ -117,27 +117,27 @@
     margin-left: auto !important;
     margin-right: auto !important;
 }
-.pos .simple_keyboard li{
+.makemyday .simple_keyboard li{
     margin: 0 5px 5px 0 !important;
     width: 49px;
     height: 49px;
     line-height: 49px;
 }
-.pos .simple_keyboard .firstitem.row_asdf{
+.makemyday .simple_keyboard .firstitem.row_asdf{
     margin-left:25px !important;
 }
-.pos .simple_keyboard .firstitem.row_zxcv{
+.makemyday .simple_keyboard .firstitem.row_zxcv{
     margin-left:55px !important;
 }
-.pos .simple_keyboard .delete{
+.makemyday .simple_keyboard .delete{
     width: 103px;
 }
-.pos .simple_keyboard .return{
+.makemyday .simple_keyboard .return{
     width: 103px;
 }
-.pos .simple_keyboard .space{
+.makemyday .simple_keyboard .space{
     width:273px;
 }
-.pos .simple_keyboard .numlock{
+.makemyday .simple_keyboard .numlock{
     width:103px;
 }

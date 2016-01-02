@@ -4,9 +4,9 @@
 from openerp.osv import fields, osv
 from openerp import tools
 
-class report_transaction_pos(osv.osv):
-    _name = "report.transaction.pos"
-    _description = "transaction for the pos"
+class report_transaction_makemyday(osv.osv):
+    _name = "report.transaction.makemyday"
+    _description = "transaction for the makemyday"
     _auto = False
     _columns = {
         'date_create': fields.char('Date', size=16, readonly=True),
@@ -22,9 +22,9 @@ class report_transaction_pos(osv.osv):
     }
 
     def init(self, cr):
-        tools.drop_view_if_exists(cr, 'report_transaction_pos')
+        tools.drop_view_if_exists(cr, 'report_transaction_makemyday')
         cr.execute("""
-            create or replace view report_transaction_pos as (
+            create or replace view report_transaction_makemyday as (
                select
                     min(absl.id) as id,
                     count(absl.id) as no_trans,
@@ -56,8 +56,8 @@ class report_transaction_pos(osv.osv):
                     #to_char(date_trunc('day',absl.create_date),'YYYY-MM-DD')
                     #to_char(date_trunc('day',absl.create_date),'YYYY-MM-DD')::text as date_create,
 
-class report_sales_by_user_pos(osv.osv):
-    _name = "report.sales.by.user.pos"
+class report_sales_by_user_makemyday(osv.osv):
+    _name = "report.sales.by.user.makemyday"
     _description = "Sales by user"
     _auto = False
     _columns = {
@@ -68,9 +68,9 @@ class report_sales_by_user_pos(osv.osv):
     }
 
     def init(self, cr):
-        tools.drop_view_if_exists(cr, 'report_sales_by_user_pos')
+        tools.drop_view_if_exists(cr, 'report_sales_by_user_makemyday')
         cr.execute("""
-            create or replace view report_sales_by_user_pos as (
+            create or replace view report_sales_by_user_makemyday as (
                 select
                     min(po.id) as id,
                     to_char(date_trunc('day',po.date_order),'YYYY-MM-DD')::text as date_order,

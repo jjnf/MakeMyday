@@ -187,7 +187,7 @@
             <field name="view_type">form</field>
             <field name="view_mode">tree,form,kanban</field>
             <field name="context" eval="{}"/>
-            <field name="domain" eval="[('available_in_pos','&lt;&gt;',False)]"/>
+            <field name="domain" eval="[('available_in_makemyday','&lt;&gt;',False)]"/>
             <field name="search_view_id" eval="False"/> <!-- Force empty -->
             <field name="view_id" eval="False"/> <!-- Force empty -->
             <field name="help" type="html">
@@ -275,7 +275,7 @@
 
         <record model="ir.ui.view" id="view_makemyday_trans_user_form">
             <field name="name">report.trans.makemyday.user.form</field>
-            <field name="model">report.transaction.pos</field>
+            <field name="model">report.transaction.makemyday</field>
             <field name="arch" type="xml">
                 <form string="POS ">
                     <group col="4">
@@ -294,7 +294,7 @@
 
         <record model="ir.ui.view" id="view_trans_makemyday_user_tree">
             <field name="name">Sales by user</field>
-            <field name="model">report.transaction.pos</field>
+            <field name="model">report.transaction.makemyday</field>
             <field name="arch" type="xml">
                 <tree string="POS">
                     <field name="date_create" widget="date" />
@@ -312,7 +312,7 @@
 
         <record model="ir.ui.view" id="view_report_transaction_makemyday_calendar">
             <field name="name">report.transaction.makemyday.calendar</field>
-            <field name="model">report.transaction.pos</field>
+            <field name="model">report.transaction.makemyday</field>
             <field eval="2" name="priority"/>
             <field name="arch" type="xml">
                 <calendar color="user_id" date_start="date_create" string="POS Report">
@@ -324,7 +324,7 @@
 
          <record model="ir.ui.view" id="view_report_transaction_makemyday_graph">
             <field name="name">report.transaction.makemyday.graph</field>
-            <field name="model">report.transaction.pos</field>
+            <field name="model">report.transaction.makemyday</field>
             <field eval="2" name="priority"/>
             <field name="arch" type="xml">
                 <graph  type="bar" string="POS Report">
@@ -337,7 +337,7 @@
 
         <record model="ir.actions.act_window" id="action_trans_makemyday_tree_today">
             <field name="name">Sales by day</field>
-            <field name="res_model">report.transaction.pos</field>
+            <field name="res_model">report.transaction.makemyday</field>
             <field name="view_type">form</field>
             <field name="view_mode">tree,calendar,form,graph</field>
             <field name="domain">[('date_create','=',time.strftime('%Y-%m-%d'))]</field>
@@ -346,7 +346,7 @@
 
         <record model="ir.actions.act_window" id="action_trans_makemyday_tree_month">
             <field name="name">Sales by month</field>
-            <field name="res_model">report.transaction.pos</field>
+            <field name="res_model">report.transaction.makemyday</field>
             <field name="view_type">form</field>
             <field name="view_mode">tree,calendar,form,graph</field>
             <field name="domain">[('date_create','like',time.strftime('%Y-%m'))]</field>
@@ -355,7 +355,7 @@
 
         <record model="ir.actions.act_window" id="action_trans_makemyday_tree">
             <field name="name">Sales by user</field>
-            <field name="res_model">report.transaction.pos</field>
+            <field name="res_model">report.transaction.makemyday</field>
             <field name="view_type">form</field>
             <field name="view_mode">tree,calendar,form,graph</field>
             <field name="view_id" ref="view_trans_makemyday_user_tree"/>
@@ -364,7 +364,7 @@
 
         <record model="ir.ui.view" id="view_report_sales_by_user_makemyday_form">
             <field name="name">report.sales.by.user.makemyday.form</field>
-            <field name="model">report.sales.by.user.pos</field>
+            <field name="model">report.sales.by.user.makemyday</field>
             <field name="arch" type="xml">
                 <form string="POS ">
                     <group col="4">
@@ -380,7 +380,7 @@
 
         <record model="ir.ui.view" id="view_report_sales_by_user_makemyday_tree">
             <field name="name">report.sales.by.user.makemyday.tree</field>
-            <field name="model">report.sales.by.user.pos</field>
+            <field name="model">report.sales.by.user.makemyday</field>
             <field name="arch" type="xml">
                 <tree string="POS">
                     <field name="date_order" widget="date"/>
@@ -393,7 +393,7 @@
 
         <record model="ir.ui.view" id="view_report_sales_by_user_makemyday_calendar">
             <field name="name">report.sales.by.user.makemyday.calendar</field>
-            <field name="model">report.sales.by.user.pos</field>
+            <field name="model">report.sales.by.user.makemyday</field>
             <field eval="2" name="priority"/>
             <field name="arch" type="xml">
                 <calendar color="user_id" date_start="date_order" string="POS Report">
@@ -405,7 +405,7 @@
 
         <record model="ir.ui.view" id="view_report_sales_by_user_makemyday_graph">
             <field name="name">report.sales.by.user.makemyday.graph</field>
-            <field name="model">report.sales.by.user.pos</field>
+            <field name="model">report.sales.by.user.makemyday</field>
             <field eval="2" name="priority"/>
             <field name="arch" type="xml">
                 <graph  type="bar" string="Sales by User">
@@ -417,7 +417,7 @@
 
          <record model="ir.actions.act_window" id="action_report_sales_by_user_makemyday_today">
             <field name="name">Sales by User</field>
-            <field name="res_model">report.sales.by.user.pos</field>
+            <field name="res_model">report.sales.by.user.makemyday</field>
             <field name="view_type">form</field>
             <field name="view_mode">tree,calendar,form,graph</field>
             <field name="domain">[('date_order','=',time.strftime('%Y-%m-%d'))]</field>
@@ -551,10 +551,10 @@
             <field name="inherit_id" ref="product.product_template_form_view"/>
             <field name="arch" type="xml">
                 <group name="sale_condition" position="after">
-                    <group name="pos" string="Point of Sale">
-                        <field name="available_in_pos"/>
-                        <field name="makemyday_categ_id" attrs="{'invisible': [('available_in_pos', '=', False)]}"/>
-                        <field name="to_weight" attrs="{'invisible': [('available_in_pos', '=', False)]}"/>
+                    <group name="makemyday" string="Point of Sale">
+                        <field name="available_in_makemyday"/>
+                        <field name="makemyday_categ_id" attrs="{'invisible': [('available_in_makemyday', '=', False)]}"/>
+                        <field name="to_weight" attrs="{'invisible': [('available_in_makemyday', '=', False)]}"/>
                     </group>
                 </group>
             </field>
@@ -633,9 +633,9 @@
         <menuitem action="action_report_makemyday_details"
                 id="menu_makemyday_details" parent="menu_point_rep" sequence="6" />
 
-        <record model="ir.actions.act_url" id="action_makemyday_pos">
+        <record model="ir.actions.act_url" id="action_makemyday_makemyday">
             <field name="name">Start Point of Sale</field>
-            <field name="url">/pos/web/</field>
+            <field name="url">/makemyday/web/</field>
             <field name="target">self</field>
         </record>
 
@@ -746,7 +746,7 @@
             res_model="makemyday.session"
             domain="[('config_id', '=', active_id)]" />
 
-        <record model="ir.actions.act_window" id="action_makemyday_config_pos">
+        <record model="ir.actions.act_window" id="action_makemyday_config_makemyday">
             <field name="name">Point of Sale</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">makemyday.config</field>
@@ -757,8 +757,8 @@
 
         <menuitem
             parent="menu_point_config_product"
-            action="action_makemyday_config_pos"
-            id="menu_makemyday_config_pos"
+            action="action_makemyday_config_makemyday"
+            id="menu_makemyday_config_makemyday"
             groups="group_makemyday_manager"/>
 
         <act_window

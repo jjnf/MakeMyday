@@ -1,16 +1,16 @@
 <?xml version="1.0" ?>
 <openerp>
     <data noupdate="0">
-        <record id="seq_picking_type_posout" model="ir.sequence">
+        <record id="seq_picking_type_makemydayout" model="ir.sequence">
             <field name="name">Picking POS</field>
             <field name="prefix">POS</field>
             <field name="padding">5</field>
             <field name="company_id" eval="False"/>
         </record>
         
-        <record id="picking_type_posout" model="stock.picking.type">
+        <record id="picking_type_makemydayout" model="stock.picking.type">
             <field name="name">PoS Orders</field>
-            <field name="sequence_id" ref="seq_picking_type_posout"/>
+            <field name="sequence_id" ref="seq_picking_type_makemydayout"/>
             <field name="default_location_src_id" ref="stock.stock_location_stock"/>
             <field name="default_location_dest_id" ref="stock.stock_location_customers"/>
             <field name="warehouse_id" eval="False"/>
@@ -30,7 +30,7 @@
         </record>
         <record model="makemyday.config" id="makemyday_config_main">
             <field name="name">Main</field>
-            <field name="picking_type_id" ref="picking_type_posout"/>
+            <field name="picking_type_id" ref="picking_type_makemydayout"/>
             <field name="barcode_nomenclature_id" ref="barcodes.default_barcode_nomenclature"/>
         </record>
 

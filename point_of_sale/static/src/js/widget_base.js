@@ -19,12 +19,12 @@ var PosBaseWidget = Widget.extend({
     init:function(parent,options){
         this._super(parent);
         options = options || {};
-        this.pos    = options.pos    || (parent ? parent.pos : undefined);
+        this.makemyday    = options.makemyday    || (parent ? parent.makemyday : undefined);
         this.chrome = options.chrome || (parent ? parent.chrome : undefined);
         this.gui    = options.gui    || (parent ? parent.gui : undefined); 
     },
     format_currency: function(amount,precision){
-        var currency = (this.pos && this.makemyday.currency) ? this.makemyday.currency : {symbol:'$', position: 'after', rounding: 0.01, decimals: 2};
+        var currency = (this.makemyday && this.makemyday.currency) ? this.makemyday.currency : {symbol:'$', position: 'after', rounding: 0.01, decimals: 2};
 
         amount = this.format_currency_no_symbol(amount,precision);
 
@@ -35,7 +35,7 @@ var PosBaseWidget = Widget.extend({
         }
     },
     format_currency_no_symbol: function(amount, precision) {
-        var currency = (this.pos && this.makemyday.currency) ? this.makemyday.currency : {symbol:'$', position: 'after', rounding: 0.01, decimals: 2};
+        var currency = (this.makemyday && this.makemyday.currency) ? this.makemyday.currency : {symbol:'$', position: 'after', rounding: 0.01, decimals: 2};
         var decimals = currency.decimals;
 
         if (precision && (typeof this.makemyday.dp[precision]) !== undefined) {
