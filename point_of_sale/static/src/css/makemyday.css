@@ -95,7 +95,7 @@ td {
 }
 .makemyday textarea:focus {
     outline: none;
-    box-shadow: 0px 0px 0px 3px #6EC89B;
+    box-shadow: 0px 0px 0px 3px #428BCA;
 }
 
 
@@ -294,7 +294,7 @@ td {
     margin:0;
     padding:0;
     color: gray;
-    background: #393939;
+    background: #002B54;
 }
 
 /*  a) The left part of the top-bar */
@@ -314,9 +314,9 @@ td {
     vertical-align: middle;
 }
 .makemyday .makemyday-logo {
-    height: 35px;
-    margin-left: 7px;
-    margin-top: 2px;
+    height: 38px;
+    margin-left: 15px;
+    margin-top: 5px;
     vertical-align:middle;
 } 
 .makemyday .makemyday-branding .username{
@@ -399,7 +399,7 @@ td {
 
 .makemyday .order-button.square{
     margin-left:1px;
-    background: #5c5c5c;
+    background: #34495E;
     color: rgb(160,160,160);
     font-size: 18px;
     line-height: 45px;
@@ -523,7 +523,7 @@ td {
 }
 
 .makemyday .leftpane .pads {
-    border-top: solid 3px rgb(110, 200, 155);
+    border-top: solid 3px #428BCA;
 }
 
 /*  ********* The control buttons ********* */
@@ -582,7 +582,7 @@ td {
 
 .makemyday .control-button.highlight,
 .makemyday .button.highlight {
-    background: #6EC89B !important;
+    background: #428BCA !important;
     border: solid 1px #64AF8A !important; 
     color: white !important;
 }
@@ -743,11 +743,11 @@ td {
 }
 .makemyday .mode-button.selected-mode {
     color: white;
-    background: #6EC89B;
+    background: #428BCA;
     border-color: transparent;
 }
 .makemyday .mode-button.selected-mode:hover {
-    background: #6EC89B;
+    background: #428BCA;
     color: white;
     border-color: transparent;
 }
@@ -879,7 +879,7 @@ td {
 
 .makemyday .categories {
     position: relative;
-    border-bottom: solid 3px rgb(110, 200, 155);
+    border-bottom: solid 3px #428BCA;
 }
 .makemyday .categories h4 {
     display: inline-block;
@@ -1264,14 +1264,14 @@ td {
 }
 .makemyday .paymentline.selected {
     font-size: 22px;
-    background: #6EC89B;
+    background: #428BCA;
     color: white;
 }
 .makemyday .paymentline.selected .edit {
     background: white;
-    color: #6EC89B;
+    color: #428BCA;
     outline: 3px blue;
-    box-shadow: 0px 0px 0px 3px #6EC89B;
+    box-shadow: 0px 0px 0px 3px #428BCA;
     position: relative;
     border-radius: 3px;
 }
@@ -1772,7 +1772,7 @@ td {
     position: absolute;
     left: 20px;
     padding: 10px;
-    color: #6EC89B;
+    color: #428BCA;
     background: rgba(110, 200, 155, 0.17);
     border-radius: 3px;
 }
@@ -1918,9 +1918,9 @@ td {
     color: white;
 }
 .paymentmethod .button.active {
-    background: #6EC89B;
+    background: #428BCA;
     color: white;
-    border-color: #6EC89B;
+    border-color: #428BCA;
 }
 
 
@@ -2206,7 +2206,7 @@ td {
 .makemyday .popup input:focus,
 .makemyday .popup-input.active {
     outline: none;
-    box-shadow: 0px 0px 0px 3px #6EC89B;
+    box-shadow: 0px 0px 0px 3px #428BCA;
 }
 .makemyday .popup.popup-error {
     background-color: #F3BBBB;
@@ -2224,7 +2224,7 @@ td {
     width: auto;
     line-height: 50px;
     margin-top: -1px;
-    border-top: solid 3px #6EC89B;
+    border-top: solid 3px #428BCA;
     
 }
 .makemyday .popup.popup-selection .selection-item {
@@ -2323,7 +2323,7 @@ td {
 }
 .makemyday *::-webkit-scrollbar-thumb{
     background: rgb(168,168,168);
-    background: #393939;
+    background: #002B54;
     min-height: 30px;
 }
 

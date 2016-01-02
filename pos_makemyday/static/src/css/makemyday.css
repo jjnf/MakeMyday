@@ -31,7 +31,7 @@
     border-left: none;
 }
 .floor-selector .button.active {
-    background: #6EC89B;
+    background: #428BCA;
     color: white;
 }
 
@@ -281,7 +281,7 @@
 /* ------ FLOOR BUTTON IN THE ORDER SELECTOR ------- */
 
 .makemyday .order-button.floor-button {
-    background: #6EC89B;
+    background: #428BCA;
     font-weight: bold;
     font-size: 16px;
     min-width: 128px;
@@ -297,8 +297,8 @@
 /* ------ ORDER LINE STATUS ------- */
 
 .makemyday .order .orderline.dirty {
-    border-left: solid 6px #6EC89B;
-    color: #6EC89B;
+    border-left: solid 6px #428BCA;
+    color: #428BCA;
     padding-left: 9px;
 }
 .makemyday .order .orderline.skip {

@@ -12,10 +12,10 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.48.5 r10040"
-   width="623"
-   height="199"
+   width="804.32086"
+   height="354.89304"
    sodipodi:docname="logo.svg"
-   inkscape:export-filename="/home/jjnf/GitHub/MakeMyday/MakeMyday/point_of_sale/static/src/img/logo.png"
+   inkscape:export-filename="/home/jjnf/GitHub/MakeMyday/MakeMyday/point_of_sale/static/src/img/logo_big.png"
    inkscape:export-xdpi="90"
    inkscape:export-ydpi="90">
   <metadata
@@ -26,7 +26,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -63,155 +63,163 @@
      id="namedview4"
      showgrid="false"
      inkscape:zoom="0.64526485"
-     inkscape:cx="547.11648"
-     inkscape:cy="99.500001"
+     inkscape:cx="282.05474"
+     inkscape:cy="133.59453"
      inkscape:window-x="0"
      inkscape:window-y="27"
      inkscape:window-maximized="0"
-     inkscape:current-layer="svg2" />
+     inkscape:current-layer="svg2"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
   <g
-     id="g148"
-     transform="matrix(0.94034665,0,0,-0.94034665,609.55569,95.742418)"
-     style="fill:#8f8f8f;fill-opacity:1">
-    <path
-       d="m 0,0 c 0,0 -10.375,2.21 -8.162,36.742 2.213,34.531 18.845,42.053 18.845,42.053 l 0,-78.803 L 0,0 z"
-       style="fill:#8f8f8f;fill-opacity:1;fill-rule:nonzero;stroke:none"
-       id="path150"
-       inkscape:connector-curvature="0" />
-  </g>
-  <g
-     id="g3822"
-     style="fill:#a24689;fill-opacity:1"
-     transform="matrix(0.75227732,0,0,0.75227732,95.709072,206.13913)">
-    <path
-       inkscape:connector-curvature="0"
-       id="path146"
-       style="fill:#a24689;fill-opacity:1;fill-rule:nonzero;stroke:none"
-       d="m 696.40803,-44.930518 -10,0 0,-101.250002 10,0 0,101.250002 z" />
+     id="g3796"
+     transform="matrix(1.191072,0,0,1.191072,28.837936,85.959721)">
     <g
-       style="fill:#a24689;fill-opacity:1;stroke:none"
-       transform="matrix(1.25,0,0,-1.25,683.05478,-146.75002)"
-       id="g152">
+       style="fill:#8f8f8f;fill-opacity:1"
+       transform="matrix(0.94034665,0,0,-0.94034665,609.55569,95.742418)"
+       id="g148">
       <path
          inkscape:connector-curvature="0"
-         id="path154"
-         style="fill:#a24689;fill-opacity:1;stroke:none"
+         id="path150"
+         style="fill:#8f8f8f;fill-opacity:1;fill-rule:nonzero;stroke:none"
          d="m 0,0 c 0,0 -10.375,2.21 -8.162,36.742 2.213,34.531 18.845,42.053 18.845,42.053 l 0,-78.803 L 0,0 z" />
     </g>
-  </g>
-  <g
-     id="g156"
-     transform="matrix(0.94034665,0,0,-0.94034665,34.131898,22.548746)"
-     style="fill:#8f8f8f;fill-opacity:1">
-    <path
-       d="M 0,0 -7.697,-35.617 -14.071,0 -20.446,-35.617 -28.144,0 c -3.573,-25.943 -7.037,-47.847 -2.87,-57.604 3.843,-8.989 10.624,-11.694 14.624,-12.479 l 0,-89.209 8,0 0,89.48 c 4,1.072 8.823,4.061 12.307,12.208 C 8.087,-47.847 3.574,-25.943 0,0"
-       style="fill:#8f8f8f;fill-opacity:1;fill-rule:nonzero;stroke:none"
-       id="path158"
-       inkscape:connector-curvature="0" />
-  </g>
-  <g
-     id="g160"
-     transform="matrix(0.94034665,0,0,-0.94034665,34.131898,22.548746)"
-     style="fill:#a24689;fill-opacity:1;stroke:none">
-    <path
-       d="M 0,0 -7.697,-35.617 -14.071,0 -20.446,-35.617 -28.144,0 c -3.573,-25.943 -7.037,-47.847 -2.87,-57.604 3.843,-8.989 10.624,-11.694 14.624,-12.479 l 0,-89.209 8,0 0,89.48 c 4,1.072 8.823,4.061 12.307,12.208 C 8.087,-47.847 3.574,-25.943 0,0 z"
-       style="fill:#a24689;fill-opacity:1;stroke:none"
-       id="path162"
-       inkscape:connector-curvature="0" />
-  </g>
-  <text
-     id="text164"
-     style="font-size:59.52403641px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#8f8f8f;fill-opacity:1;font-family:Alfa Slab One;-inkscape-font-specification:Alfa Slab One"
-     sodipodi:linespacing="125%"
-     x="87.245407"
-     y="117.54717">
-    <tspan
-       sodipodi:role="line"
-       id="tspan3183"
-       x="87.245407"
-       y="117.54717">MAKEMYDAY</tspan>
-  </text>
-  <g
-     transform="matrix(0.94034665,0,0,-0.94034665,-64.97133,481.71297)"
-     id="g168"
-     style="fill:#8f8f8f;fill-opacity:1;stroke:#a24689;stroke-opacity:1">
     <g
-       id="g170"
-       clip-path="url(#clipPath172)"
-       style="fill:#8f8f8f;fill-opacity:1;stroke:#a24689;stroke-opacity:1">
+       transform="matrix(0.75227732,0,0,0.75227732,95.709072,206.13913)"
+       style="fill:#a24689;fill-opacity:1"
+       id="g3822">
+      <path
+         d="m 696.40803,-44.930518 -10,0 0,-101.250002 10,0 0,101.250002 z"
+         style="fill:#a24689;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="path146"
+         inkscape:connector-curvature="0" />
       <g
-         id="g176"
-         transform="translate(139,329)"
-         style="fill:#8f8f8f;fill-opacity:1;stroke:#a24689;stroke-opacity:1">
+         id="g152"
+         transform="matrix(1.25,0,0,-1.25,683.05478,-146.75002)"
+         style="fill:#a24689;fill-opacity:1;stroke:none">
         <path
-           d="M 0,0 117,0"
-           style="fill:#8f8f8f;fill-opacity:1;stroke:#a24689;stroke-width:4;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none"
-           id="path178"
-           inkscape:connector-curvature="0" />
-      </g>
-      <g
-         id="g180"
-         transform="translate(563,329)"
-         style="fill:#8f8f8f;fill-opacity:1;stroke:#a24689;stroke-opacity:1">
-        <path
-           d="M 0,0 117,0"
-           style="fill:#8f8f8f;fill-opacity:1;stroke:#a24689;stroke-width:4;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none"
-           id="path182"
+           d="m 0,0 c 0,0 -10.375,2.21 -8.162,36.742 2.213,34.531 18.845,42.053 18.845,42.053 l 0,-78.803 L 0,0 z"
+           style="fill:#a24689;fill-opacity:1;stroke:none"
+           id="path154"
            inkscape:connector-curvature="0" />
       </g>
     </g>
-  </g>
-  <text
-     y="184.55788"
-     x="195.26083"
-     id="text184"
-     style="font-size:30.09109306px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#a24689;fill-opacity:1;font-family:Dosis;-inkscape-font-specification:Dosis Bold"
-     sodipodi:linespacing="125%">
-    <tspan
-       sodipodi:role="line"
-       id="tspan3042"
-       x="195.26083"
-       y="184.55788">DRINKS &amp; FOOD, LDA</tspan>
-  </text>
-  <text
-     style="font-size:11.28415966px;fill:#8f8f8f;fill-opacity:1"
-     y="29.708357"
-     x="250.56639"
-     id="text188">
-    <tspan
-       style="font-size:21.62797356px;font-variant:normal;font-weight:800;font-stretch:normal;writing-mode:lr-tb;fill:#8f8f8f;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:Dosis;-inkscape-font-specification:Dosis-ExtraBold"
-       x="250.56639 265.16528 281.2565 297.32608 316.18567 323.97174 334.09363 349.73065 364.45929"
-       y="29.708357"
-       sodipodi:role="line"
-       id="tspan190">FROM 1950</tspan>
-  </text>
-  <g
-     transform="matrix(0.94034665,0,0,-0.94034665,-64.97133,481.71297)"
-     id="g192"
-     style="fill:#8f8f8f;fill-opacity:1;stroke:#a24689;stroke-opacity:1">
     <g
-       id="g194"
-       clip-path="url(#clipPath196)"
-       style="fill:#8f8f8f;fill-opacity:1;stroke:#a24689;stroke-opacity:1">
+       style="fill:#8f8f8f;fill-opacity:1"
+       transform="matrix(0.94034665,0,0,-0.94034665,34.131898,22.548746)"
+       id="g156">
+      <path
+         inkscape:connector-curvature="0"
+         id="path158"
+         style="fill:#8f8f8f;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         d="M 0,0 -7.697,-35.617 -14.071,0 -20.446,-35.617 -28.144,0 c -3.573,-25.943 -7.037,-47.847 -2.87,-57.604 3.843,-8.989 10.624,-11.694 14.624,-12.479 l 0,-89.209 8,0 0,89.48 c 4,1.072 8.823,4.061 12.307,12.208 C 8.087,-47.847 3.574,-25.943 0,0" />
+    </g>
+    <g
+       style="fill:#a24689;fill-opacity:1;stroke:none"
+       transform="matrix(0.94034665,0,0,-0.94034665,34.131898,22.548746)"
+       id="g160">
+      <path
+         inkscape:connector-curvature="0"
+         id="path162"
+         style="fill:#a24689;fill-opacity:1;stroke:none"
+         d="M 0,0 -7.697,-35.617 -14.071,0 -20.446,-35.617 -28.144,0 c -3.573,-25.943 -7.037,-47.847 -2.87,-57.604 3.843,-8.989 10.624,-11.694 14.624,-12.479 l 0,-89.209 8,0 0,89.48 c 4,1.072 8.823,4.061 12.307,12.208 C 8.087,-47.847 3.574,-25.943 0,0 z" />
+    </g>
+    <text
+       y="117.54717"
+       x="87.245407"
+       sodipodi:linespacing="125%"
+       style="font-size:59.52403641px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#8f8f8f;fill-opacity:1;font-family:Alfa Slab One;-inkscape-font-specification:Alfa Slab One"
+       id="text164">
+      <tspan
+         y="117.54717"
+         x="87.245407"
+         id="tspan3183"
+         sodipodi:role="line">MAKEMYDAY</tspan>
+    </text>
+    <g
+       style="fill:#8f8f8f;fill-opacity:1;stroke:#a24689;stroke-opacity:1"
+       id="g168"
+       transform="matrix(0.94034665,0,0,-0.94034665,-64.97133,481.71297)">
       <g
-         id="g200"
-         transform="translate(139,489)"
-         style="fill:#8f8f8f;fill-opacity:1;stroke:#a24689;stroke-opacity:1">
-        <path
-           d="M 0,0 177,0"
-           style="fill:#8f8f8f;fill-opacity:1;stroke:#a24689;stroke-width:4;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none"
-           id="path202"
-           inkscape:connector-curvature="0" />
+         style="fill:#8f8f8f;fill-opacity:1;stroke:#a24689;stroke-opacity:1"
+         clip-path="url(#clipPath172)"
+         id="g170">
+        <g
+           style="fill:#8f8f8f;fill-opacity:1;stroke:#a24689;stroke-opacity:1"
+           transform="translate(139,329)"
+           id="g176">
+          <path
+             inkscape:connector-curvature="0"
+             id="path178"
+             style="fill:#8f8f8f;fill-opacity:1;stroke:#a24689;stroke-width:4;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none"
+             d="M 0,0 117,0" />
+        </g>
+        <g
+           style="fill:#8f8f8f;fill-opacity:1;stroke:#a24689;stroke-opacity:1"
+           transform="translate(563,329)"
+           id="g180">
+          <path
+             inkscape:connector-curvature="0"
+             id="path182"
+             style="fill:#8f8f8f;fill-opacity:1;stroke:#a24689;stroke-width:4;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none"
+             d="M 0,0 117,0" />
+        </g>
       </g>
+    </g>
+    <text
+       sodipodi:linespacing="125%"
+       style="font-size:30.09109306px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#a24689;fill-opacity:1;font-family:Dosis;-inkscape-font-specification:Dosis Bold"
+       id="text184"
+       x="195.26083"
+       y="184.55788">
+      <tspan
+         y="184.55788"
+         x="195.26083"
+         id="tspan3042"
+         sodipodi:role="line">DRINKS &amp; FOOD, LDA</tspan>
+    </text>
+    <text
+       id="text188"
+       x="250.56639"
+       y="29.708357"
+       style="font-size:11.28415966px;fill:#8f8f8f;fill-opacity:1">
+      <tspan
+         id="tspan190"
+         sodipodi:role="line"
+         y="29.708357"
+         x="250.56639 265.16528 281.2565 297.32608 316.18567 323.97174 334.09363 349.73065 364.45929"
+         style="font-size:21.62797356px;font-variant:normal;font-weight:800;font-stretch:normal;writing-mode:lr-tb;fill:#8f8f8f;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:Dosis;-inkscape-font-specification:Dosis-ExtraBold">FROM 1950</tspan>
+    </text>
+    <g
+       style="fill:#8f8f8f;fill-opacity:1;stroke:#a24689;stroke-opacity:1"
+       id="g192"
+       transform="matrix(0.94034665,0,0,-0.94034665,-64.97133,481.71297)">
       <g
-         id="g204"
-         transform="translate(491,489)"
-         style="fill:#8f8f8f;fill-opacity:1;stroke:#a24689;stroke-opacity:1">
-        <path
-           d="M 0,0 189,0"
-           style="fill:#8f8f8f;fill-opacity:1;stroke:#a24689;stroke-width:4;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none"
-           id="path206"
-           inkscape:connector-curvature="0" />
+         style="fill:#8f8f8f;fill-opacity:1;stroke:#a24689;stroke-opacity:1"
+         clip-path="url(#clipPath196)"
+         id="g194">
+        <g
+           style="fill:#8f8f8f;fill-opacity:1;stroke:#a24689;stroke-opacity:1"
+           transform="translate(139,489)"
+           id="g200">
+          <path
+             inkscape:connector-curvature="0"
+             id="path202"
+             style="fill:#8f8f8f;fill-opacity:1;stroke:#a24689;stroke-width:4;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none"
+             d="M 0,0 177,0" />
+        </g>
+        <g
+           style="fill:#8f8f8f;fill-opacity:1;stroke:#a24689;stroke-opacity:1"
+           transform="translate(491,489)"
+           id="g204">
+          <path
+             inkscape:connector-curvature="0"
+             id="path206"
+             style="fill:#8f8f8f;fill-opacity:1;stroke:#a24689;stroke-width:4;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none"
+             d="M 0,0 189,0" />
+        </g>
       </g>
     </g>
   </g>
