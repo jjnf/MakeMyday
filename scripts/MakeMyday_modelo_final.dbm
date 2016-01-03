@@ -1,0 +1,3892 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+CAUTION: Do not modify this file unless you know what you are doing.
+         Unexpected results may occur if the code is changed deliberately.
+-->
+<dbmodel pgmodeler-ver="0.7.0">
+<role name="jjnf"
+      createdb="true"
+      inherit="true"
+      login="true"
+      encrypted="true"
+      validity="2014-12-19 00:00:00"
+      password="********">
+</role>
+
+<database name="makemyday" encoding="UTF8" lc-collate="pt_PT" lc-ctype="pt_PT">
+	<role name="jjnf"/>
+	<tablespace name="pg_default"/>
+</database>
+
+<schema name="public" protected="true" rect-visible="true" fill-color="#e1e1e1" sql-disabled="true">
+</schema>
+
+<table name="res_users">
+	<schema name="public"/>
+	<role name="jjnf"/>
+	<position x="50" y="50"/>
+	<column name="id" not-null="true" default-value="nextval('res_users_id_seq'::regclass)">
+		<type name="integer"/>
+	</column>
+	<column name="active" default-value="true">
+		<type name="boolean"/>
+	</column>
+	<column name="login" not-null="true">
+		<type name="character varying" length="64"/>
+	</column>
+	<column name="password" default-value="NULL::character varying">
+		<type name="character varying"/>
+	</column>
+	<column name="company_id" not-null="true">
+		<type name="integer"/>
+	</column>
+	<column name="partner_id" not-null="true">
+		<type name="integer"/>
+	</column>
+	<column name="create_date">
+		<type name="timestamp"/>
+		<comment><![CDATA[Created on]]></comment>
+	</column>
+	<column name="create_uid">
+		<type name="integer"/>
+		<comment><![CDATA[Created by]]></comment>
+	</column>
+	<column name="share">
+		<type name="boolean"/>
+		<comment><![CDATA[Share User]]></comment>
+	</column>
+	<column name="write_uid">
+		<type name="integer"/>
+		<comment><![CDATA[Last Updated by]]></comment>
+	</column>
+	<column name="write_date">
+		<type name="timestamp"/>
+		<comment><![CDATA[Last Updated on]]></comment>
+	</column>
+	<column name="signature">
+		<type name="text"/>
+		<comment><![CDATA[Signature]]></comment>
+	</column>
+	<column name="action_id">
+		<type name="integer"/>
+		<comment><![CDATA[Home Action]]></comment>
+	</column>
+	<column name="password_crypt">
+		<type name="character varying"/>
+		<comment><![CDATA[Encrypted Password]]></comment>
+	</column>
+	<column name="alias_id" not-null="true">
+		<type name="integer"/>
+		<comment><![CDATA[Alias]]></comment>
+	</column>
+	<column name="chatter_needaction_auto">
+		<type name="boolean"/>
+		<comment><![CDATA[Automatically set needaction as Read]]></comment>
+	</column>
+	<column name="sale_team_id">
+		<type name="integer"/>
+		<comment><![CDATA[Sales Team]]></comment>
+	</column>
+	<column name="makemyday_config">
+		<type name="integer"/>
+		<comment><![CDATA[Default Point of Sale]]></comment>
+	</column>
+	<column name="makemyday_security_pin">
+		<type name="character varying" length="32"/>
+		<comment><![CDATA[Security PIN]]></comment>
+	</column>
+	<constraint name="res_users_pkey" type="pk-constr" factor="100" table="public.res_users">
+		<columns names="id" ref-type="src-columns"/>
+	</constraint>
+	<constraint name="res_users_login_key" type="uq-constr" factor="100" table="public.res_users">
+		<columns names="login" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<table name="res_company">
+	<schema name="public"/>
+	<role name="jjnf"/>
+	<position x="492" y="50"/>
+	<column name="id" not-null="true" default-value="nextval('res_company_id_seq'::regclass)">
+		<type name="integer"/>
+	</column>
+	<column name="name" not-null="true">
+		<type name="character varying"/>
+	</column>
+	<column name="partner_id" not-null="true">
+		<type name="integer"/>
+	</column>
+	<column name="currency_id" not-null="true">
+		<type name="integer"/>
+	</column>
+	<column name="rml_footer">
+		<type name="text"/>
+		<comment><![CDATA[Report Footer]]></comment>
+	</column>
+	<column name="create_date">
+		<type name="timestamp"/>
+		<comment><![CDATA[Created on]]></comment>
+	</column>
+	<column name="rml_header" not-null="true">
+		<type name="text"/>
+		<comment><![CDATA[RML Header]]></comment>
+	</column>
+	<column name="rml_paper_format" not-null="true">
+		<type name="character varying"/>
+		<comment><![CDATA[Paper Format]]></comment>
+	</column>
+	<column name="write_uid">
+		<type name="integer"/>
+		<comment><![CDATA[Last Updated by]]></comment>
+	</column>
+	<column name="logo_web">
+		<type name="bytea"/>
+		<comment><![CDATA[Logo Web]]></comment>
+	</column>
+	<column name="font">
+		<type name="integer"/>
+		<comment><![CDATA[Font]]></comment>
+	</column>
+	<column name="account_no">
+		<type name="character varying"/>
+		<comment><![CDATA[Account No.]]></comment>
+	</column>
+	<column name="parent_id">
+		<type name="integer"/>
+		<comment><![CDATA[Parent Company]]></comment>
+	</column>
+	<column name="email">
+		<type name="character varying" length="64"/>
+		<comment><![CDATA[Email]]></comment>
+	</column>
+	<column name="create_uid">
+		<type name="integer"/>
+		<comment><![CDATA[Created by]]></comment>
+	</column>
+	<column name="custom_footer">
+		<type name="boolean"/>
+		<comment><![CDATA[Custom Footer]]></comment>
+	</column>
+	<column name="phone">
+		<type name="character varying" length="64"/>
+		<comment><![CDATA[Phone]]></comment>
+	</column>
+	<column name="rml_header2" not-null="true">
+		<type name="text"/>
+		<comment><![CDATA[RML Internal Header]]></comment>
+	</column>
+	<column name="rml_header3" not-null="true">
+		<type name="text"/>
+		<comment><![CDATA[RML Internal Header for Landscape Reports]]></comment>
+	</column>
+	<column name="write_date">
+		<type name="timestamp"/>
+		<comment><![CDATA[Last Updated on]]></comment>
+	</column>
+	<column name="rml_header1">
+		<type name="character varying"/>
+		<comment><![CDATA[Company Tagline]]></comment>
+	</column>
+	<column name="company_registry">
+		<type name="character varying" length="64"/>
+		<comment><![CDATA[Company Registry]]></comment>
+	</column>
+	<column name="paperformat_id">
+		<type name="integer"/>
+		<comment><![CDATA[Paper format]]></comment>
+	</column>
+	<column name="fiscalyear_lock_date">
+		<type name="date"/>
+		<comment><![CDATA[Lock Date]]></comment>
+	</column>
+	<column name="bank_account_code_prefix">
+		<type name="character varying"/>
+		<comment><![CDATA[Prefix of the bank accounts]]></comment>
+	</column>
+	<column name="cash_account_code_prefix">
+		<type name="character varying"/>
+		<comment><![CDATA[Prefix of the cash accounts]]></comment>
+	</column>
+	<column name="anglo_saxon_accounting">
+		<type name="boolean"/>
+		<comment><![CDATA[Use anglo-saxon accounting]]></comment>
+	</column>
+	<column name="fiscalyear_last_day" not-null="true">
+		<type name="integer"/>
+		<comment><![CDATA[Fiscalyear last day]]></comment>
+	</column>
+	<column name="property_stock_account_input_categ_id">
+		<type name="integer"/>
+		<comment><![CDATA[Input Account for Stock Valuation]]></comment>
+	</column>
+	<column name="property_stock_valuation_account_id">
+		<type name="integer"/>
+		<comment><![CDATA[Account Template for Stock Valuation]]></comment>
+	</column>
+	<column name="expects_chart_of_accounts">
+		<type name="boolean"/>
+		<comment><![CDATA[Expects a Chart of Accounts]]></comment>
+	</column>
+	<column name="transfer_account_id">
+		<type name="integer"/>
+		<comment><![CDATA[Inter-Banks Transfer Account]]></comment>
+	</column>
+	<column name="property_stock_account_output_categ_id">
+		<type name="integer"/>
+		<comment><![CDATA[Output Account for Stock Valuation]]></comment>
+	</column>
+	<column name="currency_exchange_journal_id">
+		<type name="integer"/>
+		<comment><![CDATA[Exchange Gain or Loss Journal]]></comment>
+	</column>
+	<column name="period_lock_date">
+		<type name="date"/>
+		<comment><![CDATA[Lock Date for Non-Advisers]]></comment>
+	</column>
+	<column name="paypal_account">
+		<type name="character varying" length="128"/>
+		<comment><![CDATA[Paypal Account]]></comment>
+	</column>
+	<column name="accounts_code_digits">
+		<type name="integer"/>
+		<comment><![CDATA[Number of digits in an account code]]></comment>
+	</column>
+	<column name="chart_template_id">
+		<type name="integer"/>
+		<comment><![CDATA[Chart template id]]></comment>
+	</column>
+	<column name="overdue_msg">
+		<type name="text"/>
+		<comment><![CDATA[Overdue Payments Message]]></comment>
+	</column>
+	<column name="fiscalyear_last_month" not-null="true">
+		<type name="integer"/>
+		<comment><![CDATA[Fiscalyear last month]]></comment>
+	</column>
+	<column name="tax_calculation_rounding_method">
+		<type name="character varying"/>
+		<comment><![CDATA[Tax Calculation Rounding Method]]></comment>
+	</column>
+	<column name="sale_note">
+		<type name="text"/>
+		<comment><![CDATA[Default Terms and Conditions]]></comment>
+	</column>
+	<column name="propagation_minimum_delta">
+		<type name="integer"/>
+		<comment><![CDATA[Minimum Delta for Propagation of a Date Change on moves linked together]]></comment>
+	</column>
+	<column name="internal_transit_location_id">
+		<type name="integer"/>
+		<comment><![CDATA[Internal Transit Location]]></comment>
+	</column>
+	<column name="security_lead" not-null="true">
+		<type name="double precision"/>
+		<comment><![CDATA[Sales Safety Days]]></comment>
+	</column>
+	<column name="vat_check_vies">
+		<type name="boolean"/>
+		<comment><![CDATA[VIES VAT Check]]></comment>
+	</column>
+	<constraint name="res_company_pkey" type="pk-constr" factor="100" table="public.res_company">
+		<columns names="id" ref-type="src-columns"/>
+	</constraint>
+	<constraint name="res_company_name_uniq" type="uq-constr" factor="100" table="public.res_company">
+		<columns names="name" ref-type="src-columns"/>
+	</constraint>
+	<index name="res_company_parent_id_index" table="public.res_company"
+		 concurrent="false" unique="false" fast-update="false"
+		 index-type="btree" factor="90">
+		<idxelement use-sorting="false">
+			<column name="parent_id"/>
+		</idxelement>
+	</index>
+</table>
+
+<table name="res_partner">
+	<schema name="public"/>
+	<role name="jjnf"/>
+	<position x="1041" y="50"/>
+	<column name="id" not-null="true" default-value="nextval('res_partner_id_seq'::regclass)">
+		<type name="integer"/>
+	</column>
+	<column name="name">
+		<type name="character varying"/>
+	</column>
+	<column name="company_id">
+		<type name="integer"/>
+	</column>
+	<column name="comment">
+		<type name="text"/>
+		<comment><![CDATA[Notes]]></comment>
+	</column>
+	<column name="function">
+		<type name="character varying"/>
+		<comment><![CDATA[Job Position]]></comment>
+	</column>
+	<column name="create_date">
+		<type name="timestamp"/>
+		<comment><![CDATA[Created on]]></comment>
+	</column>
+	<column name="color">
+		<type name="integer"/>
+		<comment><![CDATA[Color Index]]></comment>
+	</column>
+	<column name="company_type">
+		<type name="character varying"/>
+		<comment><![CDATA[Company Type]]></comment>
+	</column>
+	<column name="date">
+		<type name="date"/>
+		<comment><![CDATA[Date]]></comment>
+	</column>
+	<column name="street">
+		<type name="character varying"/>
+		<comment><![CDATA[Street]]></comment>
+	</column>
+	<column name="city">
+		<type name="character varying"/>
+		<comment><![CDATA[City]]></comment>
+	</column>
+	<column name="user_id">
+		<type name="integer"/>
+		<comment><![CDATA[Salesperson]]></comment>
+	</column>
+	<column name="zip">
+		<type name="character varying" length="24"/>
+		<comment><![CDATA[Zip]]></comment>
+	</column>
+	<column name="title">
+		<type name="integer"/>
+		<comment><![CDATA[Title]]></comment>
+	</column>
+	<column name="country_id">
+		<type name="integer"/>
+		<comment><![CDATA[Country]]></comment>
+	</column>
+	<column name="parent_id">
+		<type name="integer"/>
+		<comment><![CDATA[Related Company]]></comment>
+	</column>
+	<column name="supplier">
+		<type name="boolean"/>
+		<comment><![CDATA[Is a Vendor]]></comment>
+	</column>
+	<column name="ref">
+		<type name="character varying"/>
+		<comment><![CDATA[Internal Reference]]></comment>
+	</column>
+	<column name="email">
+		<type name="character varying"/>
+		<comment><![CDATA[Email]]></comment>
+	</column>
+	<column name="is_company">
+		<type name="boolean"/>
+		<comment><![CDATA[Is a Company]]></comment>
+	</column>
+	<column name="tz">
+		<type name="character varying" length="64"/>
+		<comment><![CDATA[Timezone]]></comment>
+	</column>
+	<column name="website">
+		<type name="character varying"/>
+		<comment><![CDATA[Website]]></comment>
+	</column>
+	<column name="customer">
+		<type name="boolean"/>
+		<comment><![CDATA[Is a Customer]]></comment>
+	</column>
+	<column name="fax">
+		<type name="character varying"/>
+		<comment><![CDATA[Fax]]></comment>
+	</column>
+	<column name="street2">
+		<type name="character varying"/>
+		<comment><![CDATA[Street2]]></comment>
+	</column>
+	<column name="barcode">
+		<type name="character varying"/>
+		<comment><![CDATA[Barcode]]></comment>
+	</column>
+	<column name="employee">
+		<type name="boolean"/>
+		<comment><![CDATA[Employee]]></comment>
+	</column>
+	<column name="credit_limit">
+		<type name="double precision"/>
+		<comment><![CDATA[Credit Limit]]></comment>
+	</column>
+	<column name="write_date">
+		<type name="timestamp"/>
+		<comment><![CDATA[Last Updated on]]></comment>
+	</column>
+	<column name="active">
+		<type name="boolean"/>
+		<comment><![CDATA[Active]]></comment>
+	</column>
+	<column name="display_name">
+		<type name="character varying"/>
+		<comment><![CDATA[Name]]></comment>
+	</column>
+	<column name="write_uid">
+		<type name="integer"/>
+		<comment><![CDATA[Last Updated by]]></comment>
+	</column>
+	<column name="lang">
+		<type name="character varying"/>
+		<comment><![CDATA[Language]]></comment>
+	</column>
+	<column name="create_uid">
+		<type name="integer"/>
+		<comment><![CDATA[Created by]]></comment>
+	</column>
+	<column name="phone">
+		<type name="character varying"/>
+		<comment><![CDATA[Phone]]></comment>
+	</column>
+	<column name="mobile">
+		<type name="character varying"/>
+		<comment><![CDATA[Mobile]]></comment>
+	</column>
+	<column name="type">
+		<type name="character varying"/>
+		<comment><![CDATA[Address Type]]></comment>
+	</column>
+	<column name="use_parent_address">
+		<type name="boolean"/>
+		<comment><![CDATA[Use Company Address]]></comment>
+	</column>
+	<column name="birthdate">
+		<type name="character varying"/>
+		<comment><![CDATA[Birthdate]]></comment>
+	</column>
+	<column name="vat">
+		<type name="character varying"/>
+		<comment><![CDATA[TIN]]></comment>
+	</column>
+	<column name="state_id">
+		<type name="integer"/>
+		<comment><![CDATA[State]]></comment>
+	</column>
+	<column name="commercial_partner_id">
+		<type name="integer"/>
+		<comment><![CDATA[Commercial Entity]]></comment>
+	</column>
+	<column name="notify_email" not-null="true">
+		<type name="character varying"/>
+		<comment><![CDATA[Email Messages and Notifications]]></comment>
+	</column>
+	<column name="message_last_post">
+		<type name="timestamp"/>
+		<comment><![CDATA[Last Message Date]]></comment>
+	</column>
+	<column name="opt_out">
+		<type name="boolean"/>
+		<comment><![CDATA[Opt-Out]]></comment>
+	</column>
+	<column name="signup_type">
+		<type name="character varying"/>
+		<comment><![CDATA[Signup Token Type]]></comment>
+	</column>
+	<column name="signup_expiration">
+		<type name="timestamp"/>
+		<comment><![CDATA[Signup Expiration]]></comment>
+	</column>
+	<column name="signup_token">
+		<type name="character varying"/>
+		<comment><![CDATA[Signup Token]]></comment>
+	</column>
+	<column name="team_id">
+		<type name="integer"/>
+		<comment><![CDATA[Sales Team]]></comment>
+	</column>
+	<column name="last_time_entries_checked">
+		<type name="timestamp"/>
+		<comment><![CDATA[Latest Invoices & Payments Matching Date]]></comment>
+	</column>
+	<column name="debit_limit">
+		<type name="numeric"/>
+		<comment><![CDATA[Payable Limit]]></comment>
+	</column>
+	<constraint name="res_partner_pkey" type="pk-constr" factor="100" table="public.res_partner">
+		<columns names="id" ref-type="src-columns"/>
+	</constraint>
+	<constraint name="res_partner_check_name" type="ck-constr" table="public.res_partner">
+			<expression><![CDATA[((((type)::text = 'contact'::text) AND (name IS NOT NULL)) OR ((type)::text <> 'contact'::text))]]></expression>
+	</constraint>
+	<index name="res_partner_company_id_index" table="public.res_partner"
+		 concurrent="false" unique="false" fast-update="false"
+		 index-type="btree" factor="90">
+		<idxelement use-sorting="false">
+			<column name="company_id"/>
+		</idxelement>
+	</index>
+	<index name="res_partner_date_index" table="public.res_partner"
+		 concurrent="false" unique="false" fast-update="false"
+		 index-type="btree" factor="90">
+		<idxelement use-sorting="false">
+			<column name="date"/>
+		</idxelement>
+	</index>
+	<index name="res_partner_parent_id_index" table="public.res_partner"
+		 concurrent="false" unique="false" fast-update="false"
+		 index-type="btree" factor="90">
+		<idxelement use-sorting="false">
+			<column name="parent_id"/>
+		</idxelement>
+	</index>
+	<index name="res_partner_ref_index" table="public.res_partner"
+		 concurrent="false" unique="false" fast-update="false"
+		 index-type="btree" factor="90">
+		<idxelement use-sorting="false">
+			<column name="ref"/>
+		</idxelement>
+	</index>
+	<index name="res_partner_display_name_index" table="public.res_partner"
+		 concurrent="false" unique="false" fast-update="false"
+		 index-type="btree" factor="90">
+		<idxelement use-sorting="false">
+			<column name="display_name"/>
+		</idxelement>
+	</index>
+	<index name="res_partner_name_index" table="public.res_partner"
+		 concurrent="false" unique="false" fast-update="false"
+		 index-type="btree" factor="90">
+		<idxelement use-sorting="false">
+			<column name="name"/>
+		</idxelement>
+	</index>
+</table>
+
+<table name="res_company_users_rel">
+	<schema name="public"/>
+	<role name="jjnf"/>
+	<comment><![CDATA[RELATION BETWEEN res_company AND res_users]]></comment>
+	<position x="1489" y="50"/>
+	<column name="cid" not-null="true">
+		<type name="integer"/>
+	</column>
+	<column name="user_id" not-null="true">
+		<type name="integer"/>
+	</column>
+	<constraint name="res_company_users_rel_cid_user_id_key" type="uq-constr" factor="100" table="public.res_company_users_rel">
+		<columns names="cid,user_id" ref-type="src-columns"/>
+	</constraint>
+	<index name="res_company_users_rel_cid_idx" table="public.res_company_users_rel"
+		 concurrent="false" unique="false" fast-update="false"
+		 index-type="btree" factor="90">
+		<idxelement use-sorting="false">
+			<column name="cid"/>
+		</idxelement>
+	</index>
+	<index name="res_company_users_rel_user_id_idx" table="public.res_company_users_rel"
+		 concurrent="false" unique="false" fast-update="false"
+		 index-type="btree" factor="90">
+		<idxelement use-sorting="false">
+			<column name="user_id"/>
+		</idxelement>
+	</index>
+</table>
+
+<table name="res_users_log">
+	<schema name="public"/>
+	<role name="jjnf"/>
+	<comment><![CDATA[res.users.log]]></comment>
+	<position x="1818.77" y="50"/>
+	<column name="id" not-null="true" default-value="nextval('res_users_log_id_seq'::regclass)">
+		<type name="integer"/>
+	</column>
+	<column name="create_uid">
+		<type name="integer"/>
+		<comment><![CDATA[Created by]]></comment>
+	</column>
+	<column name="create_date">
+		<type name="timestamp"/>
+		<comment><![CDATA[Created on]]></comment>
+	</column>
+	<column name="write_date">
+		<type name="timestamp"/>
+		<comment><![CDATA[Last Updated on]]></comment>
+	</column>
+	<column name="write_uid">
+		<type name="integer"/>
+		<comment><![CDATA[Last Updated by]]></comment>
+	</column>
+	<constraint name="res_users_log_pkey" type="pk-constr" factor="100" table="public.res_users_log">
+		<columns names="id" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<table name="product_category">
+	<schema name="public"/>
+	<role name="jjnf"/>
+	<comment><![CDATA[Product Category]]></comment>
+	<position x="50" y="925.2"/>
+	<column name="id" not-null="true" default-value="nextval('product_category_id_seq'::regclass)">
+		<type name="integer"/>
+	</column>
+	<column name="parent_left">
+		<type name="integer"/>
+	</column>
+	<column name="parent_right">
+		<type name="integer"/>
+	</column>
+	<column name="create_uid">
+		<type name="integer"/>
+		<comment><![CDATA[Created by]]></comment>
+	</column>
+	<column name="create_date">
+		<type name="timestamp"/>
+		<comment><![CDATA[Created on]]></comment>
+	</column>
+	<column name="name" not-null="true">
+		<type name="character varying"/>
+		<comment><![CDATA[Name]]></comment>
+	</column>
+	<column name="sequence">
+		<type name="integer"/>
+		<comment><![CDATA[Sequence]]></comment>
+	</column>
+	<column name="write_uid">
+		<type name="integer"/>
+		<comment><![CDATA[Last Updated by]]></comment>
+	</column>
+	<column name="parent_id">
+		<type name="integer"/>
+		<comment><![CDATA[Parent Category]]></comment>
+	</column>
+	<column name="write_date">
+		<type name="timestamp"/>
+		<comment><![CDATA[Last Updated on]]></comment>
+	</column>
+	<column name="type">
+		<type name="character varying"/>
+		<comment><![CDATA[Category Type]]></comment>
+	</column>
+	<column name="removal_strategy_id">
+		<type name="integer"/>
+		<comment><![CDATA[Force Removal Strategy]]></comment>
+	</column>
+	<constraint name="product_category_pkey" type="pk-constr" factor="100" table="public.product_category">
+		<columns names="id" ref-type="src-columns"/>
+	</constraint>
+	<index name="product_category_parent_right_index" table="public.product_category"
+		 concurrent="false" unique="false" fast-update="false"
+		 index-type="btree" factor="90">
+		<idxelement use-sorting="false">
+			<column name="parent_right"/>
+		</idxelement>
+	</index>
+	<index name="product_category_name_index" table="public.product_category"
+		 concurrent="false" unique="false" fast-update="false"
+		 index-type="btree" factor="90">
+		<idxelement use-sorting="false">
+			<column name="name"/>
+		</idxelement>
+	</index>
+	<index name="product_category_sequence_index" table="public.product_category"
+		 concurrent="false" unique="false" fast-update="false"
+		 index-type="btree" factor="90">
+		<idxelement use-sorting="false">
+			<column name="sequence"/>
+		</idxelement>
+	</index>
+	<index name="product_category_parent_id_index" table="public.product_category"
+		 concurrent="false" unique="false" fast-update="false"
+		 index-type="btree" factor="90">
+		<idxelement use-sorting="false">
+			<column name="parent_id"/>
+		</idxelement>
+	</index>
+	<index name="product_category_parent_left_index" table="public.product_category"
+		 concurrent="false" unique="false" fast-update="false"
+		 index-type="btree" factor="90">
+		<idxelement use-sorting="false">
+			<column name="parent_left"/>
+		</idxelement>
+	</index>
+</table>
+
+<table name="product_template">
+	<schema name="public"/>
+	<role name="jjnf"/>
+	<comment><![CDATA[Product Template]]></comment>
+	<position x="431" y="925.2"/>
+	<column name="id" not-null="true" default-value="nextval('product_template_id_seq'::regclass)">
+		<type name="integer"/>
+	</column>
+	<column name="warranty">
+		<type name="double precision"/>
+		<comment><![CDATA[Warranty]]></comment>
+	</column>
+	<column name="list_price">
+		<type name="numeric"/>
+		<comment><![CDATA[Sale Price]]></comment>
+	</column>
+	<column name="weight">
+		<type name="numeric"/>
+		<comment><![CDATA[Gross Weight]]></comment>
+	</column>
+	<column name="sequence">
+		<type name="integer"/>
+		<comment><![CDATA[Sequence]]></comment>
+	</column>
+	<column name="color">
+		<type name="integer"/>
+		<comment><![CDATA[Color Index]]></comment>
+	</column>
+	<column name="write_uid">
+		<type name="integer"/>
+		<comment><![CDATA[Last Updated by]]></comment>
+	</column>
+	<column name="uom_id" not-null="true">
+		<type name="integer"/>
+		<comment><![CDATA[Unit of Measure]]></comment>
+	</column>
+	<column name="description_purchase">
+		<type name="text"/>
+		<comment><![CDATA[Purchase Description]]></comment>
+	</column>
+	<column name="create_date">
+		<type name="timestamp"/>
+		<comment><![CDATA[Created on]]></comment>
+	</column>
+	<column name="create_uid">
+		<type name="integer"/>
+		<comment><![CDATA[Created by]]></comment>
+	</column>
+	<column name="sale_ok">
+		<type name="boolean"/>
+		<comment><![CDATA[Can be Sold]]></comment>
+	</column>
+	<column name="categ_id" not-null="true">
+		<type name="integer"/>
+		<comment><![CDATA[Internal Category]]></comment>
+	</column>
+	<column name="product_manager">
+		<type name="integer"/>
+		<comment><![CDATA[Product Manager]]></comment>
+	</column>
+	<column name="message_last_post">
+		<type name="timestamp"/>
+		<comment><![CDATA[Last Message Date]]></comment>
+	</column>
+	<column name="company_id">
+		<type name="integer"/>
+		<comment><![CDATA[Company]]></comment>
+	</column>
+	<column name="state">
+		<type name="character varying"/>
+		<comment><![CDATA[Status]]></comment>
+	</column>
+	<column name="uom_po_id" not-null="true">
+		<type name="integer"/>
+		<comment><![CDATA[Purchase Unit of Measure]]></comment>
+	</column>
+	<column name="description_sale">
+		<type name="text"/>
+		<comment><![CDATA[Sale Description]]></comment>
+	</column>
+	<column name="description">
+		<type name="text"/>
+		<comment><![CDATA[Description]]></comment>
+	</column>
+	<column name="volume">
+		<type name="numeric"/>
+		<comment><![CDATA[Volume]]></comment>
+	</column>
+	<column name="write_date">
+		<type name="timestamp"/>
+		<comment><![CDATA[Last Updated on]]></comment>
+	</column>
+	<column name="active">
+		<type name="boolean"/>
+		<comment><![CDATA[Active]]></comment>
+	</column>
+	<column name="rental">
+		<type name="boolean"/>
+		<comment><![CDATA[Can be Rent]]></comment>
+	</column>
+	<column name="name" not-null="true">
+		<type name="character varying"/>
+		<comment><![CDATA[Name]]></comment>
+	</column>
+	<column name="type" not-null="true">
+		<type name="character varying"/>
+		<comment><![CDATA[Product Type]]></comment>
+	</column>
+	<column name="track_service">
+		<type name="character varying"/>
+		<comment><![CDATA[Track Service]]></comment>
+	</column>
+	<column name="invoice_policy">
+		<type name="character varying"/>
+		<comment><![CDATA[Invoicing Policy]]></comment>
+	</column>
+	<column name="description_picking">
+		<type name="text"/>
+		<comment><![CDATA[Description on Picking]]></comment>
+	</column>
+	<column name="sale_delay">
+		<type name="double precision"/>
+		<comment><![CDATA[Customer Lead Time]]></comment>
+	</column>
+	<column name="tracking" not-null="true">
+		<type name="character varying"/>
+		<comment><![CDATA[Tracking]]></comment>
+	</column>
+	<column name="available_in_makemyday">
+		<type name="boolean"/>
+		<comment><![CDATA[Available in the Point of Sale]]></comment>
+	</column>
+	<column name="makemyday_categ_id">
+		<type name="integer"/>
+		<comment><![CDATA[Point of Sale Category]]></comment>
+	</column>
+	<column name="to_weight">
+		<type name="boolean"/>
+		<comment><![CDATA[To Weigh With Scale]]></comment>
+	</column>
+	<constraint name="product_template_pkey" type="pk-constr" factor="100" table="public.product_template">
+		<columns names="id" ref-type="src-columns"/>
+	</constraint>
+	<index name="product_template_company_id_index" table="public.product_template"
+		 concurrent="false" unique="false" fast-update="false"
+		 index-type="btree" factor="90">
+		<idxelement use-sorting="false">
+			<column name="company_id"/>
+		</idxelement>
+	</index>
+	<index name="product_template_name_index" table="public.product_template"
+		 concurrent="false" unique="false" fast-update="false"
+		 index-type="btree" factor="90">
+		<idxelement use-sorting="false">
+			<column name="name"/>
+		</idxelement>
+	</index>
+</table>
+
+<table name="product_product">
+	<schema name="public"/>
+	<role name="jjnf"/>
+	<comment><![CDATA[Product]]></comment>
+	<position x="840" y="925.2"/>
+	<column name="id" not-null="true" default-value="nextval('product_product_id_seq'::regclass)">
+		<type name="integer"/>
+	</column>
+	<column name="create_date">
+		<type name="timestamp"/>
+		<comment><![CDATA[Created on]]></comment>
+	</column>
+	<column name="weight">
+		<type name="numeric"/>
+		<comment><![CDATA[Gross Weight]]></comment>
+	</column>
+	<column name="default_code">
+		<type name="character varying"/>
+		<comment><![CDATA[Internal Reference]]></comment>
+	</column>
+	<column name="name_template">
+		<type name="character varying"/>
+		<comment><![CDATA[Template Name]]></comment>
+	</column>
+	<column name="create_uid">
+		<type name="integer"/>
+		<comment><![CDATA[Created by]]></comment>
+	</column>
+	<column name="message_last_post">
+		<type name="timestamp"/>
+		<comment><![CDATA[Last Message Date]]></comment>
+	</column>
+	<column name="product_tmpl_id" not-null="true">
+		<type name="integer"/>
+		<comment><![CDATA[Product Template]]></comment>
+	</column>
+	<column name="barcode">
+		<type name="character varying"/>
+		<comment><![CDATA[Barcode]]></comment>
+	</column>
+	<column name="volume">
+		<type name="double precision"/>
+		<comment><![CDATA[Volume]]></comment>
+	</column>
+	<column name="write_date">
+		<type name="timestamp"/>
+		<comment><![CDATA[Last Updated on]]></comment>
+	</column>
+	<column name="active">
+		<type name="boolean"/>
+		<comment><![CDATA[Active]]></comment>
+	</column>
+	<column name="write_uid">
+		<type name="integer"/>
+		<comment><![CDATA[Last Updated by]]></comment>
+	</column>
+	<constraint name="product_product_pkey" type="pk-constr" factor="100" table="public.product_product">
+		<columns names="id" ref-type="src-columns"/>
+	</constraint>
+	<constraint name="product_product_barcode_uniq" type="uq-constr" factor="100" table="public.product_product">
+		<columns names="barcode" ref-type="src-columns"/>
+	</constraint>
+	<index name="product_product_default_code_index" table="public.product_product"
+		 concurrent="false" unique="false" fast-update="false"
+		 index-type="btree" factor="90">
+		<idxelement use-sorting="false">
+			<column name="default_code"/>
+		</idxelement>
+	</index>
+	<index name="product_product_name_template_index" table="public.product_product"
+		 concurrent="false" unique="false" fast-update="false"
+		 index-type="btree" factor="90">
+		<idxelement use-sorting="false">
+			<column name="name_template"/>
+		</idxelement>
+	</index>
+	<index name="product_product_product_tmpl_id_index" table="public.product_product"
+		 concurrent="false" unique="false" fast-update="false"
+		 index-type="btree" factor="90">
+		<idxelement use-sorting="false">
+			<column name="product_tmpl_id"/>
+		</idxelement>
+	</index>
+</table>
+
+<table name="account_bank_statement">
+	<schema name="public"/>
+	<role name="jjnf"/>
+	<comment><![CDATA[Bank Statement]]></comment>
+	<position x="1217" y="925.2"/>
+	<column name="makemyday_session_id">
+		<type name="integer"/>
+		<comment><![CDATA[Session]]></comment>
+	</column>
+</table>
+
+<table name="account_bank_statement_line">
+	<schema name="public"/>
+	<role name="jjnf"/>
+	<comment><![CDATA[Bank Statement Line]]></comment>
+	<position x="1523" y="925.2"/>
+	<column name="makemyday_statement_id">
+		<type name="integer"/>
+		<comment><![CDATA[POS statement]]></comment>
+	</column>
+</table>
+
+<table name="stock_location">
+	<schema name="public"/>
+	<role name="jjnf"/>
+	<comment><![CDATA[Inventory Locations]]></comment>
+	<position x="50" y="1506.4"/>
+	<column name="id" not-null="true" default-value="nextval('stock_location_id_seq'::regclass)">
+		<type name="integer"/>
+	</column>
+	<column name="parent_left">
+		<type name="integer"/>
+	</column>
+	<column name="parent_right">
+		<type name="integer"/>
+	</column>
+	<column name="comment">
+		<type name="text"/>
+		<comment><![CDATA[Additional Information]]></comment>
+	</column>
+	<column name="putaway_strategy_id">
+		<type name="integer"/>
+		<comment><![CDATA[Put Away Strategy]]></comment>
+	</column>
+	<column name="create_date">
+		<type name="timestamp"/>
+		<comment><![CDATA[Created on]]></comment>
+	</column>
+	<column name="write_date">
+		<type name="timestamp"/>
+		<comment><![CDATA[Last Updated on]]></comment>
+	</column>
+	<column name="write_uid">
+		<type name="integer"/>
+		<comment><![CDATA[Last Updated by]]></comment>
+	</column>
+	<column name="location_id">
+		<type name="integer"/>
+		<comment><![CDATA[Parent Location]]></comment>
+	</column>
+	<column name="removal_strategy_id">
+		<type name="integer"/>
+		<comment><![CDATA[Removal Strategy]]></comment>
+	</column>
+	<column name="scrap_location">
+		<type name="boolean"/>
+		<comment><![CDATA[Is a Scrap Location?]]></comment>
+	</column>
+	<column name="partner_id">
+		<type name="integer"/>
+		<comment><![CDATA[Owner]]></comment>
+	</column>
+	<column name="company_id">
+		<type name="integer"/>
+		<comment><![CDATA[Company]]></comment>
+	</column>
+	<column name="complete_name">
+		<type name="character varying"/>
+		<comment><![CDATA[Full Location Name]]></comment>
+	</column>
+	<column name="usage" not-null="true">
+		<type name="character varying"/>
+		<comment><![CDATA[Location Type]]></comment>
+	</column>
+	<column name="create_uid">
+		<type name="integer"/>
+		<comment><![CDATA[Created by]]></comment>
+	</column>
+	<column name="barcode">
+		<type name="character varying"/>
+		<comment><![CDATA[Barcode]]></comment>
+	</column>
+	<column name="posz">
+		<type name="integer"/>
+		<comment><![CDATA[Height (Z)]]></comment>
+	</column>
+	<column name="posx">
+		<type name="integer"/>
+		<comment><![CDATA[Corridor (X)]]></comment>
+	</column>
+	<column name="posy">
+		<type name="integer"/>
+		<comment><![CDATA[Shelves (Y)]]></comment>
+	</column>
+	<column name="active">
+		<type name="boolean"/>
+		<comment><![CDATA[Active]]></comment>
+	</column>
+	<column name="name" not-null="true">
+		<type name="character varying"/>
+		<comment><![CDATA[Location Name]]></comment>
+	</column>
+	<column name="return_location">
+		<type name="boolean"/>
+		<comment><![CDATA[Is a Return Location?]]></comment>
+	</column>
+	<column name="valuation_in_account_id">
+		<type name="integer"/>
+		<comment><![CDATA[Stock Valuation Account (Incoming)]]></comment>
+	</column>
+	<column name="valuation_out_account_id">
+		<type name="integer"/>
+		<comment><![CDATA[Stock Valuation Account (Outgoing)]]></comment>
+	</column>
+	<constraint name="stock_location_pkey" type="pk-constr" factor="100" table="public.stock_location">
+		<columns names="id" ref-type="src-columns"/>
+	</constraint>
+	<constraint name="stock_location_barcode_company_uniq" type="uq-constr" factor="100" table="public.stock_location">
+		<columns names="barcode,company_id" ref-type="src-columns"/>
+	</constraint>
+	<index name="stock_location_location_id_index" table="public.stock_location"
+		 concurrent="false" unique="false" fast-update="false"
+		 index-type="btree" factor="90">
+		<idxelement use-sorting="false">
+			<column name="location_id"/>
+		</idxelement>
+	</index>
+	<index name="stock_location_company_id_index" table="public.stock_location"
+		 concurrent="false" unique="false" fast-update="false"
+		 index-type="btree" factor="90">
+		<idxelement use-sorting="false">
+			<column name="company_id"/>
+		</idxelement>
+	</index>
+	<index name="stock_location_usage_index" table="public.stock_location"
+		 concurrent="false" unique="false" fast-update="false"
+		 index-type="btree" factor="90">
+		<idxelement use-sorting="false">
+			<column name="usage"/>
+		</idxelement>
+	</index>
+	<index name="stock_location_parent_right_index" table="public.stock_location"
+		 concurrent="false" unique="false" fast-update="false"
+		 index-type="btree" factor="90">
+		<idxelement use-sorting="false">
+			<column name="parent_right"/>
+		</idxelement>
+	</index>
+	<index name="stock_location_parent_left_index" table="public.stock_location"
+		 concurrent="false" unique="false" fast-update="false"
+		 index-type="btree" factor="90">
+		<idxelement use-sorting="false">
+			<column name="parent_left"/>
+		</idxelement>
+	</index>
+</table>
+
+<table name="stock_quant">
+	<schema name="public"/>
+	<role name="jjnf"/>
+	<comment><![CDATA[Quants]]></comment>
+	<position x="465" y="1506.4"/>
+	<column name="id" not-null="true" default-value="nextval('stock_quant_id_seq'::regclass)">
+		<type name="integer"/>
+	</column>
+	<column name="create_date">
+		<type name="timestamp"/>
+		<comment><![CDATA[Creation Date]]></comment>
+	</column>
+	<column name="write_uid">
+		<type name="integer"/>
+		<comment><![CDATA[Last Updated by]]></comment>
+	</column>
+	<column name="propagated_from_id">
+		<type name="integer"/>
+		<comment><![CDATA[Linked Quant]]></comment>
+	</column>
+	<column name="package_id">
+		<type name="integer"/>
+		<comment><![CDATA[Package]]></comment>
+	</column>
+	<column name="cost">
+		<type name="double precision"/>
+		<comment><![CDATA[Unit Cost]]></comment>
+	</column>
+	<column name="lot_id">
+		<type name="integer"/>
+		<comment><![CDATA[Lot]]></comment>
+	</column>
+	<column name="reservation_id">
+		<type name="integer"/>
+		<comment><![CDATA[Reserved for Move]]></comment>
+	</column>
+	<column name="create_uid">
+		<type name="integer"/>
+		<comment><![CDATA[Created by]]></comment>
+	</column>
+	<column name="location_id" not-null="true">
+		<type name="integer"/>
+		<comment><![CDATA[Location]]></comment>
+	</column>
+	<column name="company_id" not-null="true">
+		<type name="integer"/>
+		<comment><![CDATA[Company]]></comment>
+	</column>
+	<column name="owner_id">
+		<type name="integer"/>
+		<comment><![CDATA[Owner]]></comment>
+	</column>
+	<column name="write_date">
+		<type name="timestamp"/>
+		<comment><![CDATA[Last Updated on]]></comment>
+	</column>
+	<column name="qty" not-null="true">
+		<type name="double precision"/>
+		<comment><![CDATA[Quantity]]></comment>
+	</column>
+	<column name="product_id" not-null="true">
+		<type name="integer"/>
+		<comment><![CDATA[Product]]></comment>
+	</column>
+	<column name="packaging_type_id">
+		<type name="integer"/>
+		<comment><![CDATA[Type of packaging]]></comment>
+	</column>
+	<column name="negative_move_id">
+		<type name="integer"/>
+		<comment><![CDATA[Move Negative Quant]]></comment>
+	</column>
+	<column name="in_date">
+		<type name="timestamp"/>
+		<comment><![CDATA[Incoming Date]]></comment>
+	</column>
+	<constraint name="stock_quant_pkey" type="pk-constr" factor="100" table="public.stock_quant">
+		<columns names="id" ref-type="src-columns"/>
+	</constraint>
+	<index name="stock_quant_propagated_from_id_index" table="public.stock_quant"
+		 concurrent="false" unique="false" fast-update="false"
+		 index-type="btree" factor="90">
+		<idxelement use-sorting="false">
+			<column name="propagated_from_id"/>
+		</idxelement>
+	</index>
+	<index name="stock_quant_package_id_index" table="public.stock_quant"
+		 concurrent="false" unique="false" fast-update="false"
+		 index-type="btree" factor="90">
+		<idxelement use-sorting="false">
+			<column name="package_id"/>
+		</idxelement>
+	</index>
+	<index name="stock_quant_lot_id_index" table="public.stock_quant"
+		 concurrent="false" unique="false" fast-update="false"
+		 index-type="btree" factor="90">
+		<idxelement use-sorting="false">
+			<column name="lot_id"/>
+		</idxelement>
+	</index>
+	<index name="stock_quant_reservation_id_index" table="public.stock_quant"
+		 concurrent="false" unique="false" fast-update="false"
+		 index-type="btree" factor="90">
+		<idxelement use-sorting="false">
+			<column name="reservation_id"/>
+		</idxelement>
+	</index>
+	<index name="stock_quant_location_id_index" table="public.stock_quant"
+		 concurrent="false" unique="false" fast-update="false"
+		 index-type="btree" factor="90">
+		<idxelement use-sorting="false">
+			<column name="location_id"/>
+		</idxelement>
+	</index>
+	<index name="stock_quant_company_id_index" table="public.stock_quant"
+		 concurrent="false" unique="false" fast-update="false"
+		 index-type="btree" factor="90">
+		<idxelement use-sorting="false">
+			<column name="company_id"/>
+		</idxelement>
+	</index>
+	<index name="stock_quant_owner_id_index" table="public.stock_quant"
+		 concurrent="false" unique="false" fast-update="false"
+		 index-type="btree" factor="90">
+		<idxelement use-sorting="false">
+			<column name="owner_id"/>
+		</idxelement>
+	</index>
+	<index name="stock_quant_qty_index" table="public.stock_quant"
+		 concurrent="false" unique="false" fast-update="false"
+		 index-type="btree" factor="90">
+		<idxelement use-sorting="false">
+			<column name="qty"/>
+		</idxelement>
+	</index>
+	<index name="stock_quant_product_id_index" table="public.stock_quant"
+		 concurrent="false" unique="false" fast-update="false"
+		 index-type="btree" factor="90">
+		<idxelement use-sorting="false">
+			<column name="product_id"/>
+		</idxelement>
+	</index>
+	<index name="stock_quant_in_date_index" table="public.stock_quant"
+		 concurrent="false" unique="false" fast-update="false"
+		 index-type="btree" factor="90">
+		<idxelement use-sorting="false">
+			<column name="in_date"/>
+		</idxelement>
+	</index>
+	<index name="stock_quant_product_location_index" table="public.stock_quant"
+		 concurrent="false" unique="false" fast-update="false"
+		 index-type="btree" factor="90">
+		<idxelement use-sorting="false">
+			<column name="product_id"/>
+		</idxelement>
+		<idxelement use-sorting="false">
+			<column name="location_id"/>
+		</idxelement>
+		<idxelement use-sorting="false">
+			<column name="company_id"/>
+		</idxelement>
+		<idxelement use-sorting="false">
+			<column name="qty"/>
+		</idxelement>
+		<idxelement use-sorting="false">
+			<column name="in_date"/>
+		</idxelement>
+		<idxelement use-sorting="false">
+			<column name="reservation_id"/>
+		</idxelement>
+	</index>
+</table>
+
+<table name="stock_move">
+	<schema name="public"/>
+	<role name="jjnf"/>
+	<comment><![CDATA[Stock Move]]></comment>
+	<position x="838" y="1506.4"/>
+	<column name="id" not-null="true" default-value="nextval('stock_move_id_seq'::regclass)">
+		<type name="integer"/>
+	</column>
+	<column name="origin">
+		<type name="character varying"/>
+		<comment><![CDATA[Source Document]]></comment>
+	</column>
+	<column name="create_date">
+		<type name="timestamp"/>
+		<comment><![CDATA[Creation Date]]></comment>
+	</column>
+	<column name="move_dest_id">
+		<type name="integer"/>
+		<comment><![CDATA[Destination Move]]></comment>
+	</column>
+	<column name="product_uom" not-null="true">
+		<type name="integer"/>
+		<comment><![CDATA[Unit of Measure]]></comment>
+	</column>
+	<column name="price_unit">
+		<type name="double precision"/>
+		<comment><![CDATA[Unit Price]]></comment>
+	</column>
+	<column name="product_uom_qty" not-null="true">
+		<type name="numeric"/>
+		<comment><![CDATA[Quantity]]></comment>
+	</column>
+	<column name="company_id" not-null="true">
+		<type name="integer"/>
+		<comment><![CDATA[Company]]></comment>
+	</column>
+	<column name="date" not-null="true">
+		<type name="timestamp"/>
+		<comment><![CDATA[Date]]></comment>
+	</column>
+	<column name="product_qty">
+		<type name="numeric"/>
+		<comment><![CDATA[Quantity]]></comment>
+	</column>
+	<column name="location_id" not-null="true">
+		<type name="integer"/>
+		<comment><![CDATA[Source Location]]></comment>
+	</column>
+	<column name="priority">
+		<type name="character varying"/>
+		<comment><![CDATA[Priority]]></comment>
+	</column>
+	<column name="picking_type_id">
+		<type name="integer"/>
+		<comment><![CDATA[Picking Type]]></comment>
+	</column>
+	<column name="sequence">
+		<type name="integer"/>
+		<comment><![CDATA[Sequence]]></comment>
+	</column>
+	<column name="note">
+		<type name="text"/>
+		<comment><![CDATA[Notes]]></comment>
+	</column>
+	<column name="state">
+		<type name="character varying"/>
+		<comment><![CDATA[Status]]></comment>
+	</column>
+	<column name="origin_returned_move_id">
+		<type name="integer"/>
+		<comment><![CDATA[Origin return move]]></comment>
+	</column>
+	<column name="product_packaging">
+		<type name="integer"/>
+		<comment><![CDATA[preferred Packaging]]></comment>
+	</column>
+	<column name="date_expected" not-null="true">
+		<type name="timestamp"/>
+		<comment><![CDATA[Expected Date]]></comment>
+	</column>
+	<column name="procurement_id">
+		<type name="integer"/>
+		<comment><![CDATA[Procurement]]></comment>
+	</column>
+	<column name="name" not-null="true">
+		<type name="character varying"/>
+		<comment><![CDATA[Description]]></comment>
+	</column>
+	<column name="create_uid">
+		<type name="integer"/>
+		<comment><![CDATA[Created by]]></comment>
+	</column>
+	<column name="warehouse_id">
+		<type name="integer"/>
+		<comment><![CDATA[Warehouse]]></comment>
+	</column>
+	<column name="inventory_id">
+		<type name="integer"/>
+		<comment><![CDATA[Inventory]]></comment>
+	</column>
+	<column name="partially_available">
+		<type name="boolean"/>
+		<comment><![CDATA[Partially Available]]></comment>
+	</column>
+	<column name="propagate">
+		<type name="boolean"/>
+		<comment><![CDATA[Propagate cancel and split]]></comment>
+	</column>
+	<column name="restrict_partner_id">
+		<type name="integer"/>
+		<comment><![CDATA[Owner ]]></comment>
+	</column>
+	<column name="procure_method" not-null="true">
+		<type name="character varying"/>
+		<comment><![CDATA[Supply Method]]></comment>
+	</column>
+	<column name="write_uid">
+		<type name="integer"/>
+		<comment><![CDATA[Last Updated by]]></comment>
+	</column>
+	<column name="restrict_lot_id">
+		<type name="integer"/>
+		<comment><![CDATA[Lot]]></comment>
+	</column>
+	<column name="partner_id">
+		<type name="integer"/>
+		<comment><![CDATA[Destination Address ]]></comment>
+	</column>
+	<column name="group_id">
+		<type name="integer"/>
+		<comment><![CDATA[Procurement Group]]></comment>
+	</column>
+	<column name="product_id" not-null="true">
+		<type name="integer"/>
+		<comment><![CDATA[Product]]></comment>
+	</column>
+	<column name="split_from">
+		<type name="integer"/>
+		<comment><![CDATA[Move Split From]]></comment>
+	</column>
+	<column name="picking_id">
+		<type name="integer"/>
+		<comment><![CDATA[Transfer Reference]]></comment>
+	</column>
+	<column name="location_dest_id" not-null="true">
+		<type name="integer"/>
+		<comment><![CDATA[Destination Location]]></comment>
+	</column>
+	<column name="write_date">
+		<type name="timestamp"/>
+		<comment><![CDATA[Last Updated on]]></comment>
+	</column>
+	<column name="push_rule_id">
+		<type name="integer"/>
+		<comment><![CDATA[Push Rule]]></comment>
+	</column>
+	<column name="rule_id">
+		<type name="integer"/>
+		<comment><![CDATA[Procurement Rule]]></comment>
+	</column>
+	<constraint name="stock_move_pkey" type="pk-constr" factor="100" table="public.stock_move">
+		<columns names="id" ref-type="src-columns"/>
+	</constraint>
+	<index name="stock_move_create_date_index" table="public.stock_move"
+		 concurrent="false" unique="false" fast-update="false"
+		 index-type="btree" factor="90">
+		<idxelement use-sorting="false">
+			<column name="create_date"/>
+		</idxelement>
+	</index>
+	<index name="stock_move_move_dest_id_index" table="public.stock_move"
+		 concurrent="false" unique="false" fast-update="false"
+		 index-type="btree" factor="90">
+		<idxelement use-sorting="false">
+			<column name="move_dest_id"/>
+		</idxelement>
+	</index>
+	<index name="stock_move_company_id_index" table="public.stock_move"
+		 concurrent="false" unique="false" fast-update="false"
+		 index-type="btree" factor="90">
+		<idxelement use-sorting="false">
+			<column name="company_id"/>
+		</idxelement>
+	</index>
+	<index name="stock_move_date_index" table="public.stock_move"
+		 concurrent="false" unique="false" fast-update="false"
+		 index-type="btree" factor="90">
+		<idxelement use-sorting="false">
+			<column name="date"/>
+		</idxelement>
+	</index>
+	<index name="stock_move_location_id_index" table="public.stock_move"
+		 concurrent="false" unique="false" fast-update="false"
+		 index-type="btree" factor="90">
+		<idxelement use-sorting="false">
+			<column name="location_id"/>
+		</idxelement>
+	</index>
+	<index name="stock_move_state_index" table="public.stock_move"
+		 concurrent="false" unique="false" fast-update="false"
+		 index-type="btree" factor="90">
+		<idxelement use-sorting="false">
+			<column name="state"/>
+		</idxelement>
+	</index>
+	<index name="stock_move_date_expected_index" table="public.stock_move"
+		 concurrent="false" unique="false" fast-update="false"
+		 index-type="btree" factor="90">
+		<idxelement use-sorting="false">
+			<column name="date_expected"/>
+		</idxelement>
+	</index>
+	<index name="stock_move_name_index" table="public.stock_move"
+		 concurrent="false" unique="false" fast-update="false"
+		 index-type="btree" factor="90">
+		<idxelement use-sorting="false">
+			<column name="name"/>
+		</idxelement>
+	</index>
+	<index name="stock_move_product_id_index" table="public.stock_move"
+		 concurrent="false" unique="false" fast-update="false"
+		 index-type="btree" factor="90">
+		<idxelement use-sorting="false">
+			<column name="product_id"/>
+		</idxelement>
+	</index>
+	<index name="stock_move_picking_id_index" table="public.stock_move"
+		 concurrent="false" unique="false" fast-update="false"
+		 index-type="btree" factor="90">
+		<idxelement use-sorting="false">
+			<column name="picking_id"/>
+		</idxelement>
+	</index>
+	<index name="stock_move_location_dest_id_index" table="public.stock_move"
+		 concurrent="false" unique="false" fast-update="false"
+		 index-type="btree" factor="90">
+		<idxelement use-sorting="false">
+			<column name="location_dest_id"/>
+		</idxelement>
+	</index>
+	<index name="stock_move_product_location_index" table="public.stock_move"
+		 concurrent="false" unique="false" fast-update="false"
+		 index-type="btree" factor="90">
+		<idxelement use-sorting="false">
+			<column name="product_id"/>
+		</idxelement>
+		<idxelement use-sorting="false">
+			<column name="location_id"/>
+		</idxelement>
+		<idxelement use-sorting="false">
+			<column name="location_dest_id"/>
+		</idxelement>
+		<idxelement use-sorting="false">
+			<column name="company_id"/>
+		</idxelement>
+		<idxelement use-sorting="false">
+			<column name="state"/>
+		</idxelement>
+	</index>
+</table>
+
+<table name="stock_inventory">
+	<schema name="public"/>
+	<role name="jjnf"/>
+	<comment><![CDATA[Inventory]]></comment>
+	<position x="1247" y="1506.4"/>
+	<column name="id" not-null="true" default-value="nextval('stock_inventory_id_seq'::regclass)">
+		<type name="integer"/>
+	</column>
+	<column name="create_uid">
+		<type name="integer"/>
+		<comment><![CDATA[Created by]]></comment>
+	</column>
+	<column name="create_date">
+		<type name="timestamp"/>
+		<comment><![CDATA[Created on]]></comment>
+	</column>
+	<column name="name" not-null="true">
+		<type name="character varying"/>
+		<comment><![CDATA[Inventory Reference]]></comment>
+	</column>
+	<column name="location_id" not-null="true">
+		<type name="integer"/>
+		<comment><![CDATA[Inventoried Location]]></comment>
+	</column>
+	<column name="company_id" not-null="true">
+		<type name="integer"/>
+		<comment><![CDATA[Company]]></comment>
+	</column>
+	<column name="write_uid">
+		<type name="integer"/>
+		<comment><![CDATA[Last Updated by]]></comment>
+	</column>
+	<column name="state">
+		<type name="character varying"/>
+		<comment><![CDATA[Status]]></comment>
+	</column>
+	<column name="write_date">
+		<type name="timestamp"/>
+		<comment><![CDATA[Last Updated on]]></comment>
+	</column>
+	<column name="lot_id">
+		<type name="integer"/>
+		<comment><![CDATA[Inventoried Lot/Serial Number]]></comment>
+	</column>
+	<column name="date" not-null="true">
+		<type name="timestamp"/>
+		<comment><![CDATA[Inventory Date]]></comment>
+	</column>
+	<column name="package_id">
+		<type name="integer"/>
+		<comment><![CDATA[Inventoried Pack]]></comment>
+	</column>
+	<column name="partner_id">
+		<type name="integer"/>
+		<comment><![CDATA[Inventoried Owner]]></comment>
+	</column>
+	<column name="filter" not-null="true">
+		<type name="character varying"/>
+		<comment><![CDATA[Inventory of]]></comment>
+	</column>
+	<column name="product_id">
+		<type name="integer"/>
+		<comment><![CDATA[Inventoried Product]]></comment>
+	</column>
+	<column name="accounting_date">
+		<type name="date"/>
+		<comment><![CDATA[Force Accounting Date]]></comment>
+	</column>
+	<constraint name="stock_inventory_pkey" type="pk-constr" factor="100" table="public.stock_inventory">
+		<columns names="id" ref-type="src-columns"/>
+	</constraint>
+	<index name="stock_inventory_company_id_index" table="public.stock_inventory"
+		 concurrent="false" unique="false" fast-update="false"
+		 index-type="btree" factor="90">
+		<idxelement use-sorting="false">
+			<column name="company_id"/>
+		</idxelement>
+	</index>
+	<index name="stock_inventory_state_index" table="public.stock_inventory"
+		 concurrent="false" unique="false" fast-update="false"
+		 index-type="btree" factor="90">
+		<idxelement use-sorting="false">
+			<column name="state"/>
+		</idxelement>
+	</index>
+</table>
+
+<table name="stock_change_product_qty">
+	<schema name="public"/>
+	<role name="jjnf"/>
+	<comment><![CDATA[Change Product Quantity]]></comment>
+	<position x="1609" y="1506.4"/>
+	<column name="id" not-null="true" default-value="nextval('stock_change_product_qty_id_seq'::regclass)">
+		<type name="integer"/>
+	</column>
+	<column name="create_uid">
+		<type name="integer"/>
+		<comment><![CDATA[Created by]]></comment>
+	</column>
+	<column name="create_date">
+		<type name="timestamp"/>
+		<comment><![CDATA[Created on]]></comment>
+	</column>
+	<column name="product_id" not-null="true">
+		<type name="integer"/>
+		<comment><![CDATA[Product]]></comment>
+	</column>
+	<column name="write_uid">
+		<type name="integer"/>
+		<comment><![CDATA[Last Updated by]]></comment>
+	</column>
+	<column name="product_tmpl_id" not-null="true">
+		<type name="integer"/>
+		<comment><![CDATA[Template]]></comment>
+	</column>
+	<column name="write_date">
+		<type name="timestamp"/>
+		<comment><![CDATA[Last Updated on]]></comment>
+	</column>
+	<column name="lot_id">
+		<type name="integer"/>
+		<comment><![CDATA[Serial Number]]></comment>
+	</column>
+	<column name="new_quantity" not-null="true">
+		<type name="numeric"/>
+		<comment><![CDATA[New Quantity on Hand]]></comment>
+	</column>
+	<column name="location_id" not-null="true">
+		<type name="integer"/>
+		<comment><![CDATA[Location]]></comment>
+	</column>
+	<constraint name="stock_change_product_qty_pkey" type="pk-constr" factor="100" table="public.stock_change_product_qty">
+		<columns names="id" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<sequence name="makemyday_config_id_seq"
+	 start="1" increment="1"
+	 min-value="1" max-value="9223372036854775807"
+	 cache="1" cycle="false">
+	<schema name="public"/>
+	<role name="jjnf"/>
+</sequence>
+
+<table name="makemyday_config">
+	<schema name="public"/>
+	<role name="jjnf"/>
+	<comment><![CDATA[makemyday.config]]></comment>
+	<position x="50" y="2297.6"/>
+	<column name="id" not-null="true" default-value="nextval('makemyday_config_id_seq'::regclass)">
+		<type name="integer"/>
+	</column>
+	<column name="iface_big_scrollbars">
+		<type name="boolean"/>
+		<comment><![CDATA[Large Scrollbars]]></comment>
+	</column>
+	<column name="iface_electronic_scale">
+		<type name="boolean"/>
+		<comment><![CDATA[Electronic Scale]]></comment>
+	</column>
+	<column name="proxy_ip">
+		<type name="character varying" length="45"/>
+		<comment><![CDATA[IP Address]]></comment>
+	</column>
+	<column name="create_date">
+		<type name="timestamp"/>
+		<comment><![CDATA[Created on]]></comment>
+	</column>
+	<column name="iface_vkeyboard">
+		<type name="boolean"/>
+		<comment><![CDATA[Virtual KeyBoard]]></comment>
+	</column>
+	<column name="uuid">
+		<type name="character varying"/>
+		<comment><![CDATA[uuid]]></comment>
+	</column>
+	<column name="cash_control">
+		<type name="boolean"/>
+		<comment><![CDATA[Cash Control]]></comment>
+	</column>
+	<column name="barcode_nomenclature_id" not-null="true">
+		<type name="integer"/>
+		<comment><![CDATA[Barcodes]]></comment>
+	</column>
+	<column name="company_id" not-null="true">
+		<type name="integer"/>
+		<comment><![CDATA[Company]]></comment>
+	</column>
+	<column name="iface_scan_via_proxy">
+		<type name="boolean"/>
+		<comment><![CDATA[Scan via Proxy]]></comment>
+	</column>
+	<column name="state" not-null="true">
+		<type name="character varying"/>
+		<comment><![CDATA[Status]]></comment>
+	</column>
+	<column name="group_by">
+		<type name="boolean"/>
+		<comment><![CDATA[Group Journal Items]]></comment>
+	</column>
+	<column name="iface_invoicing">
+		<type name="boolean"/>
+		<comment><![CDATA[Invoicing]]></comment>
+	</column>
+	<column name="iface_tax_included">
+		<type name="boolean"/>
+		<comment><![CDATA[Include Taxes in Prices]]></comment>
+	</column>
+	<column name="group_makemyday_manager_id">
+		<type name="integer"/>
+		<comment><![CDATA[Point of Sale Manager Group]]></comment>
+	</column>
+	<column name="pricelist_id" not-null="true">
+		<type name="integer"/>
+		<comment><![CDATA[Pricelist]]></comment>
+	</column>
+	<column name="iface_start_categ_id">
+		<type name="integer"/>
+		<comment><![CDATA[Start Category]]></comment>
+	</column>
+	<column name="group_makemyday_user_id">
+		<type name="integer"/>
+		<comment><![CDATA[Point of Sale User Group]]></comment>
+	</column>
+	<column name="create_uid">
+		<type name="integer"/>
+		<comment><![CDATA[Created by]]></comment>
+	</column>
+	<column name="iface_display_categ_images">
+		<type name="boolean"/>
+		<comment><![CDATA[Display Category Pictures]]></comment>
+	</column>
+	<column name="iface_print_skip_screen">
+		<type name="boolean"/>
+		<comment><![CDATA[Skip Receipt Screen]]></comment>
+	</column>
+	<column name="stock_location_id" not-null="true">
+		<type name="integer"/>
+		<comment><![CDATA[Stock Location]]></comment>
+	</column>
+	<column name="sequence_id">
+		<type name="integer"/>
+		<comment><![CDATA[Order IDs Sequence]]></comment>
+	</column>
+	<column name="write_date">
+		<type name="timestamp"/>
+		<comment><![CDATA[Last Updated on]]></comment>
+	</column>
+	<column name="tip_product_id">
+		<type name="integer"/>
+		<comment><![CDATA[Tip Product]]></comment>
+	</column>
+	<column name="iface_print_auto">
+		<type name="boolean"/>
+		<comment><![CDATA[Automatic Receipt Printing]]></comment>
+	</column>
+	<column name="iface_payment_terminal">
+		<type name="boolean"/>
+		<comment><![CDATA[Payment Terminal]]></comment>
+	</column>
+	<column name="write_uid">
+		<type name="integer"/>
+		<comment><![CDATA[Last Updated by]]></comment>
+	</column>
+	<column name="iface_precompute_cash">
+		<type name="boolean"/>
+		<comment><![CDATA[Prefill Cash Payment]]></comment>
+	</column>
+	<column name="iface_cashdrawer">
+		<type name="boolean"/>
+		<comment><![CDATA[Cashdrawer]]></comment>
+	</column>
+	<column name="name" not-null="true">
+		<type name="character varying"/>
+		<comment><![CDATA[Point of Sale Name]]></comment>
+	</column>
+	<column name="iface_fullscreen">
+		<type name="boolean"/>
+		<comment><![CDATA[Fullscreen]]></comment>
+	</column>
+	<column name="picking_type_id">
+		<type name="integer"/>
+		<comment><![CDATA[Picking Type]]></comment>
+	</column>
+	<column name="receipt_footer">
+		<type name="text"/>
+		<comment><![CDATA[Receipt Footer]]></comment>
+	</column>
+	<column name="journal_id">
+		<type name="integer"/>
+		<comment><![CDATA[Sale Journal]]></comment>
+	</column>
+	<column name="receipt_header">
+		<type name="text"/>
+		<comment><![CDATA[Receipt Header]]></comment>
+	</column>
+	<column name="iface_print_via_proxy">
+		<type name="boolean"/>
+		<comment><![CDATA[Print via Proxy]]></comment>
+	</column>
+	<column name="iface_splitbill">
+		<type name="boolean"/>
+		<comment><![CDATA[Bill Splitting]]></comment>
+	</column>
+	<column name="iface_orderline_notes">
+		<type name="boolean"/>
+		<comment><![CDATA[Orderline Notes]]></comment>
+	</column>
+	<column name="iface_printbill">
+		<type name="boolean"/>
+		<comment><![CDATA[Bill Printing]]></comment>
+	</column>
+	<constraint name="makemyday_config_pkey" type="pk-constr" factor="100" table="public.makemyday_config">
+		<columns names="id" ref-type="src-columns"/>
+	</constraint>
+	<index name="makemyday_config_name_index" table="public.makemyday_config"
+		 concurrent="false" unique="false" fast-update="false"
+		 index-type="btree" factor="90">
+		<idxelement use-sorting="false">
+			<column name="name"/>
+		</idxelement>
+	</index>
+</table>
+
+<table name="account_fiscal_position_makemyday_config_rel">
+	<schema name="public"/>
+	<role name="jjnf"/>
+	<comment><![CDATA[RELATION BETWEEN makemyday_config AND account_fiscal_position]]></comment>
+	<position x="528" y="2297.6"/>
+	<column name="makemyday_config_id" not-null="true">
+		<type name="integer"/>
+	</column>
+	<constraint name="account_fiscal_position_makem_makemyday_config_id_account_f_key" type="uq-constr" factor="100" table="public.account_fiscal_position_makemyday_config_rel">
+		<columns names="makemyday_config_id" ref-type="src-columns"/>
+	</constraint>
+	<index name="account_fiscal_position_makemyday_confi_makemyday_config_id_idx" table="public.account_fiscal_position_makemyday_config_rel"
+		 concurrent="false" unique="false" fast-update="false"
+		 index-type="btree" factor="90">
+		<idxelement use-sorting="false">
+			<column name="makemyday_config_id"/>
+		</idxelement>
+	</index>
+</table>
+
+<table name="makemyday_config_journal_rel">
+	<schema name="public"/>
+	<role name="jjnf"/>
+	<comment><![CDATA[RELATION BETWEEN makemyday_config AND account_journal]]></comment>
+	<position x="1066.77" y="2297.6"/>
+	<column name="makemyday_config_id" not-null="true">
+		<type name="integer"/>
+	</column>
+	<column name="journal_id" not-null="true">
+		<type name="integer"/>
+	</column>
+	<constraint name="makemyday_config_journal_rel_makemyday_config_id_journal_id_key" type="uq-constr" factor="100" table="public.makemyday_config_journal_rel">
+		<columns names="makemyday_config_id,journal_id" ref-type="src-columns"/>
+	</constraint>
+	<index name="makemyday_config_journal_rel_makemyday_config_id_idx" table="public.makemyday_config_journal_rel"
+		 concurrent="false" unique="false" fast-update="false"
+		 index-type="btree" factor="90">
+		<idxelement use-sorting="false">
+			<column name="makemyday_config_id"/>
+		</idxelement>
+	</index>
+	<index name="makemyday_config_journal_rel_journal_id_idx" table="public.makemyday_config_journal_rel"
+		 concurrent="false" unique="false" fast-update="false"
+		 index-type="btree" factor="90">
+		<idxelement use-sorting="false">
+			<column name="journal_id"/>
+		</idxelement>
+	</index>
+</table>
+
+<sequence name="makemyday_session_id_seq"
+	 start="1" increment="1"
+	 min-value="1" max-value="9223372036854775807"
+	 cache="1" cycle="false">
+	<schema name="public"/>
+	<role name="jjnf"/>
+</sequence>
+
+<table name="makemyday_session">
+	<schema name="public"/>
+	<role name="jjnf"/>
+	<comment><![CDATA[makemyday.session]]></comment>
+	<position x="1535.53" y="2297.6"/>
+	<column name="id" not-null="true" default-value="nextval('makemyday_session_id_seq'::regclass)">
+		<type name="integer"/>
+	</column>
+	<column name="config_id" not-null="true">
+		<type name="integer"/>
+		<comment><![CDATA[Point of Sale]]></comment>
+	</column>
+	<column name="write_uid">
+		<type name="integer"/>
+		<comment><![CDATA[Last Updated by]]></comment>
+	</column>
+	<column name="cash_journal_id">
+		<type name="integer"/>
+		<comment><![CDATA[Cash Journal]]></comment>
+	</column>
+	<column name="cash_register_id">
+		<type name="integer"/>
+		<comment><![CDATA[Cash Register]]></comment>
+	</column>
+	<column name="user_id" not-null="true">
+		<type name="integer"/>
+		<comment><![CDATA[Responsible]]></comment>
+	</column>
+	<column name="login_number">
+		<type name="integer"/>
+		<comment><![CDATA[Login Sequence Number]]></comment>
+	</column>
+	<column name="state" not-null="true">
+		<type name="character varying"/>
+		<comment><![CDATA[Status]]></comment>
+	</column>
+	<column name="start_at">
+		<type name="timestamp"/>
+		<comment><![CDATA[Opening Date]]></comment>
+	</column>
+	<column name="rescue">
+		<type name="boolean"/>
+		<comment><![CDATA[Rescue session]]></comment>
+	</column>
+	<column name="create_uid">
+		<type name="integer"/>
+		<comment><![CDATA[Created by]]></comment>
+	</column>
+	<column name="write_date">
+		<type name="timestamp"/>
+		<comment><![CDATA[Last Updated on]]></comment>
+	</column>
+	<column name="name" not-null="true">
+		<type name="character varying"/>
+		<comment><![CDATA[Session ID]]></comment>
+	</column>
+	<column name="stop_at">
+		<type name="timestamp"/>
+		<comment><![CDATA[Closing Date]]></comment>
+	</column>
+	<column name="create_date">
+		<type name="timestamp"/>
+		<comment><![CDATA[Created on]]></comment>
+	</column>
+	<column name="sequence_number">
+		<type name="integer"/>
+		<comment><![CDATA[Order Sequence Number]]></comment>
+	</column>
+	<constraint name="makemyday_session_pkey" type="pk-constr" factor="100" table="public.makemyday_session">
+		<columns names="id" ref-type="src-columns"/>
+	</constraint>
+	<constraint name="makemyday_session_uniq_name" type="uq-constr" factor="100" table="public.makemyday_session">
+		<columns names="name" ref-type="src-columns"/>
+	</constraint>
+	<index name="makemyday_session_config_id_index" table="public.makemyday_session"
+		 concurrent="false" unique="false" fast-update="false"
+		 index-type="btree" factor="90">
+		<idxelement use-sorting="false">
+			<column name="config_id"/>
+		</idxelement>
+	</index>
+	<index name="makemyday_session_user_id_index" table="public.makemyday_session"
+		 concurrent="false" unique="false" fast-update="false"
+		 index-type="btree" factor="90">
+		<idxelement use-sorting="false">
+			<column name="user_id"/>
+		</idxelement>
+	</index>
+	<index name="makemyday_session_state_index" table="public.makemyday_session"
+		 concurrent="false" unique="false" fast-update="false"
+		 index-type="btree" factor="90">
+		<idxelement use-sorting="false">
+			<column name="state"/>
+		</idxelement>
+	</index>
+</table>
+
+<sequence name="makemyday_order_id_seq"
+	 start="1" increment="1"
+	 min-value="1" max-value="9223372036854775807"
+	 cache="1" cycle="false">
+	<schema name="public"/>
+	<role name="jjnf"/>
+</sequence>
+
+<table name="makemyday_order">
+	<schema name="public"/>
+	<role name="jjnf"/>
+	<comment><![CDATA[Point of Sale]]></comment>
+	<position x="1909.53" y="2297.6"/>
+	<column name="id" not-null="true" default-value="nextval('makemyday_order_id_seq'::regclass)">
+		<type name="integer"/>
+	</column>
+	<column name="create_date">
+		<type name="timestamp"/>
+		<comment><![CDATA[Created on]]></comment>
+	</column>
+	<column name="sale_journal">
+		<type name="integer"/>
+		<comment><![CDATA[Sale Journal]]></comment>
+	</column>
+	<column name="write_uid">
+		<type name="integer"/>
+		<comment><![CDATA[Last Updated by]]></comment>
+	</column>
+	<column name="account_move">
+		<type name="integer"/>
+		<comment><![CDATA[Journal Entry]]></comment>
+	</column>
+	<column name="date_order">
+		<type name="timestamp"/>
+		<comment><![CDATA[Order Date]]></comment>
+	</column>
+	<column name="partner_id">
+		<type name="integer"/>
+		<comment><![CDATA[Customer]]></comment>
+	</column>
+	<column name="nb_print">
+		<type name="integer"/>
+		<comment><![CDATA[Number of Print]]></comment>
+	</column>
+	<column name="create_uid">
+		<type name="integer"/>
+		<comment><![CDATA[Created by]]></comment>
+	</column>
+	<column name="user_id">
+		<type name="integer"/>
+		<comment><![CDATA[Salesman]]></comment>
+	</column>
+	<column name="location_id">
+		<type name="integer"/>
+		<comment><![CDATA[Location]]></comment>
+	</column>
+	<column name="company_id" not-null="true">
+		<type name="integer"/>
+		<comment><![CDATA[Company]]></comment>
+	</column>
+	<column name="state">
+		<type name="character varying"/>
+		<comment><![CDATA[Status]]></comment>
+	</column>
+	<column name="pricelist_id" not-null="true">
+		<type name="integer"/>
+		<comment><![CDATA[Pricelist]]></comment>
+	</column>
+	<column name="write_date">
+		<type name="timestamp"/>
+		<comment><![CDATA[Last Updated on]]></comment>
+	</column>
+	<column name="fiscal_position_id">
+		<type name="integer"/>
+		<comment><![CDATA[Fiscal Position]]></comment>
+	</column>
+	<column name="name" not-null="true">
+		<type name="character varying"/>
+		<comment><![CDATA[Order Ref]]></comment>
+	</column>
+	<column name="invoice_id">
+		<type name="integer"/>
+		<comment><![CDATA[Invoice]]></comment>
+	</column>
+	<column name="session_id" not-null="true">
+		<type name="integer"/>
+		<comment><![CDATA[Session]]></comment>
+	</column>
+	<column name="note">
+		<type name="text"/>
+		<comment><![CDATA[Internal Notes]]></comment>
+	</column>
+	<column name="makemyday_reference">
+		<type name="character varying"/>
+		<comment><![CDATA[Receipt Ref]]></comment>
+	</column>
+	<column name="picking_id">
+		<type name="integer"/>
+		<comment><![CDATA[Picking]]></comment>
+	</column>
+	<column name="sequence_number">
+		<type name="integer"/>
+		<comment><![CDATA[Sequence Number]]></comment>
+	</column>
+	<column name="customer_count">
+		<type name="integer"/>
+		<comment><![CDATA[Guests]]></comment>
+	</column>
+	<column name="table_id">
+		<type name="integer"/>
+		<comment><![CDATA[Table]]></comment>
+	</column>
+	<constraint name="makemyday_order_pkey" type="pk-constr" factor="100" table="public.makemyday_order">
+		<columns names="id" ref-type="src-columns"/>
+	</constraint>
+	<index name="makemyday_order_date_order_index" table="public.makemyday_order"
+		 concurrent="false" unique="false" fast-update="false"
+		 index-type="btree" factor="90">
+		<idxelement use-sorting="false">
+			<column name="date_order"/>
+		</idxelement>
+	</index>
+	<index name="makemyday_order_partner_id_index" table="public.makemyday_order"
+		 concurrent="false" unique="false" fast-update="false"
+		 index-type="btree" factor="90">
+		<idxelement use-sorting="false">
+			<column name="partner_id"/>
+		</idxelement>
+	</index>
+	<index name="makemyday_order_session_id_index" table="public.makemyday_order"
+		 concurrent="false" unique="false" fast-update="false"
+		 index-type="btree" factor="90">
+		<idxelement use-sorting="false">
+			<column name="session_id"/>
+		</idxelement>
+	</index>
+</table>
+
+<sequence name="makemyday_order_line_id_seq"
+	 start="1" increment="1"
+	 min-value="1" max-value="9223372036854775807"
+	 cache="1" cycle="false">
+	<schema name="public"/>
+	<role name="jjnf"/>
+</sequence>
+
+<table name="makemyday_order_line">
+	<schema name="public"/>
+	<role name="jjnf"/>
+	<comment><![CDATA[Lines of Point of Sale]]></comment>
+	<position x="50" y="2962.8"/>
+	<column name="id" not-null="true" default-value="nextval('makemyday_order_line_id_seq'::regclass)">
+		<type name="integer"/>
+	</column>
+	<column name="create_uid">
+		<type name="integer"/>
+		<comment><![CDATA[Created by]]></comment>
+	</column>
+	<column name="notice">
+		<type name="character varying"/>
+		<comment><![CDATA[Discount Notice]]></comment>
+	</column>
+	<column name="create_date">
+		<type name="timestamp"/>
+		<comment><![CDATA[Creation Date]]></comment>
+	</column>
+	<column name="product_id" not-null="true">
+		<type name="integer"/>
+		<comment><![CDATA[Product]]></comment>
+	</column>
+	<column name="name" not-null="true">
+		<type name="character varying"/>
+		<comment><![CDATA[Line No]]></comment>
+	</column>
+	<column name="order_id">
+		<type name="integer"/>
+		<comment><![CDATA[Order Ref]]></comment>
+	</column>
+	<column name="price_unit">
+		<type name="numeric"/>
+		<comment><![CDATA[Unit Price]]></comment>
+	</column>
+	<column name="company_id" not-null="true">
+		<type name="integer"/>
+		<comment><![CDATA[Company]]></comment>
+	</column>
+	<column name="qty">
+		<type name="numeric"/>
+		<comment><![CDATA[Quantity]]></comment>
+	</column>
+	<column name="discount">
+		<type name="numeric"/>
+		<comment><![CDATA[Discount (%)]]></comment>
+	</column>
+	<column name="write_date">
+		<type name="timestamp"/>
+		<comment><![CDATA[Last Updated on]]></comment>
+	</column>
+	<column name="write_uid">
+		<type name="integer"/>
+		<comment><![CDATA[Last Updated by]]></comment>
+	</column>
+	<constraint name="makemyday_order_line_pkey" type="pk-constr" factor="100" table="public.makemyday_order_line">
+		<columns names="id" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<table name="account_tax_makemyday_order_line_rel">
+	<schema name="public"/>
+	<role name="jjnf"/>
+	<comment><![CDATA[RELATION BETWEEN makemyday_order_line AND account_tax]]></comment>
+	<position x="383" y="2962.8"/>
+	<column name="makemyday_order_line_id" not-null="true">
+		<type name="integer"/>
+	</column>
+	<constraint name="account_tax_makemyday_order_l_makemyday_order_line_id_accou_key" type="uq-constr" factor="100" table="public.account_tax_makemyday_order_line_rel">
+		<columns names="makemyday_order_line_id" ref-type="src-columns"/>
+	</constraint>
+	<index name="account_tax_makemyday_order_line_re_makemyday_order_line_id_idx" table="public.account_tax_makemyday_order_line_rel"
+		 concurrent="false" unique="false" fast-update="false"
+		 index-type="btree" factor="90">
+		<idxelement use-sorting="false">
+			<column name="makemyday_order_line_id"/>
+		</idxelement>
+	</index>
+</table>
+
+<sequence name="makemyday_category_id_seq"
+	 start="1" increment="1"
+	 min-value="1" max-value="9223372036854775807"
+	 cache="1" cycle="false">
+	<schema name="public"/>
+	<role name="jjnf"/>
+</sequence>
+
+<table name="makemyday_category">
+	<schema name="public"/>
+	<role name="jjnf"/>
+	<comment><![CDATA[Public Category]]></comment>
+	<position x="930.766" y="2962.8"/>
+	<column name="id" not-null="true" default-value="nextval('makemyday_category_id_seq'::regclass)">
+		<type name="integer"/>
+	</column>
+	<column name="create_uid">
+		<type name="integer"/>
+		<comment><![CDATA[Created by]]></comment>
+	</column>
+	<column name="create_date">
+		<type name="timestamp"/>
+		<comment><![CDATA[Created on]]></comment>
+	</column>
+	<column name="name" not-null="true">
+		<type name="character varying"/>
+		<comment><![CDATA[Name]]></comment>
+	</column>
+	<column name="sequence">
+		<type name="integer"/>
+		<comment><![CDATA[Sequence]]></comment>
+	</column>
+	<column name="write_uid">
+		<type name="integer"/>
+		<comment><![CDATA[Last Updated by]]></comment>
+	</column>
+	<column name="parent_id">
+		<type name="integer"/>
+		<comment><![CDATA[Parent Category]]></comment>
+	</column>
+	<column name="write_date">
+		<type name="timestamp"/>
+		<comment><![CDATA[Last Updated on]]></comment>
+	</column>
+	<constraint name="makemyday_category_pkey" type="pk-constr" factor="100" table="public.makemyday_category">
+		<columns names="id" ref-type="src-columns"/>
+	</constraint>
+	<index name="makemyday_category_parent_id_index" table="public.makemyday_category"
+		 concurrent="false" unique="false" fast-update="false"
+		 index-type="btree" factor="90">
+		<idxelement use-sorting="false">
+			<column name="parent_id"/>
+		</idxelement>
+	</index>
+</table>
+
+<sequence name="makemyday_confirm_id_seq"
+	 start="1" increment="1"
+	 min-value="1" max-value="9223372036854775807"
+	 cache="1" cycle="false">
+	<schema name="public"/>
+	<role name="jjnf"/>
+</sequence>
+
+<table name="makemyday_confirm">
+	<schema name="public"/>
+	<role name="jjnf"/>
+	<comment><![CDATA[Post POS Journal Entries]]></comment>
+	<position x="1285.53" y="2962.8"/>
+	<column name="id" not-null="true" default-value="nextval('makemyday_confirm_id_seq'::regclass)">
+		<type name="integer"/>
+	</column>
+	<column name="create_uid">
+		<type name="integer"/>
+		<comment><![CDATA[Created by]]></comment>
+	</column>
+	<column name="create_date">
+		<type name="timestamp"/>
+		<comment><![CDATA[Created on]]></comment>
+	</column>
+	<column name="write_date">
+		<type name="timestamp"/>
+		<comment><![CDATA[Last Updated on]]></comment>
+	</column>
+	<column name="write_uid">
+		<type name="integer"/>
+		<comment><![CDATA[Last Updated by]]></comment>
+	</column>
+	<constraint name="makemyday_confirm_pkey" type="pk-constr" factor="100" table="public.makemyday_confirm">
+		<columns names="id" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<sequence name="makemyday_details_id_seq"
+	 start="1" increment="1"
+	 min-value="1" max-value="9223372036854775807"
+	 cache="1" cycle="false">
+	<schema name="public"/>
+	<role name="jjnf"/>
+</sequence>
+
+<table name="makemyday_details">
+	<schema name="public"/>
+	<role name="jjnf"/>
+	<comment><![CDATA[Sales Details]]></comment>
+	<position x="1572.53" y="2962.8"/>
+	<column name="id" not-null="true" default-value="nextval('makemyday_details_id_seq'::regclass)">
+		<type name="integer"/>
+	</column>
+	<column name="create_uid">
+		<type name="integer"/>
+		<comment><![CDATA[Created by]]></comment>
+	</column>
+	<column name="create_date">
+		<type name="timestamp"/>
+		<comment><![CDATA[Created on]]></comment>
+	</column>
+	<column name="date_end" not-null="true">
+		<type name="date"/>
+		<comment><![CDATA[Date End]]></comment>
+	</column>
+	<column name="date_start" not-null="true">
+		<type name="date"/>
+		<comment><![CDATA[Date Start]]></comment>
+	</column>
+	<column name="write_uid">
+		<type name="integer"/>
+		<comment><![CDATA[Last Updated by]]></comment>
+	</column>
+	<column name="write_date">
+		<type name="timestamp"/>
+		<comment><![CDATA[Last Updated on]]></comment>
+	</column>
+	<constraint name="makemyday_details_pkey" type="pk-constr" factor="100" table="public.makemyday_details">
+		<columns names="id" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<table name="makemyday_details_report_user_rel">
+	<schema name="public"/>
+	<role name="jjnf"/>
+	<comment><![CDATA[RELATION BETWEEN makemyday_details AND res_users]]></comment>
+	<position x="50" y="3218.2"/>
+	<column name="user_id" not-null="true">
+		<type name="integer"/>
+	</column>
+	<column name="wizard_id" not-null="true">
+		<type name="integer"/>
+	</column>
+	<constraint name="makemyday_details_report_user_rel_user_id_wizard_id_key" type="uq-constr" factor="100" table="public.makemyday_details_report_user_rel">
+		<columns names="user_id,wizard_id" ref-type="src-columns"/>
+	</constraint>
+	<index name="makemyday_details_report_user_rel_user_id_idx" table="public.makemyday_details_report_user_rel"
+		 concurrent="false" unique="false" fast-update="false"
+		 index-type="btree" factor="90">
+		<idxelement use-sorting="false">
+			<column name="user_id"/>
+		</idxelement>
+	</index>
+	<index name="makemyday_details_report_user_rel_wizard_id_idx" table="public.makemyday_details_report_user_rel"
+		 concurrent="false" unique="false" fast-update="false"
+		 index-type="btree" factor="90">
+		<idxelement use-sorting="false">
+			<column name="wizard_id"/>
+		</idxelement>
+	</index>
+</table>
+
+<sequence name="makemyday_discount_id_seq"
+	 start="1" increment="1"
+	 min-value="1" max-value="9223372036854775807"
+	 cache="1" cycle="false">
+	<schema name="public"/>
+	<role name="jjnf"/>
+</sequence>
+
+<table name="makemyday_discount">
+	<schema name="public"/>
+	<role name="jjnf"/>
+	<comment><![CDATA[Add a Global Discount]]></comment>
+	<position x="471.766" y="3218.2"/>
+	<column name="id" not-null="true" default-value="nextval('makemyday_discount_id_seq'::regclass)">
+		<type name="integer"/>
+	</column>
+	<column name="create_uid">
+		<type name="integer"/>
+		<comment><![CDATA[Created by]]></comment>
+	</column>
+	<column name="create_date">
+		<type name="timestamp"/>
+		<comment><![CDATA[Created on]]></comment>
+	</column>
+	<column name="write_uid">
+		<type name="integer"/>
+		<comment><![CDATA[Last Updated by]]></comment>
+	</column>
+	<column name="discount" not-null="true">
+		<type name="numeric"/>
+		<comment><![CDATA[Discount (%)]]></comment>
+	</column>
+	<column name="write_date">
+		<type name="timestamp"/>
+		<comment><![CDATA[Last Updated on]]></comment>
+	</column>
+	<constraint name="makemyday_discount_pkey" type="pk-constr" factor="100" table="public.makemyday_discount">
+		<columns names="id" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<sequence name="makemyday_open_statement_id_seq"
+	 start="1" increment="1"
+	 min-value="1" max-value="9223372036854775807"
+	 cache="1" cycle="false">
+	<schema name="public"/>
+	<role name="jjnf"/>
+</sequence>
+
+<table name="makemyday_open_statement">
+	<schema name="public"/>
+	<role name="jjnf"/>
+	<comment><![CDATA[Open Statements]]></comment>
+	<position x="758.766" y="3218.2"/>
+	<column name="id" not-null="true" default-value="nextval('makemyday_open_statement_id_seq'::regclass)">
+		<type name="integer"/>
+	</column>
+	<column name="create_uid">
+		<type name="integer"/>
+		<comment><![CDATA[Created by]]></comment>
+	</column>
+	<column name="create_date">
+		<type name="timestamp"/>
+		<comment><![CDATA[Created on]]></comment>
+	</column>
+	<column name="write_date">
+		<type name="timestamp"/>
+		<comment><![CDATA[Last Updated on]]></comment>
+	</column>
+	<column name="write_uid">
+		<type name="integer"/>
+		<comment><![CDATA[Last Updated by]]></comment>
+	</column>
+	<constraint name="makemyday_open_statement_pkey" type="pk-constr" factor="100" table="public.makemyday_open_statement">
+		<columns names="id" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<sequence name="makemyday_make_payment_id_seq"
+	 start="1" increment="1"
+	 min-value="1" max-value="9223372036854775807"
+	 cache="1" cycle="false">
+	<schema name="public"/>
+	<role name="jjnf"/>
+</sequence>
+
+<table name="makemyday_make_payment">
+	<schema name="public"/>
+	<role name="jjnf"/>
+	<comment><![CDATA[Point of Sale Payment]]></comment>
+	<position x="1065.37" y="3218.2"/>
+	<column name="id" not-null="true" default-value="nextval('makemyday_make_payment_id_seq'::regclass)">
+		<type name="integer"/>
+	</column>
+	<column name="payment_date" not-null="true">
+		<type name="date"/>
+		<comment><![CDATA[Payment Date]]></comment>
+	</column>
+	<column name="payment_name">
+		<type name="character varying"/>
+		<comment><![CDATA[Payment Reference]]></comment>
+	</column>
+	<column name="create_uid">
+		<type name="integer"/>
+		<comment><![CDATA[Created by]]></comment>
+	</column>
+	<column name="journal_id" not-null="true">
+		<type name="integer"/>
+		<comment><![CDATA[Payment Mode]]></comment>
+	</column>
+	<column name="write_uid">
+		<type name="integer"/>
+		<comment><![CDATA[Last Updated by]]></comment>
+	</column>
+	<column name="amount" not-null="true">
+		<type name="numeric"/>
+		<comment><![CDATA[Amount]]></comment>
+	</column>
+	<column name="write_date">
+		<type name="timestamp"/>
+		<comment><![CDATA[Last Updated on]]></comment>
+	</column>
+	<column name="create_date">
+		<type name="timestamp"/>
+		<comment><![CDATA[Created on]]></comment>
+	</column>
+	<constraint name="makemyday_make_payment_pkey" type="pk-constr" factor="100" table="public.makemyday_make_payment">
+		<columns names="id" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<sequence name="makemyday_config_settings_id_seq"
+	 start="1" increment="1"
+	 min-value="1" max-value="9223372036854775807"
+	 cache="1" cycle="false">
+	<schema name="public"/>
+	<role name="jjnf"/>
+</sequence>
+
+<table name="makemyday_config_settings">
+	<schema name="public"/>
+	<role name="jjnf"/>
+	<comment><![CDATA[makemyday.config.settings]]></comment>
+	<position x="1417.37" y="3218.2"/>
+	<column name="id" not-null="true" default-value="nextval('makemyday_config_settings_id_seq'::regclass)">
+		<type name="integer"/>
+	</column>
+	<column name="module_pos_reprint">
+		<type name="integer"/>
+		<comment><![CDATA[Reprints]]></comment>
+	</column>
+	<column name="create_uid">
+		<type name="integer"/>
+		<comment><![CDATA[Created by]]></comment>
+	</column>
+	<column name="write_uid">
+		<type name="integer"/>
+		<comment><![CDATA[Last Updated by]]></comment>
+	</column>
+	<column name="module_pos_makemyday">
+		<type name="integer"/>
+		<comment><![CDATA[Restaurant]]></comment>
+	</column>
+	<column name="write_date">
+		<type name="timestamp"/>
+		<comment><![CDATA[Last Updated on]]></comment>
+	</column>
+	<column name="create_date">
+		<type name="timestamp"/>
+		<comment><![CDATA[Created on]]></comment>
+	</column>
+	<constraint name="makemyday_config_settings_pkey" type="pk-constr" factor="100" table="public.makemyday_config_settings">
+		<columns names="id" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<sequence name="makemyday_floor_id_seq"
+	 start="1" increment="1"
+	 min-value="1" max-value="9223372036854775807"
+	 cache="1" cycle="false">
+	<schema name="public"/>
+	<role name="jjnf"/>
+</sequence>
+
+<table name="makemyday_floor">
+	<schema name="public"/>
+	<role name="jjnf"/>
+	<comment><![CDATA[makemyday.floor]]></comment>
+	<position x="50" y="3417.6"/>
+	<column name="id" not-null="true" default-value="nextval('makemyday_floor_id_seq'::regclass)">
+		<type name="integer"/>
+	</column>
+	<column name="create_uid">
+		<type name="integer"/>
+		<comment><![CDATA[Created by]]></comment>
+	</column>
+	<column name="create_date">
+		<type name="timestamp"/>
+		<comment><![CDATA[Created on]]></comment>
+	</column>
+	<column name="name" not-null="true">
+		<type name="character varying"/>
+		<comment><![CDATA[Floor Name]]></comment>
+	</column>
+	<column name="sequence">
+		<type name="integer"/>
+		<comment><![CDATA[Sequence]]></comment>
+	</column>
+	<column name="write_uid">
+		<type name="integer"/>
+		<comment><![CDATA[Last Updated by]]></comment>
+	</column>
+	<column name="write_date">
+		<type name="timestamp"/>
+		<comment><![CDATA[Last Updated on]]></comment>
+	</column>
+	<column name="background_color">
+		<type name="character varying"/>
+		<comment><![CDATA[Background Color]]></comment>
+	</column>
+	<column name="makemyday_config_id">
+		<type name="integer"/>
+		<comment><![CDATA[Point of Sale]]></comment>
+	</column>
+	<constraint name="makemyday_floor_pkey" type="pk-constr" factor="100" table="public.makemyday_floor">
+		<columns names="id" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<sequence name="makemyday_table_id_seq"
+	 start="1" increment="1"
+	 min-value="1" max-value="9223372036854775807"
+	 cache="1" cycle="false">
+	<schema name="public"/>
+	<role name="jjnf"/>
+</sequence>
+
+<table name="makemyday_table">
+	<schema name="public"/>
+	<role name="jjnf"/>
+	<comment><![CDATA[makemyday.table]]></comment>
+	<position x="443" y="3417.6"/>
+	<column name="id" not-null="true" default-value="nextval('makemyday_table_id_seq'::regclass)">
+		<type name="integer"/>
+	</column>
+	<column name="create_uid">
+		<type name="integer"/>
+		<comment><![CDATA[Created by]]></comment>
+	</column>
+	<column name="create_date">
+		<type name="timestamp"/>
+		<comment><![CDATA[Created on]]></comment>
+	</column>
+	<column name="name" not-null="true">
+		<type name="character varying" length="32"/>
+		<comment><![CDATA[Table Name]]></comment>
+	</column>
+	<column name="position_h">
+		<type name="double precision"/>
+		<comment><![CDATA[Horizontal Position]]></comment>
+	</column>
+	<column name="color">
+		<type name="character varying"/>
+		<comment><![CDATA[Color]]></comment>
+	</column>
+	<column name="floor_id">
+		<type name="integer"/>
+		<comment><![CDATA[Floor]]></comment>
+	</column>
+	<column name="height">
+		<type name="double precision"/>
+		<comment><![CDATA[Height]]></comment>
+	</column>
+	<column name="width">
+		<type name="double precision"/>
+		<comment><![CDATA[Width]]></comment>
+	</column>
+	<column name="shape" not-null="true">
+		<type name="character varying"/>
+		<comment><![CDATA[Shape]]></comment>
+	</column>
+	<column name="write_date">
+		<type name="timestamp"/>
+		<comment><![CDATA[Last Updated on]]></comment>
+	</column>
+	<column name="seats">
+		<type name="integer"/>
+		<comment><![CDATA[Seats]]></comment>
+	</column>
+	<column name="position_v">
+		<type name="double precision"/>
+		<comment><![CDATA[Vertical Position]]></comment>
+	</column>
+	<column name="write_uid">
+		<type name="integer"/>
+		<comment><![CDATA[Last Updated by]]></comment>
+	</column>
+	<column name="active">
+		<type name="boolean"/>
+		<comment><![CDATA[Active]]></comment>
+	</column>
+	<constraint name="makemyday_table_pkey" type="pk-constr" factor="100" table="public.makemyday_table">
+		<columns names="id" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<sequence name="makemyday_printer_id_seq"
+	 start="1" increment="1"
+	 min-value="1" max-value="9223372036854775807"
+	 cache="1" cycle="false">
+	<schema name="public"/>
+	<role name="jjnf"/>
+</sequence>
+
+<table name="makemyday_printer">
+	<schema name="public"/>
+	<role name="jjnf"/>
+	<comment><![CDATA[makemyday.printer]]></comment>
+	<position x="802" y="3417.6"/>
+	<column name="id" not-null="true" default-value="nextval('makemyday_printer_id_seq'::regclass)">
+		<type name="integer"/>
+	</column>
+	<column name="create_uid">
+		<type name="integer"/>
+		<comment><![CDATA[Created by]]></comment>
+	</column>
+	<column name="create_date">
+		<type name="timestamp"/>
+		<comment><![CDATA[Created on]]></comment>
+	</column>
+	<column name="name" not-null="true">
+		<type name="character varying" length="32"/>
+		<comment><![CDATA[Printer Name]]></comment>
+	</column>
+	<column name="write_uid">
+		<type name="integer"/>
+		<comment><![CDATA[Last Updated by]]></comment>
+	</column>
+	<column name="proxy_ip">
+		<type name="character varying" length="32"/>
+		<comment><![CDATA[Proxy IP Address]]></comment>
+	</column>
+	<column name="write_date">
+		<type name="timestamp"/>
+		<comment><![CDATA[Last Updated on]]></comment>
+	</column>
+	<constraint name="makemyday_printer_pkey" type="pk-constr" factor="100" table="public.makemyday_printer">
+		<columns names="id" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<table name="makemyday_config_printer_rel">
+	<schema name="public"/>
+	<role name="jjnf"/>
+	<comment><![CDATA[RELATION BETWEEN makemyday_config AND makemyday_printer]]></comment>
+	<position x="1161" y="3417.6"/>
+	<column name="config_id" not-null="true">
+		<type name="integer"/>
+	</column>
+	<column name="printer_id" not-null="true">
+		<type name="integer"/>
+	</column>
+	<constraint name="makemyday_config_printer_rel_config_id_printer_id_key" type="uq-constr" factor="100" table="public.makemyday_config_printer_rel">
+		<columns names="config_id,printer_id" ref-type="src-columns"/>
+	</constraint>
+	<index name="makemyday_config_printer_rel_config_id_idx" table="public.makemyday_config_printer_rel"
+		 concurrent="false" unique="false" fast-update="false"
+		 index-type="btree" factor="90">
+		<idxelement use-sorting="false">
+			<column name="config_id"/>
+		</idxelement>
+	</index>
+	<index name="makemyday_config_printer_rel_printer_id_idx" table="public.makemyday_config_printer_rel"
+		 concurrent="false" unique="false" fast-update="false"
+		 index-type="btree" factor="90">
+		<idxelement use-sorting="false">
+			<column name="printer_id"/>
+		</idxelement>
+	</index>
+</table>
+
+<constraint name="res_users_company_id_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="SET NULL" ref-table="public.res_company" table="public.res_users">
+	<columns names="company_id" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+<constraint name="res_users_write_uid_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="SET NULL" ref-table="public.res_users" table="public.res_users">
+	<columns names="write_uid" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+<constraint name="res_users_create_uid_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="SET NULL" ref-table="public.res_users" table="public.res_users">
+	<columns names="create_uid" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+<constraint name="res_users_partner_id_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="RESTRICT" ref-table="public.res_partner" table="public.res_users">
+	<columns names="partner_id" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+<constraint name="res_users_makemyday_config_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="SET NULL" ref-table="public.makemyday_config" table="public.res_users">
+	<columns names="makemyday_config" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+<constraint name="res_company_create_uid_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="SET NULL" ref-table="public.res_users" table="public.res_company">
+	<columns names="create_uid" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+<constraint name="res_company_partner_id_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="SET NULL" ref-table="public.res_partner" table="public.res_company">
+	<columns names="partner_id" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+<constraint name="res_company_write_uid_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="SET NULL" ref-table="public.res_users" table="public.res_company">
+	<columns names="write_uid" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+<constraint name="res_company_parent_id_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="SET NULL" ref-table="public.res_company" table="public.res_company">
+	<columns names="parent_id" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+<constraint name="res_company_internal_transit_location_id_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="SET NULL" ref-table="public.stock_location" table="public.res_company">
+	<columns names="internal_transit_location_id" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+<constraint name="res_partner_user_id_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="SET NULL" ref-table="public.res_users" table="public.res_partner">
+	<columns names="user_id" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+<constraint name="res_partner_create_uid_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="SET NULL" ref-table="public.res_users" table="public.res_partner">
+	<columns names="create_uid" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+<constraint name="res_partner_commercial_partner_id_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="SET NULL" ref-table="public.res_partner" table="public.res_partner">
+	<columns names="commercial_partner_id" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+<constraint name="res_partner_company_id_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="SET NULL" ref-table="public.res_company" table="public.res_partner">
+	<columns names="company_id" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+<constraint name="res_partner_write_uid_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="SET NULL" ref-table="public.res_users" table="public.res_partner">
+	<columns names="write_uid" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+<constraint name="res_partner_parent_id_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="SET NULL" ref-table="public.res_partner" table="public.res_partner">
+	<columns names="parent_id" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+<constraint name="res_company_users_rel_user_id_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="CASCADE" ref-table="public.res_users" table="public.res_company_users_rel">
+	<columns names="user_id" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+<constraint name="res_company_users_rel_cid_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="CASCADE" ref-table="public.res_company" table="public.res_company_users_rel">
+	<columns names="cid" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+<constraint name="res_users_log_create_uid_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="SET NULL" ref-table="public.res_users" table="public.res_users_log">
+	<columns names="create_uid" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+<constraint name="res_users_log_write_uid_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="SET NULL" ref-table="public.res_users" table="public.res_users_log">
+	<columns names="write_uid" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+<constraint name="product_category_create_uid_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="SET NULL" ref-table="public.res_users" table="public.product_category">
+	<columns names="create_uid" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+<constraint name="product_category_write_uid_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="SET NULL" ref-table="public.res_users" table="public.product_category">
+	<columns names="write_uid" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+<constraint name="product_category_parent_id_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="CASCADE" ref-table="public.product_category" table="public.product_category">
+	<columns names="parent_id" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+<constraint name="product_template_create_uid_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="SET NULL" ref-table="public.res_users" table="public.product_template">
+	<columns names="create_uid" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+<constraint name="product_template_company_id_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="SET NULL" ref-table="public.res_company" table="public.product_template">
+	<columns names="company_id" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+<constraint name="product_template_write_uid_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="SET NULL" ref-table="public.res_users" table="public.product_template">
+	<columns names="write_uid" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+<constraint name="product_template_product_manager_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="SET NULL" ref-table="public.res_users" table="public.product_template">
+	<columns names="product_manager" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+<constraint name="product_template_categ_id_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="SET NULL" ref-table="public.product_category" table="public.product_template">
+	<columns names="categ_id" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+<constraint name="product_template_makemyday_categ_id_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="SET NULL" ref-table="public.makemyday_category" table="public.product_template">
+	<columns names="makemyday_categ_id" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+<constraint name="product_product_product_tmpl_id_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="CASCADE" ref-table="public.product_template" table="public.product_product">
+	<columns names="product_tmpl_id" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+<constraint name="product_product_write_uid_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="SET NULL" ref-table="public.res_users" table="public.product_product">
+	<columns names="write_uid" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+<constraint name="product_product_create_uid_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="SET NULL" ref-table="public.res_users" table="public.product_product">
+	<columns names="create_uid" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+<constraint name="account_bank_statement_makemyday_session_id_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="SET NULL" ref-table="public.makemyday_session" table="public.account_bank_statement">
+	<columns names="makemyday_session_id" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+<constraint name="account_bank_statement_line_makemyday_statement_id_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="CASCADE" ref-table="public.makemyday_order" table="public.account_bank_statement_line">
+	<columns names="makemyday_statement_id" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+<constraint name="stock_location_write_uid_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="SET NULL" ref-table="public.res_users" table="public.stock_location">
+	<columns names="write_uid" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+<constraint name="stock_location_company_id_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="SET NULL" ref-table="public.res_company" table="public.stock_location">
+	<columns names="company_id" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+<constraint name="stock_location_partner_id_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="SET NULL" ref-table="public.res_partner" table="public.stock_location">
+	<columns names="partner_id" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+<constraint name="stock_location_location_id_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="CASCADE" ref-table="public.stock_location" table="public.stock_location">
+	<columns names="location_id" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+<constraint name="stock_location_create_uid_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="SET NULL" ref-table="public.res_users" table="public.stock_location">
+	<columns names="create_uid" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+<constraint name="stock_quant_propagated_from_id_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="SET NULL" ref-table="public.stock_quant" table="public.stock_quant">
+	<columns names="propagated_from_id" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+<constraint name="stock_quant_owner_id_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="SET NULL" ref-table="public.res_partner" table="public.stock_quant">
+	<columns names="owner_id" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+<constraint name="stock_quant_product_id_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="RESTRICT" ref-table="public.product_product" table="public.stock_quant">
+	<columns names="product_id" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+<constraint name="stock_quant_write_uid_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="SET NULL" ref-table="public.res_users" table="public.stock_quant">
+	<columns names="write_uid" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+<constraint name="stock_quant_reservation_id_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="SET NULL" ref-table="public.stock_move" table="public.stock_quant">
+	<columns names="reservation_id" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+<constraint name="stock_quant_create_uid_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="SET NULL" ref-table="public.res_users" table="public.stock_quant">
+	<columns names="create_uid" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+<constraint name="stock_quant_location_id_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="RESTRICT" ref-table="public.stock_location" table="public.stock_quant">
+	<columns names="location_id" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+<constraint name="stock_quant_company_id_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="SET NULL" ref-table="public.res_company" table="public.stock_quant">
+	<columns names="company_id" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+<constraint name="stock_quant_negative_move_id_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="SET NULL" ref-table="public.stock_move" table="public.stock_quant">
+	<columns names="negative_move_id" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+<constraint name="stock_move_restrict_partner_id_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="SET NULL" ref-table="public.res_partner" table="public.stock_move">
+	<columns names="restrict_partner_id" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+<constraint name="stock_move_location_dest_id_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="SET NULL" ref-table="public.stock_location" table="public.stock_move">
+	<columns names="location_dest_id" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+<constraint name="stock_move_company_id_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="SET NULL" ref-table="public.res_company" table="public.stock_move">
+	<columns names="company_id" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+<constraint name="stock_move_split_from_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="SET NULL" ref-table="public.stock_move" table="public.stock_move">
+	<columns names="split_from" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+<constraint name="stock_move_create_uid_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="SET NULL" ref-table="public.res_users" table="public.stock_move">
+	<columns names="create_uid" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+<constraint name="stock_move_write_uid_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="SET NULL" ref-table="public.res_users" table="public.stock_move">
+	<columns names="write_uid" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+<constraint name="stock_move_product_id_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="SET NULL" ref-table="public.product_product" table="public.stock_move">
+	<columns names="product_id" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+<constraint name="stock_move_partner_id_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="SET NULL" ref-table="public.res_partner" table="public.stock_move">
+	<columns names="partner_id" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+<constraint name="stock_move_origin_returned_move_id_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="SET NULL" ref-table="public.stock_move" table="public.stock_move">
+	<columns names="origin_returned_move_id" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+<constraint name="stock_move_location_id_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="SET NULL" ref-table="public.stock_location" table="public.stock_move">
+	<columns names="location_id" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+<constraint name="stock_move_inventory_id_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="SET NULL" ref-table="public.stock_inventory" table="public.stock_move">
+	<columns names="inventory_id" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+<constraint name="stock_move_move_dest_id_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="SET NULL" ref-table="public.stock_move" table="public.stock_move">
+	<columns names="move_dest_id" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+<constraint name="stock_inventory_partner_id_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="SET NULL" ref-table="public.res_partner" table="public.stock_inventory">
+	<columns names="partner_id" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+<constraint name="stock_inventory_company_id_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="SET NULL" ref-table="public.res_company" table="public.stock_inventory">
+	<columns names="company_id" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+<constraint name="stock_inventory_product_id_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="SET NULL" ref-table="public.product_product" table="public.stock_inventory">
+	<columns names="product_id" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+<constraint name="stock_inventory_location_id_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="SET NULL" ref-table="public.stock_location" table="public.stock_inventory">
+	<columns names="location_id" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+<constraint name="stock_inventory_create_uid_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="SET NULL" ref-table="public.res_users" table="public.stock_inventory">
+	<columns names="create_uid" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+<constraint name="stock_inventory_write_uid_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="SET NULL" ref-table="public.res_users" table="public.stock_inventory">
+	<columns names="write_uid" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+<constraint name="stock_change_product_qty_product_tmpl_id_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="SET NULL" ref-table="public.product_template" table="public.stock_change_product_qty">
+	<columns names="product_tmpl_id" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+<constraint name="stock_change_product_qty_write_uid_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="SET NULL" ref-table="public.res_users" table="public.stock_change_product_qty">
+	<columns names="write_uid" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+<constraint name="stock_change_product_qty_create_uid_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="SET NULL" ref-table="public.res_users" table="public.stock_change_product_qty">
+	<columns names="create_uid" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+<constraint name="stock_change_product_qty_location_id_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="SET NULL" ref-table="public.stock_location" table="public.stock_change_product_qty">
+	<columns names="location_id" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+<constraint name="stock_change_product_qty_product_id_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="SET NULL" ref-table="public.product_product" table="public.stock_change_product_qty">
+	<columns names="product_id" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+<constraint name="makemyday_config_iface_start_categ_id_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="SET NULL" ref-table="public.makemyday_category" table="public.makemyday_config">
+	<columns names="iface_start_categ_id" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+<constraint name="makemyday_config_write_uid_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="SET NULL" ref-table="public.res_users" table="public.makemyday_config">
+	<columns names="write_uid" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+<constraint name="makemyday_config_tip_product_id_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="SET NULL" ref-table="public.product_product" table="public.makemyday_config">
+	<columns names="tip_product_id" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+<constraint name="makemyday_config_company_id_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="SET NULL" ref-table="public.res_company" table="public.makemyday_config">
+	<columns names="company_id" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+<constraint name="makemyday_config_create_uid_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="SET NULL" ref-table="public.res_users" table="public.makemyday_config">
+	<columns names="create_uid" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+<constraint name="makemyday_config_stock_location_id_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="SET NULL" ref-table="public.stock_location" table="public.makemyday_config">
+	<columns names="stock_location_id" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+<constraint name="account_fiscal_position_makemyday_conf_makemyday_config_id_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="CASCADE" ref-table="public.makemyday_config" table="public.account_fiscal_position_makemyday_config_rel">
+	<columns names="makemyday_config_id" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+<constraint name="makemyday_config_journal_rel_makemyday_config_id_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="CASCADE" ref-table="public.makemyday_config" table="public.makemyday_config_journal_rel">
+	<columns names="makemyday_config_id" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+<constraint name="makemyday_session_user_id_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="SET NULL" ref-table="public.res_users" table="public.makemyday_session">
+	<columns names="user_id" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+<constraint name="makemyday_session_create_uid_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="SET NULL" ref-table="public.res_users" table="public.makemyday_session">
+	<columns names="create_uid" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+<constraint name="makemyday_session_config_id_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="SET NULL" ref-table="public.makemyday_config" table="public.makemyday_session">
+	<columns names="config_id" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+<constraint name="makemyday_session_write_uid_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="SET NULL" ref-table="public.res_users" table="public.makemyday_session">
+	<columns names="write_uid" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+<constraint name="makemyday_order_user_id_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="SET NULL" ref-table="public.res_users" table="public.makemyday_order">
+	<columns names="user_id" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+<constraint name="makemyday_order_create_uid_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="SET NULL" ref-table="public.res_users" table="public.makemyday_order">
+	<columns names="create_uid" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+<constraint name="makemyday_order_session_id_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="SET NULL" ref-table="public.makemyday_session" table="public.makemyday_order">
+	<columns names="session_id" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+<constraint name="makemyday_order_location_id_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="SET NULL" ref-table="public.stock_location" table="public.makemyday_order">
+	<columns names="location_id" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+<constraint name="makemyday_order_partner_id_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="SET NULL" ref-table="public.res_partner" table="public.makemyday_order">
+	<columns names="partner_id" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+<constraint name="makemyday_order_company_id_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="SET NULL" ref-table="public.res_company" table="public.makemyday_order">
+	<columns names="company_id" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+<constraint name="makemyday_order_write_uid_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="SET NULL" ref-table="public.res_users" table="public.makemyday_order">
+	<columns names="write_uid" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+<constraint name="makemyday_order_table_id_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="SET NULL" ref-table="public.makemyday_table" table="public.makemyday_order">
+	<columns names="table_id" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+<constraint name="makemyday_order_line_create_uid_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="SET NULL" ref-table="public.res_users" table="public.makemyday_order_line">
+	<columns names="create_uid" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+<constraint name="makemyday_order_line_order_id_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="CASCADE" ref-table="public.makemyday_order" table="public.makemyday_order_line">
+	<columns names="order_id" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+<constraint name="makemyday_order_line_company_id_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="SET NULL" ref-table="public.res_company" table="public.makemyday_order_line">
+	<columns names="company_id" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+<constraint name="makemyday_order_line_write_uid_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="SET NULL" ref-table="public.res_users" table="public.makemyday_order_line">
+	<columns names="write_uid" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+<constraint name="makemyday_order_line_product_id_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="SET NULL" ref-table="public.product_product" table="public.makemyday_order_line">
+	<columns names="product_id" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+<constraint name="account_tax_makemyday_order_line_r_makemyday_order_line_id_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="CASCADE" ref-table="public.makemyday_order_line" table="public.account_tax_makemyday_order_line_rel">
+	<columns names="makemyday_order_line_id" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+<constraint name="makemyday_category_create_uid_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="SET NULL" ref-table="public.res_users" table="public.makemyday_category">
+	<columns names="create_uid" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+<constraint name="makemyday_category_parent_id_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="SET NULL" ref-table="public.makemyday_category" table="public.makemyday_category">
+	<columns names="parent_id" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+<constraint name="makemyday_category_write_uid_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="SET NULL" ref-table="public.res_users" table="public.makemyday_category">
+	<columns names="write_uid" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+<constraint name="makemyday_confirm_create_uid_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="SET NULL" ref-table="public.res_users" table="public.makemyday_confirm">
+	<columns names="create_uid" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+<constraint name="makemyday_confirm_write_uid_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="SET NULL" ref-table="public.res_users" table="public.makemyday_confirm">
+	<columns names="write_uid" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+<constraint name="makemyday_details_create_uid_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="SET NULL" ref-table="public.res_users" table="public.makemyday_details">
+	<columns names="create_uid" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+<constraint name="makemyday_details_write_uid_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="SET NULL" ref-table="public.res_users" table="public.makemyday_details">
+	<columns names="write_uid" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+<constraint name="makemyday_details_report_user_rel_user_id_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="CASCADE" ref-table="public.makemyday_details" table="public.makemyday_details_report_user_rel">
+	<columns names="user_id" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+<constraint name="makemyday_details_report_user_rel_wizard_id_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="CASCADE" ref-table="public.res_users" table="public.makemyday_details_report_user_rel">
+	<columns names="wizard_id" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+<constraint name="makemyday_discount_create_uid_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="SET NULL" ref-table="public.res_users" table="public.makemyday_discount">
+	<columns names="create_uid" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+<constraint name="makemyday_discount_write_uid_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="SET NULL" ref-table="public.res_users" table="public.makemyday_discount">
+	<columns names="write_uid" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+<constraint name="makemyday_open_statement_create_uid_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="SET NULL" ref-table="public.res_users" table="public.makemyday_open_statement">
+	<columns names="create_uid" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+<constraint name="makemyday_open_statement_write_uid_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="SET NULL" ref-table="public.res_users" table="public.makemyday_open_statement">
+	<columns names="write_uid" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+<constraint name="makemyday_make_payment_create_uid_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="SET NULL" ref-table="public.res_users" table="public.makemyday_make_payment">
+	<columns names="create_uid" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+<constraint name="makemyday_make_payment_write_uid_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="SET NULL" ref-table="public.res_users" table="public.makemyday_make_payment">
+	<columns names="write_uid" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+<constraint name="makemyday_config_settings_write_uid_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="SET NULL" ref-table="public.res_users" table="public.makemyday_config_settings">
+	<columns names="write_uid" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+<constraint name="makemyday_config_settings_create_uid_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="SET NULL" ref-table="public.res_users" table="public.makemyday_config_settings">
+	<columns names="create_uid" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+<constraint name="makemyday_floor_makemyday_config_id_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="SET NULL" ref-table="public.makemyday_config" table="public.makemyday_floor">
+	<columns names="makemyday_config_id" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+<constraint name="makemyday_floor_write_uid_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="SET NULL" ref-table="public.res_users" table="public.makemyday_floor">
+	<columns names="write_uid" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+<constraint name="makemyday_floor_create_uid_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="SET NULL" ref-table="public.res_users" table="public.makemyday_floor">
+	<columns names="create_uid" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+<constraint name="makemyday_table_create_uid_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="SET NULL" ref-table="public.res_users" table="public.makemyday_table">
+	<columns names="create_uid" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+<constraint name="makemyday_table_floor_id_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="SET NULL" ref-table="public.makemyday_floor" table="public.makemyday_table">
+	<columns names="floor_id" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+<constraint name="makemyday_table_write_uid_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="SET NULL" ref-table="public.res_users" table="public.makemyday_table">
+	<columns names="write_uid" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+<constraint name="makemyday_printer_create_uid_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="SET NULL" ref-table="public.res_users" table="public.makemyday_printer">
+	<columns names="create_uid" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+<constraint name="makemyday_printer_write_uid_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="SET NULL" ref-table="public.res_users" table="public.makemyday_printer">
+	<columns names="write_uid" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+<constraint name="makemyday_config_printer_rel_config_id_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="CASCADE" ref-table="public.makemyday_config" table="public.makemyday_config_printer_rel">
+	<columns names="config_id" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+<constraint name="makemyday_config_printer_rel_printer_id_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="CASCADE" ref-table="public.makemyday_printer" table="public.makemyday_config_printer_rel">
+	<columns names="printer_id" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+<relationship name="rel_res_users_res_company" type="relfk"
+	 src-table="public.res_users"
+	 dst-table="public.res_company"
+	 src-required="true" dst-required="true"/>
+
+<relationship name="rel_res_users_res_users" type="relfk"
+	 src-table="public.res_users"
+	 dst-table="public.res_users"
+	 src-required="true" dst-required="true">
+	<line>
+		<position x="452" y="165.76"/>
+	<position x="452" y="40"/>
+	<position x="311.333" y="40"/>
+	</line>
+</relationship>
+
+<relationship name="rel_res_users_res_partner" type="relfk"
+	 src-table="public.res_users"
+	 dst-table="public.res_partner"
+	 src-required="true" dst-required="true"/>
+
+<relationship name="rel_res_users_makemyday_config" type="relfk"
+	 src-table="public.res_users"
+	 dst-table="public.makemyday_config"
+	 src-required="true" dst-required="true"/>
+
+<relationship name="rel_res_company_res_partner" type="relfk"
+	 src-table="public.res_company"
+	 dst-table="public.res_partner"
+	 src-required="true" dst-required="true"/>
+
+<relationship name="rel_res_company_res_company" type="relfk"
+	 src-table="public.res_company"
+	 dst-table="public.res_company"
+	 src-required="true" dst-required="true">
+	<line>
+		<position x="1001" y="324.08"/>
+	<position x="1001" y="40"/>
+	<position x="824.667" y="40"/>
+	</line>
+</relationship>
+
+<relationship name="rel_res_company_stock_location" type="relfk"
+	 src-table="public.res_company"
+	 dst-table="public.stock_location"
+	 src-required="true" dst-required="true"/>
+
+<relationship name="rel_res_partner_res_partner" type="relfk"
+	 src-table="public.res_partner"
+	 dst-table="public.res_partner"
+	 src-required="true" dst-required="true">
+	<line>
+		<position x="1449" y="380.08"/>
+	<position x="1449" y="40"/>
+	<position x="1306.33" y="40"/>
+	</line>
+</relationship>
+
+<relationship name="rel_res_company_users_rel_res_users" type="relfk"
+	 src-table="public.res_company_users_rel"
+	 dst-table="public.res_users"
+	 src-required="true" dst-required="true"/>
+
+<relationship name="rel_res_company_users_rel_res_company" type="relfk"
+	 src-table="public.res_company_users_rel"
+	 dst-table="public.res_company"
+	 src-required="true" dst-required="true"/>
+
+<relationship name="rel_res_users_log_res_users" type="relfk"
+	 src-table="public.res_users_log"
+	 dst-table="public.res_users"
+	 src-required="true" dst-required="true"/>
+
+<relationship name="rel_product_category_res_users" type="relfk"
+	 src-table="public.product_category"
+	 dst-table="public.res_users"
+	 src-required="true" dst-required="true"/>
+
+<relationship name="rel_product_category_product_category" type="relfk"
+	 src-table="public.product_category"
+	 dst-table="public.product_category"
+	 src-required="true" dst-required="true">
+	<line>
+		<position x="391" y="1031.28"/>
+	<position x="391" y="915.2"/>
+	<position x="270.667" y="915.2"/>
+	</line>
+</relationship>
+
+<relationship name="rel_product_template_res_users" type="relfk"
+	 src-table="public.product_template"
+	 dst-table="public.res_users"
+	 src-required="true" dst-required="true"/>
+
+<relationship name="rel_product_template_res_company" type="relfk"
+	 src-table="public.product_template"
+	 dst-table="public.res_company"
+	 src-required="true" dst-required="true"/>
+
+<relationship name="rel_product_template_product_category" type="relfk"
+	 src-table="public.product_template"
+	 dst-table="public.product_category"
+	 src-required="true" dst-required="true"/>
+
+<relationship name="rel_product_template_makemyday_category" type="relfk"
+	 src-table="public.product_template"
+	 dst-table="public.makemyday_category"
+	 src-required="true" dst-required="true"/>
+
+<relationship name="rel_product_product_product_template" type="relfk"
+	 src-table="public.product_product"
+	 dst-table="public.product_template"
+	 src-required="true" dst-required="true"/>
+
+<relationship name="rel_product_product_res_users" type="relfk"
+	 src-table="public.product_product"
+	 dst-table="public.res_users"
+	 src-required="true" dst-required="true"/>
+
+<relationship name="rel_account_bank_statement_makemyday_session" type="relfk"
+	 src-table="public.account_bank_statement"
+	 dst-table="public.makemyday_session"
+	 src-required="true" dst-required="true"/>
+
+<relationship name="rel_account_bank_statement_line_makemyday_order" type="relfk"
+	 src-table="public.account_bank_statement_line"
+	 dst-table="public.makemyday_order"
+	 src-required="true" dst-required="true"/>
+
+<relationship name="rel_stock_location_res_users" type="relfk"
+	 src-table="public.stock_location"
+	 dst-table="public.res_users"
+	 src-required="true" dst-required="true"/>
+
+<relationship name="rel_stock_location_res_partner" type="relfk"
+	 src-table="public.stock_location"
+	 dst-table="public.res_partner"
+	 src-required="true" dst-required="true"/>
+
+<relationship name="rel_stock_location_stock_location" type="relfk"
+	 src-table="public.stock_location"
+	 dst-table="public.stock_location"
+	 src-required="true" dst-required="true">
+	<line>
+		<position x="425" y="1685.28"/>
+	<position x="425" y="1496.4"/>
+	<position x="293.333" y="1496.4"/>
+	</line>
+</relationship>
+
+<relationship name="rel_stock_quant_stock_quant" type="relfk"
+	 src-table="public.stock_quant"
+	 dst-table="public.stock_quant"
+	 src-required="true" dst-required="true">
+	<line>
+		<position x="798" y="1679.68"/>
+	<position x="798" y="1496.4"/>
+	<position x="680.333" y="1496.4"/>
+	</line>
+</relationship>
+
+<relationship name="rel_stock_quant_res_partner" type="relfk"
+	 src-table="public.stock_quant"
+	 dst-table="public.res_partner"
+	 src-required="true" dst-required="true"/>
+
+<relationship name="rel_stock_quant_product_product" type="relfk"
+	 src-table="public.stock_quant"
+	 dst-table="public.product_product"
+	 src-required="true" dst-required="true"/>
+
+<relationship name="rel_stock_quant_res_users" type="relfk"
+	 src-table="public.stock_quant"
+	 dst-table="public.res_users"
+	 src-required="true" dst-required="true"/>
+
+<relationship name="rel_stock_quant_stock_move" type="relfk"
+	 src-table="public.stock_quant"
+	 dst-table="public.stock_move"
+	 src-required="true" dst-required="true"/>
+
+<relationship name="rel_stock_quant_stock_location" type="relfk"
+	 src-table="public.stock_quant"
+	 dst-table="public.stock_location"
+	 src-required="true" dst-required="true"/>
+
+<relationship name="rel_stock_quant_res_company" type="relfk"
+	 src-table="public.stock_quant"
+	 dst-table="public.res_company"
+	 src-required="true" dst-required="true"/>
+
+<relationship name="rel_stock_move_res_partner" type="relfk"
+	 src-table="public.stock_move"
+	 dst-table="public.res_partner"
+	 src-required="true" dst-required="true"/>
+
+<relationship name="rel_stock_move_stock_location" type="relfk"
+	 src-table="public.stock_move"
+	 dst-table="public.stock_location"
+	 src-required="true" dst-required="true"/>
+
+<relationship name="rel_stock_move_res_company" type="relfk"
+	 src-table="public.stock_move"
+	 dst-table="public.res_company"
+	 src-required="true" dst-required="true"/>
+
+<relationship name="rel_stock_move_stock_move" type="relfk"
+	 src-table="public.stock_move"
+	 dst-table="public.stock_move"
+	 src-required="true" dst-required="true">
+	<line>
+		<position x="1207" y="1802.88"/>
+	<position x="1207" y="1496.4"/>
+	<position x="1077.33" y="1496.4"/>
+	</line>
+</relationship>
+
+<relationship name="rel_stock_move_res_users" type="relfk"
+	 src-table="public.stock_move"
+	 dst-table="public.res_users"
+	 src-required="true" dst-required="true"/>
+
+<relationship name="rel_stock_move_product_product" type="relfk"
+	 src-table="public.stock_move"
+	 dst-table="public.product_product"
+	 src-required="true" dst-required="true"/>
+
+<relationship name="rel_stock_move_stock_inventory" type="relfk"
+	 src-table="public.stock_move"
+	 dst-table="public.stock_inventory"
+	 src-required="true" dst-required="true"/>
+
+<relationship name="rel_stock_inventory_res_partner" type="relfk"
+	 src-table="public.stock_inventory"
+	 dst-table="public.res_partner"
+	 src-required="true" dst-required="true"/>
+
+<relationship name="rel_stock_inventory_res_company" type="relfk"
+	 src-table="public.stock_inventory"
+	 dst-table="public.res_company"
+	 src-required="true" dst-required="true"/>
+
+<relationship name="rel_stock_inventory_product_product" type="relfk"
+	 src-table="public.stock_inventory"
+	 dst-table="public.product_product"
+	 src-required="true" dst-required="true"/>
+
+<relationship name="rel_stock_inventory_stock_location" type="relfk"
+	 src-table="public.stock_inventory"
+	 dst-table="public.stock_location"
+	 src-required="true" dst-required="true"/>
+
+<relationship name="rel_stock_inventory_res_users" type="relfk"
+	 src-table="public.stock_inventory"
+	 dst-table="public.res_users"
+	 src-required="true" dst-required="true"/>
+
+<relationship name="rel_stock_change_product_qty_product_template" type="relfk"
+	 src-table="public.stock_change_product_qty"
+	 dst-table="public.product_template"
+	 src-required="true" dst-required="true"/>
+
+<relationship name="rel_stock_change_product_qty_res_users" type="relfk"
+	 src-table="public.stock_change_product_qty"
+	 dst-table="public.res_users"
+	 src-required="true" dst-required="true"/>
+
+<relationship name="rel_stock_change_product_qty_stock_location" type="relfk"
+	 src-table="public.stock_change_product_qty"
+	 dst-table="public.stock_location"
+	 src-required="true" dst-required="true"/>
+
+<relationship name="rel_stock_change_product_qty_product_product" type="relfk"
+	 src-table="public.stock_change_product_qty"
+	 dst-table="public.product_product"
+	 src-required="true" dst-required="true"/>
+
+<relationship name="rel_makemyday_config_makemyday_category" type="relfk"
+	 src-table="public.makemyday_config"
+	 dst-table="public.makemyday_category"
+	 src-required="true" dst-required="true"/>
+
+<relationship name="rel_makemyday_config_product_product" type="relfk"
+	 src-table="public.makemyday_config"
+	 dst-table="public.product_product"
+	 src-required="true" dst-required="true"/>
+
+<relationship name="rel_makemyday_config_res_company" type="relfk"
+	 src-table="public.makemyday_config"
+	 dst-table="public.res_company"
+	 src-required="true" dst-required="true"/>
+
+<relationship name="rel_makemyday_config_stock_location" type="relfk"
+	 src-table="public.makemyday_config"
+	 dst-table="public.stock_location"
+	 src-required="true" dst-required="true"/>
+
+<relationship name="rel_account_fiscal_position_makemyday_config_rel_makemyday_conf" type="relfk"
+	 src-table="public.account_fiscal_position_makemyday_config_rel"
+	 dst-table="public.makemyday_config"
+	 src-required="true" dst-required="true"/>
+
+<relationship name="rel_makemyday_config_journal_rel_makemyday_config" type="relfk"
+	 src-table="public.makemyday_config_journal_rel"
+	 dst-table="public.makemyday_config"
+	 src-required="true" dst-required="true"/>
+
+<relationship name="rel_makemyday_session_res_users" type="relfk"
+	 src-table="public.makemyday_session"
+	 dst-table="public.res_users"
+	 src-required="true" dst-required="true"/>
+
+<relationship name="rel_makemyday_session_makemyday_config" type="relfk"
+	 src-table="public.makemyday_session"
+	 dst-table="public.makemyday_config"
+	 src-required="true" dst-required="true"/>
+
+<relationship name="rel_makemyday_order_res_users" type="relfk"
+	 src-table="public.makemyday_order"
+	 dst-table="public.res_users"
+	 src-required="true" dst-required="true"/>
+
+<relationship name="rel_makemyday_order_makemyday_session" type="relfk"
+	 src-table="public.makemyday_order"
+	 dst-table="public.makemyday_session"
+	 src-required="true" dst-required="true"/>
+
+<relationship name="rel_makemyday_order_stock_location" type="relfk"
+	 src-table="public.makemyday_order"
+	 dst-table="public.stock_location"
+	 src-required="true" dst-required="true"/>
+
+<relationship name="rel_makemyday_order_res_partner" type="relfk"
+	 src-table="public.makemyday_order"
+	 dst-table="public.res_partner"
+	 src-required="true" dst-required="true"/>
+
+<relationship name="rel_makemyday_order_res_company" type="relfk"
+	 src-table="public.makemyday_order"
+	 dst-table="public.res_company"
+	 src-required="true" dst-required="true"/>
+
+<relationship name="rel_makemyday_order_makemyday_table" type="relfk"
+	 src-table="public.makemyday_order"
+	 dst-table="public.makemyday_table"
+	 src-required="true" dst-required="true"/>
+
+<relationship name="rel_makemyday_order_line_res_users" type="relfk"
+	 src-table="public.makemyday_order_line"
+	 dst-table="public.res_users"
+	 src-required="true" dst-required="true"/>
+
+<relationship name="rel_makemyday_order_line_makemyday_order" type="relfk"
+	 src-table="public.makemyday_order_line"
+	 dst-table="public.makemyday_order"
+	 src-required="true" dst-required="true"/>
+
+<relationship name="rel_makemyday_order_line_res_company" type="relfk"
+	 src-table="public.makemyday_order_line"
+	 dst-table="public.res_company"
+	 src-required="true" dst-required="true"/>
+
+<relationship name="rel_makemyday_order_line_product_product" type="relfk"
+	 src-table="public.makemyday_order_line"
+	 dst-table="public.product_product"
+	 src-required="true" dst-required="true"/>
+
+<relationship name="rel_account_tax_makemyday_order_line_rel_makemyday_order_line" type="relfk"
+	 src-table="public.account_tax_makemyday_order_line_rel"
+	 dst-table="public.makemyday_order_line"
+	 src-required="true" dst-required="true"/>
+
+<relationship name="rel_makemyday_category_res_users" type="relfk"
+	 src-table="public.makemyday_category"
+	 dst-table="public.res_users"
+	 src-required="true" dst-required="true"/>
+
+<relationship name="rel_makemyday_category_makemyday_category" type="relfk"
+	 src-table="public.makemyday_category"
+	 dst-table="public.makemyday_category"
+	 src-required="true" dst-required="true">
+	<line>
+		<position x="1245.53" y="3024.08"/>
+	<position x="1245.53" y="2952.8"/>
+	<position x="1133.94" y="2952.8"/>
+	</line>
+</relationship>
+
+<relationship name="rel_makemyday_confirm_res_users" type="relfk"
+	 src-table="public.makemyday_confirm"
+	 dst-table="public.res_users"
+	 src-required="true" dst-required="true"/>
+
+<relationship name="rel_makemyday_details_res_users" type="relfk"
+	 src-table="public.makemyday_details"
+	 dst-table="public.res_users"
+	 src-required="true" dst-required="true"/>
+
+<relationship name="rel_makemyday_details_report_user_rel_makemyday_details" type="relfk"
+	 src-table="public.makemyday_details_report_user_rel"
+	 dst-table="public.makemyday_details"
+	 src-required="true" dst-required="true"/>
+
+<relationship name="rel_makemyday_details_report_user_rel_res_users" type="relfk"
+	 src-table="public.makemyday_details_report_user_rel"
+	 dst-table="public.res_users"
+	 src-required="true" dst-required="true"/>
+
+<relationship name="rel_makemyday_discount_res_users" type="relfk"
+	 src-table="public.makemyday_discount"
+	 dst-table="public.res_users"
+	 src-required="true" dst-required="true"/>
+
+<relationship name="rel_makemyday_open_statement_res_users" type="relfk"
+	 src-table="public.makemyday_open_statement"
+	 dst-table="public.res_users"
+	 src-required="true" dst-required="true"/>
+
+<relationship name="rel_makemyday_make_payment_res_users" type="relfk"
+	 src-table="public.makemyday_make_payment"
+	 dst-table="public.res_users"
+	 src-required="true" dst-required="true"/>
+
+<relationship name="rel_makemyday_config_settings_res_users" type="relfk"
+	 src-table="public.makemyday_config_settings"
+	 dst-table="public.res_users"
+	 src-required="true" dst-required="true"/>
+
+<relationship name="rel_makemyday_floor_makemyday_config" type="relfk"
+	 src-table="public.makemyday_floor"
+	 dst-table="public.makemyday_config"
+	 src-required="true" dst-required="true"/>
+
+<relationship name="rel_makemyday_floor_res_users" type="relfk"
+	 src-table="public.makemyday_floor"
+	 dst-table="public.res_users"
+	 src-required="true" dst-required="true"/>
+
+<relationship name="rel_makemyday_table_res_users" type="relfk"
+	 src-table="public.makemyday_table"
+	 dst-table="public.res_users"
+	 src-required="true" dst-required="true"/>
+
+<relationship name="rel_makemyday_table_makemyday_floor" type="relfk"
+	 src-table="public.makemyday_table"
+	 dst-table="public.makemyday_floor"
+	 src-required="true" dst-required="true"/>
+
+<relationship name="rel_makemyday_printer_res_users" type="relfk"
+	 src-table="public.makemyday_printer"
+	 dst-table="public.res_users"
+	 src-required="true" dst-required="true"/>
+
+<relationship name="rel_makemyday_config_printer_rel_makemyday_config" type="relfk"
+	 src-table="public.makemyday_config_printer_rel"
+	 dst-table="public.makemyday_config"
+	 src-required="true" dst-required="true"/>
+
+<relationship name="rel_makemyday_config_printer_rel_makemyday_printer" type="relfk"
+	 src-table="public.makemyday_config_printer_rel"
+	 dst-table="public.makemyday_printer"
+	 src-required="true" dst-required="true"/>
+
+</dbmodel>
